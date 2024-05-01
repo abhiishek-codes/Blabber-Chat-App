@@ -2959,6 +2959,7 @@ var _reactDom = require("react-dom");
 var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
 const App = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "text-black",
         children: "From React"
     }, void 0, false, {
         fileName: "src/App.js",
