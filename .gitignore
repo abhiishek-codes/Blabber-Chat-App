@@ -1,4 +1,4 @@
 # Ignore node_modules directory
 node_modules/
-Frontend/.parcel-cache
-Frontend/dist
+Frontend/.parcel-cache/
+Frontend/dist/
