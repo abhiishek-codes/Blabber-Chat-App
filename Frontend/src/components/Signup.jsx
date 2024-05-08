@@ -2,12 +2,84 @@ import React, { useState } from "react";
 import PHidelogo from "../assets/eye.png";
 import PShowlogo from "../assets/hidden.png";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Signup = ({ Setloginstate }) => {
-  const [uname, Setuname] = useState(null);
-  const [pass, Setpass] = useState(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    uname: "",
+    pass: "",
+  });
+  const [selectedFile, setSelectedFile] = useState(null);
   const [eyelogo, Seteyelogo] = useState(true);
-  const [peyelogo, Setpeyelogo] = useState(true);
+  const [errors, setErrors] = useState([]);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleFileChange = (e) => {
+    setSelectedFile(e.target.files[0]);
+  };
+
+  const handleUpload = async () => {
+    if (!selectedFile) {
+      return null;
+    }
+
+    const formData = new FormData();
+    formData.append("file", selectedFile);
+    formData.append("upload_preset", "Blabber");
+
+    try {
+      const response = await fetch(
+        `https://api.cloudinary.com/v1_1/dz093s3fc/image/upload`,
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      const data = await response.json();
+      console.log("Upload Success:", data);
+      return data.url;
+    } catch (error) {
+      console.log("Upload Error:", error);
+    }
+  };
+
+  const handleSignup = async () => {
+    const profilePicUrl = await handleUpload();
+
+    // Create a new object based on formData
+    let dataToSend = { ...formData };
+
+    // If profilePicUrl is not null, add it to dataToSend
+    if (profilePicUrl) {
+      dataToSend.profilePic = profilePicUrl;
+    }
+
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/users/signup",
+        dataToSend
+      );
+      console.log(response.data); // Assuming successful signup
+    } catch (error) {
+      if (error.response) {
+        // Server responded with an error
+        const { error: responseError } = error.response.data;
+        setErrors(
+          Array.isArray(responseError)
+            ? responseError
+            : [{ message: responseError }]
+        );
+      } else {
+        // Request failed before reaching server
+        console.error("Error:", error.message);
+      }
+    }
+  };
 
   return (
     <div>
@@ -22,27 +94,49 @@ const Signup = ({ Setloginstate }) => {
             type="text"
             name="name"
             placeholder="Enter your Name"
+            value={formData.name}
+            onChange={handleChange}
           />
-          <label className="block pt-4 pb-1 px-1 text-[1.1rem]">username</label>
+          {/* Display name field errors */}
+          {errors.map(
+            (error, index) =>
+              error.field === "name" && (
+                <p key={index} className="text-red-600">
+                  {error.message}
+                </p>
+              )
+          )}
+
+          <label className="block pt-4 pb-1 px-1 text-[1.1rem]">Username</label>
           <input
             className="border-2 border-slate-600 rounded-md px-1 w-[100%]  h-[2rem]"
             type="text"
             name="uname"
             placeholder="Enter your email"
-            value={uname}
-            onChange={(e) => Setuname(e.target.value)}
+            value={formData.uname}
+            onChange={handleChange}
           />
+          {/* Display username field errors */}
+          {errors.map(
+            (error, index) =>
+              error.field === "uname" && (
+                <p key={index} className="text-red-600">
+                  {error.message}
+                </p>
+              )
+          )}
 
-          <label className="block pt-4 pb-1 px-1 text-[1.1rem]">password</label>
+          <label className="block pt-4 pb-1 px-1 text-[1.1rem]">Password</label>
           <div className="relative">
             <input
-              className="border-2 border-slate-600 rounded-md px-1 w-[100%]  h-[2rem]  "
+              className="border-2 border-slate-600 rounded-md px-1 w-[100%]  h-[2rem]"
               type={eyelogo ? "password" : "text"}
               name="pass"
               placeholder="Enter your Password"
-              value={pass}
-              onChange={(e) => Setpass(e.target.value)}
+              value={formData.pass}
+              onChange={handleChange}
             />
+            {/* Eye icon toggle for password */}
             <button
               className={`absolute right-2 top-1 w-[26px] `}
               onClick={() => Seteyelogo(!eyelogo)}
@@ -50,30 +144,36 @@ const Signup = ({ Setloginstate }) => {
               <img src={eyelogo ? PHidelogo : PShowlogo} alt="/" />
             </button>
           </div>
-          <label className="block pt-4 pb-1 px-1 text-[1.1rem]">
-            Reenter password
-          </label>
-          <div className="relative">
-            <input
-              className="border-2 border-slate-600 rounded-md px-1 w-[100%]  h-[2rem]  "
-              type={eyelogo ? "password" : "text"}
-              name="rpass"
-              placeholder="Enter the Same Password"
-            />
-            <button
-              className={`absolute right-2 top-1 w-[26px] `}
-              onClick={() => Setpeyelogo(!peyelogo)}
-            >
-              <img src={peyelogo ? PHidelogo : PShowlogo} alt="/" />
-            </button>
-          </div>
+          {/* Display password field errors */}
+          {errors.map(
+            (error, index) =>
+              error.field === "pass" && (
+                <p key={index} className="text-red-600">
+                  {error.message}
+                </p>
+              )
+          )}
+
           <label className="block pt-4 pb-2 px-1 text-[1.1rem]">
             Upload your profile picture
           </label>
           <input type="file" id="img" name="img" accept="image/*" />
         </div>
+        {/* Display general errors */}
+        {errors.map(
+          (error, index) =>
+            !error.field && (
+              <div key={index} className="text-red-600">
+                <p>{error.message}</p>
+              </div>
+            )
+        )}
+
         <div className="flex flex-col items-center pt-6">
-          <button className="border px-[4rem] py-[0.3rem] rounded-md bg-green-700 text-white hover:bg-slate-800 transition-all duration-300 mb-5">
+          <button
+            className="border px-[4rem] py-[0.3rem] rounded-md bg-green-700 text-white hover:bg-slate-800 transition-all duration-300 mb-5"
+            onClick={handleSignup}
+          >
             Sign Up
           </button>
           <h2>

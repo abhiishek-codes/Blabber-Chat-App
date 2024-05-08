@@ -3,7 +3,6 @@ import Navlink from "./NavLinks";
 import { Link } from "react-router-dom";
 import Logo from "url:../assets/Mobile.mp4";
 import Hamburger from "url:../assets/Hamburger.png";
-import { useMediaQuery } from "react-responsive";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -74,8 +73,8 @@ const Navbar = () => {
         >
           <ul className="flex flex-col items-center justify-center gap-y-3  mx-auto">
             <Link
-              className=" bg-green-300 py-2 px-6 rounded-md hover:scale-105 transition-all hover:text-white inline-block"
-              to="/signup"
+              className=" bg-green-300 py-2 px-6 rounded-md hover:scale-105 transition-all hover:text-white  hidden md:inline-block"
+              to="/login"
             >
               Login
             </Link>

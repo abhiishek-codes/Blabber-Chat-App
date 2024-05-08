@@ -3,11 +3,48 @@ import Logo from "../assets/logo-no-background.png";
 import PHidelogo from "../assets/eye.png";
 import PShowlogo from "../assets/hidden.png";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Login = ({ Setloginstate }) => {
-  const [uname, Setuname] = useState(null);
-  const [pass, Setpass] = useState(null);
+  const [formData, setFormData] = useState({
+    username: "",
+    password: "",
+  });
   const [eyelogo, Seteyelogo] = useState(true);
+  const [errors, setErrors] = useState([]);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleLogin = async () => {
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/users/login",
+        formData
+      );
+      console.log(response.data); // Assuming successful login
+    } catch (error) {
+      if (error.response && error.response.data.error) {
+        const { error: responseError } = error.response.data;
+        if (Array.isArray(responseError)) {
+          // Map field-specific errors to update errors state
+          setErrors(
+            responseError.map((fieldError) => ({
+              field: fieldError.field,
+              message: fieldError.message,
+            }))
+          );
+        } else {
+          // General error
+          setErrors([{ message: responseError }]);
+        }
+      } else {
+        // Request failed before reaching server
+        console.error("Error:", error.message);
+      }
+    }
+  };
 
   return (
     <>
@@ -21,22 +58,30 @@ const Login = ({ Setloginstate }) => {
           <input
             className="border-2 border-slate-600 rounded-md px-1 w-[100%]  h-[2rem]"
             type="text"
-            name="uname"
+            name="username"
             placeholder="Enter your username"
-            value={uname}
-            onChange={(e) => Setuname(e.target.value)}
+            value={formData.username}
+            onChange={handleChange}
             required
           />
+          {errors.map(
+            (error, index) =>
+              error.field === "username" && (
+                <div className="text-red-600" key={index}>
+                  <p>{error.message}</p>
+                </div>
+              )
+          )}
 
           <label className="block pt-4 pb-1 px-1 text-[1.1rem]">password</label>
           <div className="relative">
             <input
               className="border-2 border-slate-600 rounded-md px-1 w-[100%]  h-[2rem]  "
               type={eyelogo ? "password" : "text"}
-              name="pass"
+              name="password"
               placeholder="Enter your Password"
-              value={pass}
-              onChange={(e) => Setpass(e.target.value)}
+              value={formData.password}
+              onChange={handleChange}
               required
             />
             <button
@@ -46,18 +91,39 @@ const Login = ({ Setloginstate }) => {
               <img src={eyelogo ? PHidelogo : PShowlogo} alt="/" />
             </button>
           </div>
+          {errors.map(
+            (error, index) =>
+              error.field === "password" && (
+                <div className="text-red-600" key={index}>
+                  <p>{error.message}</p>
+                </div>
+              )
+          )}
         </div>
         <div className="flex flex-col items-center pt-10">
+          {errors.map(
+            (error, index) =>
+              !error.field && (
+                <div className="text-red-600" key={index}>
+                  <p>{error.message}</p>
+                </div>
+              )
+          )}
           <button
             className="border px-[4rem] py-[0.3rem] rounded-md bg-green-700 text-white hover:bg-slate-800 transition-all duration-300 mb-5"
             onClick={() => {
-              Setuname("testuser@gmail.com");
-              Setpass("1234567");
+              setFormData({
+                username: "testuser@gmail.com",
+                password: "1234567",
+              });
             }}
           >
             Get test Credentials
           </button>
-          <button className="border px-[4rem] py-[0.3rem] rounded-md bg-green-700 text-white hover:bg-slate-800 transition-all duration-300 mb-5">
+          <button
+            className="border px-[4rem] py-[0.3rem] rounded-md bg-green-700 text-white hover:bg-slate-800 transition-all duration-300 mb-5"
+            onClick={handleLogin}
+          >
             Log In
           </button>
           <h2>
