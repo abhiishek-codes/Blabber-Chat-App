@@ -3,18 +3,20 @@ const jwt = require("jsonwebtoken");
 const User = require("../model/userModel");
 
 const authUser = asyncHandler(async (req, res, next) => {
-  const authHeader = req.headers["authorization"];
+  const authHeader = req.headers.authorization;
 
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
-    throw Error("Invalid authorization header");
+    res.status(404).send("Invalid authorization header");
   }
   const token = authHeader.split(" ")[1];
 
-  jwt.verify(token, process.env.JWT_SECRET, async (err, decoded) => {
+  await jwt.verify(token, process.env.JWT_SECRET, async (err, decoded) => {
     if (err) {
       throw Error("Invalid token");
     }
+    console.log(decoded);
     req.user = await User.findById(decoded.id).select("-password");
+    console.log("Authenticated");
     next();
   });
 });

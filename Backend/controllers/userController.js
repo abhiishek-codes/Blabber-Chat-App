@@ -62,8 +62,6 @@ const allUsers = asyncHandler(async (req, res) => {
     ],
   };
 
-  console.log(keyword);
-
   const users = await User.find({
     _id: { $ne: req.user._id },
     ...keyword,
