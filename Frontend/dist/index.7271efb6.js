@@ -2964,29 +2964,52 @@ var _home = require("./pages/Home");
 var _homeDefault = parcelHelpers.interopDefault(_home);
 var _loginSignup = require("./pages/LoginSignup");
 var _loginSignupDefault = parcelHelpers.interopDefault(_loginSignup);
+var _userContext = require("./utils/userContext");
+var _chatPage = require("./pages/ChatPage");
+var _chatPageDefault = parcelHelpers.interopDefault(_chatPage);
 const App = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarDefault.default), {}, void 0, false, {
-                fileName: "src/App.js",
-                lineNumber: 11,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
-                fileName: "src/App.js",
-                lineNumber: 12,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true);
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userContext.UserProvider), {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 14,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 15,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/App.js",
+            lineNumber: 13,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false);
 };
 _c = App;
+const Chatpage = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userContext.UserProvider), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _chatPageDefault.default), {}, void 0, false, {
+            fileName: "src/App.js",
+            lineNumber: 24,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/App.js",
+        lineNumber: 23,
+        columnNumber: 5
+    }, undefined);
+};
+_c1 = Chatpage;
 const router = (0, _reactRouterDom.createBrowserRouter)([
     {
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 20,
+            lineNumber: 32,
             columnNumber: 14
         }, undefined),
         children: [
@@ -2994,7 +3017,7 @@ const router = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 24,
+                    lineNumber: 36,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3002,7 +3025,7 @@ const router = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/signup",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loginSignupDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 28,
+                    lineNumber: 40,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3010,11 +3033,19 @@ const router = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/login",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loginSignupDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 32,
+                    lineNumber: 44,
                     columnNumber: 18
                 }, undefined)
             }
         ]
+    },
+    {
+        path: "/chats",
+        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Chatpage, {}, void 0, false, {
+            fileName: "src/App.js",
+            lineNumber: 50,
+            columnNumber: 14
+        }, undefined)
     }
 ]);
 const root = (0, _reactDomDefault.default).createRoot(document.getElementById("root"));
@@ -3022,18 +3053,19 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: router
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 39,
+    lineNumber: 55,
     columnNumber: 13
 }, undefined));
-var _c;
+var _c, _c1;
 $RefreshReg$(_c, "App");
+$RefreshReg$(_c1, "Chatpage");
 
   $parcel$ReactRefreshHelpers$f00f.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","react-router-dom":"9xmpe","./components/Navbar":"4U1ks","./pages/Home":"aufND","./pages/LoginSignup":"2ZFKU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","react-router-dom":"9xmpe","./components/Navbar":"4U1ks","./pages/Home":"aufND","./pages/LoginSignup":"2ZFKU","./utils/userContext":"eBA1b","./pages/ChatPage":"kHiO9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -34712,6 +34744,7 @@ const Login = ({ Setloginstate })=>{
     });
     const [eyelogo, Seteyelogo] = (0, _react.useState)(true);
     const [errors, setErrors] = (0, _react.useState)([]);
+    const navigate = (0, _reactRouterDom.useNavigate)();
     const handleChange = (e)=>{
         setFormData({
             ...formData,
@@ -34721,7 +34754,9 @@ const Login = ({ Setloginstate })=>{
     const handleLogin = async ()=>{
         try {
             const response = await (0, _axiosDefault.default).post("http://localhost:5000/api/users/login", formData);
-            console.log(response.data); // Assuming successful login
+            localStorage.setItem("userInfo", JSON.stringify(await response.data));
+            console.log(response.data);
+            navigate("/chats"); // Assuming successful login
         } catch (error) {
             if (error.response && error.response.data.error) {
                 const { error: responseError } = error.response.data;
@@ -34749,7 +34784,7 @@ const Login = ({ Setloginstate })=>{
                         children: "Login to your Account"
                     }, void 0, false, {
                         fileName: "src/components/Login.jsx",
-                        lineNumber: 52,
+                        lineNumber: 55,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -34758,13 +34793,13 @@ const Login = ({ Setloginstate })=>{
                         alt: "Blabber"
                     }, void 0, false, {
                         fileName: "src/components/Login.jsx",
-                        lineNumber: 53,
+                        lineNumber: 56,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Login.jsx",
-                lineNumber: 51,
+                lineNumber: 54,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34778,7 +34813,7 @@ const Login = ({ Setloginstate })=>{
                                 children: "username"
                             }, void 0, false, {
                                 fileName: "src/components/Login.jsx",
-                                lineNumber: 57,
+                                lineNumber: 60,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -34791,7 +34826,7 @@ const Login = ({ Setloginstate })=>{
                                 required: true
                             }, void 0, false, {
                                 fileName: "src/components/Login.jsx",
-                                lineNumber: 58,
+                                lineNumber: 61,
                                 columnNumber: 11
                             }, undefined),
                             errors.map((error, index)=>error.field === "username" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34800,12 +34835,12 @@ const Login = ({ Setloginstate })=>{
                                         children: error.message
                                     }, void 0, false, {
                                         fileName: "src/components/Login.jsx",
-                                        lineNumber: 71,
+                                        lineNumber: 74,
                                         columnNumber: 19
                                     }, undefined)
                                 }, index, false, {
                                     fileName: "src/components/Login.jsx",
-                                    lineNumber: 70,
+                                    lineNumber: 73,
                                     columnNumber: 17
                                 }, undefined)),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
@@ -34813,7 +34848,7 @@ const Login = ({ Setloginstate })=>{
                                 children: "password"
                             }, void 0, false, {
                                 fileName: "src/components/Login.jsx",
-                                lineNumber: 76,
+                                lineNumber: 79,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34829,7 +34864,7 @@ const Login = ({ Setloginstate })=>{
                                         required: true
                                     }, void 0, false, {
                                         fileName: "src/components/Login.jsx",
-                                        lineNumber: 78,
+                                        lineNumber: 81,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34840,18 +34875,18 @@ const Login = ({ Setloginstate })=>{
                                             alt: "/"
                                         }, void 0, false, {
                                             fileName: "src/components/Login.jsx",
-                                            lineNumber: 91,
+                                            lineNumber: 94,
                                             columnNumber: 15
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/components/Login.jsx",
-                                        lineNumber: 87,
+                                        lineNumber: 90,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Login.jsx",
-                                lineNumber: 77,
+                                lineNumber: 80,
                                 columnNumber: 11
                             }, undefined),
                             errors.map((error, index)=>error.field === "password" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34860,18 +34895,18 @@ const Login = ({ Setloginstate })=>{
                                         children: error.message
                                     }, void 0, false, {
                                         fileName: "src/components/Login.jsx",
-                                        lineNumber: 98,
+                                        lineNumber: 101,
                                         columnNumber: 19
                                     }, undefined)
                                 }, index, false, {
                                     fileName: "src/components/Login.jsx",
-                                    lineNumber: 97,
+                                    lineNumber: 100,
                                     columnNumber: 17
                                 }, undefined))
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Login.jsx",
-                        lineNumber: 56,
+                        lineNumber: 59,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34883,12 +34918,12 @@ const Login = ({ Setloginstate })=>{
                                         children: error.message
                                     }, void 0, false, {
                                         fileName: "src/components/Login.jsx",
-                                        lineNumber: 108,
+                                        lineNumber: 111,
                                         columnNumber: 19
                                     }, undefined)
                                 }, index, false, {
                                     fileName: "src/components/Login.jsx",
-                                    lineNumber: 107,
+                                    lineNumber: 110,
                                     columnNumber: 17
                                 }, undefined)),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34902,7 +34937,7 @@ const Login = ({ Setloginstate })=>{
                                 children: "Get test Credentials"
                             }, void 0, false, {
                                 fileName: "src/components/Login.jsx",
-                                lineNumber: 112,
+                                lineNumber: 115,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34911,7 +34946,7 @@ const Login = ({ Setloginstate })=>{
                                 children: "Log In"
                             }, void 0, false, {
                                 fileName: "src/components/Login.jsx",
-                                lineNumber: 123,
+                                lineNumber: 126,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -34927,36 +34962,40 @@ const Login = ({ Setloginstate })=>{
                                             children: "Signup"
                                         }, void 0, false, {
                                             fileName: "src/components/Login.jsx",
-                                            lineNumber: 132,
+                                            lineNumber: 135,
                                             columnNumber: 15
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/components/Login.jsx",
-                                        lineNumber: 131,
+                                        lineNumber: 134,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Login.jsx",
-                                lineNumber: 129,
+                                lineNumber: 132,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Login.jsx",
-                        lineNumber: 103,
+                        lineNumber: 106,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Login.jsx",
-                lineNumber: 55,
+                lineNumber: 58,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(Login, "eJQVIGrV9MniEV5m/FdZF7IOrL0=");
+_s(Login, "tMp3qKNmKcQT3gn7DrMGoqivefI=", false, function() {
+    return [
+        (0, _reactRouterDom.useNavigate)
+    ];
+});
 _c = Login;
 exports.default = Login;
 var _c;
@@ -39383,6 +39422,7 @@ const Signup = ({ Setloginstate })=>{
     const [selectedFile, setSelectedFile] = (0, _react.useState)(null);
     const [eyelogo, Seteyelogo] = (0, _react.useState)(true);
     const [errors, setErrors] = (0, _react.useState)([]);
+    const navigate = (0, _reactRouterDom.useNavigate)();
     const handleChange = (e)=>{
         setFormData({
             ...formData,
@@ -39415,11 +39455,13 @@ const Signup = ({ Setloginstate })=>{
         let dataToSend = {
             ...formData
         };
-        // If profilePicUrl is not null, add it to dataToSend
+        // If rofilePicUrl is not null, add it to dataToSend
         if (profilePicUrl) dataToSend.profilePic = profilePicUrl;
         try {
             const response = await (0, _axiosDefault.default).post("http://localhost:5000/api/users/signup", dataToSend);
-            console.log(response.data); // Assuming successful signup
+            localStorage.setItem("userInfo", JSON.stringify(await response.data));
+            console.log(response.data);
+            navigate("/chats"); // Assuming successful signup
         } catch (error) {
             if (error.response) {
                 // Server responded with an error
@@ -39440,7 +39482,7 @@ const Signup = ({ Setloginstate })=>{
                 children: "Where great minds blabber"
             }, void 0, false, {
                 fileName: "src/components/Signup.jsx",
-                lineNumber: 86,
+                lineNumber: 90,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -39448,7 +39490,7 @@ const Signup = ({ Setloginstate })=>{
                 children: "Sign up today."
             }, void 0, false, {
                 fileName: "src/components/Signup.jsx",
-                lineNumber: 87,
+                lineNumber: 91,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -39462,7 +39504,7 @@ const Signup = ({ Setloginstate })=>{
                                 children: "Name"
                             }, void 0, false, {
                                 fileName: "src/components/Signup.jsx",
-                                lineNumber: 91,
+                                lineNumber: 95,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -39474,7 +39516,7 @@ const Signup = ({ Setloginstate })=>{
                                 onChange: handleChange
                             }, void 0, false, {
                                 fileName: "src/components/Signup.jsx",
-                                lineNumber: 92,
+                                lineNumber: 96,
                                 columnNumber: 11
                             }, undefined),
                             errors.map((error, index)=>error.field === "name" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -39482,7 +39524,7 @@ const Signup = ({ Setloginstate })=>{
                                     children: error.message
                                 }, index, false, {
                                     fileName: "src/components/Signup.jsx",
-                                    lineNumber: 104,
+                                    lineNumber: 108,
                                     columnNumber: 17
                                 }, undefined)),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
@@ -39490,7 +39532,7 @@ const Signup = ({ Setloginstate })=>{
                                 children: "Username"
                             }, void 0, false, {
                                 fileName: "src/components/Signup.jsx",
-                                lineNumber: 110,
+                                lineNumber: 114,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -39502,7 +39544,7 @@ const Signup = ({ Setloginstate })=>{
                                 onChange: handleChange
                             }, void 0, false, {
                                 fileName: "src/components/Signup.jsx",
-                                lineNumber: 111,
+                                lineNumber: 115,
                                 columnNumber: 11
                             }, undefined),
                             errors.map((error, index)=>error.field === "uname" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -39510,7 +39552,7 @@ const Signup = ({ Setloginstate })=>{
                                     children: error.message
                                 }, index, false, {
                                     fileName: "src/components/Signup.jsx",
-                                    lineNumber: 123,
+                                    lineNumber: 127,
                                     columnNumber: 17
                                 }, undefined)),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
@@ -39518,7 +39560,7 @@ const Signup = ({ Setloginstate })=>{
                                 children: "Password"
                             }, void 0, false, {
                                 fileName: "src/components/Signup.jsx",
-                                lineNumber: 129,
+                                lineNumber: 133,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -39533,7 +39575,7 @@ const Signup = ({ Setloginstate })=>{
                                         onChange: handleChange
                                     }, void 0, false, {
                                         fileName: "src/components/Signup.jsx",
-                                        lineNumber: 131,
+                                        lineNumber: 135,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -39544,18 +39586,18 @@ const Signup = ({ Setloginstate })=>{
                                             alt: "/"
                                         }, void 0, false, {
                                             fileName: "src/components/Signup.jsx",
-                                            lineNumber: 144,
+                                            lineNumber: 148,
                                             columnNumber: 15
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/components/Signup.jsx",
-                                        lineNumber: 140,
+                                        lineNumber: 144,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Signup.jsx",
-                                lineNumber: 130,
+                                lineNumber: 134,
                                 columnNumber: 11
                             }, undefined),
                             errors.map((error, index)=>error.field === "pass" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -39563,7 +39605,7 @@ const Signup = ({ Setloginstate })=>{
                                     children: error.message
                                 }, index, false, {
                                     fileName: "src/components/Signup.jsx",
-                                    lineNumber: 151,
+                                    lineNumber: 155,
                                     columnNumber: 17
                                 }, undefined)),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
@@ -39571,7 +39613,7 @@ const Signup = ({ Setloginstate })=>{
                                 children: "Upload your profile picture"
                             }, void 0, false, {
                                 fileName: "src/components/Signup.jsx",
-                                lineNumber: 157,
+                                lineNumber: 161,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -39581,13 +39623,13 @@ const Signup = ({ Setloginstate })=>{
                                 accept: "image/*"
                             }, void 0, false, {
                                 fileName: "src/components/Signup.jsx",
-                                lineNumber: 160,
+                                lineNumber: 164,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Signup.jsx",
-                        lineNumber: 90,
+                        lineNumber: 94,
                         columnNumber: 9
                     }, undefined),
                     errors.map((error, index)=>!error.field && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -39596,12 +39638,12 @@ const Signup = ({ Setloginstate })=>{
                                 children: error.message
                             }, void 0, false, {
                                 fileName: "src/components/Signup.jsx",
-                                lineNumber: 167,
+                                lineNumber: 171,
                                 columnNumber: 17
                             }, undefined)
                         }, index, false, {
                             fileName: "src/components/Signup.jsx",
-                            lineNumber: 166,
+                            lineNumber: 170,
                             columnNumber: 15
                         }, undefined)),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -39613,7 +39655,7 @@ const Signup = ({ Setloginstate })=>{
                                 children: "Sign Up"
                             }, void 0, false, {
                                 fileName: "src/components/Signup.jsx",
-                                lineNumber: 173,
+                                lineNumber: 177,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -39629,40 +39671,44 @@ const Signup = ({ Setloginstate })=>{
                                             children: "Login"
                                         }, void 0, false, {
                                             fileName: "src/components/Signup.jsx",
-                                            lineNumber: 182,
+                                            lineNumber: 186,
                                             columnNumber: 15
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/components/Signup.jsx",
-                                        lineNumber: 181,
+                                        lineNumber: 185,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Signup.jsx",
-                                lineNumber: 179,
+                                lineNumber: 183,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Signup.jsx",
-                        lineNumber: 172,
+                        lineNumber: 176,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Signup.jsx",
-                lineNumber: 89,
+                lineNumber: 93,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Signup.jsx",
-        lineNumber: 85,
+        lineNumber: 89,
         columnNumber: 5
     }, undefined);
 };
-_s(Signup, "QS/YNhGMzeoWS/SG3/jW5EeDSzw=");
+_s(Signup, "fLuGulzQMDF0heVQ83uRR384SJI=", false, function() {
+    return [
+        (0, _reactRouterDom.useNavigate)
+    ];
+});
 _c = Signup;
 exports.default = Signup;
 var _c;
@@ -39673,6 +39719,1275 @@ $RefreshReg$(_c, "Signup");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../assets/eye.png":"j0uKt","../assets/hidden.png":"7swdN","react-router-dom":"9xmpe","axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequire10c2")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../assets/eye.png":"j0uKt","../assets/hidden.png":"7swdN","react-router-dom":"9xmpe","axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"eBA1b":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$268f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$268f.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "userContext", ()=>userContext);
+parcelHelpers.export(exports, "UserProvider", ()=>UserProvider);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _s = $RefreshSig$();
+const userContext = /*#__PURE__*/ (0, _react.createContext)();
+const UserProvider = ({ children })=>{
+    _s();
+    const [user, setUser] = (0, _react.useState)();
+    const [allChats, setAllchats] = (0, _react.useState)([]);
+    const [searchuserId, setsearchuserId] = (0, _react.useState)(null);
+    const [activeChat, setactiveChat] = (0, _react.useState)(null);
+    const [chatName, setchatName] = (0, _react.useState)(null);
+    const navigate = (0, _reactRouterDom.useNavigate)();
+    const [token, setToken] = (0, _react.useState)(null); // Moved inside the component
+    (0, _react.useEffect)(()=>{
+        const userinfo = JSON.parse(localStorage.getItem("userInfo"));
+        setUser(userinfo);
+        setToken(userinfo?.token);
+        if (!userinfo) navigate("/");
+    }, []); // Removed useNavigate from the dependency array
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(userContext.Provider, {
+        value: {
+            user,
+            setUser,
+            allChats,
+            setAllchats,
+            searchuserId,
+            setsearchuserId,
+            token,
+            setToken,
+            activeChat,
+            setactiveChat,
+            chatName,
+            setchatName
+        },
+        children: children
+    }, void 0, false, {
+        fileName: "src/utils/userContext.js",
+        lineNumber: 24,
+        columnNumber: 5
+    }, undefined);
+};
+_s(UserProvider, "O5xm8MbtHLvwATqDZwiY+qy+4uc=", false, function() {
+    return [
+        (0, _reactRouterDom.useNavigate)
+    ];
+});
+_c = UserProvider;
+var _c;
+$RefreshReg$(_c, "UserProvider");
+
+  $parcel$ReactRefreshHelpers$268f.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kHiO9":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$46ba = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$46ba.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _header = require("../components/Chat/Header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
+var _allChats = require("../components/Chat/AllChats");
+var _allChatsDefault = parcelHelpers.interopDefault(_allChats);
+var _sendMessage = require("../components/Chat/SendMessage");
+var _sendMessageDefault = parcelHelpers.interopDefault(_sendMessage);
+const ChatPage = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
+                fileName: "src/pages/ChatPage.jsx",
+                lineNumber: 9,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex flex-col h-[87vh] py-3 px-4 font-['Basis_Grotesque_Pro_Black'] ",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "flex justify-between h-full gap-x-4",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "lg:w-[32vw] xl:w-[25vw] h-full",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _allChatsDefault.default), {}, void 0, false, {
+                                fileName: "src/pages/ChatPage.jsx",
+                                lineNumber: 13,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/pages/ChatPage.jsx",
+                            lineNumber: 12,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: " w-[85vw] lg:w-[68vw] xl:w-[75vw] h-full mx-auto",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sendMessageDefault.default), {}, void 0, false, {
+                                fileName: "src/pages/ChatPage.jsx",
+                                lineNumber: 16,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/pages/ChatPage.jsx",
+                            lineNumber: 15,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/pages/ChatPage.jsx",
+                    lineNumber: 11,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/pages/ChatPage.jsx",
+                lineNumber: 10,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/pages/ChatPage.jsx",
+        lineNumber: 8,
+        columnNumber: 5
+    }, undefined);
+};
+_c = ChatPage;
+exports.default = ChatPage;
+var _c;
+$RefreshReg$(_c, "ChatPage");
+
+  $parcel$ReactRefreshHelpers$46ba.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/Chat/Header":"gFHmj","../components/Chat/AllChats":"kBEyN","../components/Chat/SendMessage":"8QwIL","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gFHmj":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b362 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b362.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _userContext = require("../../utils/userContext");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _usersCard = require("./UsersCard");
+var _usersCardDefault = parcelHelpers.interopDefault(_usersCard);
+var _reactRouterDom = require("react-router-dom");
+var _profileModal = require("./ProfileModal");
+var _profileModalDefault = parcelHelpers.interopDefault(_profileModal);
+var _s = $RefreshSig$();
+const Header = ()=>{
+    _s();
+    const { user, setUser } = (0, _react.useContext)((0, _userContext.userContext));
+    const { allChats, setAllchats, setactiveChat, activeChat } = (0, _react.useContext)((0, _userContext.userContext));
+    const [sbar, setsbar] = (0, _react.useState)(false);
+    const [suser, setsuser] = (0, _react.useState)("");
+    const [users, setusers] = (0, _react.useState)([]);
+    const [filterusers, setfilterusers] = (0, _react.useState)(users);
+    const [tgProfile, settgProfile] = (0, _react.useState)(false);
+    const userinfo = JSON.parse(localStorage.getItem("userInfo"));
+    const [profileCard, setprofileCard] = (0, _react.useState)(false);
+    const navigate = (0, _reactRouterDom.useNavigate)();
+    const clickHandler = ()=>{
+        console.log(userinfo);
+        const token = userinfo.token;
+        (0, _axiosDefault.default).get(`http://localhost:5000/api/users/?search=${suser}`, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }).then((response)=>{
+            setusers([]);
+            setusers(response.data);
+            setsuser("");
+            console.log(response.data);
+        }).catch((err)=>{
+            console.log(err.message);
+        });
+    };
+    const LogoutHandler = ()=>{
+        localStorage.removeItem("userInfo");
+        setUser(null);
+        navigate("/");
+    };
+    (0, _react.useEffect)(()=>{
+        const handleToggleProfile = (event)=>{
+            if (!event.target.closest(".profile-dropdown")) settgProfile((prevValue)=>false);
+            if (!event.target.closest(".side-bar")) setsbar((prevValue)=>false);
+        };
+        document.addEventListener("click", handleToggleProfile);
+        return ()=>{
+            document.removeEventListener("click", handleToggleProfile);
+        };
+    }, []);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "bg-slate-900 text-white py-5 px-6 ",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "flex justify-between items-center font-['Basis_Grotesque_Pro_Black']",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: "inline-block px-3 py-2 bg-white hover:bg-slate-100 text-black rounded-lg transition-transform duration-200 transform-gpu active:scale-95 text-sm sm:text-md side-bar",
+                                onClick: ()=>setsbar(!sbar),
+                                children: "\uD83D\uDD0D Search for User"
+                            }, void 0, false, {
+                                fileName: "src/components/Chat/Header.jsx",
+                                lineNumber: 72,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/Header.jsx",
+                            lineNumber: 71,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                            className: "hidden md:block text-3xl tracking-wide transform -translate-x-3",
+                            children: "Blabber : The Chat App"
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/Header.jsx",
+                            lineNumber: 79,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "inline-block relative",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: "hover:bg-white hover:text-black px-4 py-2 hover:rounded-md cursor-pointer flex items-center justify-center gap-x-2 profile-dropdown transition-transform duration-200 transform-gpu active:scale-75",
+                                onClick: ()=>settgProfile(!tgProfile),
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                        src: userinfo?.pic,
+                                        alt: "Profile",
+                                        className: "w-10 h-10"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Chat/Header.jsx",
+                                        lineNumber: 87,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                        children: "\u25BC"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Chat/Header.jsx",
+                                        lineNumber: 88,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/Chat/Header.jsx",
+                                lineNumber: 83,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/Header.jsx",
+                            lineNumber: 82,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Chat/Header.jsx",
+                    lineNumber: 70,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/Chat/Header.jsx",
+                lineNumber: 69,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: `profile-dropdown fixed right-0 py-2 flex-col justify-center items-center  px-10 bg-slate-900 text-white  text-center transform transition-transform duration-200 ease-in-out font-['Basis_Grotesque_Pro_Black'] ${tgProfile ? "translate-y-0" : "-translate-y-48 "}`,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "mb-2 block hover:bg-white hover:text-black px-3 py-2 rounded-md transition-transform duration-200 transform-gpu active:scale-75",
+                        onClick: ()=>{
+                            settgProfile(false);
+                            setprofileCard(true);
+                        },
+                        children: "Profile"
+                    }, void 0, false, {
+                        fileName: "src/components/Chat/Header.jsx",
+                        lineNumber: 101,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "mb-1 block hover:bg-white hover:text-black transition-all duration-300 px-3 py-2 rounded-md transform-gpu active:scale-75",
+                        onClick: ()=>LogoutHandler(),
+                        children: "Logout"
+                    }, void 0, false, {
+                        fileName: "src/components/Chat/Header.jsx",
+                        lineNumber: 110,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Chat/Header.jsx",
+                lineNumber: 96,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: `side-bar fixed inset-y-0 left-0 w-[75%] md:w-[45%]  xl:w-[30%] h-screen bg-white z-50 text-center transform transition-transform duration-500 ease-in-out font-['Basis_Grotesque_Pro_Black'] ${sbar ? "translate-x-0" : "-translate-x-full"}`,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "py-5 w-[95%] mx-auto px-4",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                className: "text-xl pb-5",
+                                children: "Search for users"
+                            }, void 0, false, {
+                                fileName: "src/components/Chat/Header.jsx",
+                                lineNumber: 125,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex justify-between items-center  mx-auto gap-x-4",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                        type: "text",
+                                        placeholder: "Search for users",
+                                        className: "w-full py-2 px-1 rounded-lg bg-white border-2 border-black text-black",
+                                        value: suser,
+                                        onChange: (e)=>setsuser(e.target.value)
+                                    }, void 0, false, {
+                                        fileName: "src/components/Chat/Header.jsx",
+                                        lineNumber: 127,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                        className: "text-3xl  transition-transform duration-100 transform-gpu active:scale-75 ",
+                                        onClick: ()=>{
+                                            clickHandler();
+                                            setusers([]);
+                                        },
+                                        children: "\uD83D\uDD0D"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Chat/Header.jsx",
+                                        lineNumber: 134,
+                                        columnNumber: 13
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/Chat/Header.jsx",
+                                lineNumber: 126,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Chat/Header.jsx",
+                        lineNumber: 124,
+                        columnNumber: 9
+                    }, undefined),
+                    users != undefined && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex-col  justify-center items-center w-[95%] mx-auto px-4",
+                        children: users.map((val, index)=>{
+                            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "pb-5  text-md md:text-lg ",
+                                children: /*#__PURE__*/ (0, _react.createElement)((0, _usersCardDefault.default), {
+                                    ...val,
+                                    key: index,
+                                    idx: index,
+                                    data: val,
+                                    setsbar: setsbar,
+                                    __source: {
+                                        fileName: "src/components/Chat/Header.jsx",
+                                        lineNumber: 150,
+                                        columnNumber: 19
+                                    },
+                                    __self: undefined
+                                })
+                            }, void 0, false, {
+                                fileName: "src/components/Chat/Header.jsx",
+                                lineNumber: 149,
+                                columnNumber: 17
+                            }, undefined);
+                        })
+                    }, void 0, false, {
+                        fileName: "src/components/Chat/Header.jsx",
+                        lineNumber: 146,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Chat/Header.jsx",
+                lineNumber: 119,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: `fixed z-50 top-[50%] left-[50%] font-['Basis_Grotesque_Pro_Black'] transform -translate-x-[50%] -translate-y-[50%] transition-opacity duration-500 ${profileCard ? "opacity-100" : "opacity-0 hidden"}`,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "relative",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileModalDefault.default), {
+                            ...userinfo
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/Header.jsx",
+                            lineNumber: 171,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/Chat/Header.jsx",
+                        lineNumber: 170,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "absolute top-[24%] right-[5%] sm:top-[25%] sm:right-[7%] ",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            onClick: ()=>setprofileCard(false),
+                            children: "\u274C"
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/Header.jsx",
+                            lineNumber: 175,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/Chat/Header.jsx",
+                        lineNumber: 174,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Chat/Header.jsx",
+                lineNumber: 165,
+                columnNumber: 7
+            }, undefined),
+            profileCard && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "fixed inset-0 bg-black opacity-80 z-40 "
+            }, void 0, false, {
+                fileName: "src/components/Chat/Header.jsx",
+                lineNumber: 181,
+                columnNumber: 9
+            }, undefined),
+            sbar && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "fixed inset-0 bg-black opacity-80 z-40"
+            }, void 0, false, {
+                fileName: "src/components/Chat/Header.jsx",
+                lineNumber: 185,
+                columnNumber: 16
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(Header, "/vbsUkhjc2d+m9EJgP1JXaw7uBI=", false, function() {
+    return [
+        (0, _reactRouterDom.useNavigate)
+    ];
+});
+_c = Header;
+exports.default = Header;
+var _c;
+$RefreshReg$(_c, "Header");
+
+  $parcel$ReactRefreshHelpers$b362.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../utils/userContext":"eBA1b","axios":"jo6P5","./UsersCard":"2wmLS","react-router-dom":"9xmpe","./ProfileModal":"03Gnn","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2wmLS":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$42ee = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$42ee.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _avatar = require("./Avatar");
+var _avatarDefault = parcelHelpers.interopDefault(_avatar);
+var _userContextJs = require("../../utils/userContext.js");
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _s = $RefreshSig$();
+const UsersCard = ({ name, email, _id, setsbar, idx, data })=>{
+    _s();
+    const { searchuserId, setsearchuserId, token, setAllchats, setactiveChat, activeChat } = (0, _react.useContext)((0, _userContextJs.userContext));
+    //console.log(token);
+    const ClickHandler = ()=>{
+        const formdata = {
+            userid: data._id
+        };
+        console.log(formdata);
+        console.log(token);
+        (0, _axiosDefault.default).post("http://localhost:5000/api/chat/", formdata, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }).then((response)=>{
+            setAllchats((prevChats)=>{
+                const exists = prevChats.some((chat)=>chat._id === response.data._id);
+                if (!exists) return [
+                    response.data,
+                    ...prevChats
+                ];
+                else return [
+                    prevChats.find((chat)=>chat._id === response.data._id),
+                    ...prevChats.filter((chat)=>chat._id !== response.data._id)
+                ];
+            });
+            setactiveChat(response.data._id);
+            console.log(response.data);
+        }).catch((error)=>{
+            console.log(error.message);
+        });
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+        className: "w-full border-2 border-black rounded-lg bg-slate-200 py-3 text-left mx-auto hover:bg-green-400  transition-all duration-200 hover:border-white",
+        onClick: ()=>{
+            setsbar((prev)=>!prev);
+            setsearchuserId(data.id);
+            ClickHandler();
+        },
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "flex gap-x-3 items-center px-2",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _avatarDefault.default), {
+                    name: name
+                }, void 0, false, {
+                    fileName: "src/components/Chat/UsersCard.jsx",
+                    lineNumber: 59,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "flex-col gap-y-2",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                            children: name
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/UsersCard.jsx",
+                            lineNumber: 61,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                            children: email
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/UsersCard.jsx",
+                            lineNumber: 62,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Chat/UsersCard.jsx",
+                    lineNumber: 60,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Chat/UsersCard.jsx",
+            lineNumber: 58,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/Chat/UsersCard.jsx",
+        lineNumber: 50,
+        columnNumber: 5
+    }, undefined);
+};
+_s(UsersCard, "wyOg3Hc1aAkx7q+2/bWky6P7qyM=");
+_c = UsersCard;
+exports.default = UsersCard;
+var _c;
+$RefreshReg$(_c, "UsersCard");
+
+  $parcel$ReactRefreshHelpers$42ee.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Avatar":"kBMDu","../../utils/userContext.js":"eBA1b","axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kBMDu":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b655 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b655.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const Avatar = ({ name })=>{
+    // Extract the first letter from the name
+    const firstLetter = name.charAt(0).toUpperCase();
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "w-10 h-10 bg-blue-900 text-white rounded-full flex items-center justify-center text-xl",
+        children: firstLetter
+    }, void 0, false, {
+        fileName: "src/components/Chat/Avatar.jsx",
+        lineNumber: 8,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Avatar;
+exports.default = Avatar;
+var _c;
+$RefreshReg$(_c, "Avatar");
+
+  $parcel$ReactRefreshHelpers$b655.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"03Gnn":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$7b7f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7b7f.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const ProfileModal = ({ name, email, pic })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "flex items-center justify-center min-h-screen",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "bg-slate-300 w-[85vw] h-[55vh] sm:w-[60vw]  md:w-[53vw] md:h-[55vh]   rounded-lg shadow-lg flex flex-col items-center justify-center gap-y-6",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "text-xl sm:text-3xl tracking-wide",
+                        children: name
+                    }, void 0, false, {
+                        fileName: "src/components/Chat/ProfileModal.jsx",
+                        lineNumber: 11,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: pic,
+                        alt: "Profile Pic",
+                        className: "w-40 h-440 rounded-full"
+                    }, void 0, false, {
+                        fileName: "src/components/Chat/ProfileModal.jsx",
+                        lineNumber: 12,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "text-xl sm:text-2xl tracking-wide ",
+                        children: [
+                            "Email : ",
+                            email
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Chat/ProfileModal.jsx",
+                        lineNumber: 17,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Chat/ProfileModal.jsx",
+                lineNumber: 7,
+                columnNumber: 9
+            }, undefined)
+        }, void 0, false, {
+            fileName: "src/components/Chat/ProfileModal.jsx",
+            lineNumber: 6,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false);
+};
+_c = ProfileModal;
+exports.default = ProfileModal;
+var _c;
+$RefreshReg$(_c, "ProfileModal");
+
+  $parcel$ReactRefreshHelpers$7b7f.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kBEyN":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$cc2f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$cc2f.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _userContextJs = require("../../utils/userContext.js");
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _chatUserCardJsx = require("./ChatUserCard.jsx");
+var _chatUserCardJsxDefault = parcelHelpers.interopDefault(_chatUserCardJsx);
+var _createGcJsx = require("./CreateGc.jsx");
+var _createGcJsxDefault = parcelHelpers.interopDefault(_createGcJsx);
+var _s = $RefreshSig$();
+const AllChats = ()=>{
+    _s();
+    const { allChats, setAllchats } = (0, _react.useContext)((0, _userContextJs.userContext));
+    const [creategc, setcreatgc] = (0, _react.useState)(false);
+    const userinfo = JSON.parse(localStorage.getItem("userInfo"));
+    const token = userinfo.token;
+    (0, _react.useEffect)(()=>{
+        const url = "http://localhost:5000/api/chat/";
+        (0, _axiosDefault.default).get(url, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }).then((response)=>{
+            setAllchats(response.data);
+        }).catch((err)=>console.log(err.message));
+    }, []);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "w-full h-full border-2 border-black rounded-lg bg-slate-50",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex justify-between pt-5 px-3 items-center",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                className: "text-2xl",
+                                children: "My Chats"
+                            }, void 0, false, {
+                                fileName: "src/components/Chat/AllChats.jsx",
+                                lineNumber: 32,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: "bg-slate-900 text-white py-2 px-2 rounded-md text-sm transition-transform duration-200 transform-gpu active:scale-75",
+                                onClick: ()=>setcreatgc(true),
+                                children: "Create Grp Chat \u2795"
+                            }, void 0, false, {
+                                fileName: "src/components/Chat/AllChats.jsx",
+                                lineNumber: 33,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Chat/AllChats.jsx",
+                        lineNumber: 31,
+                        columnNumber: 9
+                    }, undefined),
+                    allChats && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex flex-col gap-y-4 pt-4 items-center justify-center px-2",
+                        children: allChats.map((val, index)=>{
+                            return /*#__PURE__*/ (0, _react.createElement)((0, _chatUserCardJsxDefault.default), {
+                                ...val,
+                                key: index,
+                                data: val,
+                                idx: index,
+                                __source: {
+                                    fileName: "src/components/Chat/AllChats.jsx",
+                                    lineNumber: 44,
+                                    columnNumber: 17
+                                },
+                                __self: undefined
+                            });
+                        })
+                    }, void 0, false, {
+                        fileName: "src/components/Chat/AllChats.jsx",
+                        lineNumber: 41,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Chat/AllChats.jsx",
+                lineNumber: 30,
+                columnNumber: 7
+            }, undefined),
+            creategc && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "fixed inset-0 flex items-center justify-center z-50",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "bg-slate-100 p-4 rounded-lg shadow-lg max-w-lg w-full",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _createGcJsxDefault.default), {}, void 0, false, {
+                        fileName: "src/components/Chat/AllChats.jsx",
+                        lineNumber: 56,
+                        columnNumber: 13
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/Chat/AllChats.jsx",
+                    lineNumber: 55,
+                    columnNumber: 11
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/Chat/AllChats.jsx",
+                lineNumber: 54,
+                columnNumber: 9
+            }, undefined),
+            creategc && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "fixed inset-0 bg-black opacity-[88%] z-40"
+            }, void 0, false, {
+                fileName: "src/components/Chat/AllChats.jsx",
+                lineNumber: 62,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(AllChats, "jEQ+YeBTQLYG0mMsVTtJ4WPWk6k=");
+_c = AllChats;
+exports.default = AllChats;
+var _c;
+$RefreshReg$(_c, "AllChats");
+
+  $parcel$ReactRefreshHelpers$cc2f.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../utils/userContext.js":"eBA1b","axios":"jo6P5","./ChatUserCard.jsx":"gkI3X","./CreateGc.jsx":"lADQG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkI3X":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$9f04 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9f04.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _groupchatCard = require("./groupchatCard");
+var _groupchatCardDefault = parcelHelpers.interopDefault(_groupchatCard);
+var _onetooneCard = require("./onetooneCard");
+var _onetooneCardDefault = parcelHelpers.interopDefault(_onetooneCard);
+var _userContext = require("../../utils/userContext");
+var _s = $RefreshSig$();
+const ChatUserCard = ({ groupChat, data, idx })=>{
+    _s();
+    const { searchuserId, setsearchuserId, token, setAllchats, setactiveChat, activeChat } = (0, _react.useContext)((0, _userContext.userContext));
+    // console.log(data);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+        onClick: ()=>setactiveChat(data._id),
+        className: `border-2 px-2 py-2 rounded-md w-full text-left transition-all duration-300 ${data._id == activeChat ? "bg-black text-white hover:bg-black hover:text-white" : " hover:bg-black hover:text-white"}`,
+        children: groupChat ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _groupchatCardDefault.default), {
+            data: data
+        }, void 0, false, {
+            fileName: "src/components/Chat/ChatUserCard.jsx",
+            lineNumber: 27,
+            columnNumber: 20
+        }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _onetooneCardDefault.default), {
+            data: data
+        }, void 0, false, {
+            fileName: "src/components/Chat/ChatUserCard.jsx",
+            lineNumber: 27,
+            columnNumber: 52
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/Chat/ChatUserCard.jsx",
+        lineNumber: 18,
+        columnNumber: 5
+    }, undefined);
+};
+_s(ChatUserCard, "wyOg3Hc1aAkx7q+2/bWky6P7qyM=");
+_c = ChatUserCard;
+exports.default = ChatUserCard;
+var _c;
+$RefreshReg$(_c, "ChatUserCard");
+
+  $parcel$ReactRefreshHelpers$9f04.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./groupchatCard":"eKMbX","./onetooneCard":"883j5","../../utils/userContext":"eBA1b","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"eKMbX":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$99ea = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$99ea.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const GroupchatCard = ({ data })=>{
+    const { users } = data;
+    const { latestMessage } = data;
+    const name = data.chatName;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "flex flex-col",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                className: "text-[1em]",
+                children: name
+            }, void 0, false, {
+                fileName: "src/components/Chat/groupchatCard.jsx",
+                lineNumber: 9,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex text-[0.8em]",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: latestMessage?.sender?.name
+                    }, void 0, false, {
+                        fileName: "src/components/Chat/groupchatCard.jsx",
+                        lineNumber: 11,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: latestMessage?.content
+                    }, void 0, false, {
+                        fileName: "src/components/Chat/groupchatCard.jsx",
+                        lineNumber: 12,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Chat/groupchatCard.jsx",
+                lineNumber: 10,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Chat/groupchatCard.jsx",
+        lineNumber: 8,
+        columnNumber: 5
+    }, undefined);
+};
+_c = GroupchatCard;
+exports.default = GroupchatCard;
+var _c;
+$RefreshReg$(_c, "GroupchatCard");
+
+  $parcel$ReactRefreshHelpers$99ea.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"883j5":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0a01 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0a01.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _userContext = require("../../utils/userContext");
+const OnetooneCard = ({ data })=>{
+    const { users } = data;
+    const { latestMessage } = data;
+    const name = users[1].name;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "flex flex-col",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                className: "text-[1em]",
+                children: name
+            }, void 0, false, {
+                fileName: "src/components/Chat/onetooneCard.jsx",
+                lineNumber: 11,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex text-[0.8em]",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: latestMessage?.sender?.name
+                    }, void 0, false, {
+                        fileName: "src/components/Chat/onetooneCard.jsx",
+                        lineNumber: 13,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: latestMessage?.content
+                    }, void 0, false, {
+                        fileName: "src/components/Chat/onetooneCard.jsx",
+                        lineNumber: 14,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Chat/onetooneCard.jsx",
+                lineNumber: 12,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Chat/onetooneCard.jsx",
+        lineNumber: 10,
+        columnNumber: 5
+    }, undefined);
+};
+_c = OnetooneCard;
+exports.default = OnetooneCard;
+var _c;
+$RefreshReg$(_c, "OnetooneCard");
+
+  $parcel$ReactRefreshHelpers$0a01.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../utils/userContext":"eBA1b","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lADQG":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$9715 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9715.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _userContext = require("../../utils/userContext");
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _avatar = require("./Avatar");
+var _avatarDefault = parcelHelpers.interopDefault(_avatar);
+var _s = $RefreshSig$();
+const CreateGc = ()=>{
+    _s();
+    const [gcName, setGcName] = (0, _react.useState)("");
+    const [gcUserSearch, setGcUserSearch] = (0, _react.useState)("");
+    const [searchUsers, setSearchUsers] = (0, _react.useState)([]);
+    const [gcUsers, setGcUsers] = (0, _react.useState)([]);
+    const { token } = (0, _react.useContext)((0, _userContext.userContext));
+    const [toggle, settoggle] = (0, _react.useState)(false);
+    (0, _react.useEffect)(()=>{
+        console.log(gcUserSearch);
+        (0, _axiosDefault.default).get(`http://localhost:5000/api/users/?search=${gcUserSearch}`, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }).then((response)=>{
+            console.log(response.data);
+            setSearchUsers(response.data);
+        }).catch((err)=>{
+            console.log(err.message);
+        });
+    }, [
+        gcUserSearch
+    ]);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "w-full relative",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: " border-black h-full w-full flex flex-col justify-center items-center gap-y-5",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                            className: "text-xl pt-5",
+                            children: "Create Group Chat"
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/CreateGc.jsx",
+                            lineNumber: 36,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            type: "text",
+                            className: "w-[70%] border-2 px-2 py-1 rounded-md",
+                            placeholder: "Enter Group Name",
+                            value: gcName,
+                            onChange: (e)=>setGcName(e.target.value)
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/CreateGc.jsx",
+                            lineNumber: 37,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            type: "text",
+                            className: "w-[70%] border-2 px-2 py-1 rounded-md",
+                            placeholder: "Add Users eg Dad Mom",
+                            value: gcUserSearch,
+                            onChange: (e)=>{
+                                settoggle(true);
+                                setGcUserSearch(e.target.value);
+                            }
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/CreateGc.jsx",
+                            lineNumber: 44,
+                            columnNumber: 11
+                        }, undefined),
+                        toggle && searchUsers.length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "w-[70%] max-h-60 overflow-y-auto hide-scrollbar border-2 border-black rounded-md mt-2",
+                            children: searchUsers.map((val, idx)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                    className: "w-full border-b border-black bg-slate-50 py-2 text-left hover:bg-green-400 transition-all duration-200 hover:border-white",
+                                    onClick: ()=>{
+                                        setGcUsers((prev)=>{
+                                            if (prev.includes(val)) return prev;
+                                            return [
+                                                ...prev,
+                                                val
+                                            ];
+                                        });
+                                        settoggle(false);
+                                        setGcUserSearch("");
+                                    },
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex gap-x-3 items-center px-2",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _avatarDefault.default), {
+                                                name: val.name
+                                            }, void 0, false, {
+                                                fileName: "src/components/Chat/CreateGc.jsx",
+                                                lineNumber: 71,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "flex-col gap-y-2",
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                                        children: val.name
+                                                    }, void 0, false, {
+                                                        fileName: "src/components/Chat/CreateGc.jsx",
+                                                        lineNumber: 73,
+                                                        columnNumber: 23
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                                        children: val.email
+                                                    }, void 0, false, {
+                                                        fileName: "src/components/Chat/CreateGc.jsx",
+                                                        lineNumber: 74,
+                                                        columnNumber: 23
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/components/Chat/CreateGc.jsx",
+                                                lineNumber: 72,
+                                                columnNumber: 21
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/Chat/CreateGc.jsx",
+                                        lineNumber: 70,
+                                        columnNumber: 19
+                                    }, undefined)
+                                }, idx, false, {
+                                    fileName: "src/components/Chat/CreateGc.jsx",
+                                    lineNumber: 58,
+                                    columnNumber: 17
+                                }, undefined))
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/CreateGc.jsx",
+                            lineNumber: 56,
+                            columnNumber: 13
+                        }, undefined),
+                        gcUsers.length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "flex flex-wrap items-center w-[70%] gap-x-1 gap-y-2",
+                            children: gcUsers.map((val)=>{
+                                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "flex items-center px-2 gap-x-3 py-[2px] justify-between text-sm  rounded-md bg-black text-white",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                            className: "text-[0.9em]",
+                                            children: val.name
+                                        }, void 0, false, {
+                                            fileName: "src/components/Chat/CreateGc.jsx",
+                                            lineNumber: 87,
+                                            columnNumber: 21
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                            children: "\u2716"
+                                        }, void 0, false, {
+                                            fileName: "src/components/Chat/CreateGc.jsx",
+                                            lineNumber: 88,
+                                            columnNumber: 21
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/Chat/CreateGc.jsx",
+                                    lineNumber: 86,
+                                    columnNumber: 19
+                                }, undefined);
+                            })
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/CreateGc.jsx",
+                            lineNumber: 83,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            className: " text-white bg-black rounded-md px-3 py-2 text-sm transform-cpu duration-300 active:scale-75",
+                            children: "Create Chat"
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/CreateGc.jsx",
+                            lineNumber: 95,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Chat/CreateGc.jsx",
+                    lineNumber: 35,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    className: "absolute top-0 right-2 text-bold text-xl  transform-cpu duration-300 active:scale-75",
+                    onClick: ()=>settoggle(false),
+                    children: "\u2716"
+                }, void 0, false, {
+                    fileName: "src/components/Chat/CreateGc.jsx",
+                    lineNumber: 99,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Chat/CreateGc.jsx",
+            lineNumber: 34,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false);
+};
+_s(CreateGc, "nEwui9AVawyVRF+7Dig+FsLX6+U=");
+_c = CreateGc;
+exports.default = CreateGc;
+var _c;
+$RefreshReg$(_c, "CreateGc");
+
+  $parcel$ReactRefreshHelpers$9715.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../utils/userContext":"eBA1b","axios":"jo6P5","./Avatar":"kBMDu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8QwIL":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0327 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0327.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const SendMessage = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "w-full h-full border-2 border-black rounded-lg bg-slate-50",
+        children: "SendMessage"
+    }, void 0, false, {
+        fileName: "src/components/Chat/SendMessage.jsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, undefined);
+};
+_c = SendMessage;
+exports.default = SendMessage;
+var _c;
+$RefreshReg$(_c, "SendMessage");
+
+  $parcel$ReactRefreshHelpers$0327.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequire10c2")
 
 //# sourceMappingURL=index.7271efb6.js.map

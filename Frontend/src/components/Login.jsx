@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Logo from "../assets/logo-no-background.png";
 import PHidelogo from "../assets/eye.png";
 import PShowlogo from "../assets/hidden.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Login = ({ Setloginstate }) => {
@@ -12,6 +12,7 @@ const Login = ({ Setloginstate }) => {
   });
   const [eyelogo, Seteyelogo] = useState(true);
   const [errors, setErrors] = useState([]);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -23,7 +24,9 @@ const Login = ({ Setloginstate }) => {
         "http://localhost:5000/api/users/login",
         formData
       );
-      console.log(response.data); // Assuming successful login
+      localStorage.setItem("userInfo", JSON.stringify(await response.data));
+      console.log(response.data);
+      navigate("/chats"); // Assuming successful login
     } catch (error) {
       if (error.response && error.response.data.error) {
         const { error: responseError } = error.response.data;

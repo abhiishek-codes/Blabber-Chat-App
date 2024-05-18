@@ -24,7 +24,7 @@ const userSignup = asyncHandler(async (req, res) => {
       _id: newUser._id,
       name: newUser.name,
       email: newUser.email,
-      pic: newUser.pic,
+      pic: newUser.profilePic,
       token: generateToken(newUser._id),
     });
   } else {
@@ -45,7 +45,7 @@ const userLogin = asyncHandler(async (req, res) => {
       _id: user._id,
       name: user.name,
       email: user.email,
-      pic: user.pic,
+      pic: user.profilePic,
       token: generateToken(user._id),
     });
   } else {
@@ -55,20 +55,20 @@ const userLogin = asyncHandler(async (req, res) => {
 });
 
 const allUsers = asyncHandler(async (req, res) => {
-  const keyword = req.query.search && {
-    $or: [
-      { name: { $regex: req.query.search, $options: "i" } },
-      { email: { $regex: req.query.search, $options: "i" } },
-    ],
-  };
+  console.log(req.query.search);
+  const keyword = req.query.search
+    ? {
+        $or: [
+          { name: { $regex: req.query.search, $options: "i" } },
+          { email: { $regex: req.query.search, $options: "i" } },
+        ],
+      }
+    : {};
 
-  const users = await User.find({
-    _id: { $ne: req.user._id },
-    ...keyword,
-  });
-  res.status(200).json(users);
+  console.log(keyword);
+  const users = await User.find(keyword).find({ _id: { $ne: req.user._id } });
 
-  console.log(users);
+  res.send(users);
 });
 
 module.exports = { userSignup, userLogin, allUsers };

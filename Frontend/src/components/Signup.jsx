@@ -3,6 +3,7 @@ import PHidelogo from "../assets/eye.png";
 import PShowlogo from "../assets/hidden.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Signup = ({ Setloginstate }) => {
   const [formData, setFormData] = useState({
@@ -13,6 +14,7 @@ const Signup = ({ Setloginstate }) => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [eyelogo, Seteyelogo] = useState(true);
   const [errors, setErrors] = useState([]);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -54,7 +56,7 @@ const Signup = ({ Setloginstate }) => {
     // Create a new object based on formData
     let dataToSend = { ...formData };
 
-    // If profilePicUrl is not null, add it to dataToSend
+    // If rofilePicUrl is not null, add it to dataToSend
     if (profilePicUrl) {
       dataToSend.profilePic = profilePicUrl;
     }
@@ -64,7 +66,9 @@ const Signup = ({ Setloginstate }) => {
         "http://localhost:5000/api/users/signup",
         dataToSend
       );
-      console.log(response.data); // Assuming successful signup
+      localStorage.setItem("userInfo", JSON.stringify(await response.data));
+      console.log(response.data);
+      navigate("/chats"); // Assuming successful signup
     } catch (error) {
       if (error.response) {
         // Server responded with an error

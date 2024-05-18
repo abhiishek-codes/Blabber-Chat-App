@@ -41,7 +41,7 @@ const accessChat = asyncHandler(async (req, res) => {
       );
       res.status(200).json(fullChat);
     } catch (error) {
-      res.status(500).send("Chat cant  be created  ", error);
+      res.status(500).send("Chat cant  be created ");
     }
   }
 });
@@ -56,7 +56,7 @@ const fetchChat = asyncHandler(async (req, res) => {
     .sort({ updatedAt: -1 })
     .populate("latestMessage.sender", "name profilePic email");
 
-  if (chat.length > 0) res.status(200).send(chat);
+  if (chat) res.status(200).send(chat);
   else res.status(404).json({ msg: "No chat found" });
 });
 

@@ -4,13 +4,25 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import LoginSignup from "./pages/LoginSignup";
+import { UserProvider } from "./utils/userContext";
+import ChatPage from "./pages/ChatPage";
 
 const App = () => {
   return (
     <>
-      <Navbar />
-      <Outlet />
+      <UserProvider>
+        <Navbar />
+        <Outlet />
+      </UserProvider>
     </>
+  );
+};
+
+const Chatpage = () => {
+  return (
+    <UserProvider>
+      <ChatPage />
+    </UserProvider>
   );
 };
 
@@ -32,6 +44,10 @@ const router = createBrowserRouter([
         element: <LoginSignup />,
       },
     ],
+  },
+  {
+    path: "/chats",
+    element: <Chatpage />,
   },
 ]);
 

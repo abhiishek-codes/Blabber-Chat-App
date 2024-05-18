@@ -4,7 +4,7 @@ const User = require("../model/userModel");
 
 const authUser = asyncHandler(async (req, res, next) => {
   const authHeader = req.headers.authorization;
-
+  console.log(authHeader);
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
     res.status(404).send("Invalid authorization header");
   }

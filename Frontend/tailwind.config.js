@@ -1,21 +1,31 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 module.exports = {
+  // other configurations...
   content: ["./src/**/*.{js,jsx}"],
   theme: {
     extend: {
-      keyframes: {
-        slideIn: {
-          "0%": {
-            opacity: 0,
-            transform: "translateY(-20px)",
-          },
-          "100%": {
-            opacity: 1,
-            transform: "translateY(0)",
-          },
-        },
-      },
+      // extend your configuration here
     },
   },
-  plugins: [],
+  variants: {
+    extend: {
+      // extend your variants here if needed
+    },
+  },
+  plugins: [
+    // add a plugin to hide scrollbars
+    function ({ addUtilities }) {
+      addUtilities({
+        ".hide-scrollbar": {
+          /* Hide scrollbar for Chrome, Safari and Opera */
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+          /* Hide scrollbar for IE, Edge and Firefox */
+          "-ms-overflow-style": "none" /* IE and Edge */,
+          "scrollbar-width": "none" /* Firefox */,
+        },
+      });
+    },
+  ],
 };
