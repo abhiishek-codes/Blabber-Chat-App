@@ -9,9 +9,9 @@ dotenv.config();
 
 connectDB();
 const app = express();
-
-app.use(cors({ origin: "http://localhost:1234" }));
 app.use(express.json());
+app.use(cors({ origin: "http://localhost:1234" }));
+
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });

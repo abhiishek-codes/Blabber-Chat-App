@@ -5,16 +5,18 @@ import { userContext } from "../../utils/userContext";
 const OnetooneCard = ({ data }) => {
   const { users } = data;
   const { latestMessage } = data;
-  const name = users[1].name;
-  return (
-    <div className="flex flex-col">
-      <p className="text-[1em]">{name}</p>
-      <div className="flex text-[0.8em]">
-        <p>{latestMessage?.sender?.name}</p>
-        <p>{latestMessage?.content}</p>
+  if (users) {
+    const name = users[1].name;
+    return (
+      <div className="flex flex-col">
+        <p className="text-[1em]">{name}</p>
+        <div className="flex text-[0.8em]">
+          <p>{latestMessage?.sender?.name}</p>
+          <p>{latestMessage?.content}</p>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
 
 export default OnetooneCard;

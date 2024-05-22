@@ -8,7 +8,7 @@ import ProfileModal from "./ProfileModal";
 
 const Header = () => {
   const { user, setUser } = useContext(userContext);
-  const { allChats, setAllchats, setactiveChat, activeChat } =
+  const { allChats, setAllchats, setactiveChat, activeChat, setchatData } =
     useContext(userContext);
   const [sbar, setsbar] = useState(false);
   const [suser, setsuser] = useState("");

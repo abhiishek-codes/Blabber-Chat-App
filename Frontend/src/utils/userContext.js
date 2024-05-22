@@ -9,6 +9,7 @@ export const UserProvider = ({ children }) => {
   const [searchuserId, setsearchuserId] = useState(null);
   const [activeChat, setactiveChat] = useState(null);
   const [chatName, setchatName] = useState(null);
+  const [chatData, setchatData] = useState(null);
   const navigate = useNavigate();
   const [token, setToken] = useState(null); // Moved inside the component
 
@@ -35,6 +36,8 @@ export const UserProvider = ({ children }) => {
         setactiveChat,
         chatName,
         setchatName,
+        chatData,
+        setchatData,
       }}
     >
       {/* Changed to an object */}

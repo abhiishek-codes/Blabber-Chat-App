@@ -64,12 +64,14 @@ const fetchChat = asyncHandler(async (req, res) => {
 
 const createGroupChat = asyncHandler(async (req, res) => {
   var { name, users } = req.body;
+  users = JSON.stringify(users);
+
+  console.log(name);
+  console.log(users);
 
   if (!name || !users)
     return res.status(404).json({ msg: "Send all the deatils" });
-
   users = JSON.parse(users);
-
   if (users.length < 2)
     res
       .status(404)
@@ -102,6 +104,7 @@ const createGroupChat = asyncHandler(async (req, res) => {
 
 const updateGroupName = asyncHandler(async (req, res) => {
   const { chatId, updatedName } = req.body;
+  console.log(updatedName);
   if (!chatId || !updatedName)
     return res.status(404).json({ msg: "Enter all Details properly" });
 
@@ -150,13 +153,25 @@ const addUser = asyncHandler(async (req, res) => {
 
 const removeUser = asyncHandler(async (req, res) => {
   const { userId, chatId } = req.body;
+  console.log(userId, chatId);
   if (!userId || !chatId)
     return res.status(404).json({ msg: "Enter Details properly" });
+
+  let chat = await Chat.findById(chatId)
+    .populate("users", "-password")
+    .populate("groupAdmin", "-password");
+
+  if (userId == chat.groupAdmin._id) {
+    // If the user being removed is the group admin, assign a new admin
+    chat.groupAdmin = chat.users.find((user) => user._id != userId);
+    console.log("Updated Admin");
+  }
 
   const updatedChat = await Chat.findByIdAndUpdate(
     chatId,
     {
       $pull: { users: userId },
+      groupAdmin: chat.groupAdmin._id,
     },
     {
       new: true,

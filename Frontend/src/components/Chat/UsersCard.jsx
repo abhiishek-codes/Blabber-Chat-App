@@ -12,6 +12,7 @@ const UsersCard = ({ name, email, _id, setsbar, idx, data }) => {
     setAllchats,
     setactiveChat,
     activeChat,
+    setchatData,
   } = useContext(userContext);
   //console.log(token);
 
@@ -39,6 +40,7 @@ const UsersCard = ({ name, email, _id, setsbar, idx, data }) => {
           }
         });
         setactiveChat(response.data._id);
+        setchatData(response.data);
         console.log(response.data);
       })
       .catch((error) => {

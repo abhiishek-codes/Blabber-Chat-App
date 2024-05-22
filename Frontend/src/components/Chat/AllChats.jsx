@@ -6,7 +6,7 @@ import ChatUserCard from "./ChatUserCard.jsx";
 import CreateGc from "./CreateGc.jsx";
 
 const AllChats = () => {
-  const { allChats, setAllchats } = useContext(userContext);
+  const { allChats, setAllchats, chatData } = useContext(userContext);
   const [creategc, setcreatgc] = useState(false);
   const userinfo = JSON.parse(localStorage.getItem("userInfo"));
   const token = userinfo.token;
@@ -20,14 +20,18 @@ const AllChats = () => {
         },
       })
       .then((response) => {
-        setAllchats(response.data);
+        console.log("called from AllChats");
+        let sortedData = response.data.sort(
+          (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+        );
+        setAllchats(sortedData);
       })
       .catch((err) => console.log(err.message));
   }, []);
 
   return (
     <>
-      <div className="w-full h-full border-2 border-black rounded-lg bg-slate-50">
+      <div className="w-full h-full  border-2 border-black rounded-lg bg-slate-50">
         <div className="flex justify-between pt-5 px-3 items-center">
           <h1 className="text-2xl">My Chats</h1>
           <button
@@ -37,23 +41,26 @@ const AllChats = () => {
             Create Grp Chat ➕
           </button>
         </div>
-        {allChats && (
-          <div className="flex flex-col gap-y-4 pt-4 items-center justify-center px-2">
-            {allChats.map((val, index) => {
-              return (
-                <ChatUserCard {...val} key={index} data={val} idx={index} />
-              );
-            })}
-          </div>
-        )}
+        <div className="h-[calc(100%-4rem)] overflow-y-auto hide-scrollbar">
+          {allChats != undefined && (
+            <div className="flex flex-col gap-y-4 pt-4 items-center justify-center px-2 ">
+              {console.log("Got called from Allchats")}
+              {allChats.map((val, index) => {
+                return (
+                  <ChatUserCard {...val} key={index} data={val} idx={index} />
+                );
+              })}
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Create Group Chat Popup */}
 
       {creategc && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
-          <div className="bg-slate-100 p-4 rounded-lg shadow-lg max-w-lg w-full">
-            <CreateGc />
+          <div className="bg-slate-100 p-4 rounded-lg shadow-lg max-w-lg w-full ">
+            <CreateGc setcreatgc={setcreatgc} />
           </div>
         </div>
       )}

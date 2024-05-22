@@ -39743,6 +39743,7 @@ const UserProvider = ({ children })=>{
     const [searchuserId, setsearchuserId] = (0, _react.useState)(null);
     const [activeChat, setactiveChat] = (0, _react.useState)(null);
     const [chatName, setchatName] = (0, _react.useState)(null);
+    const [chatData, setchatData] = (0, _react.useState)(null);
     const navigate = (0, _reactRouterDom.useNavigate)();
     const [token, setToken] = (0, _react.useState)(null); // Moved inside the component
     (0, _react.useEffect)(()=>{
@@ -39764,16 +39765,18 @@ const UserProvider = ({ children })=>{
             activeChat,
             setactiveChat,
             chatName,
-            setchatName
+            setchatName,
+            chatData,
+            setchatData
         },
         children: children
     }, void 0, false, {
         fileName: "src/utils/userContext.js",
-        lineNumber: 24,
+        lineNumber: 25,
         columnNumber: 5
     }, undefined);
 };
-_s(UserProvider, "O5xm8MbtHLvwATqDZwiY+qy+4uc=", false, function() {
+_s(UserProvider, "MNgiGTi7LBj4phYa+xRucTYeMQU=", false, function() {
     return [
         (0, _reactRouterDom.useNavigate)
     ];
@@ -39805,12 +39808,19 @@ var _allChats = require("../components/Chat/AllChats");
 var _allChatsDefault = parcelHelpers.interopDefault(_allChats);
 var _sendMessage = require("../components/Chat/SendMessage");
 var _sendMessageDefault = parcelHelpers.interopDefault(_sendMessage);
+var _useScreenSize = require("../utils/useScreenSize");
+var _useScreenSizeDefault = parcelHelpers.interopDefault(_useScreenSize);
+var _messageBox = require("../components/Chat/MessageBox");
+var _messageBoxDefault = parcelHelpers.interopDefault(_messageBox);
+var _s = $RefreshSig$();
 const ChatPage = ()=>{
+    _s();
+    const screenSize = (0, _useScreenSizeDefault.default)();
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/pages/ChatPage.jsx",
-                lineNumber: 9,
+                lineNumber: 13,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -39818,48 +39828,53 @@ const ChatPage = ()=>{
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "flex justify-between h-full gap-x-4",
                     children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "lg:w-[32vw] xl:w-[25vw] h-full",
+                        !screenSize && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "lg:w-[30vw] xl:w-[25vw] h-full",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _allChatsDefault.default), {}, void 0, false, {
                                 fileName: "src/pages/ChatPage.jsx",
-                                lineNumber: 13,
-                                columnNumber: 13
+                                lineNumber: 18,
+                                columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/pages/ChatPage.jsx",
-                            lineNumber: 12,
-                            columnNumber: 11
+                            lineNumber: 17,
+                            columnNumber: 13
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: " w-[85vw] lg:w-[68vw] xl:w-[75vw] h-full mx-auto",
+                            className: " w-[85vw] lg:w-[70vw] xl:w-[75vw] h-full mx-auto",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sendMessageDefault.default), {}, void 0, false, {
                                 fileName: "src/pages/ChatPage.jsx",
-                                lineNumber: 16,
+                                lineNumber: 22,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/pages/ChatPage.jsx",
-                            lineNumber: 15,
+                            lineNumber: 21,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/pages/ChatPage.jsx",
-                    lineNumber: 11,
+                    lineNumber: 15,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/pages/ChatPage.jsx",
-                lineNumber: 10,
+                lineNumber: 14,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/pages/ChatPage.jsx",
-        lineNumber: 8,
+        lineNumber: 12,
         columnNumber: 5
     }, undefined);
 };
+_s(ChatPage, "Az9rJUgKUY00qPUUgMtIxbkNJMY=", false, function() {
+    return [
+        (0, _useScreenSizeDefault.default)
+    ];
+});
 _c = ChatPage;
 exports.default = ChatPage;
 var _c;
@@ -39870,7 +39885,7 @@ $RefreshReg$(_c, "ChatPage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/Chat/Header":"gFHmj","../components/Chat/AllChats":"kBEyN","../components/Chat/SendMessage":"8QwIL","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gFHmj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/Chat/Header":"gFHmj","../components/Chat/AllChats":"kBEyN","../components/Chat/SendMessage":"8QwIL","../utils/useScreenSize":"9xTun","../components/Chat/MessageBox":"dkoGO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gFHmj":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$b362 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -39894,7 +39909,7 @@ var _s = $RefreshSig$();
 const Header = ()=>{
     _s();
     const { user, setUser } = (0, _react.useContext)((0, _userContext.userContext));
-    const { allChats, setAllchats, setactiveChat, activeChat } = (0, _react.useContext)((0, _userContext.userContext));
+    const { allChats, setAllchats, setactiveChat, activeChat, setchatData } = (0, _react.useContext)((0, _userContext.userContext));
     const [sbar, setsbar] = (0, _react.useState)(false);
     const [suser, setsuser] = (0, _react.useState)("");
     const [users, setusers] = (0, _react.useState)([]);
@@ -40180,7 +40195,7 @@ const Header = ()=>{
         ]
     }, void 0, true);
 };
-_s(Header, "/vbsUkhjc2d+m9EJgP1JXaw7uBI=", false, function() {
+_s(Header, "YJobyzOtOoC123I7LWFCA6mQXJ4=", false, function() {
     return [
         (0, _reactRouterDom.useNavigate)
     ];
@@ -40215,7 +40230,7 @@ var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _s = $RefreshSig$();
 const UsersCard = ({ name, email, _id, setsbar, idx, data })=>{
     _s();
-    const { searchuserId, setsearchuserId, token, setAllchats, setactiveChat, activeChat } = (0, _react.useContext)((0, _userContextJs.userContext));
+    const { searchuserId, setsearchuserId, token, setAllchats, setactiveChat, activeChat, setchatData } = (0, _react.useContext)((0, _userContextJs.userContext));
     //console.log(token);
     const ClickHandler = ()=>{
         const formdata = {
@@ -40240,6 +40255,7 @@ const UsersCard = ({ name, email, _id, setsbar, idx, data })=>{
                 ];
             });
             setactiveChat(response.data._id);
+            setchatData(response.data);
             console.log(response.data);
         }).catch((error)=>{
             console.log(error.message);
@@ -40259,7 +40275,7 @@ const UsersCard = ({ name, email, _id, setsbar, idx, data })=>{
                     name: name
                 }, void 0, false, {
                     fileName: "src/components/Chat/UsersCard.jsx",
-                    lineNumber: 59,
+                    lineNumber: 61,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -40269,35 +40285,35 @@ const UsersCard = ({ name, email, _id, setsbar, idx, data })=>{
                             children: name
                         }, void 0, false, {
                             fileName: "src/components/Chat/UsersCard.jsx",
-                            lineNumber: 61,
+                            lineNumber: 63,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                             children: email
                         }, void 0, false, {
                             fileName: "src/components/Chat/UsersCard.jsx",
-                            lineNumber: 62,
+                            lineNumber: 64,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Chat/UsersCard.jsx",
-                    lineNumber: 60,
+                    lineNumber: 62,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/Chat/UsersCard.jsx",
-            lineNumber: 58,
+            lineNumber: 60,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Chat/UsersCard.jsx",
-        lineNumber: 50,
+        lineNumber: 52,
         columnNumber: 5
     }, undefined);
 };
-_s(UsersCard, "wyOg3Hc1aAkx7q+2/bWky6P7qyM=");
+_s(UsersCard, "MkBvF1FAvjGmxYfcB9rw6MQ/qRY=");
 _c = UsersCard;
 exports.default = UsersCard;
 var _c;
@@ -40354,7 +40370,8 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-const ProfileModal = ({ name, email, pic })=>{
+const ProfileModal = ({ name, email, profilePic })=>{
+    console.log(name);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "flex items-center justify-center min-h-screen",
@@ -40366,16 +40383,16 @@ const ProfileModal = ({ name, email, pic })=>{
                         children: name
                     }, void 0, false, {
                         fileName: "src/components/Chat/ProfileModal.jsx",
-                        lineNumber: 11,
+                        lineNumber: 12,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        src: pic,
+                        src: profilePic,
                         alt: "Profile Pic",
                         className: "w-40 h-440 rounded-full"
                     }, void 0, false, {
                         fileName: "src/components/Chat/ProfileModal.jsx",
-                        lineNumber: 12,
+                        lineNumber: 13,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -40386,18 +40403,18 @@ const ProfileModal = ({ name, email, pic })=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Chat/ProfileModal.jsx",
-                        lineNumber: 17,
+                        lineNumber: 18,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Chat/ProfileModal.jsx",
-                lineNumber: 7,
+                lineNumber: 8,
                 columnNumber: 9
             }, undefined)
         }, void 0, false, {
             fileName: "src/components/Chat/ProfileModal.jsx",
-            lineNumber: 6,
+            lineNumber: 7,
             columnNumber: 7
         }, undefined)
     }, void 0, false);
@@ -40434,7 +40451,7 @@ var _createGcJsxDefault = parcelHelpers.interopDefault(_createGcJsx);
 var _s = $RefreshSig$();
 const AllChats = ()=>{
     _s();
-    const { allChats, setAllchats } = (0, _react.useContext)((0, _userContextJs.userContext));
+    const { allChats, setAllchats, chatData } = (0, _react.useContext)((0, _userContextJs.userContext));
     const [creategc, setcreatgc] = (0, _react.useState)(false);
     const userinfo = JSON.parse(localStorage.getItem("userInfo"));
     const token = userinfo.token;
@@ -40445,13 +40462,15 @@ const AllChats = ()=>{
                 Authorization: `Bearer ${token}`
             }
         }).then((response)=>{
-            setAllchats(response.data);
+            console.log("called from AllChats");
+            let sortedData = response.data.sort((a, b)=>new Date(b.createdAt) - new Date(a.createdAt));
+            setAllchats(sortedData);
         }).catch((err)=>console.log(err.message));
     }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "w-full h-full border-2 border-black rounded-lg bg-slate-50",
+                className: "w-full h-full  border-2 border-black rounded-lg bg-slate-50",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "flex justify-between pt-5 px-3 items-center",
@@ -40461,7 +40480,7 @@ const AllChats = ()=>{
                                 children: "My Chats"
                             }, void 0, false, {
                                 fileName: "src/components/Chat/AllChats.jsx",
-                                lineNumber: 32,
+                                lineNumber: 36,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -40470,72 +40489,84 @@ const AllChats = ()=>{
                                 children: "Create Grp Chat \u2795"
                             }, void 0, false, {
                                 fileName: "src/components/Chat/AllChats.jsx",
-                                lineNumber: 33,
+                                lineNumber: 37,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Chat/AllChats.jsx",
-                        lineNumber: 31,
+                        lineNumber: 35,
                         columnNumber: 9
                     }, undefined),
-                    allChats && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex flex-col gap-y-4 pt-4 items-center justify-center px-2",
-                        children: allChats.map((val, index)=>{
-                            return /*#__PURE__*/ (0, _react.createElement)((0, _chatUserCardJsxDefault.default), {
-                                ...val,
-                                key: index,
-                                data: val,
-                                idx: index,
-                                __source: {
-                                    fileName: "src/components/Chat/AllChats.jsx",
-                                    lineNumber: 44,
-                                    columnNumber: 17
-                                },
-                                __self: undefined
-                            });
-                        })
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "h-[calc(100%-4rem)] overflow-y-auto hide-scrollbar",
+                        children: allChats != undefined && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "flex flex-col gap-y-4 pt-4 items-center justify-center px-2 ",
+                            children: [
+                                console.log("Got called from Allchats"),
+                                allChats.map((val, index)=>{
+                                    return /*#__PURE__*/ (0, _react.createElement)((0, _chatUserCardJsxDefault.default), {
+                                        ...val,
+                                        key: index,
+                                        data: val,
+                                        idx: index,
+                                        __source: {
+                                            fileName: "src/components/Chat/AllChats.jsx",
+                                            lineNumber: 50,
+                                            columnNumber: 19
+                                        },
+                                        __self: undefined
+                                    });
+                                })
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/Chat/AllChats.jsx",
+                            lineNumber: 46,
+                            columnNumber: 13
+                        }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/Chat/AllChats.jsx",
-                        lineNumber: 41,
-                        columnNumber: 11
+                        lineNumber: 44,
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Chat/AllChats.jsx",
-                lineNumber: 30,
+                lineNumber: 34,
                 columnNumber: 7
             }, undefined),
             creategc && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "fixed inset-0 flex items-center justify-center z-50",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "bg-slate-100 p-4 rounded-lg shadow-lg max-w-lg w-full",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _createGcJsxDefault.default), {}, void 0, false, {
+                    className: "bg-slate-100 p-4 rounded-lg shadow-lg max-w-lg w-full ",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _createGcJsxDefault.default), {
+                        setcreatgc: setcreatgc
+                    }, void 0, false, {
                         fileName: "src/components/Chat/AllChats.jsx",
-                        lineNumber: 56,
+                        lineNumber: 63,
                         columnNumber: 13
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/Chat/AllChats.jsx",
-                    lineNumber: 55,
+                    lineNumber: 62,
                     columnNumber: 11
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Chat/AllChats.jsx",
-                lineNumber: 54,
+                lineNumber: 61,
                 columnNumber: 9
             }, undefined),
             creategc && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "fixed inset-0 bg-black opacity-[88%] z-40"
             }, void 0, false, {
                 fileName: "src/components/Chat/AllChats.jsx",
-                lineNumber: 62,
+                lineNumber: 69,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(AllChats, "jEQ+YeBTQLYG0mMsVTtJ4WPWk6k=");
+_s(AllChats, "3BIvKklnrxhVWEn09W0IyX0E1tk=");
 _c = AllChats;
 exports.default = AllChats;
 var _c;
@@ -40566,31 +40597,34 @@ var _userContext = require("../../utils/userContext");
 var _s = $RefreshSig$();
 const ChatUserCard = ({ groupChat, data, idx })=>{
     _s();
-    const { searchuserId, setsearchuserId, token, setAllchats, setactiveChat, activeChat } = (0, _react.useContext)((0, _userContext.userContext));
+    const { searchuserId, setsearchuserId, token, setAllchats, setactiveChat, activeChat, chatData, setchatData } = (0, _react.useContext)((0, _userContext.userContext));
     // console.log(data);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-        onClick: ()=>setactiveChat(data._id),
+        onClick: ()=>{
+            setactiveChat(data._id);
+            setchatData(data);
+        },
         className: `border-2 px-2 py-2 rounded-md w-full text-left transition-all duration-300 ${data._id == activeChat ? "bg-black text-white hover:bg-black hover:text-white" : " hover:bg-black hover:text-white"}`,
-        children: groupChat ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _groupchatCardDefault.default), {
+        children: groupChat == true ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _groupchatCardDefault.default), {
             data: data
         }, void 0, false, {
             fileName: "src/components/Chat/ChatUserCard.jsx",
-            lineNumber: 27,
-            columnNumber: 20
+            lineNumber: 33,
+            columnNumber: 9
         }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _onetooneCardDefault.default), {
             data: data
         }, void 0, false, {
             fileName: "src/components/Chat/ChatUserCard.jsx",
-            lineNumber: 27,
-            columnNumber: 52
+            lineNumber: 35,
+            columnNumber: 9
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Chat/ChatUserCard.jsx",
-        lineNumber: 18,
+        lineNumber: 20,
         columnNumber: 5
     }, undefined);
 };
-_s(ChatUserCard, "wyOg3Hc1aAkx7q+2/bWky6P7qyM=");
+_s(ChatUserCard, "n6Q93OBhffcCygIAFEXH/zpqamU=");
 _c = ChatUserCard;
 exports.default = ChatUserCard;
 var _c;
@@ -40684,47 +40718,49 @@ var _userContext = require("../../utils/userContext");
 const OnetooneCard = ({ data })=>{
     const { users } = data;
     const { latestMessage } = data;
-    const name = users[1].name;
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex flex-col",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "text-[1em]",
-                children: name
-            }, void 0, false, {
-                fileName: "src/components/Chat/onetooneCard.jsx",
-                lineNumber: 11,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex text-[0.8em]",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: latestMessage?.sender?.name
-                    }, void 0, false, {
-                        fileName: "src/components/Chat/onetooneCard.jsx",
-                        lineNumber: 13,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: latestMessage?.content
-                    }, void 0, false, {
-                        fileName: "src/components/Chat/onetooneCard.jsx",
-                        lineNumber: 14,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Chat/onetooneCard.jsx",
-                lineNumber: 12,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Chat/onetooneCard.jsx",
-        lineNumber: 10,
-        columnNumber: 5
-    }, undefined);
+    if (users) {
+        const name = users[1].name;
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "flex flex-col",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    className: "text-[1em]",
+                    children: name
+                }, void 0, false, {
+                    fileName: "src/components/Chat/onetooneCard.jsx",
+                    lineNumber: 12,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "flex text-[0.8em]",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                            children: latestMessage?.sender?.name
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/onetooneCard.jsx",
+                            lineNumber: 14,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                            children: latestMessage?.content
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/onetooneCard.jsx",
+                            lineNumber: 15,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Chat/onetooneCard.jsx",
+                    lineNumber: 13,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Chat/onetooneCard.jsx",
+            lineNumber: 11,
+            columnNumber: 7
+        }, undefined);
+    }
 };
 _c = OnetooneCard;
 exports.default = OnetooneCard;
@@ -40754,22 +40790,20 @@ var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _avatar = require("./Avatar");
 var _avatarDefault = parcelHelpers.interopDefault(_avatar);
 var _s = $RefreshSig$();
-const CreateGc = ()=>{
+const CreateGc = ({ setcreatgc })=>{
     _s();
     const [gcName, setGcName] = (0, _react.useState)("");
     const [gcUserSearch, setGcUserSearch] = (0, _react.useState)("");
     const [searchUsers, setSearchUsers] = (0, _react.useState)([]);
     const [gcUsers, setGcUsers] = (0, _react.useState)([]);
-    const { token } = (0, _react.useContext)((0, _userContext.userContext));
+    const { token, setAllchats, allChats, setactiveChat, setchatData } = (0, _react.useContext)((0, _userContext.userContext));
     const [toggle, settoggle] = (0, _react.useState)(false);
     (0, _react.useEffect)(()=>{
-        console.log(gcUserSearch);
         (0, _axiosDefault.default).get(`http://localhost:5000/api/users/?search=${gcUserSearch}`, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
         }).then((response)=>{
-            console.log(response.data);
             setSearchUsers(response.data);
         }).catch((err)=>{
             console.log(err.message);
@@ -40777,6 +40811,37 @@ const CreateGc = ()=>{
     }, [
         gcUserSearch
     ]);
+    const clickHandler = async ()=>{
+        const users = gcUsers.map((element)=>element._id);
+        const formdata = {
+            name: gcName,
+            users: users
+        };
+        const finaldata = JSON.stringify(formdata);
+        console.log(finaldata);
+        try {
+            const response = await (0, _axiosDefault.default).post("http://localhost:5000/api/chat/group", finaldata, {
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`
+                }
+            });
+            console.log(response.data);
+            setAllchats([
+                response.data.fullChat,
+                ...allChats
+            ]);
+            setactiveChat(response.data.fullChat._id);
+            setchatData(response.data.fullChat);
+            console.log(allChats);
+            setcreatgc(false);
+        } catch (error) {
+            console.log(error.message);
+            resizeBy.status(404).json({
+                msg: "Chat cannot be created"
+            });
+        }
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "w-full relative",
@@ -40789,7 +40854,7 @@ const CreateGc = ()=>{
                             children: "Create Group Chat"
                         }, void 0, false, {
                             fileName: "src/components/Chat/CreateGc.jsx",
-                            lineNumber: 36,
+                            lineNumber: 67,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -40800,7 +40865,7 @@ const CreateGc = ()=>{
                             onChange: (e)=>setGcName(e.target.value)
                         }, void 0, false, {
                             fileName: "src/components/Chat/CreateGc.jsx",
-                            lineNumber: 37,
+                            lineNumber: 68,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -40814,7 +40879,7 @@ const CreateGc = ()=>{
                             }
                         }, void 0, false, {
                             fileName: "src/components/Chat/CreateGc.jsx",
-                            lineNumber: 44,
+                            lineNumber: 75,
                             columnNumber: 11
                         }, undefined),
                         toggle && searchUsers.length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -40823,10 +40888,14 @@ const CreateGc = ()=>{
                                     className: "w-full border-b border-black bg-slate-50 py-2 text-left hover:bg-green-400 transition-all duration-200 hover:border-white",
                                     onClick: ()=>{
                                         setGcUsers((prev)=>{
-                                            if (prev.includes(val)) return prev;
-                                            return [
-                                                ...prev,
-                                                val
+                                            const exists = prev.some((curr)=>curr._id === val._id);
+                                            if (!exists) return [
+                                                val,
+                                                ...prev
+                                            ];
+                                            else return [
+                                                prev.find((curr)=>curr._id === val._id),
+                                                ...prev.filter((curr)=>curr._id !== val._id)
                                             ];
                                         });
                                         settoggle(false);
@@ -40839,7 +40908,7 @@ const CreateGc = ()=>{
                                                 name: val.name
                                             }, void 0, false, {
                                                 fileName: "src/components/Chat/CreateGc.jsx",
-                                                lineNumber: 71,
+                                                lineNumber: 107,
                                                 columnNumber: 21
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -40849,36 +40918,36 @@ const CreateGc = ()=>{
                                                         children: val.name
                                                     }, void 0, false, {
                                                         fileName: "src/components/Chat/CreateGc.jsx",
-                                                        lineNumber: 73,
+                                                        lineNumber: 109,
                                                         columnNumber: 23
                                                     }, undefined),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                                                         children: val.email
                                                     }, void 0, false, {
                                                         fileName: "src/components/Chat/CreateGc.jsx",
-                                                        lineNumber: 74,
+                                                        lineNumber: 110,
                                                         columnNumber: 23
                                                     }, undefined)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/components/Chat/CreateGc.jsx",
-                                                lineNumber: 72,
+                                                lineNumber: 108,
                                                 columnNumber: 21
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/Chat/CreateGc.jsx",
-                                        lineNumber: 70,
+                                        lineNumber: 106,
                                         columnNumber: 19
                                     }, undefined)
                                 }, idx, false, {
                                     fileName: "src/components/Chat/CreateGc.jsx",
-                                    lineNumber: 58,
+                                    lineNumber: 89,
                                     columnNumber: 17
                                 }, undefined))
                         }, void 0, false, {
                             fileName: "src/components/Chat/CreateGc.jsx",
-                            lineNumber: 56,
+                            lineNumber: 87,
                             columnNumber: 13
                         }, undefined),
                         gcUsers.length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -40892,60 +40961,67 @@ const CreateGc = ()=>{
                                             children: val.name
                                         }, void 0, false, {
                                             fileName: "src/components/Chat/CreateGc.jsx",
-                                            lineNumber: 87,
+                                            lineNumber: 123,
                                             columnNumber: 21
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                            onClick: ()=>{
+                                                setGcUsers((prev)=>prev.filter((curr)=>curr._id !== val._id));
+                                            },
                                             children: "\u2716"
                                         }, void 0, false, {
                                             fileName: "src/components/Chat/CreateGc.jsx",
-                                            lineNumber: 88,
+                                            lineNumber: 124,
                                             columnNumber: 21
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/Chat/CreateGc.jsx",
-                                    lineNumber: 86,
+                                    lineNumber: 122,
                                     columnNumber: 19
                                 }, undefined);
                             })
                         }, void 0, false, {
                             fileName: "src/components/Chat/CreateGc.jsx",
-                            lineNumber: 83,
+                            lineNumber: 119,
                             columnNumber: 13
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                             className: " text-white bg-black rounded-md px-3 py-2 text-sm transform-cpu duration-300 active:scale-75",
+                            onClick: ()=>clickHandler(),
                             children: "Create Chat"
                         }, void 0, false, {
                             fileName: "src/components/Chat/CreateGc.jsx",
-                            lineNumber: 95,
+                            lineNumber: 139,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Chat/CreateGc.jsx",
-                    lineNumber: 35,
+                    lineNumber: 66,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                     className: "absolute top-0 right-2 text-bold text-xl  transform-cpu duration-300 active:scale-75",
-                    onClick: ()=>settoggle(false),
+                    onClick: ()=>{
+                        settoggle(false);
+                        setcreatgc(false);
+                    },
                     children: "\u2716"
                 }, void 0, false, {
                     fileName: "src/components/Chat/CreateGc.jsx",
-                    lineNumber: 99,
+                    lineNumber: 146,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/Chat/CreateGc.jsx",
-            lineNumber: 34,
+            lineNumber: 65,
             columnNumber: 7
         }, undefined)
     }, void 0, false);
 };
-_s(CreateGc, "nEwui9AVawyVRF+7Dig+FsLX6+U=");
+_s(CreateGc, "KRQa8bjgsukZrXnu/7wZaKsiXXk=");
 _c = CreateGc;
 exports.default = CreateGc;
 var _c;
@@ -40968,16 +41044,145 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-const SendMessage = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "w-full h-full border-2 border-black rounded-lg bg-slate-50",
-        children: "SendMessage"
-    }, void 0, false, {
-        fileName: "src/components/Chat/SendMessage.jsx",
-        lineNumber: 5,
-        columnNumber: 5
-    }, undefined);
+var _userContextJs = require("../../utils/userContext.js");
+var _getSenderJs = require("../../utils/getSender.js");
+var _getSenderJsDefault = parcelHelpers.interopDefault(_getSenderJs);
+var _profileModalJsx = require("./ProfileModal.jsx");
+var _profileModalJsxDefault = parcelHelpers.interopDefault(_profileModalJsx);
+var _gcModalJsx = require("./GcModal.jsx");
+var _gcModalJsxDefault = parcelHelpers.interopDefault(_gcModalJsx);
+var _messageBoxJsx = require("../Chat/MessageBox.jsx");
+var _messageBoxJsxDefault = parcelHelpers.interopDefault(_messageBoxJsx);
+var _s = $RefreshSig$();
+const SendMessage = ({ chatName, groupAdmin, users, _id })=>{
+    _s();
+    const { activeChat, chatData } = (0, _react.useContext)((0, _userContextJs.userContext));
+    const [tgProfile, settgProfile] = (0, _react.useState)(false);
+    const [gcProfile, setgcProfile] = (0, _react.useState)(false);
+    if (chatData != null) {
+        const { groupChat } = chatData;
+        const idx = (0, _getSenderJsDefault.default)(chatData.users) == chatData.users[0].name ? 0 : 1;
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "w-full h-full border-2 border-black rounded-lg text-white flex flex-col px-3 pt-5 pb-2 gap-y-3 text-xl bg-slate-900",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "flex  items-center justify-between",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                    children: groupChat ? chatData.chatName : (0, _getSenderJsDefault.default)(chatData.users)
+                                }, void 0, false, {
+                                    fileName: "src/components/Chat/SendMessage.jsx",
+                                    lineNumber: 21,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                    onClick: ()=>!groupChat ? settgProfile(true) : setgcProfile(true),
+                                    className: "bg-white rounded-md",
+                                    children: "\uD83D\uDC41\uFE0F\u200D\uD83D\uDDE8\uFE0F"
+                                }, void 0, false, {
+                                    fileName: "src/components/Chat/SendMessage.jsx",
+                                    lineNumber: 22,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/Chat/SendMessage.jsx",
+                            lineNumber: 20,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _messageBoxJsxDefault.default), {}, void 0, false, {
+                            fileName: "src/components/Chat/SendMessage.jsx",
+                            lineNumber: 31,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Chat/SendMessage.jsx",
+                    lineNumber: 19,
+                    columnNumber: 9
+                }, undefined),
+                tgProfile && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: `fixed z-50 top-[50%] left-[50%] font-['Basis_Grotesque_Pro_Black'] transform -translate-x-[50%] -translate-y-[50%] transition-opacity duration-500 ${tgProfile ? "opacity-100" : "opacity-0 hidden"}`,
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "relative",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileModalJsxDefault.default), {
+                                        ...chatData.users[idx]
+                                    }, void 0, false, {
+                                        fileName: "src/components/Chat/SendMessage.jsx",
+                                        lineNumber: 42,
+                                        columnNumber: 17
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/Chat/SendMessage.jsx",
+                                    lineNumber: 41,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "absolute top-[24%] right-[5%] sm:top-[25%] sm:right-[7%] ",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                        onClick: ()=>settgProfile(false),
+                                        children: "\u274C"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Chat/SendMessage.jsx",
+                                        lineNumber: 46,
+                                        columnNumber: 17
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/Chat/SendMessage.jsx",
+                                    lineNumber: 45,
+                                    columnNumber: 15
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/Chat/SendMessage.jsx",
+                            lineNumber: 36,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "fixed inset-0 bg-black opacity-80 z-40 "
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/SendMessage.jsx",
+                            lineNumber: 50,
+                            columnNumber: 13
+                        }, undefined)
+                    ]
+                }, void 0, true),
+                gcProfile && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: `fixed z-50 top-[50%] left-[50%] font-['Basis_Grotesque_Pro_Black'] transform -translate-x-[50%] -translate-y-[50%] transition-opacity duration-500 text-black ${gcProfile ? "opacity-100" : "opacity-0 hidden"}`,
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _gcModalJsxDefault.default), {
+                                ...chatData,
+                                setgcProfile: setgcProfile
+                            }, void 0, false, {
+                                fileName: "src/components/Chat/SendMessage.jsx",
+                                lineNumber: 61,
+                                columnNumber: 15
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/SendMessage.jsx",
+                            lineNumber: 56,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "fixed inset-0 bg-black opacity-80 z-40 "
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/SendMessage.jsx",
+                            lineNumber: 64,
+                            columnNumber: 13
+                        }, undefined)
+                    ]
+                }, void 0, true)
+            ]
+        }, void 0, true);
+    }
 };
+_s(SendMessage, "LFomj+MozW7JXtnnYy7+EizMpp8=");
 _c = SendMessage;
 exports.default = SendMessage;
 var _c;
@@ -40988,6 +41193,448 @@ $RefreshReg$(_c, "SendMessage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequire10c2")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../utils/userContext.js":"eBA1b","../../utils/getSender.js":"2jEox","./ProfileModal.jsx":"03Gnn","./GcModal.jsx":"bFv4J","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Chat/MessageBox.jsx":"dkoGO"}],"2jEox":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const getSender = (users)=>{
+    console.log(users);
+    const data = JSON.parse(localStorage.getItem("userInfo"));
+    const loggedInUser = data.name;
+    console.log(loggedInUser);
+    const sender = loggedInUser == users[0].name ? users[1].name : users[0].name;
+    return sender;
+};
+exports.default = getSender;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bFv4J":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ce10 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ce10.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _userContext = require("../../utils/userContext");
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _avatar = require("./Avatar");
+var _avatarDefault = parcelHelpers.interopDefault(_avatar);
+var _s = $RefreshSig$();
+const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile })=>{
+    _s();
+    const [gcUsers, setGcUsers] = (0, _react.useState)(users);
+    const [gcUserSearch, setGcUserSearch] = (0, _react.useState)(null);
+    const { token, allChats, setAllchats, chatData, setchatData } = (0, _react.useContext)((0, _userContext.userContext));
+    const [searchUsers, setSearchUsers] = (0, _react.useState)([]);
+    const [toggle, settoggle] = (0, _react.useState)(false);
+    const [name, setName] = (0, _react.useState)(null);
+    (0, _react.useEffect)(()=>{
+        (0, _axiosDefault.default).get(`http://localhost:5000/api/users/?search=${gcUserSearch}`, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }).then((response)=>{
+            console.log(response.data);
+            setSearchUsers(response.data);
+        }).catch((err)=>{
+            console.log(err.message);
+        });
+    }, [
+        gcUserSearch
+    ]);
+    const ClickHandler = async ()=>{
+        const data = {
+            chatId: _id,
+            updatedName: name
+        };
+        const formdata = JSON.stringify(data);
+        console.log(formdata);
+        const response = await (0, _axiosDefault.default).put("http://localhost:5000/api/chat/rename", formdata, {
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`
+            }
+        });
+        setAllchats((prev)=>{
+            return prev.map((chat)=>{
+                if (chat._id === _id) chat.chatName = response.data.chatName;
+                return chat;
+            });
+        });
+        setchatData({
+            ...chatData,
+            chatName: response.data.chatName
+        });
+        console.log(chatData);
+    };
+    const removeUsers = async (userid, updatedusers, grpAdmin)=>{
+        const data = {
+            userId: userid,
+            chatId: _id
+        };
+        const formdata = JSON.stringify(data);
+        const response = await (0, _axiosDefault.default).put("http://localhost:5000/api/chat/groupremove", formdata, {
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`
+            }
+        });
+        console.log(grpAdmin);
+        if (grpAdmin) setAllchats((chat)=>{
+            return chat.filter((chat)=>chat._id !== _id);
+        });
+    };
+    (0, _react.useEffect)(()=>{
+        console.log(allChats);
+    }, [
+        allChats
+    ]);
+    const addUser = async (id)=>{
+        const data = {
+            userId: id,
+            chatId: _id
+        };
+        const formdata = JSON.stringify(data);
+        console.log(formdata);
+        const response = await (0, _axiosDefault.default).put("http://localhost:5000/api/chat/groupadd", formdata, {
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`
+            }
+        });
+        console.log(response);
+    };
+    const leaveGrp = async ()=>{
+        const user = JSON.parse(localStorage.getItem("userInfo"));
+        const grpAdmin = true;
+        removeUsers(user._id, null, grpAdmin);
+        setchatData(null);
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "w-[40vw] bg-slate-200 rounded-lg text-center relative",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "flex flex-col justify-center items-center gap-y-6 px-3 py-4 w-[90%] mx-auto text-center",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                            className: "text-3xl",
+                            children: chatName
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/GcModal.jsx",
+                            lineNumber: 124,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "flex flex-wrap items-center gap-3 ",
+                            children: gcUsers.map((user)=>{
+                                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: " flex  px-2 gap-x-3 py-[2px]  text-sm  rounded-md bg-black text-white text-[0.9em]",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                            children: user.name
+                                        }, void 0, false, {
+                                            fileName: "src/components/Chat/GcModal.jsx",
+                                            lineNumber: 129,
+                                            columnNumber: 19
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                            onClick: ()=>{
+                                                setGcUsers((prev)=>{
+                                                    const updatedUsers = prev.filter((curr)=>curr._id !== user._id);
+                                                    // Check if the length of updatedUsers is at least 3
+                                                    if (updatedUsers.length < 3) {
+                                                        alert("Minimum of 3 users must be maintained");
+                                                        return prev; // Return the previous state
+                                                    }
+                                                    removeUsers(user._id, updatedUsers);
+                                                    return updatedUsers;
+                                                });
+                                            },
+                                            children: "\u2716"
+                                        }, void 0, false, {
+                                            fileName: "src/components/Chat/GcModal.jsx",
+                                            lineNumber: 130,
+                                            columnNumber: 19
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/Chat/GcModal.jsx",
+                                    lineNumber: 128,
+                                    columnNumber: 17
+                                }, undefined);
+                            })
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/GcModal.jsx",
+                            lineNumber: 125,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "flex gap-x-4 text-[0.9em] w-full items-center justify-center text-center ",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                    type: "text",
+                                    placeholder: "New Group Name",
+                                    className: "py-2 px-2 w-[50%]  text-center rounded-md ",
+                                    value: name,
+                                    onChange: (e)=>setName(e.target.value)
+                                }, void 0, false, {
+                                    fileName: "src/components/Chat/GcModal.jsx",
+                                    lineNumber: 155,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                    className: "bg-black text-white px-2 py-1 rounded-md transform-cpu duration-300 active:scale-75",
+                                    onClick: ()=>ClickHandler(),
+                                    children: "Update"
+                                }, void 0, false, {
+                                    fileName: "src/components/Chat/GcModal.jsx",
+                                    lineNumber: 162,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/Chat/GcModal.jsx",
+                            lineNumber: 154,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            type: "text",
+                            placeholder: "Search for user to add",
+                            className: "w-[67%] py-1 px-2 rounded-md text-center",
+                            value: gcUserSearch,
+                            onChange: (e)=>{
+                                setGcUserSearch(e.target.value);
+                                settoggle(true);
+                            }
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/GcModal.jsx",
+                            lineNumber: 169,
+                            columnNumber: 11
+                        }, undefined),
+                        toggle && searchUsers.length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "w-[70%] max-h-60 overflow-y-auto hide-scrollbar border-2 border-black rounded-md mt-2",
+                            children: searchUsers.map((val, idx)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                    className: "w-full border-b border-black bg-slate-50 py-2 text-left hover:bg-green-400 transition-all duration-200 hover:border-white",
+                                    onClick: ()=>{
+                                        setGcUsers((prev)=>{
+                                            const exists = prev.some((curr)=>curr._id === val._id);
+                                            if (!exists) return [
+                                                val,
+                                                ...prev
+                                            ];
+                                            else return [
+                                                prev.find((curr)=>curr._id === val._id),
+                                                ...prev.filter((curr)=>curr._id !== val._id)
+                                            ];
+                                        });
+                                        settoggle(false);
+                                        setGcUserSearch(null);
+                                        addUser(val._id);
+                                    },
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex gap-x-3 items-center px-2",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _avatarDefault.default), {
+                                                name: val.name
+                                            }, void 0, false, {
+                                                fileName: "src/components/Chat/GcModal.jsx",
+                                                lineNumber: 202,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "flex-col gap-y-2",
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                                        children: val.name
+                                                    }, void 0, false, {
+                                                        fileName: "src/components/Chat/GcModal.jsx",
+                                                        lineNumber: 204,
+                                                        columnNumber: 23
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                                        children: val.email
+                                                    }, void 0, false, {
+                                                        fileName: "src/components/Chat/GcModal.jsx",
+                                                        lineNumber: 205,
+                                                        columnNumber: 23
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/components/Chat/GcModal.jsx",
+                                                lineNumber: 203,
+                                                columnNumber: 21
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/Chat/GcModal.jsx",
+                                        lineNumber: 201,
+                                        columnNumber: 19
+                                    }, undefined)
+                                }, idx, false, {
+                                    fileName: "src/components/Chat/GcModal.jsx",
+                                    lineNumber: 183,
+                                    columnNumber: 17
+                                }, undefined))
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/GcModal.jsx",
+                            lineNumber: 181,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            onClick: ()=>{
+                                leaveGrp();
+                                setgcProfile(false);
+                            },
+                            className: "bg-black text-white px-2 py-1 rounded-md transform-cpu duration-300 active:scale-75",
+                            children: "Leave Group"
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/GcModal.jsx",
+                            lineNumber: 213,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Chat/GcModal.jsx",
+                    lineNumber: 123,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/Chat/GcModal.jsx",
+                lineNumber: 122,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "absolute top-1 right-3",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    onClick: ()=>setgcProfile(false),
+                    className: "transform-cpu duration-300 active:scale-75",
+                    children: "\u2716"
+                }, void 0, false, {
+                    fileName: "src/components/Chat/GcModal.jsx",
+                    lineNumber: 225,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/Chat/GcModal.jsx",
+                lineNumber: 224,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(GcModal, "uBsS9tP7rPS6fstmQgEcjZNOy8s=");
+_c = GcModal;
+exports.default = GcModal;
+var _c;
+$RefreshReg$(_c, "GcModal");
+
+  $parcel$ReactRefreshHelpers$ce10.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../utils/userContext":"eBA1b","axios":"jo6P5","./Avatar":"kBMDu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dkoGO":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$9ce9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9ce9.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const MessageBox = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "border border-black rounded-md h-full w-full flex flex-col ",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "flex gap-x-2 mt-auto",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                    type: "text",
+                    className: "rounded-sm w-full px-2 text-sm py-1 text-black",
+                    placeholder: "Enter your message here....."
+                }, void 0, false, {
+                    fileName: "src/components/Chat/MessageBox.jsx",
+                    lineNumber: 7,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    className: "bg-green-700 text-white p-1 rounded-sm hover:bg-black transform-cpu duration-300 active:scale-75 text-xl",
+                    children: "\u27A4"
+                }, void 0, false, {
+                    fileName: "src/components/Chat/MessageBox.jsx",
+                    lineNumber: 12,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Chat/MessageBox.jsx",
+            lineNumber: 6,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/Chat/MessageBox.jsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, undefined);
+};
+_c = MessageBox;
+exports.default = MessageBox;
+var _c;
+$RefreshReg$(_c, "MessageBox");
+
+  $parcel$ReactRefreshHelpers$9ce9.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xTun":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$3f26 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3f26.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$();
+const useScreenSize = (threshold = 1024)=>{
+    _s();
+    const [screenSize, setscreenSize] = (0, _react.useState)(window.innerWidth < threshold);
+    (0, _react.useEffect)(()=>{
+        let timeoutId = null;
+        const handleResize = ()=>{
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(()=>{
+                setscreenSize(window.innerWidth < threshold);
+            }, 50);
+        };
+        window.addEventListener("resize", handleResize);
+        handleResize();
+        return ()=>{
+            clearTimeout(timeoutId);
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+    return screenSize;
+};
+_s(useScreenSize, "Y4dTvzKMsZ9jlEY9gnPUEKwyXhk=");
+exports.default = useScreenSize;
+
+  $parcel$ReactRefreshHelpers$3f26.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequire10c2")
 
 //# sourceMappingURL=index.7271efb6.js.map

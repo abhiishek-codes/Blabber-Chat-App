@@ -4,16 +4,16 @@ import { userContext } from "../../utils/userContext";
 import axios from "axios";
 import Avatar from "./Avatar";
 
-const CreateGc = () => {
+const CreateGc = ({ setcreatgc }) => {
   const [gcName, setGcName] = useState("");
   const [gcUserSearch, setGcUserSearch] = useState("");
   const [searchUsers, setSearchUsers] = useState([]);
   const [gcUsers, setGcUsers] = useState([]);
-  const { token } = useContext(userContext);
+  const { token, setAllchats, allChats, setactiveChat, setchatData } =
+    useContext(userContext);
   const [toggle, settoggle] = useState(false);
 
   useEffect(() => {
-    console.log(gcUserSearch);
     axios
       .get(`http://localhost:5000/api/users/?search=${gcUserSearch}`, {
         headers: {
@@ -21,13 +21,44 @@ const CreateGc = () => {
         },
       })
       .then((response) => {
-        console.log(response.data);
         setSearchUsers(response.data);
       })
       .catch((err) => {
         console.log(err.message);
       });
   }, [gcUserSearch]);
+
+  const clickHandler = async () => {
+    const users = gcUsers.map((element) => element._id);
+    const formdata = {
+      name: gcName,
+      users: users,
+    };
+    const finaldata = JSON.stringify(formdata);
+    console.log(finaldata);
+
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/chat/group",
+        finaldata,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      console.log(response.data);
+      setAllchats([response.data.fullChat, ...allChats]);
+      setactiveChat(response.data.fullChat._id);
+      setchatData(response.data.fullChat);
+      console.log(allChats);
+      setcreatgc(false);
+    } catch (error) {
+      console.log(error.message);
+      resizeBy.status(404).json({ msg: "Chat cannot be created" });
+    }
+  };
 
   return (
     <>
@@ -60,8 +91,13 @@ const CreateGc = () => {
                   className="w-full border-b border-black bg-slate-50 py-2 text-left hover:bg-green-400 transition-all duration-200 hover:border-white"
                   onClick={() => {
                     setGcUsers((prev) => {
-                      if (prev.includes(val)) return prev;
-                      return [...prev, val];
+                      const exists = prev.some((curr) => curr._id === val._id);
+                      if (!exists) return [val, ...prev];
+                      else
+                        return [
+                          prev.find((curr) => curr._id === val._id),
+                          ...prev.filter((curr) => curr._id !== val._id),
+                        ];
                     });
                     settoggle(false);
                     setGcUserSearch("");
@@ -85,20 +121,34 @@ const CreateGc = () => {
                 return (
                   <div className="flex items-center px-2 gap-x-3 py-[2px] justify-between text-sm  rounded-md bg-black text-white">
                     <h1 className="text-[0.9em]">{val.name}</h1>
-                    <button>✖</button>
+                    <button
+                      onClick={() => {
+                        setGcUsers((prev) =>
+                          prev.filter((curr) => curr._id !== val._id)
+                        );
+                      }}
+                    >
+                      ✖
+                    </button>
                   </div>
                 );
               })}
             </div>
           )}
 
-          <button className=" text-white bg-black rounded-md px-3 py-2 text-sm transform-cpu duration-300 active:scale-75">
+          <button
+            className=" text-white bg-black rounded-md px-3 py-2 text-sm transform-cpu duration-300 active:scale-75"
+            onClick={() => clickHandler()}
+          >
             Create Chat
           </button>
         </div>
         <button
           className="absolute top-0 right-2 text-bold text-xl  transform-cpu duration-300 active:scale-75"
-          onClick={() => settoggle(false)}
+          onClick={() => {
+            settoggle(false);
+            setcreatgc(false);
+          }}
         >
           ✖
         </button>

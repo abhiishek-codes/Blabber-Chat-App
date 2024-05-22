@@ -12,11 +12,16 @@ const ChatUserCard = ({ groupChat, data, idx }) => {
     setAllchats,
     setactiveChat,
     activeChat,
+    chatData,
+    setchatData,
   } = useContext(userContext);
   // console.log(data);
   return (
     <button
-      onClick={() => setactiveChat(data._id)}
+      onClick={() => {
+        setactiveChat(data._id);
+        setchatData(data);
+      }}
       className={`border-2 px-2 py-2 rounded-md w-full text-left transition-all duration-300 ${
         data._id == activeChat
           ? "bg-black text-white hover:bg-black hover:text-white"
@@ -24,7 +29,11 @@ const ChatUserCard = ({ groupChat, data, idx }) => {
       }`}
     >
       {/* {console.log(activeChat)} */}
-      {groupChat ? <GroupchatCard data={data} /> : <OnetooneCard data={data} />}
+      {groupChat == true ? (
+        <GroupchatCard data={data} />
+      ) : (
+        <OnetooneCard data={data} />
+      )}
     </button>
   );
 };
