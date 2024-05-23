@@ -33,7 +33,7 @@ const Header = () => {
         setusers([]);
         setusers(response.data);
         setsuser("");
-        console.log(response.data);
+        console.log("Searched User");
       })
       .catch((err) => {
         console.log(err.message);
@@ -94,7 +94,7 @@ const Header = () => {
       {/* Profile drop down*/}
 
       <div
-        className={`profile-dropdown fixed right-0 py-2 flex-col justify-center items-center  px-10 bg-slate-900 text-white  text-center transform transition-transform duration-200 ease-in-out font-['Basis_Grotesque_Pro_Black'] ${
+        className={`profile-dropdown fixed right-0 py-2 z-50 flex-col justify-center items-center  px-10 bg-slate-900 text-white  text-center transform transition-transform duration-200 ease-in-out font-['Basis_Grotesque_Pro_Black'] ${
           tgProfile ? "translate-y-0" : "-translate-y-48 "
         }`}
       >

@@ -39745,12 +39745,15 @@ const UserProvider = ({ children })=>{
     const [chatName, setchatName] = (0, _react.useState)(null);
     const [chatData, setchatData] = (0, _react.useState)(null);
     const navigate = (0, _reactRouterDom.useNavigate)();
-    const [token, setToken] = (0, _react.useState)(null); // Moved inside the component
+    const [token, setToken] = (0, _react.useState)(null);
+    const [isVisible, setisVisible] = (0, _react.useState)(true); // Moved inside the component
     (0, _react.useEffect)(()=>{
-        const userinfo = JSON.parse(localStorage.getItem("userInfo"));
-        setUser(userinfo);
-        setToken(userinfo?.token);
-        if (!userinfo) navigate("/");
+        if (localStorage.getItem("userInfo")) {
+            const userinfo = JSON.parse(localStorage.getItem("userInfo"));
+            setUser(userinfo);
+            setToken(userinfo?.token);
+            if (!userinfo) navigate("/");
+        }
     }, []); // Removed useNavigate from the dependency array
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(userContext.Provider, {
         value: {
@@ -39767,16 +39770,18 @@ const UserProvider = ({ children })=>{
             chatName,
             setchatName,
             chatData,
-            setchatData
+            setchatData,
+            isVisible,
+            setisVisible
         },
         children: children
     }, void 0, false, {
         fileName: "src/utils/userContext.js",
-        lineNumber: 25,
+        lineNumber: 27,
         columnNumber: 5
     }, undefined);
 };
-_s(UserProvider, "MNgiGTi7LBj4phYa+xRucTYeMQU=", false, function() {
+_s(UserProvider, "/suk5JdC0Jv2KsLOVjrZWVrrki0=", false, function() {
     return [
         (0, _reactRouterDom.useNavigate)
     ];
@@ -39808,73 +39813,76 @@ var _allChats = require("../components/Chat/AllChats");
 var _allChatsDefault = parcelHelpers.interopDefault(_allChats);
 var _sendMessage = require("../components/Chat/SendMessage");
 var _sendMessageDefault = parcelHelpers.interopDefault(_sendMessage);
-var _useScreenSize = require("../utils/useScreenSize");
-var _useScreenSizeDefault = parcelHelpers.interopDefault(_useScreenSize);
-var _messageBox = require("../components/Chat/MessageBox");
-var _messageBoxDefault = parcelHelpers.interopDefault(_messageBox);
+var _userContext = require("../utils/userContext");
 var _s = $RefreshSig$();
 const ChatPage = ()=>{
     _s();
-    const screenSize = (0, _useScreenSizeDefault.default)();
+    const { isVisible, setisVisible } = (0, _react.useContext)((0, _userContext.userContext));
+    (0, _react.useEffect)(()=>{
+        const handleResize = ()=>{
+            setisVisible(window.innerWidth > 1024);
+        };
+        window.addEventListener("resize", handleResize);
+        // Clean up the event listener on component unmount
+        return ()=>{
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/pages/ChatPage.jsx",
-                lineNumber: 13,
+                lineNumber: 25,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex flex-col h-[87vh] py-3 px-4 font-['Basis_Grotesque_Pro_Black'] ",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "flex justify-between h-full gap-x-4",
+                    className: "flex justify-between h-full gap-x-4 relative",
                     children: [
-                        !screenSize && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "lg:w-[30vw] xl:w-[25vw] h-full",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: `transition-all duration-300 ease-in-out transform lg:translate-x-0 ${isVisible ? "translate-x-0" : "-translate-x-[120%] lg:translate-x-0"} w-[70vw] lg:w-[30vw] xl:w-[25vw] h-full absolute lg:relative z-10`,
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _allChatsDefault.default), {}, void 0, false, {
                                 fileName: "src/pages/ChatPage.jsx",
-                                lineNumber: 18,
-                                columnNumber: 15
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/pages/ChatPage.jsx",
-                            lineNumber: 17,
-                            columnNumber: 13
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: " w-[85vw] lg:w-[70vw] xl:w-[75vw] h-full mx-auto",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sendMessageDefault.default), {}, void 0, false, {
-                                fileName: "src/pages/ChatPage.jsx",
-                                lineNumber: 22,
+                                lineNumber: 35,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/pages/ChatPage.jsx",
-                            lineNumber: 21,
+                            lineNumber: 28,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: " w-[99vw] md:w-[85vw] lg:w-[70vw] xl:w-[75vw] h-full mx-auto",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sendMessageDefault.default), {}, void 0, false, {
+                                fileName: "src/pages/ChatPage.jsx",
+                                lineNumber: 38,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/pages/ChatPage.jsx",
+                            lineNumber: 37,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/pages/ChatPage.jsx",
-                    lineNumber: 15,
+                    lineNumber: 27,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/pages/ChatPage.jsx",
-                lineNumber: 14,
+                lineNumber: 26,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/pages/ChatPage.jsx",
-        lineNumber: 12,
+        lineNumber: 24,
         columnNumber: 5
     }, undefined);
 };
-_s(ChatPage, "Az9rJUgKUY00qPUUgMtIxbkNJMY=", false, function() {
-    return [
-        (0, _useScreenSizeDefault.default)
-    ];
-});
+_s(ChatPage, "be85e6TR6yKM1bIiBHi/odec3Ic=");
 _c = ChatPage;
 exports.default = ChatPage;
 var _c;
@@ -39885,7 +39893,7 @@ $RefreshReg$(_c, "ChatPage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/Chat/Header":"gFHmj","../components/Chat/AllChats":"kBEyN","../components/Chat/SendMessage":"8QwIL","../utils/useScreenSize":"9xTun","../components/Chat/MessageBox":"dkoGO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gFHmj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/Chat/Header":"gFHmj","../components/Chat/AllChats":"kBEyN","../components/Chat/SendMessage":"8QwIL","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/userContext":"eBA1b"}],"gFHmj":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$b362 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -39929,7 +39937,7 @@ const Header = ()=>{
             setusers([]);
             setusers(response.data);
             setsuser("");
-            console.log(response.data);
+            console.log("Searched User");
         }).catch((err)=>{
             console.log(err.message);
         });
@@ -40024,7 +40032,7 @@ const Header = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: `profile-dropdown fixed right-0 py-2 flex-col justify-center items-center  px-10 bg-slate-900 text-white  text-center transform transition-transform duration-200 ease-in-out font-['Basis_Grotesque_Pro_Black'] ${tgProfile ? "translate-y-0" : "-translate-y-48 "}`,
+                className: `profile-dropdown fixed right-0 py-2 z-50 flex-col justify-center items-center  px-10 bg-slate-900 text-white  text-center transform transition-transform duration-200 ease-in-out font-['Basis_Grotesque_Pro_Black'] ${tgProfile ? "translate-y-0" : "-translate-y-48 "}`,
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         className: "mb-2 block hover:bg-white hover:text-black px-3 py-2 rounded-md transition-transform duration-200 transform-gpu active:scale-75",
@@ -40370,8 +40378,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-const ProfileModal = ({ name, email, profilePic })=>{
-    console.log(name);
+const ProfileModal = ({ name, email, pic })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "flex items-center justify-center min-h-screen",
@@ -40383,16 +40390,16 @@ const ProfileModal = ({ name, email, profilePic })=>{
                         children: name
                     }, void 0, false, {
                         fileName: "src/components/Chat/ProfileModal.jsx",
-                        lineNumber: 12,
+                        lineNumber: 11,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        src: profilePic,
+                        src: pic,
                         alt: "Profile Pic",
                         className: "w-40 h-440 rounded-full"
                     }, void 0, false, {
                         fileName: "src/components/Chat/ProfileModal.jsx",
-                        lineNumber: 13,
+                        lineNumber: 12,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -40403,18 +40410,18 @@ const ProfileModal = ({ name, email, profilePic })=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Chat/ProfileModal.jsx",
-                        lineNumber: 18,
+                        lineNumber: 17,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Chat/ProfileModal.jsx",
-                lineNumber: 8,
+                lineNumber: 7,
                 columnNumber: 9
             }, undefined)
         }, void 0, false, {
             fileName: "src/components/Chat/ProfileModal.jsx",
-            lineNumber: 7,
+            lineNumber: 6,
             columnNumber: 7
         }, undefined)
     }, void 0, false);
@@ -40451,7 +40458,7 @@ var _createGcJsxDefault = parcelHelpers.interopDefault(_createGcJsx);
 var _s = $RefreshSig$();
 const AllChats = ()=>{
     _s();
-    const { allChats, setAllchats, chatData } = (0, _react.useContext)((0, _userContextJs.userContext));
+    const { allChats, setAllchats, chatData, setactiveChat, setchatData, isVisible, setisVisible } = (0, _react.useContext)((0, _userContextJs.userContext));
     const [creategc, setcreatgc] = (0, _react.useState)(false);
     const userinfo = JSON.parse(localStorage.getItem("userInfo"));
     const token = userinfo.token;
@@ -40465,6 +40472,10 @@ const AllChats = ()=>{
             console.log("called from AllChats");
             let sortedData = response.data.sort((a, b)=>new Date(b.createdAt) - new Date(a.createdAt));
             setAllchats(sortedData);
+            if (sortedData.length > 0) {
+                setactiveChat(sortedData[0]._id);
+                setchatData(sortedData[0]);
+            }
         }).catch((err)=>console.log(err.message));
     }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
@@ -40476,26 +40487,35 @@ const AllChats = ()=>{
                         className: "flex justify-between pt-5 px-3 items-center",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                                className: "text-2xl",
+                                className: "text-lg md:text-2xl ",
                                 children: "My Chats"
                             }, void 0, false, {
                                 fileName: "src/components/Chat/AllChats.jsx",
-                                lineNumber: 36,
+                                lineNumber: 49,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "bg-slate-900 text-white py-2 px-2 rounded-md text-sm transition-transform duration-200 transform-gpu active:scale-75",
+                                className: "bg-slate-900 text-white py-2 px-2 rounded-md text-sm transition-transform duration-200 transform-gpu active:scale-75 ",
                                 onClick: ()=>setcreatgc(true),
                                 children: "Create Grp Chat \u2795"
                             }, void 0, false, {
                                 fileName: "src/components/Chat/AllChats.jsx",
-                                lineNumber: 37,
+                                lineNumber: 50,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: "lg:hidden",
+                                onClick: ()=>setisVisible(!isVisible),
+                                children: "\u274C"
+                            }, void 0, false, {
+                                fileName: "src/components/Chat/AllChats.jsx",
+                                lineNumber: 57,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Chat/AllChats.jsx",
-                        lineNumber: 35,
+                        lineNumber: 48,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -40512,7 +40532,7 @@ const AllChats = ()=>{
                                         idx: index,
                                         __source: {
                                             fileName: "src/components/Chat/AllChats.jsx",
-                                            lineNumber: 50,
+                                            lineNumber: 70,
                                             columnNumber: 19
                                         },
                                         __self: undefined
@@ -40521,18 +40541,18 @@ const AllChats = ()=>{
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Chat/AllChats.jsx",
-                            lineNumber: 46,
+                            lineNumber: 66,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/Chat/AllChats.jsx",
-                        lineNumber: 44,
+                        lineNumber: 64,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Chat/AllChats.jsx",
-                lineNumber: 34,
+                lineNumber: 47,
                 columnNumber: 7
             }, undefined),
             creategc && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -40543,30 +40563,30 @@ const AllChats = ()=>{
                         setcreatgc: setcreatgc
                     }, void 0, false, {
                         fileName: "src/components/Chat/AllChats.jsx",
-                        lineNumber: 63,
+                        lineNumber: 83,
                         columnNumber: 13
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/Chat/AllChats.jsx",
-                    lineNumber: 62,
+                    lineNumber: 82,
                     columnNumber: 11
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Chat/AllChats.jsx",
-                lineNumber: 61,
+                lineNumber: 81,
                 columnNumber: 9
             }, undefined),
             creategc && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "fixed inset-0 bg-black opacity-[88%] z-40"
             }, void 0, false, {
                 fileName: "src/components/Chat/AllChats.jsx",
-                lineNumber: 69,
+                lineNumber: 89,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(AllChats, "3BIvKklnrxhVWEn09W0IyX0E1tk=");
+_s(AllChats, "SujOEMYIzB+iyvTfHJCctflS/VY=");
 _c = AllChats;
 exports.default = AllChats;
 var _c;
@@ -41056,7 +41076,7 @@ var _messageBoxJsxDefault = parcelHelpers.interopDefault(_messageBoxJsx);
 var _s = $RefreshSig$();
 const SendMessage = ({ chatName, groupAdmin, users, _id })=>{
     _s();
-    const { activeChat, chatData } = (0, _react.useContext)((0, _userContextJs.userContext));
+    const { activeChat, chatData, setisVisible, isVisible } = (0, _react.useContext)((0, _userContextJs.userContext));
     const [tgProfile, settgProfile] = (0, _react.useState)(false);
     const [gcProfile, setgcProfile] = (0, _react.useState)(false);
     if (chatData != null) {
@@ -41065,42 +41085,59 @@ const SendMessage = ({ chatName, groupAdmin, users, _id })=>{
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "w-full h-full border-2 border-black rounded-lg text-white flex flex-col px-3 pt-5 pb-2 gap-y-3 text-xl bg-slate-900",
+                    className: "w-full h-full border-2 border-black rounded-lg text-white flex flex-col px-3  gap-y-2 text-xl bg-slate-900",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "flex  items-center justify-between",
+                            className: "flex  items-center justify-between bg-slate-600 py-3 my-2 px-3 rounded-md",
                             children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                    className: "text-base lg:hidden bg-white rounded-md transform-cpu duration-300 active:scale-75 p-1",
+                                    onClick: ()=>setisVisible(!isVisible),
+                                    children: "\uD83D\uDD0D"
+                                }, void 0, false, {
+                                    fileName: "src/components/Chat/SendMessage.jsx",
+                                    lineNumber: 22,
+                                    columnNumber: 13
+                                }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                    className: "text-base md:text-3xl",
                                     children: groupChat ? chatData.chatName : (0, _getSenderJsDefault.default)(chatData.users)
                                 }, void 0, false, {
                                     fileName: "src/components/Chat/SendMessage.jsx",
-                                    lineNumber: 21,
+                                    lineNumber: 28,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                     onClick: ()=>!groupChat ? settgProfile(true) : setgcProfile(true),
-                                    className: "bg-white rounded-md",
+                                    className: "bg-white rounded-md text-base md:text-xl p-1 md:p-0",
                                     children: "\uD83D\uDC41\uFE0F\u200D\uD83D\uDDE8\uFE0F"
                                 }, void 0, false, {
                                     fileName: "src/components/Chat/SendMessage.jsx",
-                                    lineNumber: 22,
+                                    lineNumber: 32,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Chat/SendMessage.jsx",
-                            lineNumber: 20,
+                            lineNumber: 21,
                             columnNumber: 11
                         }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _messageBoxJsxDefault.default), {}, void 0, false, {
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "h-[calc(100%-1rem)] overflow-y-auto hide-scrollbar border-none px-3",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _messageBoxJsxDefault.default), {}, void 0, false, {
+                                fileName: "src/components/Chat/SendMessage.jsx",
+                                lineNumber: 42,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
                             fileName: "src/components/Chat/SendMessage.jsx",
-                            lineNumber: 31,
+                            lineNumber: 41,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Chat/SendMessage.jsx",
-                    lineNumber: 19,
+                    lineNumber: 20,
                     columnNumber: 9
                 }, undefined),
                 tgProfile && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
@@ -41114,12 +41151,12 @@ const SendMessage = ({ chatName, groupAdmin, users, _id })=>{
                                         ...chatData.users[idx]
                                     }, void 0, false, {
                                         fileName: "src/components/Chat/SendMessage.jsx",
-                                        lineNumber: 42,
+                                        lineNumber: 54,
                                         columnNumber: 17
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/Chat/SendMessage.jsx",
-                                    lineNumber: 41,
+                                    lineNumber: 53,
                                     columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41129,25 +41166,25 @@ const SendMessage = ({ chatName, groupAdmin, users, _id })=>{
                                         children: "\u274C"
                                     }, void 0, false, {
                                         fileName: "src/components/Chat/SendMessage.jsx",
-                                        lineNumber: 46,
+                                        lineNumber: 58,
                                         columnNumber: 17
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/Chat/SendMessage.jsx",
-                                    lineNumber: 45,
+                                    lineNumber: 57,
                                     columnNumber: 15
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Chat/SendMessage.jsx",
-                            lineNumber: 36,
+                            lineNumber: 48,
                             columnNumber: 13
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "fixed inset-0 bg-black opacity-80 z-40 "
                         }, void 0, false, {
                             fileName: "src/components/Chat/SendMessage.jsx",
-                            lineNumber: 50,
+                            lineNumber: 62,
                             columnNumber: 13
                         }, undefined)
                     ]
@@ -41161,28 +41198,41 @@ const SendMessage = ({ chatName, groupAdmin, users, _id })=>{
                                 setgcProfile: setgcProfile
                             }, void 0, false, {
                                 fileName: "src/components/Chat/SendMessage.jsx",
-                                lineNumber: 61,
+                                lineNumber: 73,
                                 columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Chat/SendMessage.jsx",
-                            lineNumber: 56,
+                            lineNumber: 68,
                             columnNumber: 13
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "fixed inset-0 bg-black opacity-80 z-40 "
                         }, void 0, false, {
                             fileName: "src/components/Chat/SendMessage.jsx",
-                            lineNumber: 64,
+                            lineNumber: 76,
                             columnNumber: 13
                         }, undefined)
                     ]
                 }, void 0, true)
             ]
         }, void 0, true);
-    }
+    } else return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "w-full h-full border-2 border-black rounded-lg text-white flex flex-col px-3  gap-y-2 text-xl bg-slate-900 items-center justify-center",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+            children: "Select a chat or Create a chat"
+        }, void 0, false, {
+            fileName: "src/components/Chat/SendMessage.jsx",
+            lineNumber: 84,
+            columnNumber: 9
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/Chat/SendMessage.jsx",
+        lineNumber: 83,
+        columnNumber: 7
+    }, undefined);
 };
-_s(SendMessage, "LFomj+MozW7JXtnnYy7+EizMpp8=");
+_s(SendMessage, "aCksq7OCSpWCpR+oBMAj/hOHg4E=");
 _c = SendMessage;
 exports.default = SendMessage;
 var _c;
@@ -41193,7 +41243,7 @@ $RefreshReg$(_c, "SendMessage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../utils/userContext.js":"eBA1b","../../utils/getSender.js":"2jEox","./ProfileModal.jsx":"03Gnn","./GcModal.jsx":"bFv4J","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Chat/MessageBox.jsx":"dkoGO"}],"2jEox":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../utils/userContext.js":"eBA1b","../../utils/getSender.js":"2jEox","./ProfileModal.jsx":"03Gnn","./GcModal.jsx":"bFv4J","../Chat/MessageBox.jsx":"dkoGO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2jEox":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 const getSender = (users)=>{
@@ -41550,41 +41600,134 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _userContext = require("../../utils/userContext");
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _senderCardJsx = require("./SenderCard.jsx");
+var _senderCardJsxDefault = parcelHelpers.interopDefault(_senderCardJsx);
+var _recieverCardJsx = require("./RecieverCard.jsx");
+var _recieverCardJsxDefault = parcelHelpers.interopDefault(_recieverCardJsx);
+var _s = $RefreshSig$();
 const MessageBox = ()=>{
+    _s();
+    const { token, activeChat } = (0, _react.useContext)((0, _userContext.userContext));
+    const user = JSON.parse(localStorage.getItem("userInfo"));
+    const loggedinUser = user._id;
+    const [allMsg, setallMsgs] = (0, _react.useState)([]);
+    const [msg, setMsg] = (0, _react.useState)(null);
+    (0, _react.useEffect)(()=>{
+        if (activeChat) (0, _axiosDefault.default).get(`http://localhost:5000/api/messages/${activeChat}`, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }).then((response)=>{
+            console.log(response.data);
+            setallMsgs(response.data);
+        }).catch((error)=>console.log(error.message));
+    }, [
+        activeChat
+    ]);
+    const SendMsg = ()=>{
+        if (msg) {
+            const Data = {
+                chatId: activeChat,
+                content: msg
+            };
+            const formdata = JSON.stringify(Data);
+            setMsg("");
+            (0, _axiosDefault.default).post("http://localhost:5000/api/messages", formdata, {
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`
+                }
+            }).then((resposnse)=>{
+                setallMsgs([
+                    ...allMsg,
+                    resposnse.data
+                ]);
+            }).catch((error)=>console.log(error.message));
+        }
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "border border-black rounded-md h-full w-full flex flex-col ",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "flex gap-x-2 mt-auto",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    type: "text",
-                    className: "rounded-sm w-full px-2 text-sm py-1 text-black",
-                    placeholder: "Enter your message here....."
-                }, void 0, false, {
-                    fileName: "src/components/Chat/MessageBox.jsx",
-                    lineNumber: 7,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                    className: "bg-green-700 text-white p-1 rounded-sm hover:bg-black transform-cpu duration-300 active:scale-75 text-xl",
-                    children: "\u27A4"
-                }, void 0, false, {
-                    fileName: "src/components/Chat/MessageBox.jsx",
-                    lineNumber: 12,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/Chat/MessageBox.jsx",
-            lineNumber: 6,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
+        className: " rounded-md h-full w-full flex flex-col ",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex-1 text-sm tracking-wide  py-2 flex flex-col h-[calc(100%-4rem)] overflow-y-auto hide-scrollbar gap-y-3",
+                children: allMsg.length > 0 && allMsg.map((msg)=>{
+                    const { content, sender, createdAt } = msg;
+                    const timestamp = new Date(msg.createdAt);
+                    const hours = timestamp.getHours();
+                    const minutes = timestamp.getMinutes();
+                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: `flex ${sender._id == loggedinUser ? "justify-end" : "justify-start"}`,
+                        children: sender._id === loggedinUser ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _senderCardJsxDefault.default), {
+                            content: content,
+                            hours: hours,
+                            minutes: minutes
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/MessageBox.jsx",
+                            lineNumber: 69,
+                            columnNumber: 19
+                        }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recieverCardJsxDefault.default), {
+                            content: content,
+                            ...sender,
+                            hours: hours,
+                            minutes: minutes
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/MessageBox.jsx",
+                            lineNumber: 75,
+                            columnNumber: 19
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/Chat/MessageBox.jsx",
+                        lineNumber: 63,
+                        columnNumber: 15
+                    }, undefined);
+                })
+            }, void 0, false, {
+                fileName: "src/components/Chat/MessageBox.jsx",
+                lineNumber: 55,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex gap-x-2 mt-auto pb-2",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "text",
+                        className: "rounded-sm w-full px-2 text-sm py-1 text-black",
+                        placeholder: "Enter your message here.....",
+                        value: msg,
+                        onChange: (e)=>{
+                            setMsg(e.target.value);
+                        }
+                    }, void 0, false, {
+                        fileName: "src/components/Chat/MessageBox.jsx",
+                        lineNumber: 87,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "bg-green-700 text-white p-1 rounded-sm hover:bg-black transform-cpu duration-300 active:scale-75 text-xl",
+                        onClick: ()=>SendMsg(),
+                        children: "\u27A4"
+                    }, void 0, false, {
+                        fileName: "src/components/Chat/MessageBox.jsx",
+                        lineNumber: 96,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Chat/MessageBox.jsx",
+                lineNumber: 86,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "src/components/Chat/MessageBox.jsx",
-        lineNumber: 5,
+        lineNumber: 54,
         columnNumber: 5
     }, undefined);
 };
+_s(MessageBox, "btzRJaI9kXL2wT7ewYOMp0EgmaY=");
 _c = MessageBox;
 exports.default = MessageBox;
 var _c;
@@ -41595,46 +41738,160 @@ $RefreshReg$(_c, "MessageBox");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xTun":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$3f26 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../utils/userContext":"eBA1b","axios":"jo6P5","./SenderCard.jsx":"5iQs5","./RecieverCard.jsx":"bUTKc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5iQs5":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8505 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$3f26.prelude(module);
+$parcel$ReactRefreshHelpers$8505.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _s = $RefreshSig$();
-const useScreenSize = (threshold = 1024)=>{
-    _s();
-    const [screenSize, setscreenSize] = (0, _react.useState)(window.innerWidth < threshold);
-    (0, _react.useEffect)(()=>{
-        let timeoutId = null;
-        const handleResize = ()=>{
-            clearTimeout(timeoutId);
-            timeoutId = setTimeout(()=>{
-                setscreenSize(window.innerWidth < threshold);
-            }, 50);
-        };
-        window.addEventListener("resize", handleResize);
-        handleResize();
-        return ()=>{
-            clearTimeout(timeoutId);
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
-    return screenSize;
+const SenderCard = ({ content, hours, minutes })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "min-w-[15%] max-w-[70%] md:max-w-[50%] md:min-w-[8%] bg-green-500 px-2 rounded-md py-1",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "flex flex-col ",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    style: {
+                        wordBreak: "break-all"
+                    },
+                    className: "text-right text-[0.9em] md:text-base",
+                    children: content
+                }, void 0, false, {
+                    fileName: "src/components/Chat/SenderCard.jsx",
+                    lineNumber: 7,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    className: "text-[0.7em] text-left text-black",
+                    children: [
+                        hours,
+                        ":",
+                        minutes
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Chat/SenderCard.jsx",
+                    lineNumber: 13,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Chat/SenderCard.jsx",
+            lineNumber: 6,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/Chat/SenderCard.jsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, undefined);
 };
-_s(useScreenSize, "Y4dTvzKMsZ9jlEY9gnPUEKwyXhk=");
-exports.default = useScreenSize;
+_c = SenderCard;
+exports.default = SenderCard;
+var _c;
+$RefreshReg$(_c, "SenderCard");
 
-  $parcel$ReactRefreshHelpers$3f26.postlude(module);
+  $parcel$ReactRefreshHelpers$8505.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequire10c2")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bUTKc":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$03cf = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$03cf.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const RecieverCard = ({ content, profilePic, name, hours, minutes })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "min-w-[15%] max-w-[70%] md:max-w-[50%] md:min-w-[8%]  bg-slate-500 px-2 rounded-md flex flex-col gap-y-1",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex gap-x-1 items-center",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: profilePic,
+                        alt: "PP",
+                        className: "w-6 h-6"
+                    }, void 0, false, {
+                        fileName: "src/components/Chat/RecieverCard.jsx",
+                        lineNumber: 7,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "text-[0.8em] mb-1 text-black mt-3",
+                        children: name
+                    }, void 0, false, {
+                        fileName: "src/components/Chat/RecieverCard.jsx",
+                        lineNumber: 8,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Chat/RecieverCard.jsx",
+                lineNumber: 6,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex flex-col justify-center",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        style: {
+                            wordBreak: "break-all"
+                        },
+                        className: "text-left text-[0.9em] md:text-base",
+                        children: content
+                    }, void 0, false, {
+                        fileName: "src/components/Chat/RecieverCard.jsx",
+                        lineNumber: 11,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "text-[0.8em] text-right text-black",
+                        children: [
+                            hours,
+                            ":",
+                            minutes
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Chat/RecieverCard.jsx",
+                        lineNumber: 17,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Chat/RecieverCard.jsx",
+                lineNumber: 10,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Chat/RecieverCard.jsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, undefined);
+};
+_c = RecieverCard;
+exports.default = RecieverCard;
+var _c;
+$RefreshReg$(_c, "RecieverCard");
+
+  $parcel$ReactRefreshHelpers$03cf.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequire10c2")
 
 //# sourceMappingURL=index.7271efb6.js.map

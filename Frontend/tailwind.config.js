@@ -9,6 +9,9 @@ module.exports = {
   },
   variants: {
     extend: {
+      width: {
+        1024: "1024px",
+      },
       // extend your variants here if needed
     },
   },

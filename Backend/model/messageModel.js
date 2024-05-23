@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");
 const messageSchema = mongoose.Schema(
   {
     sender: {
@@ -19,7 +20,7 @@ const messageSchema = mongoose.Schema(
       },
     ],
   },
-  { timeStamp: true }
+  { timestamps: true }
 );
 
 const Message = mongoose.model("Message", messageSchema);

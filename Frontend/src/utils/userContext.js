@@ -11,14 +11,16 @@ export const UserProvider = ({ children }) => {
   const [chatName, setchatName] = useState(null);
   const [chatData, setchatData] = useState(null);
   const navigate = useNavigate();
-  const [token, setToken] = useState(null); // Moved inside the component
+  const [token, setToken] = useState(null);
+  const [isVisible, setisVisible] = useState(true); // Moved inside the component
 
   useEffect(() => {
-    const userinfo = JSON.parse(localStorage.getItem("userInfo"));
-    setUser(userinfo);
-    setToken(userinfo?.token);
-
-    if (!userinfo) navigate("/");
+    if (localStorage.getItem("userInfo")) {
+      const userinfo = JSON.parse(localStorage.getItem("userInfo"));
+      setUser(userinfo);
+      setToken(userinfo?.token);
+      if (!userinfo) navigate("/");
+    }
   }, []); // Removed useNavigate from the dependency array
 
   return (
@@ -38,6 +40,8 @@ export const UserProvider = ({ children }) => {
         setchatName,
         chatData,
         setchatData,
+        isVisible,
+        setisVisible,
       }}
     >
       {/* Changed to an object */}
