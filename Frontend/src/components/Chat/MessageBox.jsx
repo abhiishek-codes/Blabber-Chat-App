@@ -5,12 +5,16 @@ import axios from "axios";
 import SenderCard from "./SenderCard.jsx";
 import RecieverCard from "./RecieverCard.jsx";
 
+import io from "socket.io-client";
+const ENDPOINT = "http://localhost:5000";
+var socket, selectedChatCompare;
+
 const MessageBox = () => {
   const { token, activeChat } = useContext(userContext);
   const user = JSON.parse(localStorage.getItem("userInfo"));
   const loggedinUser = user._id;
   const [allMsg, setallMsgs] = useState([]);
-  const [msg, setMsg] = useState(null);
+  const [msg, setMsg] = useState("");
 
   useEffect(() => {
     if (activeChat) {
@@ -23,10 +27,35 @@ const MessageBox = () => {
         .then((response) => {
           console.log(response.data);
           setallMsgs(response.data);
+          selectedChatCompare = activeChat;
+          socket.emit("joinChat", activeChat);
         })
         .catch((error) => console.log(error.message));
     }
   }, [activeChat]);
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("userInfo"));
+    socket = io(ENDPOINT);
+    socket.emit("setup", user);
+    socket.on("connected", () => console.log("Connected"));
+  }, []);
+
+  useEffect(() => {
+    socket.on("message recieved", (newMessageRecieved) => {
+      if (
+        !selectedChatCompare || // if chat is not selected or doesn't match current chat
+        selectedChatCompare !== newMessageRecieved.chat._id
+      ) {
+        // if (!notification.includes(newMessageRecieved)) {
+        //   setNotification([newMessageRecieved, ...notification]);
+        //   setFetchAgain(!fetchAgain);
+        // }
+      } else {
+        setallMsgs([...allMsg, newMessageRecieved]);
+      }
+    });
+  });
 
   const SendMsg = () => {
     if (msg) {
@@ -44,6 +73,7 @@ const MessageBox = () => {
           },
         })
         .then((resposnse) => {
+          socket.emit("new message", resposnse.data);
           setallMsgs([...allMsg, resposnse.data]);
         })
         .catch((error) => console.log(error.message));
