@@ -56,7 +56,7 @@ const CreateGc = ({ setcreatgc }) => {
       setcreatgc(false);
     } catch (error) {
       console.log(error.message);
-      resizeBy.status(404).json({ msg: "Chat cannot be created" });
+      res.status(404).json({ msg: "Chat cannot be created" });
     }
   };
 
@@ -84,7 +84,7 @@ const CreateGc = ({ setcreatgc }) => {
           />
 
           {toggle && searchUsers.length > 0 && (
-            <div className="w-[70%] max-h-60 overflow-y-auto hide-scrollbar border-2 border-black rounded-md mt-2">
+            <div className="w-[98%] md:w-[70%] max-h-60 overflow-y-auto hide-scrollbar border-2 border-black rounded-md mt-2">
               {searchUsers.map((val, idx) => (
                 <button
                   key={idx}

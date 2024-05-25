@@ -8,6 +8,7 @@ const authUser = asyncHandler(async (req, res, next) => {
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
     res.status(404).send("Invalid authorization header");
   }
+  if (!authHeader) return res.status(403).send("Invalid authorization header");
   const token = authHeader.split(" ")[1];
 
   await jwt.verify(token, process.env.JWT_SECRET, async (err, decoded) => {

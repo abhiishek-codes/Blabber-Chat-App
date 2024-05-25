@@ -103,7 +103,7 @@ const Login = ({ Setloginstate }) => {
               )
           )}
         </div>
-        <div className="flex flex-col items-center pt-10">
+        <div className="flex flex-col items-center ">
           {errors.map(
             (error, index) =>
               !error.field && (
@@ -112,23 +112,26 @@ const Login = ({ Setloginstate }) => {
                 </div>
               )
           )}
-          <button
-            className="border px-[4rem] py-[0.3rem] rounded-md bg-green-700 text-white hover:bg-slate-800 transition-all duration-300 mb-5"
-            onClick={() => {
-              setFormData({
-                username: "testuser@gmail.com",
-                password: "1234567",
-              });
-            }}
-          >
-            Get test Credentials
-          </button>
-          <button
-            className="border px-[4rem] py-[0.3rem] rounded-md bg-green-700 text-white hover:bg-slate-800 transition-all duration-300 mb-5"
-            onClick={handleLogin}
-          >
-            Log In
-          </button>
+          <div className="pt-10 flex flex-col">
+            <button
+              className="border px-[4rem] py-[0.3rem] rounded-md bg-green-700 text-white hover:bg-slate-800 transition-all duration-300 mb-5"
+              onClick={() => {
+                setFormData({
+                  username: "abhi.a.singh.2@gmail.com",
+                  password: "Abhishek",
+                });
+              }}
+            >
+              Get test Credentials
+            </button>
+            <button
+              className="border px-[4rem] py-[0.3rem] rounded-md bg-green-700 text-white hover:bg-slate-800 transition-all duration-300 mb-5"
+              onClick={handleLogin}
+            >
+              Log In
+            </button>
+          </div>
+
           <h2>
             Not registered Yet :
             <Link to="/signup">

@@ -67,7 +67,7 @@ const Header = () => {
   return (
     <>
       <div className="bg-slate-900 text-white py-5 px-6 ">
-        <div className="flex justify-between items-center font-['Basis_Grotesque_Pro_Black']">
+        <div className="flex justify-between items-center font-['Basis']">
           <div>
             <button
               className="inline-block px-3 py-2 bg-white hover:bg-slate-100 text-black rounded-lg transition-transform duration-200 transform-gpu active:scale-95 text-sm sm:text-md side-bar"
@@ -76,7 +76,7 @@ const Header = () => {
               🔍 Search for User
             </button>
           </div>
-          <h1 className="hidden md:block text-3xl tracking-wide transform -translate-x-3">
+          <h1 className="hidden md:block text-4xl tracking-wider transform -translate-x-3">
             Blabber : The Chat App
           </h1>
           <div className="inline-block relative">
@@ -94,7 +94,7 @@ const Header = () => {
       {/* Profile drop down*/}
 
       <div
-        className={`profile-dropdown fixed right-0 py-2 z-50 flex-col justify-center items-center  px-10 bg-slate-900 text-white  text-center transform transition-transform duration-200 ease-in-out font-['Basis_Grotesque_Pro_Black'] ${
+        className={`profile-dropdown fixed right-0 py-2 z-50 flex-col justify-center items-center  px-10 bg-slate-900 text-white  text-center transform transition-transform duration-200 ease-in-out font-['Basis'] ${
           tgProfile ? "translate-y-0" : "-translate-y-48 "
         }`}
       >
@@ -117,7 +117,7 @@ const Header = () => {
 
       {/* Sidebar with animation */}
       <div
-        className={`side-bar fixed inset-y-0 left-0 w-[75%] md:w-[45%]  xl:w-[30%] h-screen bg-white z-50 text-center transform transition-transform duration-500 ease-in-out font-['Basis_Grotesque_Pro_Black'] ${
+        className={`side-bar fixed inset-y-0 left-0 w-[75%] md:w-[45%]  xl:w-[30%] h-screen bg-white z-50 text-center transform transition-transform duration-500 ease-in-out font-['Basis'] ${
           sbar ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -163,7 +163,7 @@ const Header = () => {
 
       {/* Profile Card */}
       <div
-        className={`fixed z-50 top-[50%] left-[50%] font-['Basis_Grotesque_Pro_Black'] transform -translate-x-[50%] -translate-y-[50%] transition-opacity duration-500 ${
+        className={`fixed z-50 top-[50%] left-[50%] font-['Basis'] transform -translate-x-[50%] -translate-y-[50%] transition-opacity duration-500 ${
           profileCard ? "opacity-100" : "opacity-0 hidden"
         }`}
       >

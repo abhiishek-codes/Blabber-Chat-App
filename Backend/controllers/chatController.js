@@ -50,6 +50,8 @@ const accessChat = asyncHandler(async (req, res) => {
 
 const fetchChat = asyncHandler(async (req, res) => {
   console.log("Inside fetch Chat");
+  const user = req.user._id;
+  console.log(user);
   const chat = await Chat.find({ users: req.user._id })
     .populate("users", "-password")
     .populate("groupAdmin", "-password")

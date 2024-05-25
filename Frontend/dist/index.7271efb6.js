@@ -2955,8 +2955,8 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactDom = require("react-dom");
-var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
+var _client = require("react-dom/client");
+var _clientDefault = parcelHelpers.interopDefault(_client);
 var _reactRouterDom = require("react-router-dom");
 var _navbar = require("./components/Navbar");
 var _navbarDefault = parcelHelpers.interopDefault(_navbar);
@@ -3048,7 +3048,7 @@ const router = (0, _reactRouterDom.createBrowserRouter)([
         }, undefined)
     }
 ]);
-const root = (0, _reactDomDefault.default).createRoot(document.getElementById("root"));
+const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterProvider), {
     router: router
 }, void 0, false, {
@@ -3065,7 +3065,7 @@ $RefreshReg$(_c1, "Chatpage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","react-router-dom":"9xmpe","./components/Navbar":"4U1ks","./pages/Home":"aufND","./pages/LoginSignup":"2ZFKU","./utils/userContext":"eBA1b","./pages/ChatPage":"kHiO9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","react-router-dom":"9xmpe","./components/Navbar":"4U1ks","./pages/Home":"aufND","./pages/LoginSignup":"2ZFKU","./utils/userContext":"eBA1b","./pages/ChatPage":"kHiO9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -5784,7 +5784,28 @@ module.exports = require("a569817e6ea559f6");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"j6uA9":[function(require,module,exports) {
+},{}],"lOjBx":[function(require,module,exports) {
+"use strict";
+var m = require("aaccff5d309d9239");
+var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+exports.createRoot = function(c, o) {
+    i.usingClientEntryPoint = true;
+    try {
+        return m.createRoot(c, o);
+    } finally{
+        i.usingClientEntryPoint = false;
+    }
+};
+exports.hydrateRoot = function(c, h, o) {
+    i.usingClientEntryPoint = true;
+    try {
+        return m.hydrateRoot(c, h, o);
+    } finally{
+        i.usingClientEntryPoint = false;
+    }
+};
+
+},{"aaccff5d309d9239":"j6uA9"}],"j6uA9":[function(require,module,exports) {
 "use strict";
 function checkDCE() {
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === "undefined" || typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== "function") return;
@@ -34045,7 +34066,7 @@ const Navbar = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
         className: "w-screen h-auto",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "w-[90%] font-['Basis_Grotesque_Pro_Black'] mx-auto pt-2",
+            className: "w-[90%] font-['Basis'] mx-auto pt-2",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "flex  items-center justify-between",
@@ -34452,7 +34473,7 @@ const Home = ()=>{
             className: "w-[90vw] pt-3 mx-auto   lg:-translate-x-7",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    className: "font-['Proxima_Nova_A_Black'] text-center  text-2xl sm:text-4xl",
+                    className: "font-mono text-center  text-2xl sm:text-4xl",
                     children: "Blabber: Where conversations never end !"
                 }, void 0, false, {
                     fileName: "src/pages/Home.jsx",
@@ -34488,7 +34509,7 @@ const Home = ()=>{
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "sm:w-[40%]   font-['Basis_Grotesque_Pro_Black']  my-auto text-center overflow-hidden",
+                            className: "sm:w-[40%]   font-['Basis']  my-auto text-center overflow-hidden",
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                                     className: "text-xl text-center sm:text-2xl sm:text-left sm:pt-5",
@@ -34598,14 +34619,14 @@ const LoginSignupUser = ()=>{
     _s();
     const [loginstate, Setloginstate] = (0, _react.useState)(false);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex justify-center items-center ",
+        className: "flex justify-center items-center  md:p-4",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "w-[85%] h-[95%]  p-[1.5rem]",
+            className: "w-full max-w-lg md:max-w-[85%] p-4 md:p-[1.5rem] overflow-hidden",
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex justify-evenly  tracking-wide",
+                className: "flex flex-col md:flex-row justify-evenly tracking-wide",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "md:w-[40%] pt-4 font-['Basis_Grotesque_Pro_Black']",
+                        className: "w-full md:w-[40%] pt-4 font-['Basis']",
                         children: loginstate ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loginDefault.default), {
                             Setloginstate: Setloginstate
                         }, void 0, false, {
@@ -34625,7 +34646,7 @@ const LoginSignupUser = ()=>{
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "hidden md:block w-[60%] mx-auto",
+                        className: "hidden md:block w-full md:w-[60%] mx-auto",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _videocardDefault.default), {}, void 0, false, {
                             fileName: "src/pages/LoginSignup.jsx",
                             lineNumber: 21,
@@ -34910,7 +34931,7 @@ const Login = ({ Setloginstate })=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex flex-col items-center pt-10",
+                        className: "flex flex-col items-center ",
                         children: [
                             errors.map((error, index)=>!error.field && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     className: "text-red-600",
@@ -34926,27 +34947,36 @@ const Login = ({ Setloginstate })=>{
                                     lineNumber: 110,
                                     columnNumber: 17
                                 }, undefined)),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "border px-[4rem] py-[0.3rem] rounded-md bg-green-700 text-white hover:bg-slate-800 transition-all duration-300 mb-5",
-                                onClick: ()=>{
-                                    setFormData({
-                                        username: "testuser@gmail.com",
-                                        password: "1234567"
-                                    });
-                                },
-                                children: "Get test Credentials"
-                            }, void 0, false, {
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "pt-10 flex flex-col",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                        className: "border px-[4rem] py-[0.3rem] rounded-md bg-green-700 text-white hover:bg-slate-800 transition-all duration-300 mb-5",
+                                        onClick: ()=>{
+                                            setFormData({
+                                                username: "abhi.a.singh.2@gmail.com",
+                                                password: "Abhishek"
+                                            });
+                                        },
+                                        children: "Get test Credentials"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Login.jsx",
+                                        lineNumber: 116,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                        className: "border px-[4rem] py-[0.3rem] rounded-md bg-green-700 text-white hover:bg-slate-800 transition-all duration-300 mb-5",
+                                        onClick: handleLogin,
+                                        children: "Log In"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Login.jsx",
+                                        lineNumber: 127,
+                                        columnNumber: 13
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
                                 fileName: "src/components/Login.jsx",
                                 lineNumber: 115,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "border px-[4rem] py-[0.3rem] rounded-md bg-green-700 text-white hover:bg-slate-800 transition-all duration-300 mb-5",
-                                onClick: handleLogin,
-                                children: "Log In"
-                            }, void 0, false, {
-                                fileName: "src/components/Login.jsx",
-                                lineNumber: 126,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -34962,18 +34992,18 @@ const Login = ({ Setloginstate })=>{
                                             children: "Signup"
                                         }, void 0, false, {
                                             fileName: "src/components/Login.jsx",
-                                            lineNumber: 135,
+                                            lineNumber: 138,
                                             columnNumber: 15
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/components/Login.jsx",
-                                        lineNumber: 134,
+                                        lineNumber: 137,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Login.jsx",
-                                lineNumber: 132,
+                                lineNumber: 135,
                                 columnNumber: 11
                             }, undefined)
                         ]
@@ -39746,7 +39776,7 @@ const UserProvider = ({ children })=>{
     const [chatData, setchatData] = (0, _react.useState)(null);
     const navigate = (0, _reactRouterDom.useNavigate)();
     const [token, setToken] = (0, _react.useState)(null);
-    const [isVisible, setisVisible] = (0, _react.useState)(true); // Moved inside the component
+    const [isVisible, setisVisible] = (0, _react.useState)(window.innerWidth > 1024); // Moved inside the component
     (0, _react.useEffect)(()=>{
         if (localStorage.getItem("userInfo")) {
             const userinfo = JSON.parse(localStorage.getItem("userInfo"));
@@ -39781,7 +39811,7 @@ const UserProvider = ({ children })=>{
         columnNumber: 5
     }, undefined);
 };
-_s(UserProvider, "/suk5JdC0Jv2KsLOVjrZWVrrki0=", false, function() {
+_s(UserProvider, "ubNjvesjcNRTLmvzzU4PKfLMD+w=", false, function() {
     return [
         (0, _reactRouterDom.useNavigate)
     ];
@@ -39836,12 +39866,12 @@ const ChatPage = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex flex-col h-[87vh] py-3 px-4 font-['Basis_Grotesque_Pro_Black'] ",
+                className: "flex flex-col h-[87vh] py-3 px-4 font-['Basis'] ",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "flex justify-between h-full gap-x-4 relative",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: `transition-all duration-300 ease-in-out transform lg:translate-x-0 ${isVisible ? "translate-x-0" : "-translate-x-[120%] lg:translate-x-0"} w-[70vw] lg:w-[30vw] xl:w-[25vw] h-full absolute lg:relative z-10`,
+                            className: `font-["Basis"] transition-all duration-300 ease-in-out transform lg:translate-x-0 ${isVisible ? "translate-x-0" : "-translate-x-[120%] lg:translate-x-0"} w-[95vw] lg:w-[30vw] xl:w-[25vw] h-full absolute lg:relative z-10`,
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _allChatsDefault.default), {}, void 0, false, {
                                 fileName: "src/pages/ChatPage.jsx",
                                 lineNumber: 35,
@@ -39853,7 +39883,7 @@ const ChatPage = ()=>{
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: " w-[99vw] md:w-[85vw] lg:w-[70vw] xl:w-[75vw] h-full mx-auto",
+                            className: " w-[99vw] md:w-[85vw] lg:w-[70vw] xl:w-[75vw] h-full mx-auto font-['Basis']",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sendMessageDefault.default), {}, void 0, false, {
                                 fileName: "src/pages/ChatPage.jsx",
                                 lineNumber: 38,
@@ -39893,7 +39923,7 @@ $RefreshReg$(_c, "ChatPage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/Chat/Header":"gFHmj","../components/Chat/AllChats":"kBEyN","../components/Chat/SendMessage":"8QwIL","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/userContext":"eBA1b"}],"gFHmj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/Chat/Header":"gFHmj","../components/Chat/AllChats":"kBEyN","../components/Chat/SendMessage":"8QwIL","../utils/userContext":"eBA1b","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gFHmj":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$b362 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -39962,7 +39992,7 @@ const Header = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "bg-slate-900 text-white py-5 px-6 ",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "flex justify-between items-center font-['Basis_Grotesque_Pro_Black']",
+                    className: "flex justify-between items-center font-['Basis']",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -39980,7 +40010,7 @@ const Header = ()=>{
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                            className: "hidden md:block text-3xl tracking-wide transform -translate-x-3",
+                            className: "hidden md:block text-4xl tracking-wider transform -translate-x-3",
                             children: "Blabber : The Chat App"
                         }, void 0, false, {
                             fileName: "src/components/Chat/Header.jsx",
@@ -40032,7 +40062,7 @@ const Header = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: `profile-dropdown fixed right-0 py-2 z-50 flex-col justify-center items-center  px-10 bg-slate-900 text-white  text-center transform transition-transform duration-200 ease-in-out font-['Basis_Grotesque_Pro_Black'] ${tgProfile ? "translate-y-0" : "-translate-y-48 "}`,
+                className: `profile-dropdown fixed right-0 py-2 z-50 flex-col justify-center items-center  px-10 bg-slate-900 text-white  text-center transform transition-transform duration-200 ease-in-out font-['Basis'] ${tgProfile ? "translate-y-0" : "-translate-y-48 "}`,
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         className: "mb-2 block hover:bg-white hover:text-black px-3 py-2 rounded-md transition-transform duration-200 transform-gpu active:scale-75",
@@ -40062,7 +40092,7 @@ const Header = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: `side-bar fixed inset-y-0 left-0 w-[75%] md:w-[45%]  xl:w-[30%] h-screen bg-white z-50 text-center transform transition-transform duration-500 ease-in-out font-['Basis_Grotesque_Pro_Black'] ${sbar ? "translate-x-0" : "-translate-x-full"}`,
+                className: `side-bar fixed inset-y-0 left-0 w-[75%] md:w-[45%]  xl:w-[30%] h-screen bg-white z-50 text-center transform transition-transform duration-500 ease-in-out font-['Basis'] ${sbar ? "translate-x-0" : "-translate-x-full"}`,
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "py-5 w-[95%] mx-auto px-4",
@@ -40149,7 +40179,7 @@ const Header = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: `fixed z-50 top-[50%] left-[50%] font-['Basis_Grotesque_Pro_Black'] transform -translate-x-[50%] -translate-y-[50%] transition-opacity duration-500 ${profileCard ? "opacity-100" : "opacity-0 hidden"}`,
+                className: `fixed z-50 top-[50%] left-[50%] font-['Basis'] transform -translate-x-[50%] -translate-y-[50%] transition-opacity duration-500 ${profileCard ? "opacity-100" : "opacity-0 hidden"}`,
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "relative",
@@ -40469,7 +40499,7 @@ const AllChats = ()=>{
                 Authorization: `Bearer ${token}`
             }
         }).then((response)=>{
-            console.log("called from AllChats");
+            //console.log("called from AllChats");
             let sortedData = response.data.sort((a, b)=>new Date(b.createdAt) - new Date(a.createdAt));
             setAllchats(sortedData);
             if (sortedData.length > 0) {
@@ -40522,24 +40552,21 @@ const AllChats = ()=>{
                         className: "h-[calc(100%-4rem)] overflow-y-auto hide-scrollbar",
                         children: allChats != undefined && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "flex flex-col gap-y-4 pt-4 items-center justify-center px-2 ",
-                            children: [
-                                console.log("Got called from Allchats"),
-                                allChats.map((val, index)=>{
-                                    return /*#__PURE__*/ (0, _react.createElement)((0, _chatUserCardJsxDefault.default), {
-                                        ...val,
-                                        key: index,
-                                        data: val,
-                                        idx: index,
-                                        __source: {
-                                            fileName: "src/components/Chat/AllChats.jsx",
-                                            lineNumber: 70,
-                                            columnNumber: 19
-                                        },
-                                        __self: undefined
-                                    });
-                                })
-                            ]
-                        }, void 0, true, {
+                            children: allChats.map((val, index)=>{
+                                return /*#__PURE__*/ (0, _react.createElement)((0, _chatUserCardJsxDefault.default), {
+                                    ...val,
+                                    key: index,
+                                    data: val,
+                                    idx: index,
+                                    __source: {
+                                        fileName: "src/components/Chat/AllChats.jsx",
+                                        lineNumber: 69,
+                                        columnNumber: 19
+                                    },
+                                    __self: undefined
+                                });
+                            })
+                        }, void 0, false, {
                             fileName: "src/components/Chat/AllChats.jsx",
                             lineNumber: 66,
                             columnNumber: 13
@@ -40563,24 +40590,24 @@ const AllChats = ()=>{
                         setcreatgc: setcreatgc
                     }, void 0, false, {
                         fileName: "src/components/Chat/AllChats.jsx",
-                        lineNumber: 83,
+                        lineNumber: 82,
                         columnNumber: 13
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/Chat/AllChats.jsx",
-                    lineNumber: 82,
+                    lineNumber: 81,
                     columnNumber: 11
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Chat/AllChats.jsx",
-                lineNumber: 81,
+                lineNumber: 80,
                 columnNumber: 9
             }, undefined),
             creategc && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "fixed inset-0 bg-black opacity-[88%] z-40"
             }, void 0, false, {
                 fileName: "src/components/Chat/AllChats.jsx",
-                lineNumber: 89,
+                lineNumber: 88,
                 columnNumber: 9
             }, undefined)
         ]
@@ -40857,7 +40884,7 @@ const CreateGc = ({ setcreatgc })=>{
             setcreatgc(false);
         } catch (error) {
             console.log(error.message);
-            resizeBy.status(404).json({
+            res.status(404).json({
                 msg: "Chat cannot be created"
             });
         }
@@ -40903,7 +40930,7 @@ const CreateGc = ({ setcreatgc })=>{
                             columnNumber: 11
                         }, undefined),
                         toggle && searchUsers.length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "w-[70%] max-h-60 overflow-y-auto hide-scrollbar border-2 border-black rounded-md mt-2",
+                            className: "w-[98%] md:w-[70%] max-h-60 overflow-y-auto hide-scrollbar border-2 border-black rounded-md mt-2",
                             children: searchUsers.map((val, idx)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                     className: "w-full border-b border-black bg-slate-50 py-2 text-left hover:bg-green-400 transition-all duration-200 hover:border-white",
                                     onClick: ()=>{
@@ -41143,7 +41170,7 @@ const SendMessage = ({ chatName, groupAdmin, users, _id })=>{
                 tgProfile && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: `fixed z-50 top-[50%] left-[50%] font-['Basis_Grotesque_Pro_Black'] transform -translate-x-[50%] -translate-y-[50%] transition-opacity duration-500 ${tgProfile ? "opacity-100" : "opacity-0 hidden"}`,
+                            className: `fixed z-50 top-[50%] left-[50%] font-['Basis'] transform -translate-x-[50%] -translate-y-[50%] transition-opacity duration-500 ${tgProfile ? "opacity-100" : "opacity-0 hidden"}`,
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     className: "relative",
@@ -41192,7 +41219,7 @@ const SendMessage = ({ chatName, groupAdmin, users, _id })=>{
                 gcProfile && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: `fixed z-50 top-[50%] left-[50%] font-['Basis_Grotesque_Pro_Black'] transform -translate-x-[50%] -translate-y-[50%] transition-opacity duration-500 text-black ${gcProfile ? "opacity-100" : "opacity-0 hidden"}`,
+                            className: `fixed z-50 top-[50%] left-[50%] font-['Basis'] transform -translate-x-[50%] -translate-y-[50%] transition-opacity duration-500 text-black ${gcProfile ? "opacity-100" : "opacity-0 hidden"}`,
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _gcModalJsxDefault.default), {
                                 ...chatData,
                                 setgcProfile: setgcProfile
@@ -41247,10 +41274,8 @@ $RefreshReg$(_c, "SendMessage");
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 const getSender = (users)=>{
-    console.log(users);
     const data = JSON.parse(localStorage.getItem("userInfo"));
     const loggedInUser = data.name;
-    console.log(loggedInUser);
     const sender = loggedInUser == users[0].name ? users[1].name : users[0].name;
     return sender;
 };
@@ -41609,9 +41634,12 @@ var _recieverCardJsx = require("./RecieverCard.jsx");
 var _recieverCardJsxDefault = parcelHelpers.interopDefault(_recieverCardJsx);
 var _socketIoClient = require("socket.io-client");
 var _socketIoClientDefault = parcelHelpers.interopDefault(_socketIoClient);
+var _typinganimationGif = require("../../assets/typinganimation.gif");
+var _typinganimationGifDefault = parcelHelpers.interopDefault(_typinganimationGif);
 var _s = $RefreshSig$();
 const ENDPOINT = "http://localhost:5000";
-var socket, selectedChatCompare;
+let socket;
+let selectedChatCompare;
 const MessageBox = ()=>{
     _s();
     const { token, activeChat } = (0, _react.useContext)((0, _userContext.userContext));
@@ -41619,13 +41647,43 @@ const MessageBox = ()=>{
     const loggedinUser = user._id;
     const [allMsg, setallMsgs] = (0, _react.useState)([]);
     const [msg, setMsg] = (0, _react.useState)("");
+    const [typing, setTyping] = (0, _react.useState)(false);
+    const [istyping, setIsTyping] = (0, _react.useState)(false);
+    const [socketconnected, setsocketconnected] = (0, _react.useState)(false);
+    (0, _react.useEffect)(()=>{
+        socket = (0, _socketIoClientDefault.default)(ENDPOINT);
+        socket.emit("setup", user);
+        socket.on("connected", ()=>setsocketconnected(true));
+        socket.on("typing", ()=>setIsTyping(true));
+        socket.on("stop typing", ()=>{
+            setIsTyping(false);
+            console.log(istyping);
+        });
+        socket.on("message recieved", (newMessageRecieved)=>{
+            if (!selectedChatCompare || selectedChatCompare !== newMessageRecieved.chat._id) ;
+            else {
+                console.log("msg received");
+                setallMsgs((prevMsgs)=>[
+                        ...prevMsgs,
+                        newMessageRecieved
+                    ]);
+                const messageContainer = document.getElementById("messageContainer");
+                messageContainer.scrollTo({
+                    top: messageContainer.scrollHeight,
+                    behavior: "smooth"
+                });
+            }
+        });
+        return ()=>{
+            socket.off("message recieved");
+        };
+    }, []);
     (0, _react.useEffect)(()=>{
         if (activeChat) (0, _axiosDefault.default).get(`http://localhost:5000/api/messages/${activeChat}`, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
         }).then((response)=>{
-            console.log(response.data);
             setallMsgs(response.data);
             selectedChatCompare = activeChat;
             socket.emit("joinChat", activeChat);
@@ -41633,22 +41691,6 @@ const MessageBox = ()=>{
     }, [
         activeChat
     ]);
-    (0, _react.useEffect)(()=>{
-        const user = JSON.parse(localStorage.getItem("userInfo"));
-        socket = (0, _socketIoClientDefault.default)(ENDPOINT);
-        socket.emit("setup", user);
-        socket.on("connected", ()=>console.log("Connected"));
-    }, []);
-    (0, _react.useEffect)(()=>{
-        socket.on("message recieved", (newMessageRecieved)=>{
-            if (!selectedChatCompare || // if chat is not selected or doesn't match current chat
-            selectedChatCompare !== newMessageRecieved.chat._id) ;
-            else setallMsgs([
-                ...allMsg,
-                newMessageRecieved
-            ]);
-        });
-    });
     const SendMsg = ()=>{
         if (msg) {
             const Data = {
@@ -41662,34 +41704,64 @@ const MessageBox = ()=>{
                     "Content-Type": "application/json",
                     Authorization: `Bearer ${token}`
                 }
-            }).then((resposnse)=>{
-                socket.emit("new message", resposnse.data);
-                setallMsgs([
-                    ...allMsg,
-                    resposnse.data
-                ]);
+            }).then((response)=>{
+                socket.emit("new message", response.data);
+                setallMsgs((prevMsgs)=>[
+                        ...prevMsgs,
+                        response.data
+                    ]);
             }).catch((error)=>console.log(error.message));
         }
     };
+    const handleKeyDown = (event)=>{
+        if (event.key === "Enter") {
+            event.preventDefault();
+            SendMsg();
+        }
+    };
+    let typingTimeout; // Declare this outside the component
+    const typingHandler = ()=>{
+        if (!socketconnected) return;
+        if (!typing) {
+            setTyping(true);
+            socket.emit("typing", activeChat);
+        }
+        var timerLength = 1000;
+        // Clear the previous timeout
+        if (typingTimeout) clearTimeout(typingTimeout);
+        // Set a new timeout
+        typingTimeout = setTimeout(()=>{
+            if (typing) {
+                socket.emit("stop typing", activeChat);
+                setTyping(false);
+            }
+        }, timerLength);
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: " rounded-md h-full w-full flex flex-col ",
+        id: "messageContainer",
+        className: "rounded-md h-full w-full flex flex-col overflow-y-auto",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex-1 text-sm tracking-wide  py-2 flex flex-col h-[calc(100%-4rem)] overflow-y-auto hide-scrollbar gap-y-3",
-                children: allMsg.length > 0 && allMsg.map((msg)=>{
+                className: "flex-1 text-sm tracking-wide py-2 flex flex-col h-[calc(100%-4rem)] overflow-y-auto hide-scrollbar gap-y-3 relative",
+                children: allMsg.length > 0 && allMsg.map((msg, idx)=>{
                     const { content, sender, createdAt } = msg;
                     const timestamp = new Date(msg.createdAt);
                     const hours = timestamp.getHours();
                     const minutes = timestamp.getMinutes();
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: `flex ${sender._id == loggedinUser ? "justify-end" : "justify-start"}`,
+                        ref: (el)=>{
+                            if (el && idx === allMsg.length - 1) el.scrollIntoView({
+                                behavior: "smooth"
+                            });
+                        },
                         children: sender._id === loggedinUser ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _senderCardJsxDefault.default), {
                             content: content,
                             hours: hours,
                             minutes: minutes
                         }, void 0, false, {
                             fileName: "src/components/Chat/MessageBox.jsx",
-                            lineNumber: 99,
+                            lineNumber: 152,
                             columnNumber: 19
                         }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recieverCardJsxDefault.default), {
                             content: content,
@@ -41698,59 +41770,83 @@ const MessageBox = ()=>{
                             minutes: minutes
                         }, void 0, false, {
                             fileName: "src/components/Chat/MessageBox.jsx",
-                            lineNumber: 105,
+                            lineNumber: 158,
                             columnNumber: 19
                         }, undefined)
-                    }, void 0, false, {
+                    }, idx, false, {
                         fileName: "src/components/Chat/MessageBox.jsx",
-                        lineNumber: 93,
+                        lineNumber: 140,
                         columnNumber: 15
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/components/Chat/MessageBox.jsx",
-                lineNumber: 85,
+                lineNumber: 132,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex gap-x-2 mt-auto pb-2",
+                className: "flex gap-x-2 mt-auto pb-2 pt-9",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        type: "text",
-                        className: "rounded-sm w-full px-2 text-sm py-1 text-black",
-                        placeholder: "Enter your message here.....",
-                        value: msg,
-                        onChange: (e)=>{
-                            setMsg(e.target.value);
-                        }
-                    }, void 0, false, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex flex-col gap-y-1 flex-1",
+                        children: [
+                            istyping && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: (0, _typinganimationGifDefault.default),
+                                alt: "typing...",
+                                className: "w-12 h-9 absolute bottom-12 py-1"
+                            }, void 0, false, {
+                                fileName: "src/components/Chat/MessageBox.jsx",
+                                lineNumber: 172,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                type: "text",
+                                className: "rounded-sm h-full w-full px-2 text-sm py-1 text-black relative text-[1rem]",
+                                id: "msgIp",
+                                placeholder: "Enter your message here.....",
+                                value: msg,
+                                onChange: (e)=>{
+                                    setMsg(e.target.value);
+                                    console.log(e.target.value);
+                                    typingHandler();
+                                },
+                                onKeyDown: (e)=>{
+                                    handleKeyDown(e);
+                                }
+                            }, void 0, false, {
+                                fileName: "src/components/Chat/MessageBox.jsx",
+                                lineNumber: 178,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
                         fileName: "src/components/Chat/MessageBox.jsx",
-                        lineNumber: 117,
+                        lineNumber: 170,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         className: "bg-green-700 text-white p-1 rounded-sm hover:bg-black transform-cpu duration-300 active:scale-75 text-xl",
-                        onClick: ()=>SendMsg(),
+                        onClick: SendMsg,
                         children: "\u27A4"
                     }, void 0, false, {
                         fileName: "src/components/Chat/MessageBox.jsx",
-                        lineNumber: 126,
+                        lineNumber: 195,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Chat/MessageBox.jsx",
-                lineNumber: 116,
+                lineNumber: 169,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Chat/MessageBox.jsx",
-        lineNumber: 84,
+        lineNumber: 128,
         columnNumber: 5
     }, undefined);
 };
-_s(MessageBox, "O6LESRrxFS81HZXJl5C6uHRwv8Y=");
+_s(MessageBox, "o9sNMb928Wm0lz6WiX2kpQVKELI=");
 _c = MessageBox;
 exports.default = MessageBox;
 var _c;
@@ -41761,7 +41857,7 @@ $RefreshReg$(_c, "MessageBox");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../utils/userContext":"eBA1b","axios":"jo6P5","./SenderCard.jsx":"5iQs5","./RecieverCard.jsx":"bUTKc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","socket.io-client":"8HBJR"}],"5iQs5":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../utils/userContext":"eBA1b","axios":"jo6P5","./SenderCard.jsx":"5iQs5","./RecieverCard.jsx":"bUTKc","socket.io-client":"8HBJR","../../assets/typinganimation.gif":"jSo45","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5iQs5":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$8505 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -45376,6 +45472,9 @@ function Backoff(opts) {
     this.jitter = jitter;
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequire10c2")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jSo45":[function(require,module,exports) {
+module.exports = require("eff16e07b0aafb76").getBundleURL("aXMci") + "typinganimation.9a05d9b6.gif" + "?" + Date.now();
+
+},{"eff16e07b0aafb76":"lgJ39"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequire10c2")
 
 //# sourceMappingURL=index.7271efb6.js.map

@@ -12,7 +12,7 @@ export const UserProvider = ({ children }) => {
   const [chatData, setchatData] = useState(null);
   const navigate = useNavigate();
   const [token, setToken] = useState(null);
-  const [isVisible, setisVisible] = useState(true); // Moved inside the component
+  const [isVisible, setisVisible] = useState(window.innerWidth > 1024); // Moved inside the component
 
   useEffect(() => {
     if (localStorage.getItem("userInfo")) {

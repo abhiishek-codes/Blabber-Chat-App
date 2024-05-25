@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
       <div className="w-[90vw] pt-3 mx-auto   lg:-translate-x-7">
-        <h1 className="font-['Proxima_Nova_A_Black'] text-center  text-2xl sm:text-4xl">
+        <h1 className="font-mono text-center  text-2xl sm:text-4xl">
           Blabber: Where conversations never end !
         </h1>
         <div className="sm:flex items-center justify-center ">
@@ -18,7 +18,7 @@ const Home = () => {
           </div>
           <div
             className="sm:w-[40%]
-           font-['Basis_Grotesque_Pro_Black']  my-auto text-center overflow-hidden"
+           font-['Basis']  my-auto text-center overflow-hidden"
           >
             <h1 className="text-xl text-center sm:text-2xl sm:text-left sm:pt-5">
               Blabber Makes it easy and fun to stay in touch & communicate

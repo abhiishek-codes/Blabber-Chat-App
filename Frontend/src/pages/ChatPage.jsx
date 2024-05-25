@@ -23,18 +23,18 @@ const ChatPage = () => {
   return (
     <div>
       <Header />
-      <div className="flex flex-col h-[87vh] py-3 px-4 font-['Basis_Grotesque_Pro_Black'] ">
+      <div className="flex flex-col h-[87vh] py-3 px-4 font-['Basis'] ">
         <div className="flex justify-between h-full gap-x-4 relative">
           <div
-            className={`transition-all duration-300 ease-in-out transform lg:translate-x-0 ${
+            className={`font-["Basis"] transition-all duration-300 ease-in-out transform lg:translate-x-0 ${
               isVisible
                 ? "translate-x-0"
                 : "-translate-x-[120%] lg:translate-x-0"
-            } w-[70vw] lg:w-[30vw] xl:w-[25vw] h-full absolute lg:relative z-10`}
+            } w-[95vw] lg:w-[30vw] xl:w-[25vw] h-full absolute lg:relative z-10`}
           >
             <AllChats />
           </div>
-          <div className=" w-[99vw] md:w-[85vw] lg:w-[70vw] xl:w-[75vw] h-full mx-auto">
+          <div className=" w-[99vw] md:w-[85vw] lg:w-[70vw] xl:w-[75vw] h-full mx-auto font-['Basis']">
             <SendMessage />
           </div>
         </div>

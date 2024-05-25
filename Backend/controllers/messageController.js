@@ -17,7 +17,6 @@ const allMessages = asyncHandler(async (req, res) => {
 
 const sendMessage = asyncHandler(async (req, res) => {
   const { chatId, content } = req.body;
-  console.log(chatId, content);
   if (!chatId || !content) {
     return res.status(400).json({ message: "Enter proper inputs" });
   }
@@ -29,7 +28,6 @@ const sendMessage = asyncHandler(async (req, res) => {
       chat: chatId,
     });
 
-    console.log(newMessage);
     // Populate fields including createdAt
     await newMessage.populate("sender", "name profilePic createdAt");
 
@@ -40,8 +38,6 @@ const sendMessage = asyncHandler(async (req, res) => {
       select: "name profilePic email createdAt", // Include createdAt field
     });
 
-    console.log("Message saved");
-    console.log(fullMessage);
     await Chat.findByIdAndUpdate(req.body.chatId, {
       latestMessage: fullMessage,
     });

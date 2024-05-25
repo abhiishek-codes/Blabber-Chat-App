@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-screen h-auto">
-      <div className="w-[90%] font-['Basis_Grotesque_Pro_Black'] mx-auto pt-2">
+      <div className="w-[90%] font-['Basis'] mx-auto pt-2">
         <div className="flex  items-center justify-between">
           {/* Video */}
           <div className="flex-shrink-0">

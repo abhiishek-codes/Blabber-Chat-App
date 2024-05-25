@@ -46,7 +46,7 @@ const SendMessage = ({ chatName, groupAdmin, users, _id }) => {
         {tgProfile && (
           <>
             <div
-              className={`fixed z-50 top-[50%] left-[50%] font-['Basis_Grotesque_Pro_Black'] transform -translate-x-[50%] -translate-y-[50%] transition-opacity duration-500 ${
+              className={`fixed z-50 top-[50%] left-[50%] font-['Basis'] transform -translate-x-[50%] -translate-y-[50%] transition-opacity duration-500 ${
                 tgProfile ? "opacity-100" : "opacity-0 hidden"
               }`}
             >
@@ -66,7 +66,7 @@ const SendMessage = ({ chatName, groupAdmin, users, _id }) => {
         {gcProfile && (
           <>
             <div
-              className={`fixed z-50 top-[50%] left-[50%] font-['Basis_Grotesque_Pro_Black'] transform -translate-x-[50%] -translate-y-[50%] transition-opacity duration-500 text-black ${
+              className={`fixed z-50 top-[50%] left-[50%] font-['Basis'] transform -translate-x-[50%] -translate-y-[50%] transition-opacity duration-500 text-black ${
                 gcProfile ? "opacity-100" : "opacity-0 hidden"
               }`}
             >

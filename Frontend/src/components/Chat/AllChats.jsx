@@ -29,7 +29,7 @@ const AllChats = () => {
         },
       })
       .then((response) => {
-        console.log("called from AllChats");
+        //console.log("called from AllChats");
         let sortedData = response.data.sort(
           (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
         );
@@ -64,7 +64,6 @@ const AllChats = () => {
         <div className="h-[calc(100%-4rem)] overflow-y-auto hide-scrollbar">
           {allChats != undefined && (
             <div className="flex flex-col gap-y-4 pt-4 items-center justify-center px-2 ">
-              {console.log("Got called from Allchats")}
               {allChats.map((val, index) => {
                 return (
                   <ChatUserCard {...val} key={index} data={val} idx={index} />
