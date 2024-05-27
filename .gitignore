@@ -3,3 +3,4 @@ node_modules/
 /Frontend/.parcel-cache
 /Frontend/dist
 /Frontend/node_modules
+/Frontend/.babelrc
