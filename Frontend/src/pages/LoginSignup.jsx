@@ -3,10 +3,20 @@ import React, { useEffect, useState } from "react";
 import Videocard from "../components/Videocard";
 import Login from "../components/Login";
 import Signup from "../components/Signup";
+import { useNavigate } from "react-router-dom";
 
 const LoginSignupUser = () => {
+  const navigate = useNavigate();
+
+  const userinfo = JSON.parse(localStorage.getItem("userInfo"));
+  const name = userinfo?.name;
+  useEffect(() => {
+    if (name) {
+      navigate("/chats");
+    }
+  }, [name, navigate]);
   const [loginstate, Setloginstate] = useState(false);
-  return (
+  return !name ? (
     <div className="flex justify-center items-center  md:p-4">
       <div className="w-full max-w-lg md:max-w-[85%] p-4 md:p-[1.5rem] overflow-hidden">
         <div className="flex flex-col md:flex-row justify-evenly tracking-wide">
@@ -23,7 +33,7 @@ const LoginSignupUser = () => {
         </div>
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default LoginSignupUser;

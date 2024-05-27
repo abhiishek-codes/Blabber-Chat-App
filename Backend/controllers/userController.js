@@ -1,13 +1,14 @@
 const asyncHandler = require("express-async-handler");
 const User = require("../model/userModel.js");
 const { generateToken } = require("../config/generateToken");
+require("../config/config");
 
 const userSignup = asyncHandler(async (req, res) => {
   const { name, uname, pass, pic } = req.body;
   const email = uname;
   const password = pass;
-  console.log(req.body);
-  console.log(email);
+  const profilePic = pic;
+  console.log(pic);
   const userExists = await User.findOne({ email });
   console.log(userExists);
 
@@ -16,7 +17,7 @@ const userSignup = asyncHandler(async (req, res) => {
     throw Error("User already exists");
   }
 
-  const newUser = new User({ name, email, password, pic });
+  const newUser = new User({ name, email, password, profilePic });
   await newUser.save();
 
   if (newUser) {
@@ -24,7 +25,7 @@ const userSignup = asyncHandler(async (req, res) => {
       _id: newUser._id,
       name: newUser.name,
       email: newUser.email,
-      pic: newUser.profilePic,
+      profilePic: newUser.profilePic,
       token: generateToken(newUser._id),
     });
   } else {
@@ -45,7 +46,7 @@ const userLogin = asyncHandler(async (req, res) => {
       _id: user._id,
       name: user.name,
       email: user.email,
-      pic: user.profilePic,
+      profilePic: user.profilePic,
       token: generateToken(user._id),
     });
   } else {

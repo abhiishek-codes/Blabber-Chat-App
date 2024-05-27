@@ -12,7 +12,8 @@ let socket;
 let selectedChatCompare;
 
 const MessageBox = () => {
-  const { token, activeChat } = useContext(userContext);
+  const { token, activeChat, chatData, notifications, setNotifications } =
+    useContext(userContext);
   const user = JSON.parse(localStorage.getItem("userInfo"));
   const loggedinUser = user._id;
   const [allMsg, setallMsgs] = useState([]);
@@ -20,6 +21,32 @@ const MessageBox = () => {
   const [typing, setTyping] = useState(false);
   const [istyping, setIsTyping] = useState(false);
   const [socketconnected, setsocketconnected] = useState(false);
+
+  const notificationHandler = async (newMessageRecieved) => {
+    try {
+      const { data } = await axios.get(
+        `http://localhost:5000/api/chat/${newMessageRecieved.chat._id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      console.log(data);
+      const { _id, latestMessage } = data;
+      const newNotification = {
+        activechatId: _id,
+        chatdata: data,
+        name: latestMessage.sender.name,
+      };
+      setNotifications((prevNotifications) => [
+        newNotification,
+        ...prevNotifications,
+      ]);
+    } catch {
+      console.log(err.message);
+    }
+  };
 
   useEffect(() => {
     socket = io(ENDPOINT);
@@ -36,7 +63,7 @@ const MessageBox = () => {
         !selectedChatCompare ||
         selectedChatCompare !== newMessageRecieved.chat._id
       ) {
-        // notification
+        notificationHandler(newMessageRecieved);
       } else {
         console.log("msg received");
         setallMsgs((prevMsgs) => [...prevMsgs, newMessageRecieved]);
@@ -64,6 +91,7 @@ const MessageBox = () => {
         .then((response) => {
           setallMsgs(response.data);
           selectedChatCompare = activeChat;
+
           socket.emit("joinChat", activeChat);
         })
         .catch((error) => console.log(error.message));
@@ -105,7 +133,7 @@ const MessageBox = () => {
   const typingHandler = () => {
     if (!socketconnected) return;
 
-    if (!typing) {
+    if (!typing && selectedChatCompare === activeChat) {
       setTyping(true);
       socket.emit("typing", activeChat);
     }

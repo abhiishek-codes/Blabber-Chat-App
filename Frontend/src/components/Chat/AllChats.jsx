@@ -18,7 +18,7 @@ const AllChats = () => {
 
   const [creategc, setcreatgc] = useState(false);
   const userinfo = JSON.parse(localStorage.getItem("userInfo"));
-  const token = userinfo.token;
+  const token = userinfo?.token;
 
   useEffect(() => {
     const url = "http://localhost:5000/api/chat/";
@@ -29,6 +29,7 @@ const AllChats = () => {
         },
       })
       .then((response) => {
+        console.log(response.data);
         //console.log("called from AllChats");
         let sortedData = response.data.sort(
           (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
@@ -44,7 +45,7 @@ const AllChats = () => {
 
   return (
     <>
-      <div className="w-full h-full  border-2 border-black rounded-lg bg-slate-50">
+      <div className="w-full h-full  border-2 border-black rounded-lg bg-slate-50 mr-2">
         <div className="flex justify-between pt-5 px-3 items-center">
           <h1 className="text-lg md:text-2xl ">My Chats</h1>
           <button

@@ -5,22 +5,32 @@ import axios from "axios";
 import UsersCard from "./UsersCard";
 import { useNavigate } from "react-router-dom";
 import ProfileModal from "./ProfileModal";
+import notification from "../../assets/notification.gif";
+import { set } from "zod";
 
 const Header = () => {
   const { user, setUser } = useContext(userContext);
-  const { allChats, setAllchats, setactiveChat, activeChat, setchatData } =
-    useContext(userContext);
+  const {
+    allChats,
+    setAllchats,
+    setactiveChat,
+    activeChat,
+    setchatData,
+    notifications,
+    setNotifications,
+  } = useContext(userContext);
   const [sbar, setsbar] = useState(false);
   const [suser, setsuser] = useState("");
   const [users, setusers] = useState([]);
   const [filterusers, setfilterusers] = useState(users);
   const [tgProfile, settgProfile] = useState(false);
   const userinfo = JSON.parse(localStorage.getItem("userInfo"));
+  console.log(userinfo);
   const [profileCard, setprofileCard] = useState(false);
   const navigate = useNavigate();
+  const [notitrigger, setnotitrigger] = useState(false);
 
   const clickHandler = () => {
-    console.log(userinfo);
     const token = userinfo.token;
 
     axios
@@ -45,6 +55,21 @@ const Header = () => {
     setUser(null);
     navigate("/");
   };
+
+  useEffect(() => {
+    if (notifications.length > 0) {
+      const audio = new Audio("../../assets/notification-tone.mp3");
+      const playAudio = () => {
+        audio.play().catch((error) => {
+          // Handle the error if autoplay is not allowed
+          console.error("Autoplay failed:", error);
+        });
+      };
+
+      // Play audio when component mounts
+      playAudio();
+    }
+  }, [notifications]);
 
   useEffect(() => {
     const handleToggleProfile = (event) => {
@@ -76,20 +101,99 @@ const Header = () => {
               🔍 Search for User
             </button>
           </div>
-          <h1 className="hidden md:block text-4xl tracking-wider transform -translate-x-3">
+          <h1 className="hidden md:block text-2xl lg:text-4xl tracking-wider transform ">
             Blabber : The Chat App
           </h1>
-          <div className="inline-block relative">
+          <div className="flex gap-x-1 items-center">
             <button
-              className="hover:bg-white hover:text-black px-4 py-2 hover:rounded-md cursor-pointer flex items-center justify-center gap-x-2 profile-dropdown transition-transform duration-200 transform-gpu active:scale-75"
-              onClick={() => settgProfile(!tgProfile)}
+              className="text-2xl pt-1 relative"
+              onClick={() => setnotitrigger(!notitrigger)}
             >
-              <img src={userinfo?.pic} alt="Profile" className="w-10 h-10" />
-              <h1>▼</h1>
+              {!notifications.length > 0 ? (
+                <>🔔</>
+              ) : (
+                <>
+                  <img src={notification} alt="/" className="w-12 h-12" />
+                </>
+              )}
             </button>
+            <div className="inline-block relative">
+              <button
+                className="hover:bg-white hover:text-black px-4 py-2 hover:rounded-md cursor-pointer flex items-center justify-center gap-x-2 profile-dropdown transition-transform duration-200 transform-gpu active:scale-75"
+                onClick={() => settgProfile(!tgProfile)}
+              >
+                <img
+                  src={userinfo?.profilePic}
+                  alt="Profile"
+                  className="w-10 h-10 rounded-full object-cover"
+                />
+                <h1>▼</h1>
+              </button>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* notification */}
+
+      {notitrigger && (
+        <div className="absolute top-[10%] md:top-[8%] right-0  bg-black px-2 py-3 transform -translate-x-[30%] md:-translate-x-[25 %] lg:-translate-x-[20%]">
+          <div className="text-sm md:text-lg text-white">
+            {notifications.length > 0 ? (
+              <>
+                <div className="flex flex-col gap-y-1">
+                  {notifications.map((currnotification, val) => {
+                    return (
+                      <button
+                        key={val}
+                        onClick={() => {
+                          setnotitrigger(false);
+                          setactiveChat(currnotification.activechatId);
+                          setchatData(currnotification.chatdata);
+                          setAllchats((previousChats) => {
+                            const chatExists = previousChats.some(
+                              (chat) =>
+                                chat._id === currnotification.activechatId
+                            );
+
+                            if (!chatExists)
+                              return [
+                                currnotification.chatdata,
+                                ...previousChats,
+                              ];
+                            else
+                              return [
+                                previousChats.find(
+                                  (chat) =>
+                                    chat._id === currnotification.activechatId
+                                ),
+                                ...previousChats.filter(
+                                  (chat) =>
+                                    chat._id !== currnotification.activechatId
+                                ),
+                              ];
+                          });
+                          setNotifications((previousNotification) => {
+                            return previousNotification.filter(
+                              (notification) =>
+                                notification.activechatId !==
+                                currnotification.activechatId
+                            );
+                          });
+                        }}
+                      >
+                        You got new Message from {currnotification.name}
+                      </button>
+                    );
+                  })}
+                </div>
+              </>
+            ) : (
+              <>No new Notifications</>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* Profile drop down*/}
 

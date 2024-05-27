@@ -1,6 +1,7 @@
 import React from "react";
 
-const ProfileModal = ({ name, email, pic }) => {
+const ProfileModal = ({ name, email, profilePic, pic, data }) => {
+  console.log(data);
   return (
     <>
       <div className="flex items-center justify-center min-h-screen">
@@ -10,11 +11,11 @@ const ProfileModal = ({ name, email, pic }) => {
         >
           <h1 className="text-xl sm:text-3xl tracking-wide">{name}</h1>
           <img
-            src={pic}
+            src={profilePic ? profilePic : pic}
             alt="Profile Pic"
-            className="w-40 h-440 rounded-full"
+            className="w-[150px] h-[150px] rounded-full"
           />
-          <h1 className="text-xl sm:text-2xl tracking-wide ">
+          <h1 className="text-md sm:text-2xl tracking-wide ">
             Email : {email}
           </h1>
         </div>

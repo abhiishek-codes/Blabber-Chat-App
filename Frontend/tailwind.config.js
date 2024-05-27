@@ -4,7 +4,11 @@ module.exports = {
   content: ["./src/**/*.{js,jsx}"],
   theme: {
     extend: {
-      // extend your configuration here
+      colors: {
+        bgcolor: "#1C1C24",
+        bgbox: "#292932",
+        bgbutton: "#79D861",
+      },
     },
   },
   variants: {

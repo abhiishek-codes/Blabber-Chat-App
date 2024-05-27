@@ -1,88 +1,37 @@
 import React, { useState, useEffect } from "react";
-import Navlink from "./NavLinks";
 import { Link } from "react-router-dom";
-import Logo from "url:../assets/Mobile.mp4";
-import Hamburger from "url:../assets/Hamburger.png";
+import Logo from "url:../assets/blabber.png";
+import { useContext } from "react";
+import { userContext } from "../utils/userContext";
 
 const Navbar = () => {
-  const [toggle, setToggle] = useState(false);
-
-  const togglemenu = () => {
-    setToggle(!toggle);
-  };
-
-  const handleResize = () => {
-    if (window.innerWidth >= 767) {
-      setToggle(false);
-    }
-  };
+  const { remainingHeight, setRemainingHeight } = useContext(userContext);
 
   useEffect(() => {
-    window.addEventListener("resize", handleResize);
-  });
+    const elementHeight = document.getElementById("myElement").offsetHeight;
+
+    const newRemainingHeight = window.innerHeight - elementHeight;
+
+    setRemainingHeight(newRemainingHeight);
+  }, []);
 
   return (
-    <nav className="w-screen h-auto">
-      <div className="w-[90%] font-['Basis'] mx-auto pt-2">
-        <div className="flex  items-center justify-between">
-          {/* Video */}
-          <div className="flex-shrink-0">
-            <Link to="/">
-              <video loop autoPlay muted className="h-[100px] scale-110">
-                <source src={Logo} type="video/mp4" />
-              </video>
-            </Link>
-          </div>
-
-          {/* Links */}
-
-          <div className=" flex-grow text-center hidden md:flex justify-center items-center">
-            <ul className="flex gap-8">
-              <Navlink />
-            </ul>
-          </div>
-
-          {/* Login */}
-          <div className="text-center hidden md:block">
-            <Link
-              className=" bg-green-300 py-3 px-8 rounded-md hover:scale-110 transition-all hover:text-white inline-block"
-              to="/signup"
-            >
-              Signup
-            </Link>
-          </div>
-
-          {/* Mobile View */}
-          {/* Hamburger Icon */}
-
-          <div className="md:hidden">
-            <button className="border-none " onClick={togglemenu}>
-              <img
-                src={Hamburger}
-                alt="Hamburger"
-                className="transform scale-150"
-              />
-            </button>
-          </div>
-        </div>
-        {/* Mobile Menu */}
-        <div
-          className={` shadow-lg pb-2 rounded-sm  ${
-            toggle ? "block" : "hidden"
-          } animate-[slideIn_1s] `}
-        >
-          <ul className="flex flex-col items-center justify-center gap-y-3  mx-auto">
-            <Link
-              className=" bg-green-300 py-2 px-6 rounded-md hover:scale-105 transition-all hover:text-white  hidden md:inline-block"
-              to="/login"
-            >
-              Login
-            </Link>
-            <Navlink toggle={toggle} />
-          </ul>
-        </div>
+    <div id="myElement" className="h-auto bg-bgcolor text-white font-['Mona']">
+      <div className="flex justify-between items-center w-[80%] mx-auto py-8">
+        <Link to="/">
+          <img
+            src={Logo}
+            alt="Blabber The Chat App"
+            className="w-36 h-22 scale-110 transform-cpu duration-300 active:scale-75"
+          />
+        </Link>
+        <Link to="/login">
+          <button className="bg-bgbutton px-7 py-2 rounded-sm transform-cpu active:scale-75 duration-300 tracking-wide text-black hover:bg-white hover:text-black">
+            Login
+          </button>
+        </Link>
       </div>
-    </nav>
+    </div>
   );
 };
 

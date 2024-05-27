@@ -1,26 +1,33 @@
+require("dotenv").config();
 const express = require("express");
-const dotenv = require("dotenv");
 const connectDB = require("./config/db.js");
 const userRoute = require("./routes/userRoute.js");
 const chatRoute = require("./routes/chatRoute.js");
 const messageRoute = require("./routes/messageRoute.js");
-
+const path = require("path");
 const { errorHandler, invalidUrl } = require("./middlewares/errorHandler.js");
 const cors = require("cors");
-dotenv.config();
 
+// Connect to the database
 connectDB();
+
 const app = express();
 app.use(express.json());
 app.use(cors({ origin: "http://localhost:1234" }));
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("API is running successfully");
 });
 
+// API routes
 app.use("/api/users", userRoute);
 app.use("/api/chat", chatRoute);
 app.use("/api/messages", messageRoute);
+
+if (process.env.NODE_ENV === "Production") {
+  console.log = function () {};
+  console.error = function () {};
+}
 
 app.use(errorHandler);
 app.use(invalidUrl);
@@ -29,7 +36,7 @@ const server = app.listen(process.env.PORT || 5000, () => {
   console.log(`Server started on port ${process.env.PORT}`);
 });
 
-//socket server setup
+// Socket server setup
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
@@ -37,7 +44,7 @@ const io = require("socket.io")(server, {
   },
 });
 
-//checking client connection with socket
+// Checking client connection with socket
 io.on("connection", (socket) => {
   socket.on("setup", (userData) => {
     socket.join(userData._id);
@@ -46,7 +53,6 @@ io.on("connection", (socket) => {
 
   socket.on("joinChat", (room) => {
     socket.join(room);
-    console.log("User Joined room ", room);
   });
 
   socket.on("typing", (chatId) => {
@@ -65,7 +71,7 @@ io.on("connection", (socket) => {
     chat.users.forEach((user) => {
       if (user._id == newMessageRecieved.sender._id) return;
       console.log("Msg sent");
-      socket.in(user._id).emit("message recieved", newMessageRecieved);
+      socket.in(user._id).emit("message received", newMessageRecieved);
     });
   });
 });

@@ -1,8 +1,10 @@
 const { z } = require("zod");
+require("../config/config");
 
 const errorHandler = (err, req, res, next) => {
   if (err instanceof z.ZodError) {
     // Zod validation error
+
     const errorMessage = err.errors.map((error) => ({
       field: error.path[0],
       message: error.message,

@@ -30,6 +30,12 @@ const CreateGc = ({ setcreatgc }) => {
 
   const clickHandler = async () => {
     const users = gcUsers.map((element) => element._id);
+
+    if (users.length < 2) {
+      alert("Minimum of 3 users must be maintained");
+      return; // Return the previous state
+    }
+
     const formdata = {
       name: gcName,
       users: users,
@@ -56,7 +62,6 @@ const CreateGc = ({ setcreatgc }) => {
       setcreatgc(false);
     } catch (error) {
       console.log(error.message);
-      res.status(404).json({ msg: "Chat cannot be created" });
     }
   };
 
@@ -84,7 +89,7 @@ const CreateGc = ({ setcreatgc }) => {
           />
 
           {toggle && searchUsers.length > 0 && (
-            <div className="w-[98%] md:w-[70%] max-h-60 overflow-y-auto hide-scrollbar border-2 border-black rounded-md mt-2">
+            <div className="w-[95%]  max-h-60 overflow-y-auto hide-scrollbar border-2 border-black rounded-md mt-2">
               {searchUsers.map((val, idx) => (
                 <button
                   key={idx}
@@ -103,11 +108,14 @@ const CreateGc = ({ setcreatgc }) => {
                     setGcUserSearch("");
                   }}
                 >
-                  <div className="flex gap-x-3 items-center px-2">
-                    <Avatar name={val.name} />
-                    <div className="flex-col gap-y-2">
-                      <h1>{val.name}</h1>
-                      <h1>{val.email}</h1>
+                  <div className="flex md:gap-x-2 items-center px-2">
+                    <div className="flex-shrink-0">
+                      <Avatar name={val.name} />
+                    </div>
+
+                    <div className="flex flex-col">
+                      <h1 className="break-words">{val.name}</h1>
+                      <h1 className="max-w-[99%] break-words">{val.email}</h1>
                     </div>
                   </div>
                 </button>

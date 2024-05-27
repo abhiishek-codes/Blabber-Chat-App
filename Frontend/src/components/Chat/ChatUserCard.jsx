@@ -14,6 +14,8 @@ const ChatUserCard = ({ groupChat, data, idx }) => {
     activeChat,
     chatData,
     setchatData,
+    isVisible,
+    setisVisible,
   } = useContext(userContext);
   // console.log(data);
   return (
@@ -21,6 +23,7 @@ const ChatUserCard = ({ groupChat, data, idx }) => {
       onClick={() => {
         setactiveChat(data._id);
         setchatData(data);
+        setisVisible(!isVisible);
       }}
       className={`border-2 px-2 py-2 rounded-md w-full text-left transition-all duration-300 ${
         data._id == activeChat

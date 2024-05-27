@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "npx nodemon ./Backend/server.js",
+    "start": "nodemon ./Backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -22,5 +22,8 @@
     "socket-io": "^1.0.0",
     "socket.io": "^4.7.5",
     "zod": "^3.23.5"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-remove-console": "^6.9.4"
   }
 }

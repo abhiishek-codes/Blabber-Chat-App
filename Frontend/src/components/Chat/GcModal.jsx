@@ -7,8 +7,15 @@ import Avatar from "./Avatar";
 const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile }) => {
   const [gcUsers, setGcUsers] = useState(users);
   const [gcUserSearch, setGcUserSearch] = useState(null);
-  const { token, allChats, setAllchats, chatData, setchatData } =
-    useContext(userContext);
+  const {
+    token,
+    allChats,
+    setAllchats,
+    chatData,
+    setchatData,
+    activeChat,
+    setactiveChat,
+  } = useContext(userContext);
   const [searchUsers, setSearchUsers] = useState([]);
   const [toggle, settoggle] = useState(false);
   const [name, setName] = useState(null);
@@ -78,7 +85,6 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile }) => {
       }
     );
 
-    console.log(grpAdmin);
     if (grpAdmin)
       setAllchats((chat) => {
         return chat.filter((chat) => chat._id !== _id);
@@ -114,18 +120,24 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile }) => {
     const user = JSON.parse(localStorage.getItem("userInfo"));
     const grpAdmin = true;
     removeUsers(user._id, null, grpAdmin);
-    setchatData(null);
+    if (activeChat === allChats[0]._id) {
+      setchatData(allChats[1]);
+      setactiveChat(allChats[1]._id);
+    } else {
+      setchatData(allChats[0]);
+      setactiveChat(allChats[0]._id);
+    }
   };
 
   return (
     <>
-      <div className="w-[40vw] bg-slate-200 rounded-lg text-center relative">
+      <div className="w-[80vw] md:w-[40vw] bg-slate-200 rounded-lg text-center relative">
         <div className="flex flex-col justify-center items-center gap-y-6 px-3 py-4 w-[90%] mx-auto text-center">
-          <h1 className="text-3xl">{chatName}</h1>
+          <h1 className="text-xl md:text-3xl">{chatName}</h1>
           <div className="flex flex-wrap items-center gap-3 ">
             {gcUsers.map((user) => {
               return (
-                <div className=" flex  px-2 gap-x-3 py-[2px]  text-sm  rounded-md bg-black text-white text-[0.9em]">
+                <div className=" flex  px-2 gap-x-3 py-[2px] rounded-md bg-black text-white text-[0.7em] md:text-[0.9em]">
                   <h1>{user.name}</h1>
                   <button
                     onClick={() => {
@@ -151,7 +163,7 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile }) => {
               );
             })}
           </div>
-          <div className="flex gap-x-4 text-[0.9em] w-full items-center justify-center text-center ">
+          <div className="flex gap-x-4 text-[0.7em] md:text-[0.9em] w-full items-center justify-center text-center ">
             <input
               type="text"
               placeholder="New Group Name"
@@ -215,7 +227,7 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile }) => {
               leaveGrp();
               setgcProfile(false);
             }}
-            className="bg-black text-white px-2 py-1 rounded-md transform-cpu duration-300 active:scale-75"
+            className="bg-black text-white px-2 py-1 rounded-md transform-cpu duration-300 active:scale-75 text-[0.7em] md:text-[0.9em]"
           >
             Leave Group
           </button>

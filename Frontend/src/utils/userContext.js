@@ -12,6 +12,8 @@ export const UserProvider = ({ children }) => {
   const [chatData, setchatData] = useState(null);
   const navigate = useNavigate();
   const [token, setToken] = useState(null);
+  const [notifications, setNotifications] = useState([]);
+  const [remainingHeight, setRemainingHeight] = useState(0);
   const [isVisible, setisVisible] = useState(window.innerWidth > 1024); // Moved inside the component
 
   useEffect(() => {
@@ -42,6 +44,10 @@ export const UserProvider = ({ children }) => {
         setchatData,
         isVisible,
         setisVisible,
+        notifications,
+        setNotifications,
+        remainingHeight,
+        setRemainingHeight,
       }}
     >
       {/* Changed to an object */}

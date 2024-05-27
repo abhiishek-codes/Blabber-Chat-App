@@ -51,7 +51,7 @@ const SendMessage = ({ chatName, groupAdmin, users, _id }) => {
               }`}
             >
               <div className="relative">
-                <ProfileModal {...chatData.users[idx]} />
+                <ProfileModal {...chatData.users[idx]} data={chatData} />
               </div>
 
               <div className="absolute top-[24%] right-[5%] sm:top-[25%] sm:right-[7%] ">

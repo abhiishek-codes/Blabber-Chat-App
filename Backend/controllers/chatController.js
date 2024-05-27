@@ -1,6 +1,7 @@
 const asyncHandler = require("express-async-handler");
 const Chat = require("../model/chatModel");
 const express = require("express");
+require("../config/config");
 
 //to access chat with user and to create chat with  user if chat not available.
 
@@ -46,17 +47,39 @@ const accessChat = asyncHandler(async (req, res) => {
   }
 });
 
+//fetch particular chat by chatId
+
+const fetchPchat = asyncHandler(async (req, res) => {
+  const chatId = req.params.chatId;
+  let chat = await Chat.findById(chatId)
+    .populate("users", "-password")
+    .populate("latestMessage")
+    .populate("groupAdmin", "-password");
+  chat = await Chat.populate(chat, {
+    path: "latestMessage.sender",
+    select: "name profilePic email",
+  });
+
+  if (chat) res.status(200).send(chat);
+  else res.status(404).json({ msg: "No chat found" });
+});
+
 // to get all chat of a user
 
 const fetchChat = asyncHandler(async (req, res) => {
   console.log("Inside fetch Chat");
   const user = req.user._id;
-  console.log(user);
+
   const chat = await Chat.find({ users: req.user._id })
     .populate("users", "-password")
+    .populate("latestMessage")
     .populate("groupAdmin", "-password")
-    .sort({ updatedAt: -1 })
-    .populate("latestMessage.sender", "name profilePic email");
+    .sort({ updatedAt: -1 });
+
+  await Chat.populate(chat, {
+    path: "latestMessage.sender",
+    select: "name profilePic email",
+  });
 
   if (chat) res.status(200).send(chat);
   else res.status(404).json({ msg: "No chat found" });
@@ -190,6 +213,7 @@ const removeUser = asyncHandler(async (req, res) => {
 
 module.exports = {
   accessChat,
+  fetchPchat,
   fetchChat,
   createGroupChat,
   updateGroupName,

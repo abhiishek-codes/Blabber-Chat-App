@@ -2967,24 +2967,26 @@ var _loginSignupDefault = parcelHelpers.interopDefault(_loginSignup);
 var _userContext = require("./utils/userContext");
 var _chatPage = require("./pages/ChatPage");
 var _chatPageDefault = parcelHelpers.interopDefault(_chatPage);
+var _errorJsx = require("./components/Chat/Error.jsx");
+var _errorJsxDefault = parcelHelpers.interopDefault(_errorJsx);
 const App = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userContext.UserProvider), {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 14,
+                    lineNumber: 13,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 15,
+                    lineNumber: 14,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/App.js",
-            lineNumber: 13,
+            lineNumber: 12,
             columnNumber: 7
         }, undefined)
     }, void 0, false);
@@ -2994,13 +2996,13 @@ const Chatpage = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userContext.UserProvider), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _chatPageDefault.default), {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 24,
+            lineNumber: 20,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/App.js",
-        lineNumber: 23,
-        columnNumber: 5
+        lineNumber: 19,
+        columnNumber: 10
     }, undefined);
 };
 _c1 = Chatpage;
@@ -3009,32 +3011,37 @@ const router = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 32,
-            columnNumber: 14
+            lineNumber: 25,
+            columnNumber: 12
+        }, undefined),
+        errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorJsxDefault.default), {}, void 0, false, {
+            fileName: "src/App.js",
+            lineNumber: 26,
+            columnNumber: 17
         }, undefined),
         children: [
             {
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 36,
-                    columnNumber: 18
+                    lineNumber: 29,
+                    columnNumber: 14
                 }, undefined)
             },
             {
                 path: "/signup",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loginSignupDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 40,
-                    columnNumber: 18
+                    lineNumber: 32,
+                    columnNumber: 14
                 }, undefined)
             },
             {
                 path: "/login",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loginSignupDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 44,
-                    columnNumber: 18
+                    lineNumber: 35,
+                    columnNumber: 14
                 }, undefined)
             }
         ]
@@ -3043,8 +3050,13 @@ const router = (0, _reactRouterDom.createBrowserRouter)([
         path: "/chats",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Chatpage, {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 50,
-            columnNumber: 14
+            lineNumber: 39,
+            columnNumber: 12
+        }, undefined),
+        errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorJsxDefault.default), {}, void 0, false, {
+            fileName: "src/App.js",
+            lineNumber: 40,
+            columnNumber: 17
         }, undefined)
     }
 ]);
@@ -3053,7 +3065,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: router
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 55,
+    lineNumber: 43,
     columnNumber: 13
 }, undefined));
 var _c, _c1;
@@ -3065,7 +3077,7 @@ $RefreshReg$(_c1, "Chatpage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","react-router-dom":"9xmpe","./components/Navbar":"4U1ks","./pages/Home":"aufND","./pages/LoginSignup":"2ZFKU","./utils/userContext":"eBA1b","./pages/ChatPage":"kHiO9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","react-router-dom":"9xmpe","./components/Navbar":"4U1ks","./pages/Home":"aufND","./pages/LoginSignup":"2ZFKU","./utils/userContext":"eBA1b","./pages/ChatPage":"kHiO9","./components/Chat/Error.jsx":"b6oIK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -34043,176 +34055,69 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _navLinks = require("./NavLinks");
-var _navLinksDefault = parcelHelpers.interopDefault(_navLinks);
 var _reactRouterDom = require("react-router-dom");
-var _mobileMp4 = require("url:../assets/Mobile.mp4");
-var _mobileMp4Default = parcelHelpers.interopDefault(_mobileMp4);
-var _hamburgerPng = require("url:../assets/Hamburger.png");
-var _hamburgerPngDefault = parcelHelpers.interopDefault(_hamburgerPng);
+var _blabberPng = require("url:../assets/blabber.png");
+var _blabberPngDefault = parcelHelpers.interopDefault(_blabberPng);
+var _userContext = require("../utils/userContext");
 var _s = $RefreshSig$();
 const Navbar = ()=>{
     _s();
-    const [toggle, setToggle] = (0, _react.useState)(false);
-    const togglemenu = ()=>{
-        setToggle(!toggle);
-    };
-    const handleResize = ()=>{
-        if (window.innerWidth >= 767) setToggle(false);
-    };
+    const { remainingHeight, setRemainingHeight } = (0, _react.useContext)((0, _userContext.userContext));
     (0, _react.useEffect)(()=>{
-        window.addEventListener("resize", handleResize);
-    });
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
-        className: "w-screen h-auto",
+        const elementHeight = document.getElementById("myElement").offsetHeight;
+        const newRemainingHeight = window.innerHeight - elementHeight;
+        setRemainingHeight(newRemainingHeight);
+    }, []);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        id: "myElement",
+        className: "h-auto bg-bgcolor text-white font-['Mona']",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "w-[90%] font-['Basis'] mx-auto pt-2",
+            className: "flex justify-between items-center w-[80%] mx-auto py-8",
             children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "flex  items-center justify-between",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "flex-shrink-0",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                to: "/",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("video", {
-                                    loop: true,
-                                    autoPlay: true,
-                                    muted: true,
-                                    className: "h-[100px] scale-110",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("source", {
-                                        src: (0, _mobileMp4Default.default),
-                                        type: "video/mp4"
-                                    }, void 0, false, {
-                                        fileName: "src/components/Navbar.jsx",
-                                        lineNumber: 32,
-                                        columnNumber: 17
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/components/Navbar.jsx",
-                                    lineNumber: 31,
-                                    columnNumber: 15
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/components/Navbar.jsx",
-                                lineNumber: 30,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/Navbar.jsx",
-                            lineNumber: 29,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: " flex-grow text-center hidden md:flex justify-center items-center",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                                className: "flex gap-8",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navLinksDefault.default), {}, void 0, false, {
-                                    fileName: "src/components/Navbar.jsx",
-                                    lineNumber: 41,
-                                    columnNumber: 15
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/components/Navbar.jsx",
-                                lineNumber: 40,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/Navbar.jsx",
-                            lineNumber: 39,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "text-center hidden md:block",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                className: " bg-green-300 py-3 px-8 rounded-md hover:scale-110 transition-all hover:text-white inline-block",
-                                to: "/signup",
-                                children: "Signup"
-                            }, void 0, false, {
-                                fileName: "src/components/Navbar.jsx",
-                                lineNumber: 47,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/Navbar.jsx",
-                            lineNumber: 46,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "md:hidden",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "border-none ",
-                                onClick: togglemenu,
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                    src: (0, _hamburgerPngDefault.default),
-                                    alt: "Hamburger",
-                                    className: "transform scale-150"
-                                }, void 0, false, {
-                                    fileName: "src/components/Navbar.jsx",
-                                    lineNumber: 60,
-                                    columnNumber: 15
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/components/Navbar.jsx",
-                                lineNumber: 59,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/Navbar.jsx",
-                            lineNumber: 58,
-                            columnNumber: 11
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/Navbar.jsx",
-                    lineNumber: 27,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: ` shadow-lg pb-2 rounded-sm  ${toggle ? "block" : "hidden"} animate-[slideIn_1s] `,
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                        className: "flex flex-col items-center justify-center gap-y-3  mx-auto",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                className: " bg-green-300 py-2 px-6 rounded-md hover:scale-105 transition-all hover:text-white  hidden md:inline-block",
-                                to: "/login",
-                                children: "Login"
-                            }, void 0, false, {
-                                fileName: "src/components/Navbar.jsx",
-                                lineNumber: 75,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navLinksDefault.default), {
-                                toggle: toggle
-                            }, void 0, false, {
-                                fileName: "src/components/Navbar.jsx",
-                                lineNumber: 81,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                    to: "/",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: (0, _blabberPngDefault.default),
+                        alt: "Blabber The Chat App",
+                        className: "w-36 h-22 scale-110 transform-cpu duration-300 active:scale-75"
+                    }, void 0, false, {
                         fileName: "src/components/Navbar.jsx",
-                        lineNumber: 74,
+                        lineNumber: 19,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/Navbar.jsx",
-                    lineNumber: 69,
+                    lineNumber: 18,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                    to: "/login",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "bg-bgbutton px-7 py-2 rounded-sm transform-cpu active:scale-75 duration-300 tracking-wide text-black hover:bg-white hover:text-black",
+                        children: "Login"
+                    }, void 0, false, {
+                        fileName: "src/components/Navbar.jsx",
+                        lineNumber: 22,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/Navbar.jsx",
+                    lineNumber: 21,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/Navbar.jsx",
-            lineNumber: 26,
+            lineNumber: 17,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Navbar.jsx",
-        lineNumber: 25,
-        columnNumber: 5
+        lineNumber: 16,
+        columnNumber: 10
     }, undefined);
 };
-_s(Navbar, "E5z+7KxU27TYd2kLomdFOtK8mpg=");
+_s(Navbar, "pvWPEvGf3zqDH9khDU9+OOKqxzk=");
 _c = Navbar;
 exports.default = Navbar;
 var _c;
@@ -34223,50 +34128,122 @@ $RefreshReg$(_c, "Navbar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./NavLinks":"9Cu91","react-router-dom":"9xmpe","url:../assets/Mobile.mp4":"ajUkj","url:../assets/Hamburger.png":"gHyON","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9Cu91":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$9011 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","url:../assets/blabber.png":"85NmC","../utils/userContext":"eBA1b","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"85NmC":[function(require,module,exports) {
+module.exports = require("19ed23f86aa6d81a").getBundleURL("aXMci") + "blabber.84393e5f.png" + "?" + Date.now();
+
+},{"19ed23f86aa6d81a":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+}
+// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"eBA1b":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$268f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$9011.prelude(module);
+$parcel$ReactRefreshHelpers$268f.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "userContext", ()=>userContext);
+parcelHelpers.export(exports, "UserProvider", ()=>UserProvider);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouterDom = require("react-router-dom");
-const Navlink = ({ toggle })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            "Features",
-            "AboutUs",
-            "ContactUs"
-        ].map((val, index)=>{
-            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                    className: `${toggle ? "hover:underline inline-block hover:scale-105 transition-all " : "hover:bg-green-300 px-4 py-2 inline-block hover:scale-105 transition-all rounded-lg"}`,
-                    to: "/" + val,
-                    children: val
-                }, index, false, {
-                    fileName: "src/components/NavLinks.jsx",
-                    lineNumber: 10,
-                    columnNumber: 13
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/NavLinks.jsx",
-                lineNumber: 9,
-                columnNumber: 11
-            }, undefined);
-        })
-    }, void 0, false);
+var _s = $RefreshSig$();
+const userContext = /*#__PURE__*/ (0, _react.createContext)();
+const UserProvider = ({ children })=>{
+    _s();
+    const [user, setUser] = (0, _react.useState)();
+    const [allChats, setAllchats] = (0, _react.useState)([]);
+    const [searchuserId, setsearchuserId] = (0, _react.useState)(null);
+    const [activeChat, setactiveChat] = (0, _react.useState)(null);
+    const [chatName, setchatName] = (0, _react.useState)(null);
+    const [chatData, setchatData] = (0, _react.useState)(null);
+    const navigate = (0, _reactRouterDom.useNavigate)();
+    const [token, setToken] = (0, _react.useState)(null);
+    const [notifications, setNotifications] = (0, _react.useState)([]);
+    const [remainingHeight, setRemainingHeight] = (0, _react.useState)(0);
+    const [isVisible, setisVisible] = (0, _react.useState)(window.innerWidth > 1024); // Moved inside the component
+    (0, _react.useEffect)(()=>{
+        if (localStorage.getItem("userInfo")) {
+            const userinfo = JSON.parse(localStorage.getItem("userInfo"));
+            setUser(userinfo);
+            setToken(userinfo?.token);
+            if (!userinfo) navigate("/");
+        }
+    }, []); // Removed useNavigate from the dependency array
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(userContext.Provider, {
+        value: {
+            user,
+            setUser,
+            allChats,
+            setAllchats,
+            searchuserId,
+            setsearchuserId,
+            token,
+            setToken,
+            activeChat,
+            setactiveChat,
+            chatName,
+            setchatName,
+            chatData,
+            setchatData,
+            isVisible,
+            setisVisible,
+            notifications,
+            setNotifications,
+            remainingHeight,
+            setRemainingHeight
+        },
+        children: children
+    }, void 0, false, {
+        fileName: "src/utils/userContext.js",
+        lineNumber: 28,
+        columnNumber: 10
+    }, undefined);
 };
-_c = Navlink;
-exports.default = Navlink;
+_s(UserProvider, "xmO02j49VO74TYFkabAFBJRqB9M=", false, function() {
+    return [
+        (0, _reactRouterDom.useNavigate)
+    ];
+});
+_c = UserProvider;
 var _c;
-$RefreshReg$(_c, "Navlink");
+$RefreshReg$(_c, "UserProvider");
 
-  $parcel$ReactRefreshHelpers$9011.postlude(module);
+  $parcel$ReactRefreshHelpers$268f.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
@@ -34409,48 +34386,7 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC"}],"ajUkj":[function(require,module,exports) {
-module.exports = require("268f13ea77028300").getBundleURL("aXMci") + "Mobile.9e3f6682.mp4" + "?" + Date.now();
-
-},{"268f13ea77028300":"lgJ39"}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return "/";
-}
-function getBaseURL(url) {
-    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
-}
-// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error("Origin not found");
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
-},{}],"gHyON":[function(require,module,exports) {
-module.exports = require("e3e949ba1a565727").getBundleURL("aXMci") + "Hamburger.a97a292d.png" + "?" + Date.now();
-
-},{"e3e949ba1a565727":"lgJ39"}],"aufND":[function(require,module,exports) {
+},{"7422ead32dcc1e6b":"786KC"}],"aufND":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$257a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -34462,124 +34398,131 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _socialMediaMp4 = require("url:../assets/Social media.mp4");
-var _socialMediaMp4Default = parcelHelpers.interopDefault(_socialMediaMp4);
-var _globalizationMp4 = require("url:../assets/Globalization.mp4");
-var _globalizationMp4Default = parcelHelpers.interopDefault(_globalizationMp4);
+var _home1Mp4 = require("url:../assets/home1.mp4");
+var _home1Mp4Default = parcelHelpers.interopDefault(_home1Mp4);
+var _home2Mp4 = require("url:../assets/home2.mp4");
+var _home2Mp4Default = parcelHelpers.interopDefault(_home2Mp4);
 var _reactRouterDom = require("react-router-dom");
+var _userContext = require("../utils/userContext");
+var _waveSvg = require("../assets/wave.svg");
+var _waveSvgDefault = parcelHelpers.interopDefault(_waveSvg);
+var _s = $RefreshSig$();
 const Home = ()=>{
+    _s();
+    const { remainingHeight, setRemainingHeight } = (0, _react.useContext)((0, _userContext.userContext));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "w-[90vw] pt-3 mx-auto   lg:-translate-x-7",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    className: "font-mono text-center  text-2xl sm:text-4xl",
-                    children: "Blabber: Where conversations never end !"
-                }, void 0, false, {
-                    fileName: "src/pages/Home.jsx",
-                    lineNumber: 10,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "sm:flex items-center justify-center ",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "w-85vw mx-auto sm:w-1/2 overflow-hidden",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("video", {
-                                loop: true,
-                                autoPlay: true,
-                                muted: true,
-                                className: "w-full sm:w-[80%]  mx-auto",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("source", {
-                                    src: (0, _socialMediaMp4Default.default),
-                                    type: "video/mp4"
-                                }, void 0, false, {
-                                    fileName: "src/pages/Home.jsx",
-                                    lineNumber: 16,
-                                    columnNumber: 15
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/pages/Home.jsx",
-                                lineNumber: 15,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/pages/Home.jsx",
-                            lineNumber: 14,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "sm:w-[40%]   font-['Basis']  my-auto text-center overflow-hidden",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                                    className: "text-xl text-center sm:text-2xl sm:text-left sm:pt-5",
-                                    children: "Blabber Makes it easy and fun to stay in touch & communicate anywhere anyplace with anyone"
-                                }, void 0, false, {
-                                    fileName: "src/pages/Home.jsx",
-                                    lineNumber: 23,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "hidden sm:block pt-5 ",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("video", {
-                                        loop: true,
-                                        autoPlay: true,
-                                        muted: true,
-                                        className: "w-[78%]  mx-auto ",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("source", {
-                                            src: (0, _globalizationMp4Default.default),
-                                            type: "video/mp4"
-                                        }, void 0, false, {
-                                            fileName: "src/pages/Home.jsx",
-                                            lineNumber: 29,
-                                            columnNumber: 17
-                                        }, undefined)
+            className: " bg-bgcolor my-auto pt-2 md:pt-0",
+            style: {
+                height: `${remainingHeight}px`
+            },
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "pt-2 mx-auto flex flex-col items-center justify-center gap-y-4 md:gap-y-8 text-white max-w-7xl",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "text-3xl  md:text-5xl font-bold tracking-wide",
+                        children: "Blabber The Chat App"
+                    }, void 0, false, {
+                        fileName: "src/pages/Home.jsx",
+                        lineNumber: 18,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: "text-md md:text-lg tracking-wide font-medium text-center px-4 pt-1",
+                        children: "Blabber Makes it easy and fun to stay in touch & communicate anywhere anyplace with anyone"
+                    }, void 0, false, {
+                        fileName: "src/pages/Home.jsx",
+                        lineNumber: 21,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex items-center justify-center w-full gap-x-2 overflow-hidden",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex-1 max-w-lg p-2 hidden md:block",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("video", {
+                                    loop: true,
+                                    autoPlay: true,
+                                    muted: true,
+                                    className: "w-full h-auto rounded-lg",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("source", {
+                                        src: (0, _home1Mp4Default.default),
+                                        type: "video/mp4"
                                     }, void 0, false, {
                                         fileName: "src/pages/Home.jsx",
                                         lineNumber: 28,
-                                        columnNumber: 15
+                                        columnNumber: 17
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/pages/Home.jsx",
                                     lineNumber: 27,
-                                    columnNumber: 13
+                                    columnNumber: 15
                                 }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/pages/Home.jsx",
-                            lineNumber: 19,
-                            columnNumber: 11
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/pages/Home.jsx",
-                    lineNumber: 13,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "mt-4 translate-y-0 sm:mx-auto sm:-translate-y-4 translate-x-1 text-center",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                        className: "px-5 py-1 sm:px-10 sm:py-2 rounded-lg bg-green-700 text-white hover:bg-slate-800 transition-all block-inline duration-300  ",
+                            }, void 0, false, {
+                                fileName: "src/pages/Home.jsx",
+                                lineNumber: 26,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex-1 max-w-lg p-2",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("video", {
+                                    loop: true,
+                                    autoPlay: true,
+                                    muted: true,
+                                    className: "w-full h-auto rounded-lg",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("source", {
+                                        src: (0, _home2Mp4Default.default),
+                                        type: "video/mp4"
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Home.jsx",
+                                        lineNumber: 33,
+                                        columnNumber: 17
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/pages/Home.jsx",
+                                    lineNumber: 32,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/pages/Home.jsx",
+                                lineNumber: 31,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/pages/Home.jsx",
+                        lineNumber: 25,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: "/login",
-                        children: "Start Messaging"
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            className: "bg-bgbutton px-10 py-2 rounded-sm transform-cpu active:scale-75 duration-300 tracking-wide text-black hover:bg-white hover:text-black font-[Mona]",
+                            children: "Start Journey"
+                        }, void 0, false, {
+                            fileName: "src/pages/Home.jsx",
+                            lineNumber: 39,
+                            columnNumber: 13
+                        }, undefined)
                     }, void 0, false, {
                         fileName: "src/pages/Home.jsx",
-                        lineNumber: 35,
+                        lineNumber: 38,
                         columnNumber: 11
                     }, undefined)
-                }, void 0, false, {
-                    fileName: "src/pages/Home.jsx",
-                    lineNumber: 34,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
+                ]
+            }, void 0, true, {
+                fileName: "src/pages/Home.jsx",
+                lineNumber: 17,
+                columnNumber: 9
+            }, undefined)
+        }, void 0, false, {
             fileName: "src/pages/Home.jsx",
-            lineNumber: 9,
+            lineNumber: 14,
             columnNumber: 7
         }, undefined)
     }, void 0, false);
 };
+_s(Home, "AKOnckUxA9A0ml99JBQCI/CQF1Y=");
 _c = Home;
 exports.default = Home;
 var _c;
@@ -34590,13 +34533,16 @@ $RefreshReg$(_c, "Home");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","url:../assets/Social media.mp4":"arCNf","url:../assets/Globalization.mp4":"767gf","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"arCNf":[function(require,module,exports) {
-module.exports = require("55f8b96ea709bee6").getBundleURL("aXMci") + "Social media.2c6ab26f.mp4" + "?" + Date.now();
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","url:../assets/home1.mp4":"lVRE9","url:../assets/home2.mp4":"eUgoI","react-router-dom":"9xmpe","../utils/userContext":"eBA1b","../assets/wave.svg":"j7AqN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lVRE9":[function(require,module,exports) {
+module.exports = require("95e63070bafcd845").getBundleURL("aXMci") + "home1.c1044912.mp4" + "?" + Date.now();
 
-},{"55f8b96ea709bee6":"lgJ39"}],"767gf":[function(require,module,exports) {
-module.exports = require("fb442270ceb71534").getBundleURL("aXMci") + "Globalization.2744f009.mp4" + "?" + Date.now();
+},{"95e63070bafcd845":"lgJ39"}],"eUgoI":[function(require,module,exports) {
+module.exports = require("f46e66bbdc113d2c").getBundleURL("aXMci") + "home2.946a47f8.mp4" + "?" + Date.now();
 
-},{"fb442270ceb71534":"lgJ39"}],"2ZFKU":[function(require,module,exports) {
+},{"f46e66bbdc113d2c":"lgJ39"}],"j7AqN":[function(require,module,exports) {
+module.exports = require("5c09264e025c8bc5").getBundleURL("aXMci") + "wave.733d2db0.svg" + "?" + Date.now();
+
+},{"5c09264e025c8bc5":"lgJ39"}],"2ZFKU":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$d23d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -34614,11 +34560,21 @@ var _login = require("../components/Login");
 var _loginDefault = parcelHelpers.interopDefault(_login);
 var _signup = require("../components/Signup");
 var _signupDefault = parcelHelpers.interopDefault(_signup);
+var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
 const LoginSignupUser = ()=>{
     _s();
+    const navigate = (0, _reactRouterDom.useNavigate)();
+    const userinfo = JSON.parse(localStorage.getItem("userInfo"));
+    const name = userinfo?.name;
+    (0, _react.useEffect)(()=>{
+        if (name) navigate("/chats");
+    }, [
+        name,
+        navigate
+    ]);
     const [loginstate, Setloginstate] = (0, _react.useState)(false);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+    return !name ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "flex justify-center items-center  md:p-4",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "w-full max-w-lg md:max-w-[85%] p-4 md:p-[1.5rem] overflow-hidden",
@@ -34631,50 +34587,54 @@ const LoginSignupUser = ()=>{
                             Setloginstate: Setloginstate
                         }, void 0, false, {
                             fileName: "src/pages/LoginSignup.jsx",
-                            lineNumber: 15,
-                            columnNumber: 15
+                            lineNumber: 21,
+                            columnNumber: 27
                         }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _signupDefault.default), {
                             Setloginstate: Setloginstate
                         }, void 0, false, {
                             fileName: "src/pages/LoginSignup.jsx",
-                            lineNumber: 17,
-                            columnNumber: 15
+                            lineNumber: 21,
+                            columnNumber: 69
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/pages/LoginSignup.jsx",
-                        lineNumber: 13,
+                        lineNumber: 20,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "hidden md:block w-full md:w-[60%] mx-auto",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _videocardDefault.default), {}, void 0, false, {
                             fileName: "src/pages/LoginSignup.jsx",
-                            lineNumber: 21,
+                            lineNumber: 24,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/pages/LoginSignup.jsx",
-                        lineNumber: 20,
+                        lineNumber: 23,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/LoginSignup.jsx",
-                lineNumber: 12,
+                lineNumber: 19,
                 columnNumber: 9
             }, undefined)
         }, void 0, false, {
             fileName: "src/pages/LoginSignup.jsx",
-            lineNumber: 11,
+            lineNumber: 18,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/pages/LoginSignup.jsx",
-        lineNumber: 10,
-        columnNumber: 5
-    }, undefined);
+        lineNumber: 17,
+        columnNumber: 18
+    }, undefined) : null;
 };
-_s(LoginSignupUser, "6e+tNs3yy0//kwZW5sddb1I4TlQ=");
+_s(LoginSignupUser, "wzz2ddXEotVyNCpI8NXQOENs0wo=", false, function() {
+    return [
+        (0, _reactRouterDom.useNavigate)
+    ];
+});
 _c = LoginSignupUser;
 exports.default = LoginSignupUser;
 var _c;
@@ -34685,7 +34645,7 @@ $RefreshReg$(_c, "LoginSignupUser");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/Videocard":"7VO5W","../components/Login":"9LO69","../components/Signup":"a4MKG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7VO5W":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/Videocard":"7VO5W","../components/Login":"9LO69","../components/Signup":"a4MKG","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7VO5W":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$b807 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -34712,12 +34672,12 @@ const Videocard = ()=>{
                 type: "video/mp4"
             }, void 0, false, {
                 fileName: "src/components/Videocard.jsx",
-                lineNumber: 14,
+                lineNumber: 6,
                 columnNumber: 9
             }, undefined)
         }, void 0, false, {
             fileName: "src/components/Videocard.jsx",
-            lineNumber: 7,
+            lineNumber: 5,
             columnNumber: 7
         }, undefined)
     }, void 0, false);
@@ -34776,13 +34736,11 @@ const Login = ({ Setloginstate })=>{
         try {
             const response = await (0, _axiosDefault.default).post("http://localhost:5000/api/users/login", formData);
             localStorage.setItem("userInfo", JSON.stringify(await response.data));
-            console.log(response.data);
             navigate("/chats"); // Assuming successful login
         } catch (error) {
             if (error.response && error.response.data.error) {
                 const { error: responseError } = error.response.data;
-                if (Array.isArray(responseError)) // Map field-specific errors to update errors state
-                setErrors(responseError.map((fieldError)=>({
+                if (Array.isArray(responseError)) setErrors(responseError.map((fieldError)=>({
                         field: fieldError.field,
                         message: fieldError.message
                     })));
@@ -34792,8 +34750,7 @@ const Login = ({ Setloginstate })=>{
                         message: responseError
                     }
                 ]);
-            } else // Request failed before reaching server
-            console.error("Error:", error.message);
+            }
         }
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
@@ -34805,7 +34762,7 @@ const Login = ({ Setloginstate })=>{
                         children: "Login to your Account"
                     }, void 0, false, {
                         fileName: "src/components/Login.jsx",
-                        lineNumber: 55,
+                        lineNumber: 49,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -34814,13 +34771,13 @@ const Login = ({ Setloginstate })=>{
                         alt: "Blabber"
                     }, void 0, false, {
                         fileName: "src/components/Login.jsx",
-                        lineNumber: 56,
+                        lineNumber: 50,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Login.jsx",
-                lineNumber: 54,
+                lineNumber: 48,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34834,7 +34791,7 @@ const Login = ({ Setloginstate })=>{
                                 children: "username"
                             }, void 0, false, {
                                 fileName: "src/components/Login.jsx",
-                                lineNumber: 60,
+                                lineNumber: 54,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -34847,7 +34804,7 @@ const Login = ({ Setloginstate })=>{
                                 required: true
                             }, void 0, false, {
                                 fileName: "src/components/Login.jsx",
-                                lineNumber: 61,
+                                lineNumber: 55,
                                 columnNumber: 11
                             }, undefined),
                             errors.map((error, index)=>error.field === "username" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34856,20 +34813,20 @@ const Login = ({ Setloginstate })=>{
                                         children: error.message
                                     }, void 0, false, {
                                         fileName: "src/components/Login.jsx",
-                                        lineNumber: 74,
+                                        lineNumber: 57,
                                         columnNumber: 19
                                     }, undefined)
                                 }, index, false, {
                                     fileName: "src/components/Login.jsx",
-                                    lineNumber: 73,
-                                    columnNumber: 17
+                                    lineNumber: 56,
+                                    columnNumber: 71
                                 }, undefined)),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                                 className: "block pt-4 pb-1 px-1 text-[1.1rem]",
                                 children: "password"
                             }, void 0, false, {
                                 fileName: "src/components/Login.jsx",
-                                lineNumber: 79,
+                                lineNumber: 60,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34885,7 +34842,7 @@ const Login = ({ Setloginstate })=>{
                                         required: true
                                     }, void 0, false, {
                                         fileName: "src/components/Login.jsx",
-                                        lineNumber: 81,
+                                        lineNumber: 62,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34896,18 +34853,18 @@ const Login = ({ Setloginstate })=>{
                                             alt: "/"
                                         }, void 0, false, {
                                             fileName: "src/components/Login.jsx",
-                                            lineNumber: 94,
+                                            lineNumber: 64,
                                             columnNumber: 15
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/components/Login.jsx",
-                                        lineNumber: 90,
+                                        lineNumber: 63,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Login.jsx",
-                                lineNumber: 80,
+                                lineNumber: 61,
                                 columnNumber: 11
                             }, undefined),
                             errors.map((error, index)=>error.field === "password" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34916,18 +34873,18 @@ const Login = ({ Setloginstate })=>{
                                         children: error.message
                                     }, void 0, false, {
                                         fileName: "src/components/Login.jsx",
-                                        lineNumber: 101,
+                                        lineNumber: 68,
                                         columnNumber: 19
                                     }, undefined)
                                 }, index, false, {
                                     fileName: "src/components/Login.jsx",
-                                    lineNumber: 100,
-                                    columnNumber: 17
+                                    lineNumber: 67,
+                                    columnNumber: 71
                                 }, undefined))
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Login.jsx",
-                        lineNumber: 59,
+                        lineNumber: 53,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34939,13 +34896,13 @@ const Login = ({ Setloginstate })=>{
                                         children: error.message
                                     }, void 0, false, {
                                         fileName: "src/components/Login.jsx",
-                                        lineNumber: 111,
+                                        lineNumber: 73,
                                         columnNumber: 19
                                     }, undefined)
                                 }, index, false, {
                                     fileName: "src/components/Login.jsx",
-                                    lineNumber: 110,
-                                    columnNumber: 17
+                                    lineNumber: 72,
+                                    columnNumber: 57
                                 }, undefined)),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "pt-10 flex flex-col",
@@ -34954,14 +34911,14 @@ const Login = ({ Setloginstate })=>{
                                         className: "border px-[4rem] py-[0.3rem] rounded-md bg-green-700 text-white hover:bg-slate-800 transition-all duration-300 mb-5",
                                         onClick: ()=>{
                                             setFormData({
-                                                username: "abhi.a.singh.2@gmail.com",
-                                                password: "Abhishek"
+                                                username: "testuser@gmail.com",
+                                                password: "test@1234"
                                             });
                                         },
                                         children: "Get test Credentials"
                                     }, void 0, false, {
                                         fileName: "src/components/Login.jsx",
-                                        lineNumber: 116,
+                                        lineNumber: 76,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34970,13 +34927,13 @@ const Login = ({ Setloginstate })=>{
                                         children: "Log In"
                                     }, void 0, false, {
                                         fileName: "src/components/Login.jsx",
-                                        lineNumber: 127,
+                                        lineNumber: 84,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Login.jsx",
-                                lineNumber: 115,
+                                lineNumber: 75,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -34992,36 +34949,36 @@ const Login = ({ Setloginstate })=>{
                                             children: "Signup"
                                         }, void 0, false, {
                                             fileName: "src/components/Login.jsx",
-                                            lineNumber: 138,
+                                            lineNumber: 92,
                                             columnNumber: 15
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/components/Login.jsx",
-                                        lineNumber: 137,
+                                        lineNumber: 91,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Login.jsx",
-                                lineNumber: 135,
+                                lineNumber: 89,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Login.jsx",
-                        lineNumber: 106,
+                        lineNumber: 71,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Login.jsx",
-                lineNumber: 58,
+                lineNumber: 52,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(Login, "tMp3qKNmKcQT3gn7DrMGoqivefI=", false, function() {
+_s(Login, "6Brq7uMW8ws0d4Ph6Tl2/bXRLjo=", false, function() {
     return [
         (0, _reactRouterDom.useNavigate)
     ];
@@ -39464,45 +39421,44 @@ const Signup = ({ Setloginstate })=>{
     };
     const handleUpload = async ()=>{
         if (!selectedFile) return null;
-        const formData = new FormData();
-        formData.append("file", selectedFile);
-        formData.append("upload_preset", "Blabber");
+        const uploadData = new FormData();
+        uploadData.append("file", selectedFile);
+        uploadData.append("upload_preset", "Blabber");
         try {
             const response = await fetch(`https://api.cloudinary.com/v1_1/dz093s3fc/image/upload`, {
                 method: "POST",
-                body: formData
+                body: uploadData
             });
             const data = await response.json();
-            console.log("Upload Success:", data);
             return data.url;
         } catch (error) {
-            console.log("Upload Error:", error);
+            return null;
         }
     };
     const handleSignup = async ()=>{
         const profilePicUrl = await handleUpload();
-        // Create a new object based on formData
-        let dataToSend = {
+        const dataToSend = {
             ...formData
         };
-        // If rofilePicUrl is not null, add it to dataToSend
-        if (profilePicUrl) dataToSend.profilePic = profilePicUrl;
+        if (profilePicUrl) dataToSend.pic = profilePicUrl;
         try {
             const response = await (0, _axiosDefault.default).post("http://localhost:5000/api/users/signup", dataToSend);
-            localStorage.setItem("userInfo", JSON.stringify(await response.data));
-            console.log(response.data);
-            navigate("/chats"); // Assuming successful signup
+            localStorage.setItem("userInfo", JSON.stringify(response.data));
+            navigate("/chats");
         } catch (error) {
-            if (error.response) {
-                // Server responded with an error
+            if (error.response && error.response.data.error) {
                 const { error: responseError } = error.response.data;
-                setErrors(Array.isArray(responseError) ? responseError : [
+                if (Array.isArray(responseError)) setErrors(responseError.map((fieldError)=>({
+                        field: fieldError.field,
+                        message: fieldError.message
+                    })));
+                else // General error
+                setErrors([
                     {
                         message: responseError
                     }
                 ]);
-            } else // Request failed before reaching server
-            console.error("Error:", error.message);
+            }
         }
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -39512,7 +39468,7 @@ const Signup = ({ Setloginstate })=>{
                 children: "Where great minds blabber"
             }, void 0, false, {
                 fileName: "src/components/Signup.jsx",
-                lineNumber: 90,
+                lineNumber: 78,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -39520,11 +39476,11 @@ const Signup = ({ Setloginstate })=>{
                 children: "Sign up today."
             }, void 0, false, {
                 fileName: "src/components/Signup.jsx",
-                lineNumber: 91,
+                lineNumber: 79,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "text-left mx-7 ",
+                className: "text-left mx-7",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "px-1",
@@ -39534,11 +39490,11 @@ const Signup = ({ Setloginstate })=>{
                                 children: "Name"
                             }, void 0, false, {
                                 fileName: "src/components/Signup.jsx",
-                                lineNumber: 95,
+                                lineNumber: 83,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                className: "border-2 border-slate-600 rounded-md px-1 w-[100%]  h-[2rem]",
+                                className: "border-2 border-slate-600 rounded-md px-1 w-[100%] h-[2rem]",
                                 type: "text",
                                 name: "name",
                                 placeholder: "Enter your Name",
@@ -39546,7 +39502,7 @@ const Signup = ({ Setloginstate })=>{
                                 onChange: handleChange
                             }, void 0, false, {
                                 fileName: "src/components/Signup.jsx",
-                                lineNumber: 96,
+                                lineNumber: 84,
                                 columnNumber: 11
                             }, undefined),
                             errors.map((error, index)=>error.field === "name" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -39554,19 +39510,19 @@ const Signup = ({ Setloginstate })=>{
                                     children: error.message
                                 }, index, false, {
                                     fileName: "src/components/Signup.jsx",
-                                    lineNumber: 108,
-                                    columnNumber: 17
+                                    lineNumber: 85,
+                                    columnNumber: 67
                                 }, undefined)),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                                 className: "block pt-4 pb-1 px-1 text-[1.1rem]",
                                 children: "Username"
                             }, void 0, false, {
                                 fileName: "src/components/Signup.jsx",
-                                lineNumber: 114,
+                                lineNumber: 89,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                className: "border-2 border-slate-600 rounded-md px-1 w-[100%]  h-[2rem]",
+                                className: "border-2 border-slate-600 rounded-md px-1 w-[100%] h-[2rem]",
                                 type: "text",
                                 name: "uname",
                                 placeholder: "Enter your email",
@@ -39574,7 +39530,7 @@ const Signup = ({ Setloginstate })=>{
                                 onChange: handleChange
                             }, void 0, false, {
                                 fileName: "src/components/Signup.jsx",
-                                lineNumber: 115,
+                                lineNumber: 90,
                                 columnNumber: 11
                             }, undefined),
                             errors.map((error, index)=>error.field === "uname" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -39582,22 +39538,22 @@ const Signup = ({ Setloginstate })=>{
                                     children: error.message
                                 }, index, false, {
                                     fileName: "src/components/Signup.jsx",
-                                    lineNumber: 127,
-                                    columnNumber: 17
+                                    lineNumber: 91,
+                                    columnNumber: 68
                                 }, undefined)),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                                 className: "block pt-4 pb-1 px-1 text-[1.1rem]",
                                 children: "Password"
                             }, void 0, false, {
                                 fileName: "src/components/Signup.jsx",
-                                lineNumber: 133,
+                                lineNumber: 95,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "relative",
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        className: "border-2 border-slate-600 rounded-md px-1 w-[100%]  h-[2rem]",
+                                        className: "border-2 border-slate-600 rounded-md px-1 w-[100%] h-[2rem]",
                                         type: eyelogo ? "password" : "text",
                                         name: "pass",
                                         placeholder: "Enter your Password",
@@ -39605,29 +39561,30 @@ const Signup = ({ Setloginstate })=>{
                                         onChange: handleChange
                                     }, void 0, false, {
                                         fileName: "src/components/Signup.jsx",
-                                        lineNumber: 135,
+                                        lineNumber: 97,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                        className: `absolute right-2 top-1 w-[26px] `,
+                                        type: "button",
+                                        className: "absolute right-2 top-1 w-[26px]",
                                         onClick: ()=>Seteyelogo(!eyelogo),
                                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                                             src: eyelogo ? (0, _eyePngDefault.default) : (0, _hiddenPngDefault.default),
-                                            alt: "/"
+                                            alt: "Toggle visibility"
                                         }, void 0, false, {
                                             fileName: "src/components/Signup.jsx",
-                                            lineNumber: 148,
+                                            lineNumber: 99,
                                             columnNumber: 15
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/components/Signup.jsx",
-                                        lineNumber: 144,
+                                        lineNumber: 98,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Signup.jsx",
-                                lineNumber: 134,
+                                lineNumber: 96,
                                 columnNumber: 11
                             }, undefined),
                             errors.map((error, index)=>error.field === "pass" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -39635,31 +39592,32 @@ const Signup = ({ Setloginstate })=>{
                                     children: error.message
                                 }, index, false, {
                                     fileName: "src/components/Signup.jsx",
-                                    lineNumber: 155,
-                                    columnNumber: 17
+                                    lineNumber: 102,
+                                    columnNumber: 67
                                 }, undefined)),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                                 className: "block pt-4 pb-2 px-1 text-[1.1rem]",
                                 children: "Upload your profile picture"
                             }, void 0, false, {
                                 fileName: "src/components/Signup.jsx",
-                                lineNumber: 161,
+                                lineNumber: 106,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                                 type: "file",
                                 id: "img",
                                 name: "img",
-                                accept: "image/*"
+                                accept: "image/*",
+                                onChange: handleFileChange
                             }, void 0, false, {
                                 fileName: "src/components/Signup.jsx",
-                                lineNumber: 164,
+                                lineNumber: 109,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Signup.jsx",
-                        lineNumber: 94,
+                        lineNumber: 82,
                         columnNumber: 9
                     }, undefined),
                     errors.map((error, index)=>!error.field && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -39668,13 +39626,13 @@ const Signup = ({ Setloginstate })=>{
                                 children: error.message
                             }, void 0, false, {
                                 fileName: "src/components/Signup.jsx",
-                                lineNumber: 171,
+                                lineNumber: 112,
                                 columnNumber: 17
                             }, undefined)
                         }, index, false, {
                             fileName: "src/components/Signup.jsx",
-                            lineNumber: 170,
-                            columnNumber: 15
+                            lineNumber: 111,
+                            columnNumber: 55
                         }, undefined)),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "flex flex-col items-center pt-6",
@@ -39685,7 +39643,7 @@ const Signup = ({ Setloginstate })=>{
                                 children: "Sign Up"
                             }, void 0, false, {
                                 fileName: "src/components/Signup.jsx",
-                                lineNumber: 177,
+                                lineNumber: 116,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -39701,40 +39659,40 @@ const Signup = ({ Setloginstate })=>{
                                             children: "Login"
                                         }, void 0, false, {
                                             fileName: "src/components/Signup.jsx",
-                                            lineNumber: 186,
+                                            lineNumber: 122,
                                             columnNumber: 15
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/components/Signup.jsx",
-                                        lineNumber: 185,
+                                        lineNumber: 121,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Signup.jsx",
-                                lineNumber: 183,
+                                lineNumber: 119,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Signup.jsx",
-                        lineNumber: 176,
+                        lineNumber: 115,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Signup.jsx",
-                lineNumber: 93,
+                lineNumber: 81,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Signup.jsx",
-        lineNumber: 89,
-        columnNumber: 5
+        lineNumber: 77,
+        columnNumber: 10
     }, undefined);
 };
-_s(Signup, "fLuGulzQMDF0heVQ83uRR384SJI=", false, function() {
+_s(Signup, "c/7EwcpzaFa43sMqes+z/PsMBDg=", false, function() {
     return [
         (0, _reactRouterDom.useNavigate)
     ];
@@ -39749,83 +39707,7 @@ $RefreshReg$(_c, "Signup");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../assets/eye.png":"j0uKt","../assets/hidden.png":"7swdN","react-router-dom":"9xmpe","axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"eBA1b":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$268f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$268f.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "userContext", ()=>userContext);
-parcelHelpers.export(exports, "UserProvider", ()=>UserProvider);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRouterDom = require("react-router-dom");
-var _s = $RefreshSig$();
-const userContext = /*#__PURE__*/ (0, _react.createContext)();
-const UserProvider = ({ children })=>{
-    _s();
-    const [user, setUser] = (0, _react.useState)();
-    const [allChats, setAllchats] = (0, _react.useState)([]);
-    const [searchuserId, setsearchuserId] = (0, _react.useState)(null);
-    const [activeChat, setactiveChat] = (0, _react.useState)(null);
-    const [chatName, setchatName] = (0, _react.useState)(null);
-    const [chatData, setchatData] = (0, _react.useState)(null);
-    const navigate = (0, _reactRouterDom.useNavigate)();
-    const [token, setToken] = (0, _react.useState)(null);
-    const [isVisible, setisVisible] = (0, _react.useState)(window.innerWidth > 1024); // Moved inside the component
-    (0, _react.useEffect)(()=>{
-        if (localStorage.getItem("userInfo")) {
-            const userinfo = JSON.parse(localStorage.getItem("userInfo"));
-            setUser(userinfo);
-            setToken(userinfo?.token);
-            if (!userinfo) navigate("/");
-        }
-    }, []); // Removed useNavigate from the dependency array
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(userContext.Provider, {
-        value: {
-            user,
-            setUser,
-            allChats,
-            setAllchats,
-            searchuserId,
-            setsearchuserId,
-            token,
-            setToken,
-            activeChat,
-            setactiveChat,
-            chatName,
-            setchatName,
-            chatData,
-            setchatData,
-            isVisible,
-            setisVisible
-        },
-        children: children
-    }, void 0, false, {
-        fileName: "src/utils/userContext.js",
-        lineNumber: 27,
-        columnNumber: 5
-    }, undefined);
-};
-_s(UserProvider, "ubNjvesjcNRTLmvzzU4PKfLMD+w=", false, function() {
-    return [
-        (0, _reactRouterDom.useNavigate)
-    ];
-});
-_c = UserProvider;
-var _c;
-$RefreshReg$(_c, "UserProvider");
-
-  $parcel$ReactRefreshHelpers$268f.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kHiO9":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../assets/eye.png":"j0uKt","../assets/hidden.png":"7swdN","react-router-dom":"9xmpe","axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kHiO9":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$46ba = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -39844,10 +39726,13 @@ var _allChatsDefault = parcelHelpers.interopDefault(_allChats);
 var _sendMessage = require("../components/Chat/SendMessage");
 var _sendMessageDefault = parcelHelpers.interopDefault(_sendMessage);
 var _userContext = require("../utils/userContext");
+var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
 const ChatPage = ()=>{
     _s();
     const { isVisible, setisVisible } = (0, _react.useContext)((0, _userContext.userContext));
+    const userinfo = JSON.parse(localStorage.getItem("userInfo"));
+    const name = userinfo?.name;
     (0, _react.useEffect)(()=>{
         const handleResize = ()=>{
             setisVisible(window.innerWidth > 1024);
@@ -39858,15 +39743,15 @@ const ChatPage = ()=>{
             window.removeEventListener("resize", handleResize);
         };
     }, []);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+    return name ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/pages/ChatPage.jsx",
-                lineNumber: 25,
+                lineNumber: 26,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex flex-col h-[87vh] py-3 px-4 font-['Basis'] ",
+                className: "flex flex-col h-[87vh] py-3 px-4 font-['Basis'] max-w-full",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "flex justify-between h-full gap-x-4 relative",
                     children: [
@@ -39874,45 +39759,85 @@ const ChatPage = ()=>{
                             className: `font-["Basis"] transition-all duration-300 ease-in-out transform lg:translate-x-0 ${isVisible ? "translate-x-0" : "-translate-x-[120%] lg:translate-x-0"} w-[95vw] lg:w-[30vw] xl:w-[25vw] h-full absolute lg:relative z-10`,
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _allChatsDefault.default), {}, void 0, false, {
                                 fileName: "src/pages/ChatPage.jsx",
-                                lineNumber: 35,
+                                lineNumber: 30,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/pages/ChatPage.jsx",
-                            lineNumber: 28,
+                            lineNumber: 29,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: " w-[99vw] md:w-[85vw] lg:w-[70vw] xl:w-[75vw] h-full mx-auto font-['Basis']",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sendMessageDefault.default), {}, void 0, false, {
                                 fileName: "src/pages/ChatPage.jsx",
-                                lineNumber: 38,
+                                lineNumber: 33,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/pages/ChatPage.jsx",
-                            lineNumber: 37,
+                            lineNumber: 32,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/pages/ChatPage.jsx",
-                    lineNumber: 27,
+                    lineNumber: 28,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/pages/ChatPage.jsx",
-                lineNumber: 26,
+                lineNumber: 27,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/pages/ChatPage.jsx",
-        lineNumber: 24,
-        columnNumber: 5
-    }, undefined);
+        lineNumber: 25,
+        columnNumber: 17
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "w-screen h-screen bg-bgcolor flex justify-center items-center",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex flex-col items-center justify-center gap-y-4",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "text-white text-3xl",
+                        children: "Login and try again"
+                    }, void 0, false, {
+                        fileName: "src/pages/ChatPage.jsx",
+                        lineNumber: 40,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/login",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            className: "px-3 py-2 bg-bgbutton transform-cpu active:scale-75 duration-300 rounded-md",
+                            children: "Login"
+                        }, void 0, false, {
+                            fileName: "src/pages/ChatPage.jsx",
+                            lineNumber: 42,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/pages/ChatPage.jsx",
+                        lineNumber: 41,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/pages/ChatPage.jsx",
+                lineNumber: 39,
+                columnNumber: 9
+            }, undefined)
+        }, void 0, false, {
+            fileName: "src/pages/ChatPage.jsx",
+            lineNumber: 38,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false);
 };
-_s(ChatPage, "be85e6TR6yKM1bIiBHi/odec3Ic=");
+_s(ChatPage, "JZAhXk5l/7pHPOldiAZSQo+xnPM=");
 _c = ChatPage;
 exports.default = ChatPage;
 var _c;
@@ -39923,7 +39848,7 @@ $RefreshReg$(_c, "ChatPage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/Chat/Header":"gFHmj","../components/Chat/AllChats":"kBEyN","../components/Chat/SendMessage":"8QwIL","../utils/userContext":"eBA1b","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gFHmj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/Chat/Header":"gFHmj","../components/Chat/AllChats":"kBEyN","../components/Chat/SendMessage":"8QwIL","../utils/userContext":"eBA1b","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gFHmj":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$b362 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -39943,11 +39868,14 @@ var _usersCardDefault = parcelHelpers.interopDefault(_usersCard);
 var _reactRouterDom = require("react-router-dom");
 var _profileModal = require("./ProfileModal");
 var _profileModalDefault = parcelHelpers.interopDefault(_profileModal);
+var _notificationGif = require("../../assets/notification.gif");
+var _notificationGifDefault = parcelHelpers.interopDefault(_notificationGif);
+var _zod = require("zod");
 var _s = $RefreshSig$();
 const Header = ()=>{
     _s();
     const { user, setUser } = (0, _react.useContext)((0, _userContext.userContext));
-    const { allChats, setAllchats, setactiveChat, activeChat, setchatData } = (0, _react.useContext)((0, _userContext.userContext));
+    const { allChats, setAllchats, setactiveChat, activeChat, setchatData, notifications, setNotifications } = (0, _react.useContext)((0, _userContext.userContext));
     const [sbar, setsbar] = (0, _react.useState)(false);
     const [suser, setsuser] = (0, _react.useState)("");
     const [users, setusers] = (0, _react.useState)([]);
@@ -39956,8 +39884,8 @@ const Header = ()=>{
     const userinfo = JSON.parse(localStorage.getItem("userInfo"));
     const [profileCard, setprofileCard] = (0, _react.useState)(false);
     const navigate = (0, _reactRouterDom.useNavigate)();
+    const [notitrigger, setnotitrigger] = (0, _react.useState)(false);
     const clickHandler = ()=>{
-        console.log(userinfo);
         const token = userinfo.token;
         (0, _axiosDefault.default).get(`http://localhost:5000/api/users/?search=${suser}`, {
             headers: {
@@ -39967,16 +39895,25 @@ const Header = ()=>{
             setusers([]);
             setusers(response.data);
             setsuser("");
-            console.log("Searched User");
-        }).catch((err)=>{
-            console.log(err.message);
-        });
+        }).catch((err)=>{});
     };
     const LogoutHandler = ()=>{
         localStorage.removeItem("userInfo");
         setUser(null);
         navigate("/");
     };
+    (0, _react.useEffect)(()=>{
+        if (notifications.length > 0) {
+            const audio = new Audio("../../assets/notification-tone.mp3");
+            const playAudio = ()=>{
+                audio.play().catch((error)=>{});
+            };
+            // Play audio when component mounts
+            playAudio();
+        }
+    }, [
+        notifications
+    ]);
     (0, _react.useEffect)(()=>{
         const handleToggleProfile = (event)=>{
             if (!event.target.closest(".profile-dropdown")) settgProfile((prevValue)=>false);
@@ -40001,65 +39938,151 @@ const Header = ()=>{
                                 children: "\uD83D\uDD0D Search for User"
                             }, void 0, false, {
                                 fileName: "src/components/Chat/Header.jsx",
-                                lineNumber: 72,
+                                lineNumber: 79,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Chat/Header.jsx",
-                            lineNumber: 71,
+                            lineNumber: 78,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                            className: "hidden md:block text-4xl tracking-wider transform -translate-x-3",
+                            className: "hidden md:block text-2xl lg:text-4xl tracking-wider transform ",
                             children: "Blabber : The Chat App"
                         }, void 0, false, {
                             fileName: "src/components/Chat/Header.jsx",
-                            lineNumber: 79,
+                            lineNumber: 83,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "inline-block relative",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "hover:bg-white hover:text-black px-4 py-2 hover:rounded-md cursor-pointer flex items-center justify-center gap-x-2 profile-dropdown transition-transform duration-200 transform-gpu active:scale-75",
-                                onClick: ()=>settgProfile(!tgProfile),
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                        src: userinfo?.pic,
-                                        alt: "Profile",
-                                        className: "w-10 h-10"
-                                    }, void 0, false, {
+                            className: "flex gap-x-1 items-center",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                    className: "text-2xl pt-1 relative",
+                                    onClick: ()=>setnotitrigger(!notitrigger),
+                                    children: !notifications.length > 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                                        children: "\uD83D\uDD14"
+                                    }, void 0, false) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                            src: (0, _notificationGifDefault.default),
+                                            alt: "/",
+                                            className: "w-12 h-12"
+                                        }, void 0, false, {
+                                            fileName: "src/components/Chat/Header.jsx",
+                                            lineNumber: 89,
+                                            columnNumber: 19
+                                        }, undefined)
+                                    }, void 0, false)
+                                }, void 0, false, {
+                                    fileName: "src/components/Chat/Header.jsx",
+                                    lineNumber: 87,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "inline-block relative",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                        className: "hover:bg-white hover:text-black px-4 py-2 hover:rounded-md cursor-pointer flex items-center justify-center gap-x-2 profile-dropdown transition-transform duration-200 transform-gpu active:scale-75",
+                                        onClick: ()=>settgProfile(!tgProfile),
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                                src: userinfo?.profilePic,
+                                                alt: "Profile",
+                                                className: "w-10 h-10 rounded-full object-cover"
+                                            }, void 0, false, {
+                                                fileName: "src/components/Chat/Header.jsx",
+                                                lineNumber: 94,
+                                                columnNumber: 17
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                                children: "\u25BC"
+                                            }, void 0, false, {
+                                                fileName: "src/components/Chat/Header.jsx",
+                                                lineNumber: 95,
+                                                columnNumber: 17
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "src/components/Chat/Header.jsx",
-                                        lineNumber: 87,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                                        children: "\u25BC"
-                                    }, void 0, false, {
-                                        fileName: "src/components/Chat/Header.jsx",
-                                        lineNumber: 88,
+                                        lineNumber: 93,
                                         columnNumber: 15
                                     }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/Chat/Header.jsx",
-                                lineNumber: 83,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
+                                }, void 0, false, {
+                                    fileName: "src/components/Chat/Header.jsx",
+                                    lineNumber: 92,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
                             fileName: "src/components/Chat/Header.jsx",
-                            lineNumber: 82,
+                            lineNumber: 86,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Chat/Header.jsx",
-                    lineNumber: 70,
+                    lineNumber: 77,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Chat/Header.jsx",
-                lineNumber: 69,
+                lineNumber: 76,
                 columnNumber: 7
+            }, undefined),
+            notitrigger && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "absolute top-[10%] md:top-[8%] right-0  bg-black px-2 py-3 transform -translate-x-[30%] md:-translate-x-[25 %] lg:-translate-x-[20%]",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "text-sm md:text-lg text-white",
+                    children: notifications.length > 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "flex flex-col gap-y-1",
+                            children: notifications.map((currnotification, val)=>{
+                                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                    onClick: ()=>{
+                                        setnotitrigger(false);
+                                        setactiveChat(currnotification.activechatId);
+                                        setchatData(currnotification.chatdata);
+                                        setAllchats((previousChats)=>{
+                                            const chatExists = previousChats.some((chat)=>chat._id === currnotification.activechatId);
+                                            if (!chatExists) return [
+                                                currnotification.chatdata,
+                                                ...previousChats
+                                            ];
+                                            else return [
+                                                previousChats.find((chat)=>chat._id === currnotification.activechatId),
+                                                ...previousChats.filter((chat)=>chat._id !== currnotification.activechatId)
+                                            ];
+                                        });
+                                        setNotifications((previousNotification)=>{
+                                            return previousNotification.filter((notification)=>notification.activechatId !== currnotification.activechatId);
+                                        });
+                                    },
+                                    children: [
+                                        "You got new Message from ",
+                                        currnotification.name
+                                    ]
+                                }, val, true, {
+                                    fileName: "src/components/Chat/Header.jsx",
+                                    lineNumber: 109,
+                                    columnNumber: 22
+                                }, undefined);
+                            })
+                        }, void 0, false, {
+                            fileName: "src/components/Chat/Header.jsx",
+                            lineNumber: 107,
+                            columnNumber: 17
+                        }, undefined)
+                    }, void 0, false) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                        children: "No new Notifications"
+                    }, void 0, false)
+                }, void 0, false, {
+                    fileName: "src/components/Chat/Header.jsx",
+                    lineNumber: 105,
+                    columnNumber: 11
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/Chat/Header.jsx",
+                lineNumber: 104,
+                columnNumber: 23
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: `profile-dropdown fixed right-0 py-2 z-50 flex-col justify-center items-center  px-10 bg-slate-900 text-white  text-center transform transition-transform duration-200 ease-in-out font-['Basis'] ${tgProfile ? "translate-y-0" : "-translate-y-48 "}`,
@@ -40073,7 +40096,7 @@ const Header = ()=>{
                         children: "Profile"
                     }, void 0, false, {
                         fileName: "src/components/Chat/Header.jsx",
-                        lineNumber: 101,
+                        lineNumber: 132,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -40082,13 +40105,13 @@ const Header = ()=>{
                         children: "Logout"
                     }, void 0, false, {
                         fileName: "src/components/Chat/Header.jsx",
-                        lineNumber: 110,
+                        lineNumber: 138,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Chat/Header.jsx",
-                lineNumber: 96,
+                lineNumber: 131,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -40102,7 +40125,7 @@ const Header = ()=>{
                                 children: "Search for users"
                             }, void 0, false, {
                                 fileName: "src/components/Chat/Header.jsx",
-                                lineNumber: 125,
+                                lineNumber: 146,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -40116,7 +40139,7 @@ const Header = ()=>{
                                         onChange: (e)=>setsuser(e.target.value)
                                     }, void 0, false, {
                                         fileName: "src/components/Chat/Header.jsx",
-                                        lineNumber: 127,
+                                        lineNumber: 148,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -40128,19 +40151,19 @@ const Header = ()=>{
                                         children: "\uD83D\uDD0D"
                                     }, void 0, false, {
                                         fileName: "src/components/Chat/Header.jsx",
-                                        lineNumber: 134,
+                                        lineNumber: 149,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Chat/Header.jsx",
-                                lineNumber: 126,
+                                lineNumber: 147,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Chat/Header.jsx",
-                        lineNumber: 124,
+                        lineNumber: 145,
                         columnNumber: 9
                     }, undefined),
                     users != undefined && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -40156,26 +40179,26 @@ const Header = ()=>{
                                     setsbar: setsbar,
                                     __source: {
                                         fileName: "src/components/Chat/Header.jsx",
-                                        lineNumber: 150,
+                                        lineNumber: 160,
                                         columnNumber: 19
                                     },
                                     __self: undefined
                                 })
                             }, void 0, false, {
                                 fileName: "src/components/Chat/Header.jsx",
-                                lineNumber: 149,
-                                columnNumber: 17
+                                lineNumber: 159,
+                                columnNumber: 18
                             }, undefined);
                         })
                     }, void 0, false, {
                         fileName: "src/components/Chat/Header.jsx",
-                        lineNumber: 146,
-                        columnNumber: 11
+                        lineNumber: 157,
+                        columnNumber: 32
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Chat/Header.jsx",
-                lineNumber: 119,
+                lineNumber: 144,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -40187,12 +40210,12 @@ const Header = ()=>{
                             ...userinfo
                         }, void 0, false, {
                             fileName: "src/components/Chat/Header.jsx",
-                            lineNumber: 171,
+                            lineNumber: 169,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/Chat/Header.jsx",
-                        lineNumber: 170,
+                        lineNumber: 168,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -40202,38 +40225,38 @@ const Header = ()=>{
                             children: "\u274C"
                         }, void 0, false, {
                             fileName: "src/components/Chat/Header.jsx",
-                            lineNumber: 175,
+                            lineNumber: 173,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/Chat/Header.jsx",
-                        lineNumber: 174,
+                        lineNumber: 172,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Chat/Header.jsx",
-                lineNumber: 165,
+                lineNumber: 167,
                 columnNumber: 7
             }, undefined),
             profileCard && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "fixed inset-0 bg-black opacity-80 z-40 "
             }, void 0, false, {
                 fileName: "src/components/Chat/Header.jsx",
-                lineNumber: 181,
-                columnNumber: 9
+                lineNumber: 178,
+                columnNumber: 23
             }, undefined),
             sbar && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "fixed inset-0 bg-black opacity-80 z-40"
             }, void 0, false, {
                 fileName: "src/components/Chat/Header.jsx",
-                lineNumber: 185,
+                lineNumber: 181,
                 columnNumber: 16
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(Header, "YJobyzOtOoC123I7LWFCA6mQXJ4=", false, function() {
+_s(Header, "kSPKgzu16/5XWqwx7VbTyZa4C4E=", false, function() {
     return [
         (0, _reactRouterDom.useNavigate)
     ];
@@ -40248,7 +40271,7 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../utils/userContext":"eBA1b","axios":"jo6P5","./UsersCard":"2wmLS","react-router-dom":"9xmpe","./ProfileModal":"03Gnn","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2wmLS":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../utils/userContext":"eBA1b","axios":"jo6P5","./UsersCard":"2wmLS","react-router-dom":"9xmpe","./ProfileModal":"03Gnn","../../assets/notification.gif":"4whaU","zod":"ljqhX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2wmLS":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$42ee = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -40274,8 +40297,6 @@ const UsersCard = ({ name, email, _id, setsbar, idx, data })=>{
         const formdata = {
             userid: data._id
         };
-        console.log(formdata);
-        console.log(token);
         (0, _axiosDefault.default).post("http://localhost:5000/api/chat/", formdata, {
             headers: {
                 Authorization: `Bearer ${token}`
@@ -40294,10 +40315,7 @@ const UsersCard = ({ name, email, _id, setsbar, idx, data })=>{
             });
             setactiveChat(response.data._id);
             setchatData(response.data);
-            console.log(response.data);
-        }).catch((error)=>{
-            console.log(error.message);
-        });
+        }).catch((error)=>{});
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
         className: "w-full border-2 border-black rounded-lg bg-slate-200 py-3 text-left mx-auto hover:bg-green-400  transition-all duration-200 hover:border-white",
@@ -40313,7 +40331,7 @@ const UsersCard = ({ name, email, _id, setsbar, idx, data })=>{
                     name: name
                 }, void 0, false, {
                     fileName: "src/components/Chat/UsersCard.jsx",
-                    lineNumber: 61,
+                    lineNumber: 50,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -40323,35 +40341,35 @@ const UsersCard = ({ name, email, _id, setsbar, idx, data })=>{
                             children: name
                         }, void 0, false, {
                             fileName: "src/components/Chat/UsersCard.jsx",
-                            lineNumber: 63,
+                            lineNumber: 52,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                             children: email
                         }, void 0, false, {
                             fileName: "src/components/Chat/UsersCard.jsx",
-                            lineNumber: 64,
+                            lineNumber: 53,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Chat/UsersCard.jsx",
-                    lineNumber: 62,
+                    lineNumber: 51,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/Chat/UsersCard.jsx",
-            lineNumber: 60,
+            lineNumber: 49,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Chat/UsersCard.jsx",
-        lineNumber: 52,
-        columnNumber: 5
+        lineNumber: 44,
+        columnNumber: 10
     }, undefined);
 };
-_s(UsersCard, "MkBvF1FAvjGmxYfcB9rw6MQ/qRY=");
+_s(UsersCard, "U7TeZsj7pQm/M+DTWiD5wuW+zmk=");
 _c = UsersCard;
 exports.default = UsersCard;
 var _c;
@@ -40382,8 +40400,8 @@ const Avatar = ({ name })=>{
         children: firstLetter
     }, void 0, false, {
         fileName: "src/components/Chat/Avatar.jsx",
-        lineNumber: 8,
-        columnNumber: 5
+        lineNumber: 7,
+        columnNumber: 10
     }, undefined);
 };
 _c = Avatar;
@@ -40408,7 +40426,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-const ProfileModal = ({ name, email, pic })=>{
+const ProfileModal = ({ name, email, profilePic, pic, data })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "flex items-center justify-center min-h-screen",
@@ -40420,38 +40438,38 @@ const ProfileModal = ({ name, email, pic })=>{
                         children: name
                     }, void 0, false, {
                         fileName: "src/components/Chat/ProfileModal.jsx",
-                        lineNumber: 11,
+                        lineNumber: 13,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        src: pic,
+                        src: profilePic ? profilePic : pic,
                         alt: "Profile Pic",
-                        className: "w-40 h-440 rounded-full"
+                        className: "w-[150px] h-[150px] rounded-full"
                     }, void 0, false, {
                         fileName: "src/components/Chat/ProfileModal.jsx",
-                        lineNumber: 12,
+                        lineNumber: 14,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: "text-xl sm:text-2xl tracking-wide ",
+                        className: "text-md sm:text-2xl tracking-wide ",
                         children: [
                             "Email : ",
                             email
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Chat/ProfileModal.jsx",
-                        lineNumber: 17,
+                        lineNumber: 15,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Chat/ProfileModal.jsx",
-                lineNumber: 7,
+                lineNumber: 11,
                 columnNumber: 9
             }, undefined)
         }, void 0, false, {
             fileName: "src/components/Chat/ProfileModal.jsx",
-            lineNumber: 6,
+            lineNumber: 10,
             columnNumber: 7
         }, undefined)
     }, void 0, false);
@@ -40466,7 +40484,4127 @@ $RefreshReg$(_c, "ProfileModal");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kBEyN":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4whaU":[function(require,module,exports) {
+module.exports = require("3a98166a3ad03b10").getBundleURL("aXMci") + "notification.34dd6717.gif" + "?" + Date.now();
+
+},{"3a98166a3ad03b10":"lgJ39"}],"ljqhX":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "BRAND", ()=>BRAND);
+parcelHelpers.export(exports, "DIRTY", ()=>DIRTY);
+parcelHelpers.export(exports, "EMPTY_PATH", ()=>EMPTY_PATH);
+parcelHelpers.export(exports, "INVALID", ()=>INVALID);
+parcelHelpers.export(exports, "NEVER", ()=>NEVER);
+parcelHelpers.export(exports, "OK", ()=>OK);
+parcelHelpers.export(exports, "ParseStatus", ()=>ParseStatus);
+parcelHelpers.export(exports, "Schema", ()=>ZodType);
+parcelHelpers.export(exports, "ZodAny", ()=>ZodAny);
+parcelHelpers.export(exports, "ZodArray", ()=>ZodArray);
+parcelHelpers.export(exports, "ZodBigInt", ()=>ZodBigInt);
+parcelHelpers.export(exports, "ZodBoolean", ()=>ZodBoolean);
+parcelHelpers.export(exports, "ZodBranded", ()=>ZodBranded);
+parcelHelpers.export(exports, "ZodCatch", ()=>ZodCatch);
+parcelHelpers.export(exports, "ZodDate", ()=>ZodDate);
+parcelHelpers.export(exports, "ZodDefault", ()=>ZodDefault);
+parcelHelpers.export(exports, "ZodDiscriminatedUnion", ()=>ZodDiscriminatedUnion);
+parcelHelpers.export(exports, "ZodEffects", ()=>ZodEffects);
+parcelHelpers.export(exports, "ZodEnum", ()=>ZodEnum);
+parcelHelpers.export(exports, "ZodError", ()=>ZodError);
+parcelHelpers.export(exports, "ZodFirstPartyTypeKind", ()=>ZodFirstPartyTypeKind);
+parcelHelpers.export(exports, "ZodFunction", ()=>ZodFunction);
+parcelHelpers.export(exports, "ZodIntersection", ()=>ZodIntersection);
+parcelHelpers.export(exports, "ZodIssueCode", ()=>ZodIssueCode);
+parcelHelpers.export(exports, "ZodLazy", ()=>ZodLazy);
+parcelHelpers.export(exports, "ZodLiteral", ()=>ZodLiteral);
+parcelHelpers.export(exports, "ZodMap", ()=>ZodMap);
+parcelHelpers.export(exports, "ZodNaN", ()=>ZodNaN);
+parcelHelpers.export(exports, "ZodNativeEnum", ()=>ZodNativeEnum);
+parcelHelpers.export(exports, "ZodNever", ()=>ZodNever);
+parcelHelpers.export(exports, "ZodNull", ()=>ZodNull);
+parcelHelpers.export(exports, "ZodNullable", ()=>ZodNullable);
+parcelHelpers.export(exports, "ZodNumber", ()=>ZodNumber);
+parcelHelpers.export(exports, "ZodObject", ()=>ZodObject);
+parcelHelpers.export(exports, "ZodOptional", ()=>ZodOptional);
+parcelHelpers.export(exports, "ZodParsedType", ()=>ZodParsedType);
+parcelHelpers.export(exports, "ZodPipeline", ()=>ZodPipeline);
+parcelHelpers.export(exports, "ZodPromise", ()=>ZodPromise);
+parcelHelpers.export(exports, "ZodReadonly", ()=>ZodReadonly);
+parcelHelpers.export(exports, "ZodRecord", ()=>ZodRecord);
+parcelHelpers.export(exports, "ZodSchema", ()=>ZodType);
+parcelHelpers.export(exports, "ZodSet", ()=>ZodSet);
+parcelHelpers.export(exports, "ZodString", ()=>ZodString);
+parcelHelpers.export(exports, "ZodSymbol", ()=>ZodSymbol);
+parcelHelpers.export(exports, "ZodTransformer", ()=>ZodEffects);
+parcelHelpers.export(exports, "ZodTuple", ()=>ZodTuple);
+parcelHelpers.export(exports, "ZodType", ()=>ZodType);
+parcelHelpers.export(exports, "ZodUndefined", ()=>ZodUndefined);
+parcelHelpers.export(exports, "ZodUnion", ()=>ZodUnion);
+parcelHelpers.export(exports, "ZodUnknown", ()=>ZodUnknown);
+parcelHelpers.export(exports, "ZodVoid", ()=>ZodVoid);
+parcelHelpers.export(exports, "addIssueToContext", ()=>addIssueToContext);
+parcelHelpers.export(exports, "any", ()=>anyType);
+parcelHelpers.export(exports, "array", ()=>arrayType);
+parcelHelpers.export(exports, "bigint", ()=>bigIntType);
+parcelHelpers.export(exports, "boolean", ()=>booleanType);
+parcelHelpers.export(exports, "coerce", ()=>coerce);
+parcelHelpers.export(exports, "custom", ()=>custom);
+parcelHelpers.export(exports, "date", ()=>dateType);
+parcelHelpers.export(exports, "datetimeRegex", ()=>datetimeRegex);
+parcelHelpers.export(exports, "default", ()=>z);
+parcelHelpers.export(exports, "defaultErrorMap", ()=>errorMap);
+parcelHelpers.export(exports, "discriminatedUnion", ()=>discriminatedUnionType);
+parcelHelpers.export(exports, "effect", ()=>effectsType);
+parcelHelpers.export(exports, "enum", ()=>enumType);
+parcelHelpers.export(exports, "function", ()=>functionType);
+parcelHelpers.export(exports, "getErrorMap", ()=>getErrorMap);
+parcelHelpers.export(exports, "getParsedType", ()=>getParsedType);
+parcelHelpers.export(exports, "instanceof", ()=>instanceOfType);
+parcelHelpers.export(exports, "intersection", ()=>intersectionType);
+parcelHelpers.export(exports, "isAborted", ()=>isAborted);
+parcelHelpers.export(exports, "isAsync", ()=>isAsync);
+parcelHelpers.export(exports, "isDirty", ()=>isDirty);
+parcelHelpers.export(exports, "isValid", ()=>isValid);
+parcelHelpers.export(exports, "late", ()=>late);
+parcelHelpers.export(exports, "lazy", ()=>lazyType);
+parcelHelpers.export(exports, "literal", ()=>literalType);
+parcelHelpers.export(exports, "makeIssue", ()=>makeIssue);
+parcelHelpers.export(exports, "map", ()=>mapType);
+parcelHelpers.export(exports, "nan", ()=>nanType);
+parcelHelpers.export(exports, "nativeEnum", ()=>nativeEnumType);
+parcelHelpers.export(exports, "never", ()=>neverType);
+parcelHelpers.export(exports, "null", ()=>nullType);
+parcelHelpers.export(exports, "nullable", ()=>nullableType);
+parcelHelpers.export(exports, "number", ()=>numberType);
+parcelHelpers.export(exports, "object", ()=>objectType);
+parcelHelpers.export(exports, "objectUtil", ()=>objectUtil);
+parcelHelpers.export(exports, "oboolean", ()=>oboolean);
+parcelHelpers.export(exports, "onumber", ()=>onumber);
+parcelHelpers.export(exports, "optional", ()=>optionalType);
+parcelHelpers.export(exports, "ostring", ()=>ostring);
+parcelHelpers.export(exports, "pipeline", ()=>pipelineType);
+parcelHelpers.export(exports, "preprocess", ()=>preprocessType);
+parcelHelpers.export(exports, "promise", ()=>promiseType);
+parcelHelpers.export(exports, "quotelessJson", ()=>quotelessJson);
+parcelHelpers.export(exports, "record", ()=>recordType);
+parcelHelpers.export(exports, "set", ()=>setType);
+parcelHelpers.export(exports, "setErrorMap", ()=>setErrorMap);
+parcelHelpers.export(exports, "strictObject", ()=>strictObjectType);
+parcelHelpers.export(exports, "string", ()=>stringType);
+parcelHelpers.export(exports, "symbol", ()=>symbolType);
+parcelHelpers.export(exports, "transformer", ()=>effectsType);
+parcelHelpers.export(exports, "tuple", ()=>tupleType);
+parcelHelpers.export(exports, "undefined", ()=>undefinedType);
+parcelHelpers.export(exports, "union", ()=>unionType);
+parcelHelpers.export(exports, "unknown", ()=>unknownType);
+parcelHelpers.export(exports, "util", ()=>util);
+parcelHelpers.export(exports, "void", ()=>voidType);
+parcelHelpers.export(exports, "z", ()=>z);
+var util;
+(function(util) {
+    util.assertEqual = (val)=>val;
+    function assertIs(_arg) {}
+    util.assertIs = assertIs;
+    function assertNever(_x) {
+        throw new Error();
+    }
+    util.assertNever = assertNever;
+    util.arrayToEnum = (items)=>{
+        const obj = {};
+        for (const item of items)obj[item] = item;
+        return obj;
+    };
+    util.getValidEnumValues = (obj)=>{
+        const validKeys = util.objectKeys(obj).filter((k)=>typeof obj[obj[k]] !== "number");
+        const filtered = {};
+        for (const k of validKeys)filtered[k] = obj[k];
+        return util.objectValues(filtered);
+    };
+    util.objectValues = (obj)=>{
+        return util.objectKeys(obj).map(function(e) {
+            return obj[e];
+        });
+    };
+    util.objectKeys = typeof Object.keys === "function" // eslint-disable-line ban/ban
+     ? (obj)=>Object.keys(obj) // eslint-disable-line ban/ban
+     : (object)=>{
+        const keys = [];
+        for(const key in object)if (Object.prototype.hasOwnProperty.call(object, key)) keys.push(key);
+        return keys;
+    };
+    util.find = (arr, checker)=>{
+        for (const item of arr){
+            if (checker(item)) return item;
+        }
+        return undefined;
+    };
+    util.isInteger = typeof Number.isInteger === "function" ? (val)=>Number.isInteger(val) // eslint-disable-line ban/ban
+     : (val)=>typeof val === "number" && isFinite(val) && Math.floor(val) === val;
+    function joinValues(array, separator = " | ") {
+        return array.map((val)=>typeof val === "string" ? `'${val}'` : val).join(separator);
+    }
+    util.joinValues = joinValues;
+    util.jsonStringifyReplacer = (_, value)=>{
+        if (typeof value === "bigint") return value.toString();
+        return value;
+    };
+})(util || (util = {}));
+var objectUtil;
+(function(objectUtil) {
+    objectUtil.mergeShapes = (first, second)=>{
+        return {
+            ...first,
+            ...second
+        };
+    };
+})(objectUtil || (objectUtil = {}));
+const ZodParsedType = util.arrayToEnum([
+    "string",
+    "nan",
+    "number",
+    "integer",
+    "float",
+    "boolean",
+    "date",
+    "bigint",
+    "symbol",
+    "function",
+    "undefined",
+    "null",
+    "array",
+    "object",
+    "unknown",
+    "promise",
+    "void",
+    "never",
+    "map",
+    "set"
+]);
+const getParsedType = (data)=>{
+    const t = typeof data;
+    switch(t){
+        case "undefined":
+            return ZodParsedType.undefined;
+        case "string":
+            return ZodParsedType.string;
+        case "number":
+            return isNaN(data) ? ZodParsedType.nan : ZodParsedType.number;
+        case "boolean":
+            return ZodParsedType.boolean;
+        case "function":
+            return ZodParsedType.function;
+        case "bigint":
+            return ZodParsedType.bigint;
+        case "symbol":
+            return ZodParsedType.symbol;
+        case "object":
+            if (Array.isArray(data)) return ZodParsedType.array;
+            if (data === null) return ZodParsedType.null;
+            if (data.then && typeof data.then === "function" && data.catch && typeof data.catch === "function") return ZodParsedType.promise;
+            if (typeof Map !== "undefined" && data instanceof Map) return ZodParsedType.map;
+            if (typeof Set !== "undefined" && data instanceof Set) return ZodParsedType.set;
+            if (typeof Date !== "undefined" && data instanceof Date) return ZodParsedType.date;
+            return ZodParsedType.object;
+        default:
+            return ZodParsedType.unknown;
+    }
+};
+const ZodIssueCode = util.arrayToEnum([
+    "invalid_type",
+    "invalid_literal",
+    "custom",
+    "invalid_union",
+    "invalid_union_discriminator",
+    "invalid_enum_value",
+    "unrecognized_keys",
+    "invalid_arguments",
+    "invalid_return_type",
+    "invalid_date",
+    "invalid_string",
+    "too_small",
+    "too_big",
+    "invalid_intersection_types",
+    "not_multiple_of",
+    "not_finite"
+]);
+const quotelessJson = (obj)=>{
+    const json = JSON.stringify(obj, null, 2);
+    return json.replace(/"([^"]+)":/g, "$1:");
+};
+class ZodError extends Error {
+    constructor(issues){
+        super();
+        this.issues = [];
+        this.addIssue = (sub)=>{
+            this.issues = [
+                ...this.issues,
+                sub
+            ];
+        };
+        this.addIssues = (subs = [])=>{
+            this.issues = [
+                ...this.issues,
+                ...subs
+            ];
+        };
+        const actualProto = new.target.prototype;
+        if (Object.setPrototypeOf) // eslint-disable-next-line ban/ban
+        Object.setPrototypeOf(this, actualProto);
+        else this.__proto__ = actualProto;
+        this.name = "ZodError";
+        this.issues = issues;
+    }
+    get errors() {
+        return this.issues;
+    }
+    format(_mapper) {
+        const mapper = _mapper || function(issue) {
+            return issue.message;
+        };
+        const fieldErrors = {
+            _errors: []
+        };
+        const processError = (error)=>{
+            for (const issue of error.issues){
+                if (issue.code === "invalid_union") issue.unionErrors.map(processError);
+                else if (issue.code === "invalid_return_type") processError(issue.returnTypeError);
+                else if (issue.code === "invalid_arguments") processError(issue.argumentsError);
+                else if (issue.path.length === 0) fieldErrors._errors.push(mapper(issue));
+                else {
+                    let curr = fieldErrors;
+                    let i = 0;
+                    while(i < issue.path.length){
+                        const el = issue.path[i];
+                        const terminal = i === issue.path.length - 1;
+                        if (!terminal) curr[el] = curr[el] || {
+                            _errors: []
+                        };
+                        else {
+                            curr[el] = curr[el] || {
+                                _errors: []
+                            };
+                            curr[el]._errors.push(mapper(issue));
+                        }
+                        curr = curr[el];
+                        i++;
+                    }
+                }
+            }
+        };
+        processError(this);
+        return fieldErrors;
+    }
+    static assert(value) {
+        if (!(value instanceof ZodError)) throw new Error(`Not a ZodError: ${value}`);
+    }
+    toString() {
+        return this.message;
+    }
+    get message() {
+        return JSON.stringify(this.issues, util.jsonStringifyReplacer, 2);
+    }
+    get isEmpty() {
+        return this.issues.length === 0;
+    }
+    flatten(mapper = (issue)=>issue.message) {
+        const fieldErrors = {};
+        const formErrors = [];
+        for (const sub of this.issues)if (sub.path.length > 0) {
+            fieldErrors[sub.path[0]] = fieldErrors[sub.path[0]] || [];
+            fieldErrors[sub.path[0]].push(mapper(sub));
+        } else formErrors.push(mapper(sub));
+        return {
+            formErrors,
+            fieldErrors
+        };
+    }
+    get formErrors() {
+        return this.flatten();
+    }
+}
+ZodError.create = (issues)=>{
+    const error = new ZodError(issues);
+    return error;
+};
+const errorMap = (issue, _ctx)=>{
+    let message;
+    switch(issue.code){
+        case ZodIssueCode.invalid_type:
+            if (issue.received === ZodParsedType.undefined) message = "Required";
+            else message = `Expected ${issue.expected}, received ${issue.received}`;
+            break;
+        case ZodIssueCode.invalid_literal:
+            message = `Invalid literal value, expected ${JSON.stringify(issue.expected, util.jsonStringifyReplacer)}`;
+            break;
+        case ZodIssueCode.unrecognized_keys:
+            message = `Unrecognized key(s) in object: ${util.joinValues(issue.keys, ", ")}`;
+            break;
+        case ZodIssueCode.invalid_union:
+            message = `Invalid input`;
+            break;
+        case ZodIssueCode.invalid_union_discriminator:
+            message = `Invalid discriminator value. Expected ${util.joinValues(issue.options)}`;
+            break;
+        case ZodIssueCode.invalid_enum_value:
+            message = `Invalid enum value. Expected ${util.joinValues(issue.options)}, received '${issue.received}'`;
+            break;
+        case ZodIssueCode.invalid_arguments:
+            message = `Invalid function arguments`;
+            break;
+        case ZodIssueCode.invalid_return_type:
+            message = `Invalid function return type`;
+            break;
+        case ZodIssueCode.invalid_date:
+            message = `Invalid date`;
+            break;
+        case ZodIssueCode.invalid_string:
+            if (typeof issue.validation === "object") {
+                if ("includes" in issue.validation) {
+                    message = `Invalid input: must include "${issue.validation.includes}"`;
+                    if (typeof issue.validation.position === "number") message = `${message} at one or more positions greater than or equal to ${issue.validation.position}`;
+                } else if ("startsWith" in issue.validation) message = `Invalid input: must start with "${issue.validation.startsWith}"`;
+                else if ("endsWith" in issue.validation) message = `Invalid input: must end with "${issue.validation.endsWith}"`;
+                else util.assertNever(issue.validation);
+            } else if (issue.validation !== "regex") message = `Invalid ${issue.validation}`;
+            else message = "Invalid";
+            break;
+        case ZodIssueCode.too_small:
+            if (issue.type === "array") message = `Array must contain ${issue.exact ? "exactly" : issue.inclusive ? `at least` : `more than`} ${issue.minimum} element(s)`;
+            else if (issue.type === "string") message = `String must contain ${issue.exact ? "exactly" : issue.inclusive ? `at least` : `over`} ${issue.minimum} character(s)`;
+            else if (issue.type === "number") message = `Number must be ${issue.exact ? `exactly equal to ` : issue.inclusive ? `greater than or equal to ` : `greater than `}${issue.minimum}`;
+            else if (issue.type === "date") message = `Date must be ${issue.exact ? `exactly equal to ` : issue.inclusive ? `greater than or equal to ` : `greater than `}${new Date(Number(issue.minimum))}`;
+            else message = "Invalid input";
+            break;
+        case ZodIssueCode.too_big:
+            if (issue.type === "array") message = `Array must contain ${issue.exact ? `exactly` : issue.inclusive ? `at most` : `less than`} ${issue.maximum} element(s)`;
+            else if (issue.type === "string") message = `String must contain ${issue.exact ? `exactly` : issue.inclusive ? `at most` : `under`} ${issue.maximum} character(s)`;
+            else if (issue.type === "number") message = `Number must be ${issue.exact ? `exactly` : issue.inclusive ? `less than or equal to` : `less than`} ${issue.maximum}`;
+            else if (issue.type === "bigint") message = `BigInt must be ${issue.exact ? `exactly` : issue.inclusive ? `less than or equal to` : `less than`} ${issue.maximum}`;
+            else if (issue.type === "date") message = `Date must be ${issue.exact ? `exactly` : issue.inclusive ? `smaller than or equal to` : `smaller than`} ${new Date(Number(issue.maximum))}`;
+            else message = "Invalid input";
+            break;
+        case ZodIssueCode.custom:
+            message = `Invalid input`;
+            break;
+        case ZodIssueCode.invalid_intersection_types:
+            message = `Intersection results could not be merged`;
+            break;
+        case ZodIssueCode.not_multiple_of:
+            message = `Number must be a multiple of ${issue.multipleOf}`;
+            break;
+        case ZodIssueCode.not_finite:
+            message = "Number must be finite";
+            break;
+        default:
+            message = _ctx.defaultError;
+            util.assertNever(issue);
+    }
+    return {
+        message
+    };
+};
+let overrideErrorMap = errorMap;
+function setErrorMap(map) {
+    overrideErrorMap = map;
+}
+function getErrorMap() {
+    return overrideErrorMap;
+}
+const makeIssue = (params)=>{
+    const { data, path, errorMaps, issueData } = params;
+    const fullPath = [
+        ...path,
+        ...issueData.path || []
+    ];
+    const fullIssue = {
+        ...issueData,
+        path: fullPath
+    };
+    if (issueData.message !== undefined) return {
+        ...issueData,
+        path: fullPath,
+        message: issueData.message
+    };
+    let errorMessage = "";
+    const maps = errorMaps.filter((m)=>!!m).slice().reverse();
+    for (const map of maps)errorMessage = map(fullIssue, {
+        data,
+        defaultError: errorMessage
+    }).message;
+    return {
+        ...issueData,
+        path: fullPath,
+        message: errorMessage
+    };
+};
+const EMPTY_PATH = [];
+function addIssueToContext(ctx, issueData) {
+    const overrideMap = getErrorMap();
+    const issue = makeIssue({
+        issueData: issueData,
+        data: ctx.data,
+        path: ctx.path,
+        errorMaps: [
+            ctx.common.contextualErrorMap,
+            ctx.schemaErrorMap,
+            overrideMap,
+            overrideMap === errorMap ? undefined : errorMap
+        ].filter((x)=>!!x)
+    });
+    ctx.common.issues.push(issue);
+}
+class ParseStatus {
+    constructor(){
+        this.value = "valid";
+    }
+    dirty() {
+        if (this.value === "valid") this.value = "dirty";
+    }
+    abort() {
+        if (this.value !== "aborted") this.value = "aborted";
+    }
+    static mergeArray(status, results) {
+        const arrayValue = [];
+        for (const s of results){
+            if (s.status === "aborted") return INVALID;
+            if (s.status === "dirty") status.dirty();
+            arrayValue.push(s.value);
+        }
+        return {
+            status: status.value,
+            value: arrayValue
+        };
+    }
+    static async mergeObjectAsync(status, pairs) {
+        const syncPairs = [];
+        for (const pair of pairs){
+            const key = await pair.key;
+            const value = await pair.value;
+            syncPairs.push({
+                key,
+                value
+            });
+        }
+        return ParseStatus.mergeObjectSync(status, syncPairs);
+    }
+    static mergeObjectSync(status, pairs) {
+        const finalObject = {};
+        for (const pair of pairs){
+            const { key, value } = pair;
+            if (key.status === "aborted") return INVALID;
+            if (value.status === "aborted") return INVALID;
+            if (key.status === "dirty") status.dirty();
+            if (value.status === "dirty") status.dirty();
+            if (key.value !== "__proto__" && (typeof value.value !== "undefined" || pair.alwaysSet)) finalObject[key.value] = value.value;
+        }
+        return {
+            status: status.value,
+            value: finalObject
+        };
+    }
+}
+const INVALID = Object.freeze({
+    status: "aborted"
+});
+const DIRTY = (value)=>({
+        status: "dirty",
+        value
+    });
+const OK = (value)=>({
+        status: "valid",
+        value
+    });
+const isAborted = (x)=>x.status === "aborted";
+const isDirty = (x)=>x.status === "dirty";
+const isValid = (x)=>x.status === "valid";
+const isAsync = (x)=>typeof Promise !== "undefined" && x instanceof Promise;
+/******************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */ function __classPrivateFieldGet(receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+}
+function __classPrivateFieldSet(receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value), value;
+}
+typeof SuppressedError === "function" && SuppressedError;
+var errorUtil;
+(function(errorUtil) {
+    errorUtil.errToObj = (message)=>typeof message === "string" ? {
+            message
+        } : message || {};
+    errorUtil.toString = (message)=>typeof message === "string" ? message : message === null || message === void 0 ? void 0 : message.message;
+})(errorUtil || (errorUtil = {}));
+var _ZodEnum_cache, _ZodNativeEnum_cache;
+class ParseInputLazyPath {
+    constructor(parent, value, path, key){
+        this._cachedPath = [];
+        this.parent = parent;
+        this.data = value;
+        this._path = path;
+        this._key = key;
+    }
+    get path() {
+        if (!this._cachedPath.length) {
+            if (this._key instanceof Array) this._cachedPath.push(...this._path, ...this._key);
+            else this._cachedPath.push(...this._path, this._key);
+        }
+        return this._cachedPath;
+    }
+}
+const handleResult = (ctx, result)=>{
+    if (isValid(result)) return {
+        success: true,
+        data: result.value
+    };
+    else {
+        if (!ctx.common.issues.length) throw new Error("Validation failed but no issues detected.");
+        return {
+            success: false,
+            get error () {
+                if (this._error) return this._error;
+                const error = new ZodError(ctx.common.issues);
+                this._error = error;
+                return this._error;
+            }
+        };
+    }
+};
+function processCreateParams(params) {
+    if (!params) return {};
+    const { errorMap, invalid_type_error, required_error, description } = params;
+    if (errorMap && (invalid_type_error || required_error)) throw new Error(`Can't use "invalid_type_error" or "required_error" in conjunction with custom error map.`);
+    if (errorMap) return {
+        errorMap: errorMap,
+        description
+    };
+    const customMap = (iss, ctx)=>{
+        var _a, _b;
+        const { message } = params;
+        if (iss.code === "invalid_enum_value") return {
+            message: message !== null && message !== void 0 ? message : ctx.defaultError
+        };
+        if (typeof ctx.data === "undefined") return {
+            message: (_a = message !== null && message !== void 0 ? message : required_error) !== null && _a !== void 0 ? _a : ctx.defaultError
+        };
+        if (iss.code !== "invalid_type") return {
+            message: ctx.defaultError
+        };
+        return {
+            message: (_b = message !== null && message !== void 0 ? message : invalid_type_error) !== null && _b !== void 0 ? _b : ctx.defaultError
+        };
+    };
+    return {
+        errorMap: customMap,
+        description
+    };
+}
+class ZodType {
+    constructor(def){
+        /** Alias of safeParseAsync */ this.spa = this.safeParseAsync;
+        this._def = def;
+        this.parse = this.parse.bind(this);
+        this.safeParse = this.safeParse.bind(this);
+        this.parseAsync = this.parseAsync.bind(this);
+        this.safeParseAsync = this.safeParseAsync.bind(this);
+        this.spa = this.spa.bind(this);
+        this.refine = this.refine.bind(this);
+        this.refinement = this.refinement.bind(this);
+        this.superRefine = this.superRefine.bind(this);
+        this.optional = this.optional.bind(this);
+        this.nullable = this.nullable.bind(this);
+        this.nullish = this.nullish.bind(this);
+        this.array = this.array.bind(this);
+        this.promise = this.promise.bind(this);
+        this.or = this.or.bind(this);
+        this.and = this.and.bind(this);
+        this.transform = this.transform.bind(this);
+        this.brand = this.brand.bind(this);
+        this.default = this.default.bind(this);
+        this.catch = this.catch.bind(this);
+        this.describe = this.describe.bind(this);
+        this.pipe = this.pipe.bind(this);
+        this.readonly = this.readonly.bind(this);
+        this.isNullable = this.isNullable.bind(this);
+        this.isOptional = this.isOptional.bind(this);
+    }
+    get description() {
+        return this._def.description;
+    }
+    _getType(input) {
+        return getParsedType(input.data);
+    }
+    _getOrReturnCtx(input, ctx) {
+        return ctx || {
+            common: input.parent.common,
+            data: input.data,
+            parsedType: getParsedType(input.data),
+            schemaErrorMap: this._def.errorMap,
+            path: input.path,
+            parent: input.parent
+        };
+    }
+    _processInputParams(input) {
+        return {
+            status: new ParseStatus(),
+            ctx: {
+                common: input.parent.common,
+                data: input.data,
+                parsedType: getParsedType(input.data),
+                schemaErrorMap: this._def.errorMap,
+                path: input.path,
+                parent: input.parent
+            }
+        };
+    }
+    _parseSync(input) {
+        const result = this._parse(input);
+        if (isAsync(result)) throw new Error("Synchronous parse encountered promise.");
+        return result;
+    }
+    _parseAsync(input) {
+        const result = this._parse(input);
+        return Promise.resolve(result);
+    }
+    parse(data, params) {
+        const result = this.safeParse(data, params);
+        if (result.success) return result.data;
+        throw result.error;
+    }
+    safeParse(data, params) {
+        var _a;
+        const ctx = {
+            common: {
+                issues: [],
+                async: (_a = params === null || params === void 0 ? void 0 : params.async) !== null && _a !== void 0 ? _a : false,
+                contextualErrorMap: params === null || params === void 0 ? void 0 : params.errorMap
+            },
+            path: (params === null || params === void 0 ? void 0 : params.path) || [],
+            schemaErrorMap: this._def.errorMap,
+            parent: null,
+            data,
+            parsedType: getParsedType(data)
+        };
+        const result = this._parseSync({
+            data,
+            path: ctx.path,
+            parent: ctx
+        });
+        return handleResult(ctx, result);
+    }
+    async parseAsync(data, params) {
+        const result = await this.safeParseAsync(data, params);
+        if (result.success) return result.data;
+        throw result.error;
+    }
+    async safeParseAsync(data, params) {
+        const ctx = {
+            common: {
+                issues: [],
+                contextualErrorMap: params === null || params === void 0 ? void 0 : params.errorMap,
+                async: true
+            },
+            path: (params === null || params === void 0 ? void 0 : params.path) || [],
+            schemaErrorMap: this._def.errorMap,
+            parent: null,
+            data,
+            parsedType: getParsedType(data)
+        };
+        const maybeAsyncResult = this._parse({
+            data,
+            path: ctx.path,
+            parent: ctx
+        });
+        const result = await (isAsync(maybeAsyncResult) ? maybeAsyncResult : Promise.resolve(maybeAsyncResult));
+        return handleResult(ctx, result);
+    }
+    refine(check, message) {
+        const getIssueProperties = (val)=>{
+            if (typeof message === "string" || typeof message === "undefined") return {
+                message
+            };
+            else if (typeof message === "function") return message(val);
+            else return message;
+        };
+        return this._refinement((val, ctx)=>{
+            const result = check(val);
+            const setError = ()=>ctx.addIssue({
+                    code: ZodIssueCode.custom,
+                    ...getIssueProperties(val)
+                });
+            if (typeof Promise !== "undefined" && result instanceof Promise) return result.then((data)=>{
+                if (!data) {
+                    setError();
+                    return false;
+                } else return true;
+            });
+            if (!result) {
+                setError();
+                return false;
+            } else return true;
+        });
+    }
+    refinement(check, refinementData) {
+        return this._refinement((val, ctx)=>{
+            if (!check(val)) {
+                ctx.addIssue(typeof refinementData === "function" ? refinementData(val, ctx) : refinementData);
+                return false;
+            } else return true;
+        });
+    }
+    _refinement(refinement) {
+        return new ZodEffects({
+            schema: this,
+            typeName: ZodFirstPartyTypeKind.ZodEffects,
+            effect: {
+                type: "refinement",
+                refinement
+            }
+        });
+    }
+    superRefine(refinement) {
+        return this._refinement(refinement);
+    }
+    optional() {
+        return ZodOptional.create(this, this._def);
+    }
+    nullable() {
+        return ZodNullable.create(this, this._def);
+    }
+    nullish() {
+        return this.nullable().optional();
+    }
+    array() {
+        return ZodArray.create(this, this._def);
+    }
+    promise() {
+        return ZodPromise.create(this, this._def);
+    }
+    or(option) {
+        return ZodUnion.create([
+            this,
+            option
+        ], this._def);
+    }
+    and(incoming) {
+        return ZodIntersection.create(this, incoming, this._def);
+    }
+    transform(transform) {
+        return new ZodEffects({
+            ...processCreateParams(this._def),
+            schema: this,
+            typeName: ZodFirstPartyTypeKind.ZodEffects,
+            effect: {
+                type: "transform",
+                transform
+            }
+        });
+    }
+    default(def) {
+        const defaultValueFunc = typeof def === "function" ? def : ()=>def;
+        return new ZodDefault({
+            ...processCreateParams(this._def),
+            innerType: this,
+            defaultValue: defaultValueFunc,
+            typeName: ZodFirstPartyTypeKind.ZodDefault
+        });
+    }
+    brand() {
+        return new ZodBranded({
+            typeName: ZodFirstPartyTypeKind.ZodBranded,
+            type: this,
+            ...processCreateParams(this._def)
+        });
+    }
+    catch(def) {
+        const catchValueFunc = typeof def === "function" ? def : ()=>def;
+        return new ZodCatch({
+            ...processCreateParams(this._def),
+            innerType: this,
+            catchValue: catchValueFunc,
+            typeName: ZodFirstPartyTypeKind.ZodCatch
+        });
+    }
+    describe(description) {
+        const This = this.constructor;
+        return new This({
+            ...this._def,
+            description
+        });
+    }
+    pipe(target) {
+        return ZodPipeline.create(this, target);
+    }
+    readonly() {
+        return ZodReadonly.create(this);
+    }
+    isOptional() {
+        return this.safeParse(undefined).success;
+    }
+    isNullable() {
+        return this.safeParse(null).success;
+    }
+}
+const cuidRegex = /^c[^\s-]{8,}$/i;
+const cuid2Regex = /^[0-9a-z]+$/;
+const ulidRegex = /^[0-9A-HJKMNP-TV-Z]{26}$/;
+// const uuidRegex =
+//   /^([a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[a-f0-9]{4}-[a-f0-9]{12}|00000000-0000-0000-0000-000000000000)$/i;
+const uuidRegex = /^[0-9a-fA-F]{8}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{12}$/i;
+const nanoidRegex = /^[a-z0-9_-]{21}$/i;
+const durationRegex = /^[-+]?P(?!$)(?:(?:[-+]?\d+Y)|(?:[-+]?\d+[.,]\d+Y$))?(?:(?:[-+]?\d+M)|(?:[-+]?\d+[.,]\d+M$))?(?:(?:[-+]?\d+W)|(?:[-+]?\d+[.,]\d+W$))?(?:(?:[-+]?\d+D)|(?:[-+]?\d+[.,]\d+D$))?(?:T(?=[\d+-])(?:(?:[-+]?\d+H)|(?:[-+]?\d+[.,]\d+H$))?(?:(?:[-+]?\d+M)|(?:[-+]?\d+[.,]\d+M$))?(?:[-+]?\d+(?:[.,]\d+)?S)?)??$/;
+// from https://stackoverflow.com/a/46181/1550155
+// old version: too slow, didn't support unicode
+// const emailRegex = /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))$/i;
+//old email regex
+// const emailRegex = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@((?!-)([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{1,})[^-<>()[\].,;:\s@"]$/i;
+// eslint-disable-next-line
+// const emailRegex =
+//   /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[(((25[0-5])|(2[0-4][0-9])|(1[0-9]{2})|([0-9]{1,2}))\.){3}((25[0-5])|(2[0-4][0-9])|(1[0-9]{2})|([0-9]{1,2}))\])|(\[IPv6:(([a-f0-9]{1,4}:){7}|::([a-f0-9]{1,4}:){0,6}|([a-f0-9]{1,4}:){1}:([a-f0-9]{1,4}:){0,5}|([a-f0-9]{1,4}:){2}:([a-f0-9]{1,4}:){0,4}|([a-f0-9]{1,4}:){3}:([a-f0-9]{1,4}:){0,3}|([a-f0-9]{1,4}:){4}:([a-f0-9]{1,4}:){0,2}|([a-f0-9]{1,4}:){5}:([a-f0-9]{1,4}:){0,1})([a-f0-9]{1,4}|(((25[0-5])|(2[0-4][0-9])|(1[0-9]{2})|([0-9]{1,2}))\.){3}((25[0-5])|(2[0-4][0-9])|(1[0-9]{2})|([0-9]{1,2})))\])|([A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])*(\.[A-Za-z]{2,})+))$/;
+// const emailRegex =
+//   /^[a-zA-Z0-9\.\!\#\$\%\&\'\*\+\/\=\?\^\_\`\{\|\}\~\-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+// const emailRegex =
+//   /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/i;
+const emailRegex = /^(?!\.)(?!.*\.\.)([A-Z0-9_'+\-\.]*)[A-Z0-9_+-]@([A-Z0-9][A-Z0-9\-]*\.)+[A-Z]{2,}$/i;
+// const emailRegex =
+//   /^[a-z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-z0-9-]+(?:\.[a-z0-9\-]+)*$/i;
+// from https://thekevinscott.com/emojis-in-javascript/#writing-a-regular-expression
+const _emojiRegex = `^(\\p{Extended_Pictographic}|\\p{Emoji_Component})+$`;
+let emojiRegex;
+// faster, simpler, safer
+const ipv4Regex = /^(?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])$/;
+const ipv6Regex = /^(([a-f0-9]{1,4}:){7}|::([a-f0-9]{1,4}:){0,6}|([a-f0-9]{1,4}:){1}:([a-f0-9]{1,4}:){0,5}|([a-f0-9]{1,4}:){2}:([a-f0-9]{1,4}:){0,4}|([a-f0-9]{1,4}:){3}:([a-f0-9]{1,4}:){0,3}|([a-f0-9]{1,4}:){4}:([a-f0-9]{1,4}:){0,2}|([a-f0-9]{1,4}:){5}:([a-f0-9]{1,4}:){0,1})([a-f0-9]{1,4}|(((25[0-5])|(2[0-4][0-9])|(1[0-9]{2})|([0-9]{1,2}))\.){3}((25[0-5])|(2[0-4][0-9])|(1[0-9]{2})|([0-9]{1,2})))$/;
+// https://stackoverflow.com/questions/7860392/determine-if-string-is-in-base64-using-javascript
+const base64Regex = /^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/;
+// simple
+// const dateRegexSource = `\\d{4}-\\d{2}-\\d{2}`;
+// no leap year validation
+// const dateRegexSource = `\\d{4}-((0[13578]|10|12)-31|(0[13-9]|1[0-2])-30|(0[1-9]|1[0-2])-(0[1-9]|1\\d|2\\d))`;
+// with leap year validation
+const dateRegexSource = `((\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-((0[13578]|1[02])-(0[1-9]|[12]\\d|3[01])|(0[469]|11)-(0[1-9]|[12]\\d|30)|(02)-(0[1-9]|1\\d|2[0-8])))`;
+const dateRegex = new RegExp(`^${dateRegexSource}$`);
+function timeRegexSource(args) {
+    // let regex = `\\d{2}:\\d{2}:\\d{2}`;
+    let regex = `([01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d`;
+    if (args.precision) regex = `${regex}\\.\\d{${args.precision}}`;
+    else if (args.precision == null) regex = `${regex}(\\.\\d+)?`;
+    return regex;
+}
+function timeRegex(args) {
+    return new RegExp(`^${timeRegexSource(args)}$`);
+}
+// Adapted from https://stackoverflow.com/a/3143231
+function datetimeRegex(args) {
+    let regex = `${dateRegexSource}T${timeRegexSource(args)}`;
+    const opts = [];
+    opts.push(args.local ? `Z?` : `Z`);
+    if (args.offset) opts.push(`([+-]\\d{2}:?\\d{2})`);
+    regex = `${regex}(${opts.join("|")})`;
+    return new RegExp(`^${regex}$`);
+}
+function isValidIP(ip, version) {
+    if ((version === "v4" || !version) && ipv4Regex.test(ip)) return true;
+    if ((version === "v6" || !version) && ipv6Regex.test(ip)) return true;
+    return false;
+}
+class ZodString extends ZodType {
+    _parse(input) {
+        if (this._def.coerce) input.data = String(input.data);
+        const parsedType = this._getType(input);
+        if (parsedType !== ZodParsedType.string) {
+            const ctx = this._getOrReturnCtx(input);
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.invalid_type,
+                expected: ZodParsedType.string,
+                received: ctx.parsedType
+            });
+            return INVALID;
+        }
+        const status = new ParseStatus();
+        let ctx = undefined;
+        for (const check of this._def.checks){
+            if (check.kind === "min") {
+                if (input.data.length < check.value) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        code: ZodIssueCode.too_small,
+                        minimum: check.value,
+                        type: "string",
+                        inclusive: true,
+                        exact: false,
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "max") {
+                if (input.data.length > check.value) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        code: ZodIssueCode.too_big,
+                        maximum: check.value,
+                        type: "string",
+                        inclusive: true,
+                        exact: false,
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "length") {
+                const tooBig = input.data.length > check.value;
+                const tooSmall = input.data.length < check.value;
+                if (tooBig || tooSmall) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    if (tooBig) addIssueToContext(ctx, {
+                        code: ZodIssueCode.too_big,
+                        maximum: check.value,
+                        type: "string",
+                        inclusive: true,
+                        exact: true,
+                        message: check.message
+                    });
+                    else if (tooSmall) addIssueToContext(ctx, {
+                        code: ZodIssueCode.too_small,
+                        minimum: check.value,
+                        type: "string",
+                        inclusive: true,
+                        exact: true,
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "email") {
+                if (!emailRegex.test(input.data)) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        validation: "email",
+                        code: ZodIssueCode.invalid_string,
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "emoji") {
+                if (!emojiRegex) emojiRegex = new RegExp(_emojiRegex, "u");
+                if (!emojiRegex.test(input.data)) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        validation: "emoji",
+                        code: ZodIssueCode.invalid_string,
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "uuid") {
+                if (!uuidRegex.test(input.data)) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        validation: "uuid",
+                        code: ZodIssueCode.invalid_string,
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "nanoid") {
+                if (!nanoidRegex.test(input.data)) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        validation: "nanoid",
+                        code: ZodIssueCode.invalid_string,
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "cuid") {
+                if (!cuidRegex.test(input.data)) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        validation: "cuid",
+                        code: ZodIssueCode.invalid_string,
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "cuid2") {
+                if (!cuid2Regex.test(input.data)) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        validation: "cuid2",
+                        code: ZodIssueCode.invalid_string,
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "ulid") {
+                if (!ulidRegex.test(input.data)) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        validation: "ulid",
+                        code: ZodIssueCode.invalid_string,
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "url") try {
+                new URL(input.data);
+            } catch (_a) {
+                ctx = this._getOrReturnCtx(input, ctx);
+                addIssueToContext(ctx, {
+                    validation: "url",
+                    code: ZodIssueCode.invalid_string,
+                    message: check.message
+                });
+                status.dirty();
+            }
+            else if (check.kind === "regex") {
+                check.regex.lastIndex = 0;
+                const testResult = check.regex.test(input.data);
+                if (!testResult) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        validation: "regex",
+                        code: ZodIssueCode.invalid_string,
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "trim") input.data = input.data.trim();
+            else if (check.kind === "includes") {
+                if (!input.data.includes(check.value, check.position)) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        code: ZodIssueCode.invalid_string,
+                        validation: {
+                            includes: check.value,
+                            position: check.position
+                        },
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "toLowerCase") input.data = input.data.toLowerCase();
+            else if (check.kind === "toUpperCase") input.data = input.data.toUpperCase();
+            else if (check.kind === "startsWith") {
+                if (!input.data.startsWith(check.value)) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        code: ZodIssueCode.invalid_string,
+                        validation: {
+                            startsWith: check.value
+                        },
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "endsWith") {
+                if (!input.data.endsWith(check.value)) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        code: ZodIssueCode.invalid_string,
+                        validation: {
+                            endsWith: check.value
+                        },
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "datetime") {
+                const regex = datetimeRegex(check);
+                if (!regex.test(input.data)) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        code: ZodIssueCode.invalid_string,
+                        validation: "datetime",
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "date") {
+                const regex = dateRegex;
+                if (!regex.test(input.data)) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        code: ZodIssueCode.invalid_string,
+                        validation: "date",
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "time") {
+                const regex = timeRegex(check);
+                if (!regex.test(input.data)) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        code: ZodIssueCode.invalid_string,
+                        validation: "time",
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "duration") {
+                if (!durationRegex.test(input.data)) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        validation: "duration",
+                        code: ZodIssueCode.invalid_string,
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "ip") {
+                if (!isValidIP(input.data, check.version)) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        validation: "ip",
+                        code: ZodIssueCode.invalid_string,
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "base64") {
+                if (!base64Regex.test(input.data)) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        validation: "base64",
+                        code: ZodIssueCode.invalid_string,
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else util.assertNever(check);
+        }
+        return {
+            status: status.value,
+            value: input.data
+        };
+    }
+    _regex(regex, validation, message) {
+        return this.refinement((data)=>regex.test(data), {
+            validation,
+            code: ZodIssueCode.invalid_string,
+            ...errorUtil.errToObj(message)
+        });
+    }
+    _addCheck(check) {
+        return new ZodString({
+            ...this._def,
+            checks: [
+                ...this._def.checks,
+                check
+            ]
+        });
+    }
+    email(message) {
+        return this._addCheck({
+            kind: "email",
+            ...errorUtil.errToObj(message)
+        });
+    }
+    url(message) {
+        return this._addCheck({
+            kind: "url",
+            ...errorUtil.errToObj(message)
+        });
+    }
+    emoji(message) {
+        return this._addCheck({
+            kind: "emoji",
+            ...errorUtil.errToObj(message)
+        });
+    }
+    uuid(message) {
+        return this._addCheck({
+            kind: "uuid",
+            ...errorUtil.errToObj(message)
+        });
+    }
+    nanoid(message) {
+        return this._addCheck({
+            kind: "nanoid",
+            ...errorUtil.errToObj(message)
+        });
+    }
+    cuid(message) {
+        return this._addCheck({
+            kind: "cuid",
+            ...errorUtil.errToObj(message)
+        });
+    }
+    cuid2(message) {
+        return this._addCheck({
+            kind: "cuid2",
+            ...errorUtil.errToObj(message)
+        });
+    }
+    ulid(message) {
+        return this._addCheck({
+            kind: "ulid",
+            ...errorUtil.errToObj(message)
+        });
+    }
+    base64(message) {
+        return this._addCheck({
+            kind: "base64",
+            ...errorUtil.errToObj(message)
+        });
+    }
+    ip(options) {
+        return this._addCheck({
+            kind: "ip",
+            ...errorUtil.errToObj(options)
+        });
+    }
+    datetime(options) {
+        var _a, _b;
+        if (typeof options === "string") return this._addCheck({
+            kind: "datetime",
+            precision: null,
+            offset: false,
+            local: false,
+            message: options
+        });
+        return this._addCheck({
+            kind: "datetime",
+            precision: typeof (options === null || options === void 0 ? void 0 : options.precision) === "undefined" ? null : options === null || options === void 0 ? void 0 : options.precision,
+            offset: (_a = options === null || options === void 0 ? void 0 : options.offset) !== null && _a !== void 0 ? _a : false,
+            local: (_b = options === null || options === void 0 ? void 0 : options.local) !== null && _b !== void 0 ? _b : false,
+            ...errorUtil.errToObj(options === null || options === void 0 ? void 0 : options.message)
+        });
+    }
+    date(message) {
+        return this._addCheck({
+            kind: "date",
+            message
+        });
+    }
+    time(options) {
+        if (typeof options === "string") return this._addCheck({
+            kind: "time",
+            precision: null,
+            message: options
+        });
+        return this._addCheck({
+            kind: "time",
+            precision: typeof (options === null || options === void 0 ? void 0 : options.precision) === "undefined" ? null : options === null || options === void 0 ? void 0 : options.precision,
+            ...errorUtil.errToObj(options === null || options === void 0 ? void 0 : options.message)
+        });
+    }
+    duration(message) {
+        return this._addCheck({
+            kind: "duration",
+            ...errorUtil.errToObj(message)
+        });
+    }
+    regex(regex, message) {
+        return this._addCheck({
+            kind: "regex",
+            regex: regex,
+            ...errorUtil.errToObj(message)
+        });
+    }
+    includes(value, options) {
+        return this._addCheck({
+            kind: "includes",
+            value: value,
+            position: options === null || options === void 0 ? void 0 : options.position,
+            ...errorUtil.errToObj(options === null || options === void 0 ? void 0 : options.message)
+        });
+    }
+    startsWith(value, message) {
+        return this._addCheck({
+            kind: "startsWith",
+            value: value,
+            ...errorUtil.errToObj(message)
+        });
+    }
+    endsWith(value, message) {
+        return this._addCheck({
+            kind: "endsWith",
+            value: value,
+            ...errorUtil.errToObj(message)
+        });
+    }
+    min(minLength, message) {
+        return this._addCheck({
+            kind: "min",
+            value: minLength,
+            ...errorUtil.errToObj(message)
+        });
+    }
+    max(maxLength, message) {
+        return this._addCheck({
+            kind: "max",
+            value: maxLength,
+            ...errorUtil.errToObj(message)
+        });
+    }
+    length(len, message) {
+        return this._addCheck({
+            kind: "length",
+            value: len,
+            ...errorUtil.errToObj(message)
+        });
+    }
+    /**
+     * @deprecated Use z.string().min(1) instead.
+     * @see {@link ZodString.min}
+     */ nonempty(message) {
+        return this.min(1, errorUtil.errToObj(message));
+    }
+    trim() {
+        return new ZodString({
+            ...this._def,
+            checks: [
+                ...this._def.checks,
+                {
+                    kind: "trim"
+                }
+            ]
+        });
+    }
+    toLowerCase() {
+        return new ZodString({
+            ...this._def,
+            checks: [
+                ...this._def.checks,
+                {
+                    kind: "toLowerCase"
+                }
+            ]
+        });
+    }
+    toUpperCase() {
+        return new ZodString({
+            ...this._def,
+            checks: [
+                ...this._def.checks,
+                {
+                    kind: "toUpperCase"
+                }
+            ]
+        });
+    }
+    get isDatetime() {
+        return !!this._def.checks.find((ch)=>ch.kind === "datetime");
+    }
+    get isDate() {
+        return !!this._def.checks.find((ch)=>ch.kind === "date");
+    }
+    get isTime() {
+        return !!this._def.checks.find((ch)=>ch.kind === "time");
+    }
+    get isDuration() {
+        return !!this._def.checks.find((ch)=>ch.kind === "duration");
+    }
+    get isEmail() {
+        return !!this._def.checks.find((ch)=>ch.kind === "email");
+    }
+    get isURL() {
+        return !!this._def.checks.find((ch)=>ch.kind === "url");
+    }
+    get isEmoji() {
+        return !!this._def.checks.find((ch)=>ch.kind === "emoji");
+    }
+    get isUUID() {
+        return !!this._def.checks.find((ch)=>ch.kind === "uuid");
+    }
+    get isNANOID() {
+        return !!this._def.checks.find((ch)=>ch.kind === "nanoid");
+    }
+    get isCUID() {
+        return !!this._def.checks.find((ch)=>ch.kind === "cuid");
+    }
+    get isCUID2() {
+        return !!this._def.checks.find((ch)=>ch.kind === "cuid2");
+    }
+    get isULID() {
+        return !!this._def.checks.find((ch)=>ch.kind === "ulid");
+    }
+    get isIP() {
+        return !!this._def.checks.find((ch)=>ch.kind === "ip");
+    }
+    get isBase64() {
+        return !!this._def.checks.find((ch)=>ch.kind === "base64");
+    }
+    get minLength() {
+        let min = null;
+        for (const ch of this._def.checks){
+            if (ch.kind === "min") {
+                if (min === null || ch.value > min) min = ch.value;
+            }
+        }
+        return min;
+    }
+    get maxLength() {
+        let max = null;
+        for (const ch of this._def.checks){
+            if (ch.kind === "max") {
+                if (max === null || ch.value < max) max = ch.value;
+            }
+        }
+        return max;
+    }
+}
+ZodString.create = (params)=>{
+    var _a;
+    return new ZodString({
+        checks: [],
+        typeName: ZodFirstPartyTypeKind.ZodString,
+        coerce: (_a = params === null || params === void 0 ? void 0 : params.coerce) !== null && _a !== void 0 ? _a : false,
+        ...processCreateParams(params)
+    });
+};
+// https://stackoverflow.com/questions/3966484/why-does-modulus-operator-return-fractional-number-in-javascript/31711034#31711034
+function floatSafeRemainder(val, step) {
+    const valDecCount = (val.toString().split(".")[1] || "").length;
+    const stepDecCount = (step.toString().split(".")[1] || "").length;
+    const decCount = valDecCount > stepDecCount ? valDecCount : stepDecCount;
+    const valInt = parseInt(val.toFixed(decCount).replace(".", ""));
+    const stepInt = parseInt(step.toFixed(decCount).replace(".", ""));
+    return valInt % stepInt / Math.pow(10, decCount);
+}
+class ZodNumber extends ZodType {
+    constructor(){
+        super(...arguments);
+        this.min = this.gte;
+        this.max = this.lte;
+        this.step = this.multipleOf;
+    }
+    _parse(input) {
+        if (this._def.coerce) input.data = Number(input.data);
+        const parsedType = this._getType(input);
+        if (parsedType !== ZodParsedType.number) {
+            const ctx = this._getOrReturnCtx(input);
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.invalid_type,
+                expected: ZodParsedType.number,
+                received: ctx.parsedType
+            });
+            return INVALID;
+        }
+        let ctx = undefined;
+        const status = new ParseStatus();
+        for (const check of this._def.checks){
+            if (check.kind === "int") {
+                if (!util.isInteger(input.data)) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        code: ZodIssueCode.invalid_type,
+                        expected: "integer",
+                        received: "float",
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "min") {
+                const tooSmall = check.inclusive ? input.data < check.value : input.data <= check.value;
+                if (tooSmall) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        code: ZodIssueCode.too_small,
+                        minimum: check.value,
+                        type: "number",
+                        inclusive: check.inclusive,
+                        exact: false,
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "max") {
+                const tooBig = check.inclusive ? input.data > check.value : input.data >= check.value;
+                if (tooBig) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        code: ZodIssueCode.too_big,
+                        maximum: check.value,
+                        type: "number",
+                        inclusive: check.inclusive,
+                        exact: false,
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "multipleOf") {
+                if (floatSafeRemainder(input.data, check.value) !== 0) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        code: ZodIssueCode.not_multiple_of,
+                        multipleOf: check.value,
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "finite") {
+                if (!Number.isFinite(input.data)) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        code: ZodIssueCode.not_finite,
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else util.assertNever(check);
+        }
+        return {
+            status: status.value,
+            value: input.data
+        };
+    }
+    gte(value, message) {
+        return this.setLimit("min", value, true, errorUtil.toString(message));
+    }
+    gt(value, message) {
+        return this.setLimit("min", value, false, errorUtil.toString(message));
+    }
+    lte(value, message) {
+        return this.setLimit("max", value, true, errorUtil.toString(message));
+    }
+    lt(value, message) {
+        return this.setLimit("max", value, false, errorUtil.toString(message));
+    }
+    setLimit(kind, value, inclusive, message) {
+        return new ZodNumber({
+            ...this._def,
+            checks: [
+                ...this._def.checks,
+                {
+                    kind,
+                    value,
+                    inclusive,
+                    message: errorUtil.toString(message)
+                }
+            ]
+        });
+    }
+    _addCheck(check) {
+        return new ZodNumber({
+            ...this._def,
+            checks: [
+                ...this._def.checks,
+                check
+            ]
+        });
+    }
+    int(message) {
+        return this._addCheck({
+            kind: "int",
+            message: errorUtil.toString(message)
+        });
+    }
+    positive(message) {
+        return this._addCheck({
+            kind: "min",
+            value: 0,
+            inclusive: false,
+            message: errorUtil.toString(message)
+        });
+    }
+    negative(message) {
+        return this._addCheck({
+            kind: "max",
+            value: 0,
+            inclusive: false,
+            message: errorUtil.toString(message)
+        });
+    }
+    nonpositive(message) {
+        return this._addCheck({
+            kind: "max",
+            value: 0,
+            inclusive: true,
+            message: errorUtil.toString(message)
+        });
+    }
+    nonnegative(message) {
+        return this._addCheck({
+            kind: "min",
+            value: 0,
+            inclusive: true,
+            message: errorUtil.toString(message)
+        });
+    }
+    multipleOf(value, message) {
+        return this._addCheck({
+            kind: "multipleOf",
+            value: value,
+            message: errorUtil.toString(message)
+        });
+    }
+    finite(message) {
+        return this._addCheck({
+            kind: "finite",
+            message: errorUtil.toString(message)
+        });
+    }
+    safe(message) {
+        return this._addCheck({
+            kind: "min",
+            inclusive: true,
+            value: Number.MIN_SAFE_INTEGER,
+            message: errorUtil.toString(message)
+        })._addCheck({
+            kind: "max",
+            inclusive: true,
+            value: Number.MAX_SAFE_INTEGER,
+            message: errorUtil.toString(message)
+        });
+    }
+    get minValue() {
+        let min = null;
+        for (const ch of this._def.checks){
+            if (ch.kind === "min") {
+                if (min === null || ch.value > min) min = ch.value;
+            }
+        }
+        return min;
+    }
+    get maxValue() {
+        let max = null;
+        for (const ch of this._def.checks){
+            if (ch.kind === "max") {
+                if (max === null || ch.value < max) max = ch.value;
+            }
+        }
+        return max;
+    }
+    get isInt() {
+        return !!this._def.checks.find((ch)=>ch.kind === "int" || ch.kind === "multipleOf" && util.isInteger(ch.value));
+    }
+    get isFinite() {
+        let max = null, min = null;
+        for (const ch of this._def.checks){
+            if (ch.kind === "finite" || ch.kind === "int" || ch.kind === "multipleOf") return true;
+            else if (ch.kind === "min") {
+                if (min === null || ch.value > min) min = ch.value;
+            } else if (ch.kind === "max") {
+                if (max === null || ch.value < max) max = ch.value;
+            }
+        }
+        return Number.isFinite(min) && Number.isFinite(max);
+    }
+}
+ZodNumber.create = (params)=>{
+    return new ZodNumber({
+        checks: [],
+        typeName: ZodFirstPartyTypeKind.ZodNumber,
+        coerce: (params === null || params === void 0 ? void 0 : params.coerce) || false,
+        ...processCreateParams(params)
+    });
+};
+class ZodBigInt extends ZodType {
+    constructor(){
+        super(...arguments);
+        this.min = this.gte;
+        this.max = this.lte;
+    }
+    _parse(input) {
+        if (this._def.coerce) input.data = BigInt(input.data);
+        const parsedType = this._getType(input);
+        if (parsedType !== ZodParsedType.bigint) {
+            const ctx = this._getOrReturnCtx(input);
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.invalid_type,
+                expected: ZodParsedType.bigint,
+                received: ctx.parsedType
+            });
+            return INVALID;
+        }
+        let ctx = undefined;
+        const status = new ParseStatus();
+        for (const check of this._def.checks){
+            if (check.kind === "min") {
+                const tooSmall = check.inclusive ? input.data < check.value : input.data <= check.value;
+                if (tooSmall) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        code: ZodIssueCode.too_small,
+                        type: "bigint",
+                        minimum: check.value,
+                        inclusive: check.inclusive,
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "max") {
+                const tooBig = check.inclusive ? input.data > check.value : input.data >= check.value;
+                if (tooBig) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        code: ZodIssueCode.too_big,
+                        type: "bigint",
+                        maximum: check.value,
+                        inclusive: check.inclusive,
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "multipleOf") {
+                if (input.data % check.value !== BigInt(0)) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        code: ZodIssueCode.not_multiple_of,
+                        multipleOf: check.value,
+                        message: check.message
+                    });
+                    status.dirty();
+                }
+            } else util.assertNever(check);
+        }
+        return {
+            status: status.value,
+            value: input.data
+        };
+    }
+    gte(value, message) {
+        return this.setLimit("min", value, true, errorUtil.toString(message));
+    }
+    gt(value, message) {
+        return this.setLimit("min", value, false, errorUtil.toString(message));
+    }
+    lte(value, message) {
+        return this.setLimit("max", value, true, errorUtil.toString(message));
+    }
+    lt(value, message) {
+        return this.setLimit("max", value, false, errorUtil.toString(message));
+    }
+    setLimit(kind, value, inclusive, message) {
+        return new ZodBigInt({
+            ...this._def,
+            checks: [
+                ...this._def.checks,
+                {
+                    kind,
+                    value,
+                    inclusive,
+                    message: errorUtil.toString(message)
+                }
+            ]
+        });
+    }
+    _addCheck(check) {
+        return new ZodBigInt({
+            ...this._def,
+            checks: [
+                ...this._def.checks,
+                check
+            ]
+        });
+    }
+    positive(message) {
+        return this._addCheck({
+            kind: "min",
+            value: BigInt(0),
+            inclusive: false,
+            message: errorUtil.toString(message)
+        });
+    }
+    negative(message) {
+        return this._addCheck({
+            kind: "max",
+            value: BigInt(0),
+            inclusive: false,
+            message: errorUtil.toString(message)
+        });
+    }
+    nonpositive(message) {
+        return this._addCheck({
+            kind: "max",
+            value: BigInt(0),
+            inclusive: true,
+            message: errorUtil.toString(message)
+        });
+    }
+    nonnegative(message) {
+        return this._addCheck({
+            kind: "min",
+            value: BigInt(0),
+            inclusive: true,
+            message: errorUtil.toString(message)
+        });
+    }
+    multipleOf(value, message) {
+        return this._addCheck({
+            kind: "multipleOf",
+            value,
+            message: errorUtil.toString(message)
+        });
+    }
+    get minValue() {
+        let min = null;
+        for (const ch of this._def.checks){
+            if (ch.kind === "min") {
+                if (min === null || ch.value > min) min = ch.value;
+            }
+        }
+        return min;
+    }
+    get maxValue() {
+        let max = null;
+        for (const ch of this._def.checks){
+            if (ch.kind === "max") {
+                if (max === null || ch.value < max) max = ch.value;
+            }
+        }
+        return max;
+    }
+}
+ZodBigInt.create = (params)=>{
+    var _a;
+    return new ZodBigInt({
+        checks: [],
+        typeName: ZodFirstPartyTypeKind.ZodBigInt,
+        coerce: (_a = params === null || params === void 0 ? void 0 : params.coerce) !== null && _a !== void 0 ? _a : false,
+        ...processCreateParams(params)
+    });
+};
+class ZodBoolean extends ZodType {
+    _parse(input) {
+        if (this._def.coerce) input.data = Boolean(input.data);
+        const parsedType = this._getType(input);
+        if (parsedType !== ZodParsedType.boolean) {
+            const ctx = this._getOrReturnCtx(input);
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.invalid_type,
+                expected: ZodParsedType.boolean,
+                received: ctx.parsedType
+            });
+            return INVALID;
+        }
+        return OK(input.data);
+    }
+}
+ZodBoolean.create = (params)=>{
+    return new ZodBoolean({
+        typeName: ZodFirstPartyTypeKind.ZodBoolean,
+        coerce: (params === null || params === void 0 ? void 0 : params.coerce) || false,
+        ...processCreateParams(params)
+    });
+};
+class ZodDate extends ZodType {
+    _parse(input) {
+        if (this._def.coerce) input.data = new Date(input.data);
+        const parsedType = this._getType(input);
+        if (parsedType !== ZodParsedType.date) {
+            const ctx = this._getOrReturnCtx(input);
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.invalid_type,
+                expected: ZodParsedType.date,
+                received: ctx.parsedType
+            });
+            return INVALID;
+        }
+        if (isNaN(input.data.getTime())) {
+            const ctx = this._getOrReturnCtx(input);
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.invalid_date
+            });
+            return INVALID;
+        }
+        const status = new ParseStatus();
+        let ctx = undefined;
+        for (const check of this._def.checks){
+            if (check.kind === "min") {
+                if (input.data.getTime() < check.value) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        code: ZodIssueCode.too_small,
+                        message: check.message,
+                        inclusive: true,
+                        exact: false,
+                        minimum: check.value,
+                        type: "date"
+                    });
+                    status.dirty();
+                }
+            } else if (check.kind === "max") {
+                if (input.data.getTime() > check.value) {
+                    ctx = this._getOrReturnCtx(input, ctx);
+                    addIssueToContext(ctx, {
+                        code: ZodIssueCode.too_big,
+                        message: check.message,
+                        inclusive: true,
+                        exact: false,
+                        maximum: check.value,
+                        type: "date"
+                    });
+                    status.dirty();
+                }
+            } else util.assertNever(check);
+        }
+        return {
+            status: status.value,
+            value: new Date(input.data.getTime())
+        };
+    }
+    _addCheck(check) {
+        return new ZodDate({
+            ...this._def,
+            checks: [
+                ...this._def.checks,
+                check
+            ]
+        });
+    }
+    min(minDate, message) {
+        return this._addCheck({
+            kind: "min",
+            value: minDate.getTime(),
+            message: errorUtil.toString(message)
+        });
+    }
+    max(maxDate, message) {
+        return this._addCheck({
+            kind: "max",
+            value: maxDate.getTime(),
+            message: errorUtil.toString(message)
+        });
+    }
+    get minDate() {
+        let min = null;
+        for (const ch of this._def.checks){
+            if (ch.kind === "min") {
+                if (min === null || ch.value > min) min = ch.value;
+            }
+        }
+        return min != null ? new Date(min) : null;
+    }
+    get maxDate() {
+        let max = null;
+        for (const ch of this._def.checks){
+            if (ch.kind === "max") {
+                if (max === null || ch.value < max) max = ch.value;
+            }
+        }
+        return max != null ? new Date(max) : null;
+    }
+}
+ZodDate.create = (params)=>{
+    return new ZodDate({
+        checks: [],
+        coerce: (params === null || params === void 0 ? void 0 : params.coerce) || false,
+        typeName: ZodFirstPartyTypeKind.ZodDate,
+        ...processCreateParams(params)
+    });
+};
+class ZodSymbol extends ZodType {
+    _parse(input) {
+        const parsedType = this._getType(input);
+        if (parsedType !== ZodParsedType.symbol) {
+            const ctx = this._getOrReturnCtx(input);
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.invalid_type,
+                expected: ZodParsedType.symbol,
+                received: ctx.parsedType
+            });
+            return INVALID;
+        }
+        return OK(input.data);
+    }
+}
+ZodSymbol.create = (params)=>{
+    return new ZodSymbol({
+        typeName: ZodFirstPartyTypeKind.ZodSymbol,
+        ...processCreateParams(params)
+    });
+};
+class ZodUndefined extends ZodType {
+    _parse(input) {
+        const parsedType = this._getType(input);
+        if (parsedType !== ZodParsedType.undefined) {
+            const ctx = this._getOrReturnCtx(input);
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.invalid_type,
+                expected: ZodParsedType.undefined,
+                received: ctx.parsedType
+            });
+            return INVALID;
+        }
+        return OK(input.data);
+    }
+}
+ZodUndefined.create = (params)=>{
+    return new ZodUndefined({
+        typeName: ZodFirstPartyTypeKind.ZodUndefined,
+        ...processCreateParams(params)
+    });
+};
+class ZodNull extends ZodType {
+    _parse(input) {
+        const parsedType = this._getType(input);
+        if (parsedType !== ZodParsedType.null) {
+            const ctx = this._getOrReturnCtx(input);
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.invalid_type,
+                expected: ZodParsedType.null,
+                received: ctx.parsedType
+            });
+            return INVALID;
+        }
+        return OK(input.data);
+    }
+}
+ZodNull.create = (params)=>{
+    return new ZodNull({
+        typeName: ZodFirstPartyTypeKind.ZodNull,
+        ...processCreateParams(params)
+    });
+};
+class ZodAny extends ZodType {
+    constructor(){
+        super(...arguments);
+        // to prevent instances of other classes from extending ZodAny. this causes issues with catchall in ZodObject.
+        this._any = true;
+    }
+    _parse(input) {
+        return OK(input.data);
+    }
+}
+ZodAny.create = (params)=>{
+    return new ZodAny({
+        typeName: ZodFirstPartyTypeKind.ZodAny,
+        ...processCreateParams(params)
+    });
+};
+class ZodUnknown extends ZodType {
+    constructor(){
+        super(...arguments);
+        // required
+        this._unknown = true;
+    }
+    _parse(input) {
+        return OK(input.data);
+    }
+}
+ZodUnknown.create = (params)=>{
+    return new ZodUnknown({
+        typeName: ZodFirstPartyTypeKind.ZodUnknown,
+        ...processCreateParams(params)
+    });
+};
+class ZodNever extends ZodType {
+    _parse(input) {
+        const ctx = this._getOrReturnCtx(input);
+        addIssueToContext(ctx, {
+            code: ZodIssueCode.invalid_type,
+            expected: ZodParsedType.never,
+            received: ctx.parsedType
+        });
+        return INVALID;
+    }
+}
+ZodNever.create = (params)=>{
+    return new ZodNever({
+        typeName: ZodFirstPartyTypeKind.ZodNever,
+        ...processCreateParams(params)
+    });
+};
+class ZodVoid extends ZodType {
+    _parse(input) {
+        const parsedType = this._getType(input);
+        if (parsedType !== ZodParsedType.undefined) {
+            const ctx = this._getOrReturnCtx(input);
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.invalid_type,
+                expected: ZodParsedType.void,
+                received: ctx.parsedType
+            });
+            return INVALID;
+        }
+        return OK(input.data);
+    }
+}
+ZodVoid.create = (params)=>{
+    return new ZodVoid({
+        typeName: ZodFirstPartyTypeKind.ZodVoid,
+        ...processCreateParams(params)
+    });
+};
+class ZodArray extends ZodType {
+    _parse(input) {
+        const { ctx, status } = this._processInputParams(input);
+        const def = this._def;
+        if (ctx.parsedType !== ZodParsedType.array) {
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.invalid_type,
+                expected: ZodParsedType.array,
+                received: ctx.parsedType
+            });
+            return INVALID;
+        }
+        if (def.exactLength !== null) {
+            const tooBig = ctx.data.length > def.exactLength.value;
+            const tooSmall = ctx.data.length < def.exactLength.value;
+            if (tooBig || tooSmall) {
+                addIssueToContext(ctx, {
+                    code: tooBig ? ZodIssueCode.too_big : ZodIssueCode.too_small,
+                    minimum: tooSmall ? def.exactLength.value : undefined,
+                    maximum: tooBig ? def.exactLength.value : undefined,
+                    type: "array",
+                    inclusive: true,
+                    exact: true,
+                    message: def.exactLength.message
+                });
+                status.dirty();
+            }
+        }
+        if (def.minLength !== null) {
+            if (ctx.data.length < def.minLength.value) {
+                addIssueToContext(ctx, {
+                    code: ZodIssueCode.too_small,
+                    minimum: def.minLength.value,
+                    type: "array",
+                    inclusive: true,
+                    exact: false,
+                    message: def.minLength.message
+                });
+                status.dirty();
+            }
+        }
+        if (def.maxLength !== null) {
+            if (ctx.data.length > def.maxLength.value) {
+                addIssueToContext(ctx, {
+                    code: ZodIssueCode.too_big,
+                    maximum: def.maxLength.value,
+                    type: "array",
+                    inclusive: true,
+                    exact: false,
+                    message: def.maxLength.message
+                });
+                status.dirty();
+            }
+        }
+        if (ctx.common.async) return Promise.all([
+            ...ctx.data
+        ].map((item, i)=>{
+            return def.type._parseAsync(new ParseInputLazyPath(ctx, item, ctx.path, i));
+        })).then((result)=>{
+            return ParseStatus.mergeArray(status, result);
+        });
+        const result = [
+            ...ctx.data
+        ].map((item, i)=>{
+            return def.type._parseSync(new ParseInputLazyPath(ctx, item, ctx.path, i));
+        });
+        return ParseStatus.mergeArray(status, result);
+    }
+    get element() {
+        return this._def.type;
+    }
+    min(minLength, message) {
+        return new ZodArray({
+            ...this._def,
+            minLength: {
+                value: minLength,
+                message: errorUtil.toString(message)
+            }
+        });
+    }
+    max(maxLength, message) {
+        return new ZodArray({
+            ...this._def,
+            maxLength: {
+                value: maxLength,
+                message: errorUtil.toString(message)
+            }
+        });
+    }
+    length(len, message) {
+        return new ZodArray({
+            ...this._def,
+            exactLength: {
+                value: len,
+                message: errorUtil.toString(message)
+            }
+        });
+    }
+    nonempty(message) {
+        return this.min(1, message);
+    }
+}
+ZodArray.create = (schema, params)=>{
+    return new ZodArray({
+        type: schema,
+        minLength: null,
+        maxLength: null,
+        exactLength: null,
+        typeName: ZodFirstPartyTypeKind.ZodArray,
+        ...processCreateParams(params)
+    });
+};
+function deepPartialify(schema) {
+    if (schema instanceof ZodObject) {
+        const newShape = {};
+        for(const key in schema.shape){
+            const fieldSchema = schema.shape[key];
+            newShape[key] = ZodOptional.create(deepPartialify(fieldSchema));
+        }
+        return new ZodObject({
+            ...schema._def,
+            shape: ()=>newShape
+        });
+    } else if (schema instanceof ZodArray) return new ZodArray({
+        ...schema._def,
+        type: deepPartialify(schema.element)
+    });
+    else if (schema instanceof ZodOptional) return ZodOptional.create(deepPartialify(schema.unwrap()));
+    else if (schema instanceof ZodNullable) return ZodNullable.create(deepPartialify(schema.unwrap()));
+    else if (schema instanceof ZodTuple) return ZodTuple.create(schema.items.map((item)=>deepPartialify(item)));
+    else return schema;
+}
+class ZodObject extends ZodType {
+    constructor(){
+        super(...arguments);
+        this._cached = null;
+        /**
+         * @deprecated In most cases, this is no longer needed - unknown properties are now silently stripped.
+         * If you want to pass through unknown properties, use `.passthrough()` instead.
+         */ this.nonstrict = this.passthrough;
+        // extend<
+        //   Augmentation extends ZodRawShape,
+        //   NewOutput extends util.flatten<{
+        //     [k in keyof Augmentation | keyof Output]: k extends keyof Augmentation
+        //       ? Augmentation[k]["_output"]
+        //       : k extends keyof Output
+        //       ? Output[k]
+        //       : never;
+        //   }>,
+        //   NewInput extends util.flatten<{
+        //     [k in keyof Augmentation | keyof Input]: k extends keyof Augmentation
+        //       ? Augmentation[k]["_input"]
+        //       : k extends keyof Input
+        //       ? Input[k]
+        //       : never;
+        //   }>
+        // >(
+        //   augmentation: Augmentation
+        // ): ZodObject<
+        //   extendShape<T, Augmentation>,
+        //   UnknownKeys,
+        //   Catchall,
+        //   NewOutput,
+        //   NewInput
+        // > {
+        //   return new ZodObject({
+        //     ...this._def,
+        //     shape: () => ({
+        //       ...this._def.shape(),
+        //       ...augmentation,
+        //     }),
+        //   }) as any;
+        // }
+        /**
+         * @deprecated Use `.extend` instead
+         *  */ this.augment = this.extend;
+    }
+    _getCached() {
+        if (this._cached !== null) return this._cached;
+        const shape = this._def.shape();
+        const keys = util.objectKeys(shape);
+        return this._cached = {
+            shape,
+            keys
+        };
+    }
+    _parse(input) {
+        const parsedType = this._getType(input);
+        if (parsedType !== ZodParsedType.object) {
+            const ctx = this._getOrReturnCtx(input);
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.invalid_type,
+                expected: ZodParsedType.object,
+                received: ctx.parsedType
+            });
+            return INVALID;
+        }
+        const { status, ctx } = this._processInputParams(input);
+        const { shape, keys: shapeKeys } = this._getCached();
+        const extraKeys = [];
+        if (!(this._def.catchall instanceof ZodNever && this._def.unknownKeys === "strip")) {
+            for(const key in ctx.data)if (!shapeKeys.includes(key)) extraKeys.push(key);
+        }
+        const pairs = [];
+        for (const key of shapeKeys){
+            const keyValidator = shape[key];
+            const value = ctx.data[key];
+            pairs.push({
+                key: {
+                    status: "valid",
+                    value: key
+                },
+                value: keyValidator._parse(new ParseInputLazyPath(ctx, value, ctx.path, key)),
+                alwaysSet: key in ctx.data
+            });
+        }
+        if (this._def.catchall instanceof ZodNever) {
+            const unknownKeys = this._def.unknownKeys;
+            if (unknownKeys === "passthrough") for (const key of extraKeys)pairs.push({
+                key: {
+                    status: "valid",
+                    value: key
+                },
+                value: {
+                    status: "valid",
+                    value: ctx.data[key]
+                }
+            });
+            else if (unknownKeys === "strict") {
+                if (extraKeys.length > 0) {
+                    addIssueToContext(ctx, {
+                        code: ZodIssueCode.unrecognized_keys,
+                        keys: extraKeys
+                    });
+                    status.dirty();
+                }
+            } else if (unknownKeys === "strip") ;
+            else throw new Error(`Internal ZodObject error: invalid unknownKeys value.`);
+        } else {
+            // run catchall validation
+            const catchall = this._def.catchall;
+            for (const key of extraKeys){
+                const value = ctx.data[key];
+                pairs.push({
+                    key: {
+                        status: "valid",
+                        value: key
+                    },
+                    value: catchall._parse(new ParseInputLazyPath(ctx, value, ctx.path, key) //, ctx.child(key), value, getParsedType(value)
+                    ),
+                    alwaysSet: key in ctx.data
+                });
+            }
+        }
+        if (ctx.common.async) return Promise.resolve().then(async ()=>{
+            const syncPairs = [];
+            for (const pair of pairs){
+                const key = await pair.key;
+                const value = await pair.value;
+                syncPairs.push({
+                    key,
+                    value,
+                    alwaysSet: pair.alwaysSet
+                });
+            }
+            return syncPairs;
+        }).then((syncPairs)=>{
+            return ParseStatus.mergeObjectSync(status, syncPairs);
+        });
+        else return ParseStatus.mergeObjectSync(status, pairs);
+    }
+    get shape() {
+        return this._def.shape();
+    }
+    strict(message) {
+        errorUtil.errToObj;
+        return new ZodObject({
+            ...this._def,
+            unknownKeys: "strict",
+            ...message !== undefined ? {
+                errorMap: (issue, ctx)=>{
+                    var _a, _b, _c, _d;
+                    const defaultError = (_c = (_b = (_a = this._def).errorMap) === null || _b === void 0 ? void 0 : _b.call(_a, issue, ctx).message) !== null && _c !== void 0 ? _c : ctx.defaultError;
+                    if (issue.code === "unrecognized_keys") return {
+                        message: (_d = errorUtil.errToObj(message).message) !== null && _d !== void 0 ? _d : defaultError
+                    };
+                    return {
+                        message: defaultError
+                    };
+                }
+            } : {}
+        });
+    }
+    strip() {
+        return new ZodObject({
+            ...this._def,
+            unknownKeys: "strip"
+        });
+    }
+    passthrough() {
+        return new ZodObject({
+            ...this._def,
+            unknownKeys: "passthrough"
+        });
+    }
+    // const AugmentFactory =
+    //   <Def extends ZodObjectDef>(def: Def) =>
+    //   <Augmentation extends ZodRawShape>(
+    //     augmentation: Augmentation
+    //   ): ZodObject<
+    //     extendShape<ReturnType<Def["shape"]>, Augmentation>,
+    //     Def["unknownKeys"],
+    //     Def["catchall"]
+    //   > => {
+    //     return new ZodObject({
+    //       ...def,
+    //       shape: () => ({
+    //         ...def.shape(),
+    //         ...augmentation,
+    //       }),
+    //     }) as any;
+    //   };
+    extend(augmentation) {
+        return new ZodObject({
+            ...this._def,
+            shape: ()=>({
+                    ...this._def.shape(),
+                    ...augmentation
+                })
+        });
+    }
+    /**
+     * Prior to zod@1.0.12 there was a bug in the
+     * inferred type of merged objects. Please
+     * upgrade if you are experiencing issues.
+     */ merge(merging) {
+        const merged = new ZodObject({
+            unknownKeys: merging._def.unknownKeys,
+            catchall: merging._def.catchall,
+            shape: ()=>({
+                    ...this._def.shape(),
+                    ...merging._def.shape()
+                }),
+            typeName: ZodFirstPartyTypeKind.ZodObject
+        });
+        return merged;
+    }
+    // merge<
+    //   Incoming extends AnyZodObject,
+    //   Augmentation extends Incoming["shape"],
+    //   NewOutput extends {
+    //     [k in keyof Augmentation | keyof Output]: k extends keyof Augmentation
+    //       ? Augmentation[k]["_output"]
+    //       : k extends keyof Output
+    //       ? Output[k]
+    //       : never;
+    //   },
+    //   NewInput extends {
+    //     [k in keyof Augmentation | keyof Input]: k extends keyof Augmentation
+    //       ? Augmentation[k]["_input"]
+    //       : k extends keyof Input
+    //       ? Input[k]
+    //       : never;
+    //   }
+    // >(
+    //   merging: Incoming
+    // ): ZodObject<
+    //   extendShape<T, ReturnType<Incoming["_def"]["shape"]>>,
+    //   Incoming["_def"]["unknownKeys"],
+    //   Incoming["_def"]["catchall"],
+    //   NewOutput,
+    //   NewInput
+    // > {
+    //   const merged: any = new ZodObject({
+    //     unknownKeys: merging._def.unknownKeys,
+    //     catchall: merging._def.catchall,
+    //     shape: () =>
+    //       objectUtil.mergeShapes(this._def.shape(), merging._def.shape()),
+    //     typeName: ZodFirstPartyTypeKind.ZodObject,
+    //   }) as any;
+    //   return merged;
+    // }
+    setKey(key, schema) {
+        return this.augment({
+            [key]: schema
+        });
+    }
+    // merge<Incoming extends AnyZodObject>(
+    //   merging: Incoming
+    // ): //ZodObject<T & Incoming["_shape"], UnknownKeys, Catchall> = (merging) => {
+    // ZodObject<
+    //   extendShape<T, ReturnType<Incoming["_def"]["shape"]>>,
+    //   Incoming["_def"]["unknownKeys"],
+    //   Incoming["_def"]["catchall"]
+    // > {
+    //   // const mergedShape = objectUtil.mergeShapes(
+    //   //   this._def.shape(),
+    //   //   merging._def.shape()
+    //   // );
+    //   const merged: any = new ZodObject({
+    //     unknownKeys: merging._def.unknownKeys,
+    //     catchall: merging._def.catchall,
+    //     shape: () =>
+    //       objectUtil.mergeShapes(this._def.shape(), merging._def.shape()),
+    //     typeName: ZodFirstPartyTypeKind.ZodObject,
+    //   }) as any;
+    //   return merged;
+    // }
+    catchall(index) {
+        return new ZodObject({
+            ...this._def,
+            catchall: index
+        });
+    }
+    pick(mask) {
+        const shape = {};
+        util.objectKeys(mask).forEach((key)=>{
+            if (mask[key] && this.shape[key]) shape[key] = this.shape[key];
+        });
+        return new ZodObject({
+            ...this._def,
+            shape: ()=>shape
+        });
+    }
+    omit(mask) {
+        const shape = {};
+        util.objectKeys(this.shape).forEach((key)=>{
+            if (!mask[key]) shape[key] = this.shape[key];
+        });
+        return new ZodObject({
+            ...this._def,
+            shape: ()=>shape
+        });
+    }
+    /**
+     * @deprecated
+     */ deepPartial() {
+        return deepPartialify(this);
+    }
+    partial(mask) {
+        const newShape = {};
+        util.objectKeys(this.shape).forEach((key)=>{
+            const fieldSchema = this.shape[key];
+            if (mask && !mask[key]) newShape[key] = fieldSchema;
+            else newShape[key] = fieldSchema.optional();
+        });
+        return new ZodObject({
+            ...this._def,
+            shape: ()=>newShape
+        });
+    }
+    required(mask) {
+        const newShape = {};
+        util.objectKeys(this.shape).forEach((key)=>{
+            if (mask && !mask[key]) newShape[key] = this.shape[key];
+            else {
+                const fieldSchema = this.shape[key];
+                let newField = fieldSchema;
+                while(newField instanceof ZodOptional)newField = newField._def.innerType;
+                newShape[key] = newField;
+            }
+        });
+        return new ZodObject({
+            ...this._def,
+            shape: ()=>newShape
+        });
+    }
+    keyof() {
+        return createZodEnum(util.objectKeys(this.shape));
+    }
+}
+ZodObject.create = (shape, params)=>{
+    return new ZodObject({
+        shape: ()=>shape,
+        unknownKeys: "strip",
+        catchall: ZodNever.create(),
+        typeName: ZodFirstPartyTypeKind.ZodObject,
+        ...processCreateParams(params)
+    });
+};
+ZodObject.strictCreate = (shape, params)=>{
+    return new ZodObject({
+        shape: ()=>shape,
+        unknownKeys: "strict",
+        catchall: ZodNever.create(),
+        typeName: ZodFirstPartyTypeKind.ZodObject,
+        ...processCreateParams(params)
+    });
+};
+ZodObject.lazycreate = (shape, params)=>{
+    return new ZodObject({
+        shape,
+        unknownKeys: "strip",
+        catchall: ZodNever.create(),
+        typeName: ZodFirstPartyTypeKind.ZodObject,
+        ...processCreateParams(params)
+    });
+};
+class ZodUnion extends ZodType {
+    _parse(input) {
+        const { ctx } = this._processInputParams(input);
+        const options = this._def.options;
+        function handleResults(results) {
+            // return first issue-free validation if it exists
+            for (const result of results){
+                if (result.result.status === "valid") return result.result;
+            }
+            for (const result of results)if (result.result.status === "dirty") {
+                // add issues from dirty option
+                ctx.common.issues.push(...result.ctx.common.issues);
+                return result.result;
+            }
+            // return invalid
+            const unionErrors = results.map((result)=>new ZodError(result.ctx.common.issues));
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.invalid_union,
+                unionErrors
+            });
+            return INVALID;
+        }
+        if (ctx.common.async) return Promise.all(options.map(async (option)=>{
+            const childCtx = {
+                ...ctx,
+                common: {
+                    ...ctx.common,
+                    issues: []
+                },
+                parent: null
+            };
+            return {
+                result: await option._parseAsync({
+                    data: ctx.data,
+                    path: ctx.path,
+                    parent: childCtx
+                }),
+                ctx: childCtx
+            };
+        })).then(handleResults);
+        else {
+            let dirty = undefined;
+            const issues = [];
+            for (const option of options){
+                const childCtx = {
+                    ...ctx,
+                    common: {
+                        ...ctx.common,
+                        issues: []
+                    },
+                    parent: null
+                };
+                const result = option._parseSync({
+                    data: ctx.data,
+                    path: ctx.path,
+                    parent: childCtx
+                });
+                if (result.status === "valid") return result;
+                else if (result.status === "dirty" && !dirty) dirty = {
+                    result,
+                    ctx: childCtx
+                };
+                if (childCtx.common.issues.length) issues.push(childCtx.common.issues);
+            }
+            if (dirty) {
+                ctx.common.issues.push(...dirty.ctx.common.issues);
+                return dirty.result;
+            }
+            const unionErrors = issues.map((issues)=>new ZodError(issues));
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.invalid_union,
+                unionErrors
+            });
+            return INVALID;
+        }
+    }
+    get options() {
+        return this._def.options;
+    }
+}
+ZodUnion.create = (types, params)=>{
+    return new ZodUnion({
+        options: types,
+        typeName: ZodFirstPartyTypeKind.ZodUnion,
+        ...processCreateParams(params)
+    });
+};
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+//////////                                 //////////
+//////////      ZodDiscriminatedUnion      //////////
+//////////                                 //////////
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+const getDiscriminator = (type)=>{
+    if (type instanceof ZodLazy) return getDiscriminator(type.schema);
+    else if (type instanceof ZodEffects) return getDiscriminator(type.innerType());
+    else if (type instanceof ZodLiteral) return [
+        type.value
+    ];
+    else if (type instanceof ZodEnum) return type.options;
+    else if (type instanceof ZodNativeEnum) // eslint-disable-next-line ban/ban
+    return util.objectValues(type.enum);
+    else if (type instanceof ZodDefault) return getDiscriminator(type._def.innerType);
+    else if (type instanceof ZodUndefined) return [
+        undefined
+    ];
+    else if (type instanceof ZodNull) return [
+        null
+    ];
+    else if (type instanceof ZodOptional) return [
+        undefined,
+        ...getDiscriminator(type.unwrap())
+    ];
+    else if (type instanceof ZodNullable) return [
+        null,
+        ...getDiscriminator(type.unwrap())
+    ];
+    else if (type instanceof ZodBranded) return getDiscriminator(type.unwrap());
+    else if (type instanceof ZodReadonly) return getDiscriminator(type.unwrap());
+    else if (type instanceof ZodCatch) return getDiscriminator(type._def.innerType);
+    else return [];
+};
+class ZodDiscriminatedUnion extends ZodType {
+    _parse(input) {
+        const { ctx } = this._processInputParams(input);
+        if (ctx.parsedType !== ZodParsedType.object) {
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.invalid_type,
+                expected: ZodParsedType.object,
+                received: ctx.parsedType
+            });
+            return INVALID;
+        }
+        const discriminator = this.discriminator;
+        const discriminatorValue = ctx.data[discriminator];
+        const option = this.optionsMap.get(discriminatorValue);
+        if (!option) {
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.invalid_union_discriminator,
+                options: Array.from(this.optionsMap.keys()),
+                path: [
+                    discriminator
+                ]
+            });
+            return INVALID;
+        }
+        if (ctx.common.async) return option._parseAsync({
+            data: ctx.data,
+            path: ctx.path,
+            parent: ctx
+        });
+        else return option._parseSync({
+            data: ctx.data,
+            path: ctx.path,
+            parent: ctx
+        });
+    }
+    get discriminator() {
+        return this._def.discriminator;
+    }
+    get options() {
+        return this._def.options;
+    }
+    get optionsMap() {
+        return this._def.optionsMap;
+    }
+    /**
+     * The constructor of the discriminated union schema. Its behaviour is very similar to that of the normal z.union() constructor.
+     * However, it only allows a union of objects, all of which need to share a discriminator property. This property must
+     * have a different value for each object in the union.
+     * @param discriminator the name of the discriminator property
+     * @param types an array of object schemas
+     * @param params
+     */ static create(discriminator, options, params) {
+        // Get all the valid discriminator values
+        const optionsMap = new Map();
+        // try {
+        for (const type of options){
+            const discriminatorValues = getDiscriminator(type.shape[discriminator]);
+            if (!discriminatorValues.length) throw new Error(`A discriminator value for key \`${discriminator}\` could not be extracted from all schema options`);
+            for (const value of discriminatorValues){
+                if (optionsMap.has(value)) throw new Error(`Discriminator property ${String(discriminator)} has duplicate value ${String(value)}`);
+                optionsMap.set(value, type);
+            }
+        }
+        return new ZodDiscriminatedUnion({
+            typeName: ZodFirstPartyTypeKind.ZodDiscriminatedUnion,
+            discriminator,
+            options,
+            optionsMap,
+            ...processCreateParams(params)
+        });
+    }
+}
+function mergeValues(a, b) {
+    const aType = getParsedType(a);
+    const bType = getParsedType(b);
+    if (a === b) return {
+        valid: true,
+        data: a
+    };
+    else if (aType === ZodParsedType.object && bType === ZodParsedType.object) {
+        const bKeys = util.objectKeys(b);
+        const sharedKeys = util.objectKeys(a).filter((key)=>bKeys.indexOf(key) !== -1);
+        const newObj = {
+            ...a,
+            ...b
+        };
+        for (const key of sharedKeys){
+            const sharedValue = mergeValues(a[key], b[key]);
+            if (!sharedValue.valid) return {
+                valid: false
+            };
+            newObj[key] = sharedValue.data;
+        }
+        return {
+            valid: true,
+            data: newObj
+        };
+    } else if (aType === ZodParsedType.array && bType === ZodParsedType.array) {
+        if (a.length !== b.length) return {
+            valid: false
+        };
+        const newArray = [];
+        for(let index = 0; index < a.length; index++){
+            const itemA = a[index];
+            const itemB = b[index];
+            const sharedValue = mergeValues(itemA, itemB);
+            if (!sharedValue.valid) return {
+                valid: false
+            };
+            newArray.push(sharedValue.data);
+        }
+        return {
+            valid: true,
+            data: newArray
+        };
+    } else if (aType === ZodParsedType.date && bType === ZodParsedType.date && +a === +b) return {
+        valid: true,
+        data: a
+    };
+    else return {
+        valid: false
+    };
+}
+class ZodIntersection extends ZodType {
+    _parse(input) {
+        const { status, ctx } = this._processInputParams(input);
+        const handleParsed = (parsedLeft, parsedRight)=>{
+            if (isAborted(parsedLeft) || isAborted(parsedRight)) return INVALID;
+            const merged = mergeValues(parsedLeft.value, parsedRight.value);
+            if (!merged.valid) {
+                addIssueToContext(ctx, {
+                    code: ZodIssueCode.invalid_intersection_types
+                });
+                return INVALID;
+            }
+            if (isDirty(parsedLeft) || isDirty(parsedRight)) status.dirty();
+            return {
+                status: status.value,
+                value: merged.data
+            };
+        };
+        if (ctx.common.async) return Promise.all([
+            this._def.left._parseAsync({
+                data: ctx.data,
+                path: ctx.path,
+                parent: ctx
+            }),
+            this._def.right._parseAsync({
+                data: ctx.data,
+                path: ctx.path,
+                parent: ctx
+            })
+        ]).then(([left, right])=>handleParsed(left, right));
+        else return handleParsed(this._def.left._parseSync({
+            data: ctx.data,
+            path: ctx.path,
+            parent: ctx
+        }), this._def.right._parseSync({
+            data: ctx.data,
+            path: ctx.path,
+            parent: ctx
+        }));
+    }
+}
+ZodIntersection.create = (left, right, params)=>{
+    return new ZodIntersection({
+        left: left,
+        right: right,
+        typeName: ZodFirstPartyTypeKind.ZodIntersection,
+        ...processCreateParams(params)
+    });
+};
+class ZodTuple extends ZodType {
+    _parse(input) {
+        const { status, ctx } = this._processInputParams(input);
+        if (ctx.parsedType !== ZodParsedType.array) {
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.invalid_type,
+                expected: ZodParsedType.array,
+                received: ctx.parsedType
+            });
+            return INVALID;
+        }
+        if (ctx.data.length < this._def.items.length) {
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.too_small,
+                minimum: this._def.items.length,
+                inclusive: true,
+                exact: false,
+                type: "array"
+            });
+            return INVALID;
+        }
+        const rest = this._def.rest;
+        if (!rest && ctx.data.length > this._def.items.length) {
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.too_big,
+                maximum: this._def.items.length,
+                inclusive: true,
+                exact: false,
+                type: "array"
+            });
+            status.dirty();
+        }
+        const items = [
+            ...ctx.data
+        ].map((item, itemIndex)=>{
+            const schema = this._def.items[itemIndex] || this._def.rest;
+            if (!schema) return null;
+            return schema._parse(new ParseInputLazyPath(ctx, item, ctx.path, itemIndex));
+        }).filter((x)=>!!x); // filter nulls
+        if (ctx.common.async) return Promise.all(items).then((results)=>{
+            return ParseStatus.mergeArray(status, results);
+        });
+        else return ParseStatus.mergeArray(status, items);
+    }
+    get items() {
+        return this._def.items;
+    }
+    rest(rest) {
+        return new ZodTuple({
+            ...this._def,
+            rest
+        });
+    }
+}
+ZodTuple.create = (schemas, params)=>{
+    if (!Array.isArray(schemas)) throw new Error("You must pass an array of schemas to z.tuple([ ... ])");
+    return new ZodTuple({
+        items: schemas,
+        typeName: ZodFirstPartyTypeKind.ZodTuple,
+        rest: null,
+        ...processCreateParams(params)
+    });
+};
+class ZodRecord extends ZodType {
+    get keySchema() {
+        return this._def.keyType;
+    }
+    get valueSchema() {
+        return this._def.valueType;
+    }
+    _parse(input) {
+        const { status, ctx } = this._processInputParams(input);
+        if (ctx.parsedType !== ZodParsedType.object) {
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.invalid_type,
+                expected: ZodParsedType.object,
+                received: ctx.parsedType
+            });
+            return INVALID;
+        }
+        const pairs = [];
+        const keyType = this._def.keyType;
+        const valueType = this._def.valueType;
+        for(const key in ctx.data)pairs.push({
+            key: keyType._parse(new ParseInputLazyPath(ctx, key, ctx.path, key)),
+            value: valueType._parse(new ParseInputLazyPath(ctx, ctx.data[key], ctx.path, key)),
+            alwaysSet: key in ctx.data
+        });
+        if (ctx.common.async) return ParseStatus.mergeObjectAsync(status, pairs);
+        else return ParseStatus.mergeObjectSync(status, pairs);
+    }
+    get element() {
+        return this._def.valueType;
+    }
+    static create(first, second, third) {
+        if (second instanceof ZodType) return new ZodRecord({
+            keyType: first,
+            valueType: second,
+            typeName: ZodFirstPartyTypeKind.ZodRecord,
+            ...processCreateParams(third)
+        });
+        return new ZodRecord({
+            keyType: ZodString.create(),
+            valueType: first,
+            typeName: ZodFirstPartyTypeKind.ZodRecord,
+            ...processCreateParams(second)
+        });
+    }
+}
+class ZodMap extends ZodType {
+    get keySchema() {
+        return this._def.keyType;
+    }
+    get valueSchema() {
+        return this._def.valueType;
+    }
+    _parse(input) {
+        const { status, ctx } = this._processInputParams(input);
+        if (ctx.parsedType !== ZodParsedType.map) {
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.invalid_type,
+                expected: ZodParsedType.map,
+                received: ctx.parsedType
+            });
+            return INVALID;
+        }
+        const keyType = this._def.keyType;
+        const valueType = this._def.valueType;
+        const pairs = [
+            ...ctx.data.entries()
+        ].map(([key, value], index)=>{
+            return {
+                key: keyType._parse(new ParseInputLazyPath(ctx, key, ctx.path, [
+                    index,
+                    "key"
+                ])),
+                value: valueType._parse(new ParseInputLazyPath(ctx, value, ctx.path, [
+                    index,
+                    "value"
+                ]))
+            };
+        });
+        if (ctx.common.async) {
+            const finalMap = new Map();
+            return Promise.resolve().then(async ()=>{
+                for (const pair of pairs){
+                    const key = await pair.key;
+                    const value = await pair.value;
+                    if (key.status === "aborted" || value.status === "aborted") return INVALID;
+                    if (key.status === "dirty" || value.status === "dirty") status.dirty();
+                    finalMap.set(key.value, value.value);
+                }
+                return {
+                    status: status.value,
+                    value: finalMap
+                };
+            });
+        } else {
+            const finalMap = new Map();
+            for (const pair of pairs){
+                const key = pair.key;
+                const value = pair.value;
+                if (key.status === "aborted" || value.status === "aborted") return INVALID;
+                if (key.status === "dirty" || value.status === "dirty") status.dirty();
+                finalMap.set(key.value, value.value);
+            }
+            return {
+                status: status.value,
+                value: finalMap
+            };
+        }
+    }
+}
+ZodMap.create = (keyType, valueType, params)=>{
+    return new ZodMap({
+        valueType,
+        keyType,
+        typeName: ZodFirstPartyTypeKind.ZodMap,
+        ...processCreateParams(params)
+    });
+};
+class ZodSet extends ZodType {
+    _parse(input) {
+        const { status, ctx } = this._processInputParams(input);
+        if (ctx.parsedType !== ZodParsedType.set) {
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.invalid_type,
+                expected: ZodParsedType.set,
+                received: ctx.parsedType
+            });
+            return INVALID;
+        }
+        const def = this._def;
+        if (def.minSize !== null) {
+            if (ctx.data.size < def.minSize.value) {
+                addIssueToContext(ctx, {
+                    code: ZodIssueCode.too_small,
+                    minimum: def.minSize.value,
+                    type: "set",
+                    inclusive: true,
+                    exact: false,
+                    message: def.minSize.message
+                });
+                status.dirty();
+            }
+        }
+        if (def.maxSize !== null) {
+            if (ctx.data.size > def.maxSize.value) {
+                addIssueToContext(ctx, {
+                    code: ZodIssueCode.too_big,
+                    maximum: def.maxSize.value,
+                    type: "set",
+                    inclusive: true,
+                    exact: false,
+                    message: def.maxSize.message
+                });
+                status.dirty();
+            }
+        }
+        const valueType = this._def.valueType;
+        function finalizeSet(elements) {
+            const parsedSet = new Set();
+            for (const element of elements){
+                if (element.status === "aborted") return INVALID;
+                if (element.status === "dirty") status.dirty();
+                parsedSet.add(element.value);
+            }
+            return {
+                status: status.value,
+                value: parsedSet
+            };
+        }
+        const elements = [
+            ...ctx.data.values()
+        ].map((item, i)=>valueType._parse(new ParseInputLazyPath(ctx, item, ctx.path, i)));
+        if (ctx.common.async) return Promise.all(elements).then((elements)=>finalizeSet(elements));
+        else return finalizeSet(elements);
+    }
+    min(minSize, message) {
+        return new ZodSet({
+            ...this._def,
+            minSize: {
+                value: minSize,
+                message: errorUtil.toString(message)
+            }
+        });
+    }
+    max(maxSize, message) {
+        return new ZodSet({
+            ...this._def,
+            maxSize: {
+                value: maxSize,
+                message: errorUtil.toString(message)
+            }
+        });
+    }
+    size(size, message) {
+        return this.min(size, message).max(size, message);
+    }
+    nonempty(message) {
+        return this.min(1, message);
+    }
+}
+ZodSet.create = (valueType, params)=>{
+    return new ZodSet({
+        valueType,
+        minSize: null,
+        maxSize: null,
+        typeName: ZodFirstPartyTypeKind.ZodSet,
+        ...processCreateParams(params)
+    });
+};
+class ZodFunction extends ZodType {
+    constructor(){
+        super(...arguments);
+        this.validate = this.implement;
+    }
+    _parse(input) {
+        const { ctx } = this._processInputParams(input);
+        if (ctx.parsedType !== ZodParsedType.function) {
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.invalid_type,
+                expected: ZodParsedType.function,
+                received: ctx.parsedType
+            });
+            return INVALID;
+        }
+        function makeArgsIssue(args, error) {
+            return makeIssue({
+                data: args,
+                path: ctx.path,
+                errorMaps: [
+                    ctx.common.contextualErrorMap,
+                    ctx.schemaErrorMap,
+                    getErrorMap(),
+                    errorMap
+                ].filter((x)=>!!x),
+                issueData: {
+                    code: ZodIssueCode.invalid_arguments,
+                    argumentsError: error
+                }
+            });
+        }
+        function makeReturnsIssue(returns, error) {
+            return makeIssue({
+                data: returns,
+                path: ctx.path,
+                errorMaps: [
+                    ctx.common.contextualErrorMap,
+                    ctx.schemaErrorMap,
+                    getErrorMap(),
+                    errorMap
+                ].filter((x)=>!!x),
+                issueData: {
+                    code: ZodIssueCode.invalid_return_type,
+                    returnTypeError: error
+                }
+            });
+        }
+        const params = {
+            errorMap: ctx.common.contextualErrorMap
+        };
+        const fn = ctx.data;
+        if (this._def.returns instanceof ZodPromise) {
+            // Would love a way to avoid disabling this rule, but we need
+            // an alias (using an arrow function was what caused 2651).
+            // eslint-disable-next-line @typescript-eslint/no-this-alias
+            const me = this;
+            return OK(async function(...args) {
+                const error = new ZodError([]);
+                const parsedArgs = await me._def.args.parseAsync(args, params).catch((e)=>{
+                    error.addIssue(makeArgsIssue(args, e));
+                    throw error;
+                });
+                const result = await Reflect.apply(fn, this, parsedArgs);
+                const parsedReturns = await me._def.returns._def.type.parseAsync(result, params).catch((e)=>{
+                    error.addIssue(makeReturnsIssue(result, e));
+                    throw error;
+                });
+                return parsedReturns;
+            });
+        } else {
+            // Would love a way to avoid disabling this rule, but we need
+            // an alias (using an arrow function was what caused 2651).
+            // eslint-disable-next-line @typescript-eslint/no-this-alias
+            const me = this;
+            return OK(function(...args) {
+                const parsedArgs = me._def.args.safeParse(args, params);
+                if (!parsedArgs.success) throw new ZodError([
+                    makeArgsIssue(args, parsedArgs.error)
+                ]);
+                const result = Reflect.apply(fn, this, parsedArgs.data);
+                const parsedReturns = me._def.returns.safeParse(result, params);
+                if (!parsedReturns.success) throw new ZodError([
+                    makeReturnsIssue(result, parsedReturns.error)
+                ]);
+                return parsedReturns.data;
+            });
+        }
+    }
+    parameters() {
+        return this._def.args;
+    }
+    returnType() {
+        return this._def.returns;
+    }
+    args(...items) {
+        return new ZodFunction({
+            ...this._def,
+            args: ZodTuple.create(items).rest(ZodUnknown.create())
+        });
+    }
+    returns(returnType) {
+        return new ZodFunction({
+            ...this._def,
+            returns: returnType
+        });
+    }
+    implement(func) {
+        const validatedFunc = this.parse(func);
+        return validatedFunc;
+    }
+    strictImplement(func) {
+        const validatedFunc = this.parse(func);
+        return validatedFunc;
+    }
+    static create(args, returns, params) {
+        return new ZodFunction({
+            args: args ? args : ZodTuple.create([]).rest(ZodUnknown.create()),
+            returns: returns || ZodUnknown.create(),
+            typeName: ZodFirstPartyTypeKind.ZodFunction,
+            ...processCreateParams(params)
+        });
+    }
+}
+class ZodLazy extends ZodType {
+    get schema() {
+        return this._def.getter();
+    }
+    _parse(input) {
+        const { ctx } = this._processInputParams(input);
+        const lazySchema = this._def.getter();
+        return lazySchema._parse({
+            data: ctx.data,
+            path: ctx.path,
+            parent: ctx
+        });
+    }
+}
+ZodLazy.create = (getter, params)=>{
+    return new ZodLazy({
+        getter: getter,
+        typeName: ZodFirstPartyTypeKind.ZodLazy,
+        ...processCreateParams(params)
+    });
+};
+class ZodLiteral extends ZodType {
+    _parse(input) {
+        if (input.data !== this._def.value) {
+            const ctx = this._getOrReturnCtx(input);
+            addIssueToContext(ctx, {
+                received: ctx.data,
+                code: ZodIssueCode.invalid_literal,
+                expected: this._def.value
+            });
+            return INVALID;
+        }
+        return {
+            status: "valid",
+            value: input.data
+        };
+    }
+    get value() {
+        return this._def.value;
+    }
+}
+ZodLiteral.create = (value, params)=>{
+    return new ZodLiteral({
+        value: value,
+        typeName: ZodFirstPartyTypeKind.ZodLiteral,
+        ...processCreateParams(params)
+    });
+};
+function createZodEnum(values, params) {
+    return new ZodEnum({
+        values,
+        typeName: ZodFirstPartyTypeKind.ZodEnum,
+        ...processCreateParams(params)
+    });
+}
+class ZodEnum extends ZodType {
+    constructor(){
+        super(...arguments);
+        _ZodEnum_cache.set(this, void 0);
+    }
+    _parse(input) {
+        if (typeof input.data !== "string") {
+            const ctx = this._getOrReturnCtx(input);
+            const expectedValues = this._def.values;
+            addIssueToContext(ctx, {
+                expected: util.joinValues(expectedValues),
+                received: ctx.parsedType,
+                code: ZodIssueCode.invalid_type
+            });
+            return INVALID;
+        }
+        if (!__classPrivateFieldGet(this, _ZodEnum_cache, "f")) __classPrivateFieldSet(this, _ZodEnum_cache, new Set(this._def.values), "f");
+        if (!__classPrivateFieldGet(this, _ZodEnum_cache, "f").has(input.data)) {
+            const ctx = this._getOrReturnCtx(input);
+            const expectedValues = this._def.values;
+            addIssueToContext(ctx, {
+                received: ctx.data,
+                code: ZodIssueCode.invalid_enum_value,
+                options: expectedValues
+            });
+            return INVALID;
+        }
+        return OK(input.data);
+    }
+    get options() {
+        return this._def.values;
+    }
+    get enum() {
+        const enumValues = {};
+        for (const val of this._def.values)enumValues[val] = val;
+        return enumValues;
+    }
+    get Values() {
+        const enumValues = {};
+        for (const val of this._def.values)enumValues[val] = val;
+        return enumValues;
+    }
+    get Enum() {
+        const enumValues = {};
+        for (const val of this._def.values)enumValues[val] = val;
+        return enumValues;
+    }
+    extract(values, newDef = this._def) {
+        return ZodEnum.create(values, {
+            ...this._def,
+            ...newDef
+        });
+    }
+    exclude(values, newDef = this._def) {
+        return ZodEnum.create(this.options.filter((opt)=>!values.includes(opt)), {
+            ...this._def,
+            ...newDef
+        });
+    }
+}
+_ZodEnum_cache = new WeakMap();
+ZodEnum.create = createZodEnum;
+class ZodNativeEnum extends ZodType {
+    constructor(){
+        super(...arguments);
+        _ZodNativeEnum_cache.set(this, void 0);
+    }
+    _parse(input) {
+        const nativeEnumValues = util.getValidEnumValues(this._def.values);
+        const ctx = this._getOrReturnCtx(input);
+        if (ctx.parsedType !== ZodParsedType.string && ctx.parsedType !== ZodParsedType.number) {
+            const expectedValues = util.objectValues(nativeEnumValues);
+            addIssueToContext(ctx, {
+                expected: util.joinValues(expectedValues),
+                received: ctx.parsedType,
+                code: ZodIssueCode.invalid_type
+            });
+            return INVALID;
+        }
+        if (!__classPrivateFieldGet(this, _ZodNativeEnum_cache, "f")) __classPrivateFieldSet(this, _ZodNativeEnum_cache, new Set(util.getValidEnumValues(this._def.values)), "f");
+        if (!__classPrivateFieldGet(this, _ZodNativeEnum_cache, "f").has(input.data)) {
+            const expectedValues = util.objectValues(nativeEnumValues);
+            addIssueToContext(ctx, {
+                received: ctx.data,
+                code: ZodIssueCode.invalid_enum_value,
+                options: expectedValues
+            });
+            return INVALID;
+        }
+        return OK(input.data);
+    }
+    get enum() {
+        return this._def.values;
+    }
+}
+_ZodNativeEnum_cache = new WeakMap();
+ZodNativeEnum.create = (values, params)=>{
+    return new ZodNativeEnum({
+        values: values,
+        typeName: ZodFirstPartyTypeKind.ZodNativeEnum,
+        ...processCreateParams(params)
+    });
+};
+class ZodPromise extends ZodType {
+    unwrap() {
+        return this._def.type;
+    }
+    _parse(input) {
+        const { ctx } = this._processInputParams(input);
+        if (ctx.parsedType !== ZodParsedType.promise && ctx.common.async === false) {
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.invalid_type,
+                expected: ZodParsedType.promise,
+                received: ctx.parsedType
+            });
+            return INVALID;
+        }
+        const promisified = ctx.parsedType === ZodParsedType.promise ? ctx.data : Promise.resolve(ctx.data);
+        return OK(promisified.then((data)=>{
+            return this._def.type.parseAsync(data, {
+                path: ctx.path,
+                errorMap: ctx.common.contextualErrorMap
+            });
+        }));
+    }
+}
+ZodPromise.create = (schema, params)=>{
+    return new ZodPromise({
+        type: schema,
+        typeName: ZodFirstPartyTypeKind.ZodPromise,
+        ...processCreateParams(params)
+    });
+};
+class ZodEffects extends ZodType {
+    innerType() {
+        return this._def.schema;
+    }
+    sourceType() {
+        return this._def.schema._def.typeName === ZodFirstPartyTypeKind.ZodEffects ? this._def.schema.sourceType() : this._def.schema;
+    }
+    _parse(input) {
+        const { status, ctx } = this._processInputParams(input);
+        const effect = this._def.effect || null;
+        const checkCtx = {
+            addIssue: (arg)=>{
+                addIssueToContext(ctx, arg);
+                if (arg.fatal) status.abort();
+                else status.dirty();
+            },
+            get path () {
+                return ctx.path;
+            }
+        };
+        checkCtx.addIssue = checkCtx.addIssue.bind(checkCtx);
+        if (effect.type === "preprocess") {
+            const processed = effect.transform(ctx.data, checkCtx);
+            if (ctx.common.async) return Promise.resolve(processed).then(async (processed)=>{
+                if (status.value === "aborted") return INVALID;
+                const result = await this._def.schema._parseAsync({
+                    data: processed,
+                    path: ctx.path,
+                    parent: ctx
+                });
+                if (result.status === "aborted") return INVALID;
+                if (result.status === "dirty") return DIRTY(result.value);
+                if (status.value === "dirty") return DIRTY(result.value);
+                return result;
+            });
+            else {
+                if (status.value === "aborted") return INVALID;
+                const result = this._def.schema._parseSync({
+                    data: processed,
+                    path: ctx.path,
+                    parent: ctx
+                });
+                if (result.status === "aborted") return INVALID;
+                if (result.status === "dirty") return DIRTY(result.value);
+                if (status.value === "dirty") return DIRTY(result.value);
+                return result;
+            }
+        }
+        if (effect.type === "refinement") {
+            const executeRefinement = (acc)=>{
+                const result = effect.refinement(acc, checkCtx);
+                if (ctx.common.async) return Promise.resolve(result);
+                if (result instanceof Promise) throw new Error("Async refinement encountered during synchronous parse operation. Use .parseAsync instead.");
+                return acc;
+            };
+            if (ctx.common.async === false) {
+                const inner = this._def.schema._parseSync({
+                    data: ctx.data,
+                    path: ctx.path,
+                    parent: ctx
+                });
+                if (inner.status === "aborted") return INVALID;
+                if (inner.status === "dirty") status.dirty();
+                // return value is ignored
+                executeRefinement(inner.value);
+                return {
+                    status: status.value,
+                    value: inner.value
+                };
+            } else return this._def.schema._parseAsync({
+                data: ctx.data,
+                path: ctx.path,
+                parent: ctx
+            }).then((inner)=>{
+                if (inner.status === "aborted") return INVALID;
+                if (inner.status === "dirty") status.dirty();
+                return executeRefinement(inner.value).then(()=>{
+                    return {
+                        status: status.value,
+                        value: inner.value
+                    };
+                });
+            });
+        }
+        if (effect.type === "transform") {
+            if (ctx.common.async === false) {
+                const base = this._def.schema._parseSync({
+                    data: ctx.data,
+                    path: ctx.path,
+                    parent: ctx
+                });
+                if (!isValid(base)) return base;
+                const result = effect.transform(base.value, checkCtx);
+                if (result instanceof Promise) throw new Error(`Asynchronous transform encountered during synchronous parse operation. Use .parseAsync instead.`);
+                return {
+                    status: status.value,
+                    value: result
+                };
+            } else return this._def.schema._parseAsync({
+                data: ctx.data,
+                path: ctx.path,
+                parent: ctx
+            }).then((base)=>{
+                if (!isValid(base)) return base;
+                return Promise.resolve(effect.transform(base.value, checkCtx)).then((result)=>({
+                        status: status.value,
+                        value: result
+                    }));
+            });
+        }
+        util.assertNever(effect);
+    }
+}
+ZodEffects.create = (schema, effect, params)=>{
+    return new ZodEffects({
+        schema,
+        typeName: ZodFirstPartyTypeKind.ZodEffects,
+        effect,
+        ...processCreateParams(params)
+    });
+};
+ZodEffects.createWithPreprocess = (preprocess, schema, params)=>{
+    return new ZodEffects({
+        schema,
+        effect: {
+            type: "preprocess",
+            transform: preprocess
+        },
+        typeName: ZodFirstPartyTypeKind.ZodEffects,
+        ...processCreateParams(params)
+    });
+};
+class ZodOptional extends ZodType {
+    _parse(input) {
+        const parsedType = this._getType(input);
+        if (parsedType === ZodParsedType.undefined) return OK(undefined);
+        return this._def.innerType._parse(input);
+    }
+    unwrap() {
+        return this._def.innerType;
+    }
+}
+ZodOptional.create = (type, params)=>{
+    return new ZodOptional({
+        innerType: type,
+        typeName: ZodFirstPartyTypeKind.ZodOptional,
+        ...processCreateParams(params)
+    });
+};
+class ZodNullable extends ZodType {
+    _parse(input) {
+        const parsedType = this._getType(input);
+        if (parsedType === ZodParsedType.null) return OK(null);
+        return this._def.innerType._parse(input);
+    }
+    unwrap() {
+        return this._def.innerType;
+    }
+}
+ZodNullable.create = (type, params)=>{
+    return new ZodNullable({
+        innerType: type,
+        typeName: ZodFirstPartyTypeKind.ZodNullable,
+        ...processCreateParams(params)
+    });
+};
+class ZodDefault extends ZodType {
+    _parse(input) {
+        const { ctx } = this._processInputParams(input);
+        let data = ctx.data;
+        if (ctx.parsedType === ZodParsedType.undefined) data = this._def.defaultValue();
+        return this._def.innerType._parse({
+            data,
+            path: ctx.path,
+            parent: ctx
+        });
+    }
+    removeDefault() {
+        return this._def.innerType;
+    }
+}
+ZodDefault.create = (type, params)=>{
+    return new ZodDefault({
+        innerType: type,
+        typeName: ZodFirstPartyTypeKind.ZodDefault,
+        defaultValue: typeof params.default === "function" ? params.default : ()=>params.default,
+        ...processCreateParams(params)
+    });
+};
+class ZodCatch extends ZodType {
+    _parse(input) {
+        const { ctx } = this._processInputParams(input);
+        // newCtx is used to not collect issues from inner types in ctx
+        const newCtx = {
+            ...ctx,
+            common: {
+                ...ctx.common,
+                issues: []
+            }
+        };
+        const result = this._def.innerType._parse({
+            data: newCtx.data,
+            path: newCtx.path,
+            parent: {
+                ...newCtx
+            }
+        });
+        if (isAsync(result)) return result.then((result)=>{
+            return {
+                status: "valid",
+                value: result.status === "valid" ? result.value : this._def.catchValue({
+                    get error () {
+                        return new ZodError(newCtx.common.issues);
+                    },
+                    input: newCtx.data
+                })
+            };
+        });
+        else return {
+            status: "valid",
+            value: result.status === "valid" ? result.value : this._def.catchValue({
+                get error () {
+                    return new ZodError(newCtx.common.issues);
+                },
+                input: newCtx.data
+            })
+        };
+    }
+    removeCatch() {
+        return this._def.innerType;
+    }
+}
+ZodCatch.create = (type, params)=>{
+    return new ZodCatch({
+        innerType: type,
+        typeName: ZodFirstPartyTypeKind.ZodCatch,
+        catchValue: typeof params.catch === "function" ? params.catch : ()=>params.catch,
+        ...processCreateParams(params)
+    });
+};
+class ZodNaN extends ZodType {
+    _parse(input) {
+        const parsedType = this._getType(input);
+        if (parsedType !== ZodParsedType.nan) {
+            const ctx = this._getOrReturnCtx(input);
+            addIssueToContext(ctx, {
+                code: ZodIssueCode.invalid_type,
+                expected: ZodParsedType.nan,
+                received: ctx.parsedType
+            });
+            return INVALID;
+        }
+        return {
+            status: "valid",
+            value: input.data
+        };
+    }
+}
+ZodNaN.create = (params)=>{
+    return new ZodNaN({
+        typeName: ZodFirstPartyTypeKind.ZodNaN,
+        ...processCreateParams(params)
+    });
+};
+const BRAND = Symbol("zod_brand");
+class ZodBranded extends ZodType {
+    _parse(input) {
+        const { ctx } = this._processInputParams(input);
+        const data = ctx.data;
+        return this._def.type._parse({
+            data,
+            path: ctx.path,
+            parent: ctx
+        });
+    }
+    unwrap() {
+        return this._def.type;
+    }
+}
+class ZodPipeline extends ZodType {
+    _parse(input) {
+        const { status, ctx } = this._processInputParams(input);
+        if (ctx.common.async) {
+            const handleAsync = async ()=>{
+                const inResult = await this._def.in._parseAsync({
+                    data: ctx.data,
+                    path: ctx.path,
+                    parent: ctx
+                });
+                if (inResult.status === "aborted") return INVALID;
+                if (inResult.status === "dirty") {
+                    status.dirty();
+                    return DIRTY(inResult.value);
+                } else return this._def.out._parseAsync({
+                    data: inResult.value,
+                    path: ctx.path,
+                    parent: ctx
+                });
+            };
+            return handleAsync();
+        } else {
+            const inResult = this._def.in._parseSync({
+                data: ctx.data,
+                path: ctx.path,
+                parent: ctx
+            });
+            if (inResult.status === "aborted") return INVALID;
+            if (inResult.status === "dirty") {
+                status.dirty();
+                return {
+                    status: "dirty",
+                    value: inResult.value
+                };
+            } else return this._def.out._parseSync({
+                data: inResult.value,
+                path: ctx.path,
+                parent: ctx
+            });
+        }
+    }
+    static create(a, b) {
+        return new ZodPipeline({
+            in: a,
+            out: b,
+            typeName: ZodFirstPartyTypeKind.ZodPipeline
+        });
+    }
+}
+class ZodReadonly extends ZodType {
+    _parse(input) {
+        const result = this._def.innerType._parse(input);
+        if (isValid(result)) result.value = Object.freeze(result.value);
+        return result;
+    }
+    unwrap() {
+        return this._def.innerType;
+    }
+}
+ZodReadonly.create = (type, params)=>{
+    return new ZodReadonly({
+        innerType: type,
+        typeName: ZodFirstPartyTypeKind.ZodReadonly,
+        ...processCreateParams(params)
+    });
+};
+function custom(check, params = {}, /**
+ * @deprecated
+ *
+ * Pass `fatal` into the params object instead:
+ *
+ * ```ts
+ * z.string().custom((val) => val.length > 5, { fatal: false })
+ * ```
+ *
+ */ fatal) {
+    if (check) return ZodAny.create().superRefine((data, ctx)=>{
+        var _a, _b;
+        if (!check(data)) {
+            const p = typeof params === "function" ? params(data) : typeof params === "string" ? {
+                message: params
+            } : params;
+            const _fatal = (_b = (_a = p.fatal) !== null && _a !== void 0 ? _a : fatal) !== null && _b !== void 0 ? _b : true;
+            const p2 = typeof p === "string" ? {
+                message: p
+            } : p;
+            ctx.addIssue({
+                code: "custom",
+                ...p2,
+                fatal: _fatal
+            });
+        }
+    });
+    return ZodAny.create();
+}
+const late = {
+    object: ZodObject.lazycreate
+};
+var ZodFirstPartyTypeKind;
+(function(ZodFirstPartyTypeKind) {
+    ZodFirstPartyTypeKind["ZodString"] = "ZodString";
+    ZodFirstPartyTypeKind["ZodNumber"] = "ZodNumber";
+    ZodFirstPartyTypeKind["ZodNaN"] = "ZodNaN";
+    ZodFirstPartyTypeKind["ZodBigInt"] = "ZodBigInt";
+    ZodFirstPartyTypeKind["ZodBoolean"] = "ZodBoolean";
+    ZodFirstPartyTypeKind["ZodDate"] = "ZodDate";
+    ZodFirstPartyTypeKind["ZodSymbol"] = "ZodSymbol";
+    ZodFirstPartyTypeKind["ZodUndefined"] = "ZodUndefined";
+    ZodFirstPartyTypeKind["ZodNull"] = "ZodNull";
+    ZodFirstPartyTypeKind["ZodAny"] = "ZodAny";
+    ZodFirstPartyTypeKind["ZodUnknown"] = "ZodUnknown";
+    ZodFirstPartyTypeKind["ZodNever"] = "ZodNever";
+    ZodFirstPartyTypeKind["ZodVoid"] = "ZodVoid";
+    ZodFirstPartyTypeKind["ZodArray"] = "ZodArray";
+    ZodFirstPartyTypeKind["ZodObject"] = "ZodObject";
+    ZodFirstPartyTypeKind["ZodUnion"] = "ZodUnion";
+    ZodFirstPartyTypeKind["ZodDiscriminatedUnion"] = "ZodDiscriminatedUnion";
+    ZodFirstPartyTypeKind["ZodIntersection"] = "ZodIntersection";
+    ZodFirstPartyTypeKind["ZodTuple"] = "ZodTuple";
+    ZodFirstPartyTypeKind["ZodRecord"] = "ZodRecord";
+    ZodFirstPartyTypeKind["ZodMap"] = "ZodMap";
+    ZodFirstPartyTypeKind["ZodSet"] = "ZodSet";
+    ZodFirstPartyTypeKind["ZodFunction"] = "ZodFunction";
+    ZodFirstPartyTypeKind["ZodLazy"] = "ZodLazy";
+    ZodFirstPartyTypeKind["ZodLiteral"] = "ZodLiteral";
+    ZodFirstPartyTypeKind["ZodEnum"] = "ZodEnum";
+    ZodFirstPartyTypeKind["ZodEffects"] = "ZodEffects";
+    ZodFirstPartyTypeKind["ZodNativeEnum"] = "ZodNativeEnum";
+    ZodFirstPartyTypeKind["ZodOptional"] = "ZodOptional";
+    ZodFirstPartyTypeKind["ZodNullable"] = "ZodNullable";
+    ZodFirstPartyTypeKind["ZodDefault"] = "ZodDefault";
+    ZodFirstPartyTypeKind["ZodCatch"] = "ZodCatch";
+    ZodFirstPartyTypeKind["ZodPromise"] = "ZodPromise";
+    ZodFirstPartyTypeKind["ZodBranded"] = "ZodBranded";
+    ZodFirstPartyTypeKind["ZodPipeline"] = "ZodPipeline";
+    ZodFirstPartyTypeKind["ZodReadonly"] = "ZodReadonly";
+})(ZodFirstPartyTypeKind || (ZodFirstPartyTypeKind = {}));
+const instanceOfType = (// const instanceOfType = <T extends new (...args: any[]) => any>(
+cls, params = {
+    message: `Input not instance of ${cls.name}`
+})=>custom((data)=>data instanceof cls, params);
+const stringType = ZodString.create;
+const numberType = ZodNumber.create;
+const nanType = ZodNaN.create;
+const bigIntType = ZodBigInt.create;
+const booleanType = ZodBoolean.create;
+const dateType = ZodDate.create;
+const symbolType = ZodSymbol.create;
+const undefinedType = ZodUndefined.create;
+const nullType = ZodNull.create;
+const anyType = ZodAny.create;
+const unknownType = ZodUnknown.create;
+const neverType = ZodNever.create;
+const voidType = ZodVoid.create;
+const arrayType = ZodArray.create;
+const objectType = ZodObject.create;
+const strictObjectType = ZodObject.strictCreate;
+const unionType = ZodUnion.create;
+const discriminatedUnionType = ZodDiscriminatedUnion.create;
+const intersectionType = ZodIntersection.create;
+const tupleType = ZodTuple.create;
+const recordType = ZodRecord.create;
+const mapType = ZodMap.create;
+const setType = ZodSet.create;
+const functionType = ZodFunction.create;
+const lazyType = ZodLazy.create;
+const literalType = ZodLiteral.create;
+const enumType = ZodEnum.create;
+const nativeEnumType = ZodNativeEnum.create;
+const promiseType = ZodPromise.create;
+const effectsType = ZodEffects.create;
+const optionalType = ZodOptional.create;
+const nullableType = ZodNullable.create;
+const preprocessType = ZodEffects.createWithPreprocess;
+const pipelineType = ZodPipeline.create;
+const ostring = ()=>stringType().optional();
+const onumber = ()=>numberType().optional();
+const oboolean = ()=>booleanType().optional();
+const coerce = {
+    string: (arg)=>ZodString.create({
+            ...arg,
+            coerce: true
+        }),
+    number: (arg)=>ZodNumber.create({
+            ...arg,
+            coerce: true
+        }),
+    boolean: (arg)=>ZodBoolean.create({
+            ...arg,
+            coerce: true
+        }),
+    bigint: (arg)=>ZodBigInt.create({
+            ...arg,
+            coerce: true
+        }),
+    date: (arg)=>ZodDate.create({
+            ...arg,
+            coerce: true
+        })
+};
+const NEVER = INVALID;
+var z = /*#__PURE__*/ Object.freeze({
+    __proto__: null,
+    defaultErrorMap: errorMap,
+    setErrorMap: setErrorMap,
+    getErrorMap: getErrorMap,
+    makeIssue: makeIssue,
+    EMPTY_PATH: EMPTY_PATH,
+    addIssueToContext: addIssueToContext,
+    ParseStatus: ParseStatus,
+    INVALID: INVALID,
+    DIRTY: DIRTY,
+    OK: OK,
+    isAborted: isAborted,
+    isDirty: isDirty,
+    isValid: isValid,
+    isAsync: isAsync,
+    get util () {
+        return util;
+    },
+    get objectUtil () {
+        return objectUtil;
+    },
+    ZodParsedType: ZodParsedType,
+    getParsedType: getParsedType,
+    ZodType: ZodType,
+    datetimeRegex: datetimeRegex,
+    ZodString: ZodString,
+    ZodNumber: ZodNumber,
+    ZodBigInt: ZodBigInt,
+    ZodBoolean: ZodBoolean,
+    ZodDate: ZodDate,
+    ZodSymbol: ZodSymbol,
+    ZodUndefined: ZodUndefined,
+    ZodNull: ZodNull,
+    ZodAny: ZodAny,
+    ZodUnknown: ZodUnknown,
+    ZodNever: ZodNever,
+    ZodVoid: ZodVoid,
+    ZodArray: ZodArray,
+    ZodObject: ZodObject,
+    ZodUnion: ZodUnion,
+    ZodDiscriminatedUnion: ZodDiscriminatedUnion,
+    ZodIntersection: ZodIntersection,
+    ZodTuple: ZodTuple,
+    ZodRecord: ZodRecord,
+    ZodMap: ZodMap,
+    ZodSet: ZodSet,
+    ZodFunction: ZodFunction,
+    ZodLazy: ZodLazy,
+    ZodLiteral: ZodLiteral,
+    ZodEnum: ZodEnum,
+    ZodNativeEnum: ZodNativeEnum,
+    ZodPromise: ZodPromise,
+    ZodEffects: ZodEffects,
+    ZodTransformer: ZodEffects,
+    ZodOptional: ZodOptional,
+    ZodNullable: ZodNullable,
+    ZodDefault: ZodDefault,
+    ZodCatch: ZodCatch,
+    ZodNaN: ZodNaN,
+    BRAND: BRAND,
+    ZodBranded: ZodBranded,
+    ZodPipeline: ZodPipeline,
+    ZodReadonly: ZodReadonly,
+    custom: custom,
+    Schema: ZodType,
+    ZodSchema: ZodType,
+    late: late,
+    get ZodFirstPartyTypeKind () {
+        return ZodFirstPartyTypeKind;
+    },
+    coerce: coerce,
+    any: anyType,
+    array: arrayType,
+    bigint: bigIntType,
+    boolean: booleanType,
+    date: dateType,
+    discriminatedUnion: discriminatedUnionType,
+    effect: effectsType,
+    "enum": enumType,
+    "function": functionType,
+    "instanceof": instanceOfType,
+    intersection: intersectionType,
+    lazy: lazyType,
+    literal: literalType,
+    map: mapType,
+    nan: nanType,
+    nativeEnum: nativeEnumType,
+    never: neverType,
+    "null": nullType,
+    nullable: nullableType,
+    number: numberType,
+    object: objectType,
+    oboolean: oboolean,
+    onumber: onumber,
+    optional: optionalType,
+    ostring: ostring,
+    pipeline: pipelineType,
+    preprocess: preprocessType,
+    promise: promiseType,
+    record: recordType,
+    set: setType,
+    strictObject: strictObjectType,
+    string: stringType,
+    symbol: symbolType,
+    transformer: effectsType,
+    tuple: tupleType,
+    "undefined": undefinedType,
+    union: unionType,
+    unknown: unknownType,
+    "void": voidType,
+    NEVER: NEVER,
+    ZodIssueCode: ZodIssueCode,
+    quotelessJson: quotelessJson,
+    ZodError: ZodError
+});
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kBEyN":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$cc2f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -40491,7 +44629,7 @@ const AllChats = ()=>{
     const { allChats, setAllchats, chatData, setactiveChat, setchatData, isVisible, setisVisible } = (0, _react.useContext)((0, _userContextJs.userContext));
     const [creategc, setcreatgc] = (0, _react.useState)(false);
     const userinfo = JSON.parse(localStorage.getItem("userInfo"));
-    const token = userinfo.token;
+    const token = userinfo?.token;
     (0, _react.useEffect)(()=>{
         const url = "http://localhost:5000/api/chat/";
         (0, _axiosDefault.default).get(url, {
@@ -40506,12 +44644,12 @@ const AllChats = ()=>{
                 setactiveChat(sortedData[0]._id);
                 setchatData(sortedData[0]);
             }
-        }).catch((err)=>console.log(err.message));
+        }).catch((err)=>void 0);
     }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "w-full h-full  border-2 border-black rounded-lg bg-slate-50",
+                className: "w-full h-full  border-2 border-black rounded-lg bg-slate-50 mr-2",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "flex justify-between pt-5 px-3 items-center",
@@ -40521,7 +44659,7 @@ const AllChats = ()=>{
                                 children: "My Chats"
                             }, void 0, false, {
                                 fileName: "src/components/Chat/AllChats.jsx",
-                                lineNumber: 49,
+                                lineNumber: 39,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -40530,7 +44668,7 @@ const AllChats = ()=>{
                                 children: "Create Grp Chat \u2795"
                             }, void 0, false, {
                                 fileName: "src/components/Chat/AllChats.jsx",
-                                lineNumber: 50,
+                                lineNumber: 40,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -40539,13 +44677,13 @@ const AllChats = ()=>{
                                 children: "\u274C"
                             }, void 0, false, {
                                 fileName: "src/components/Chat/AllChats.jsx",
-                                lineNumber: 57,
+                                lineNumber: 44,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Chat/AllChats.jsx",
-                        lineNumber: 48,
+                        lineNumber: 38,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -40560,26 +44698,26 @@ const AllChats = ()=>{
                                     idx: index,
                                     __source: {
                                         fileName: "src/components/Chat/AllChats.jsx",
-                                        lineNumber: 69,
-                                        columnNumber: 19
+                                        lineNumber: 51,
+                                        columnNumber: 20
                                     },
                                     __self: undefined
                                 });
                             })
                         }, void 0, false, {
                             fileName: "src/components/Chat/AllChats.jsx",
-                            lineNumber: 66,
-                            columnNumber: 13
+                            lineNumber: 49,
+                            columnNumber: 37
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/Chat/AllChats.jsx",
-                        lineNumber: 64,
+                        lineNumber: 48,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Chat/AllChats.jsx",
-                lineNumber: 47,
+                lineNumber: 37,
                 columnNumber: 7
             }, undefined),
             creategc && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -40590,30 +44728,30 @@ const AllChats = ()=>{
                         setcreatgc: setcreatgc
                     }, void 0, false, {
                         fileName: "src/components/Chat/AllChats.jsx",
-                        lineNumber: 82,
+                        lineNumber: 61,
                         columnNumber: 13
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/Chat/AllChats.jsx",
-                    lineNumber: 81,
+                    lineNumber: 60,
                     columnNumber: 11
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Chat/AllChats.jsx",
-                lineNumber: 80,
-                columnNumber: 9
+                lineNumber: 59,
+                columnNumber: 20
             }, undefined),
             creategc && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "fixed inset-0 bg-black opacity-[88%] z-40"
             }, void 0, false, {
                 fileName: "src/components/Chat/AllChats.jsx",
-                lineNumber: 88,
-                columnNumber: 9
+                lineNumber: 65,
+                columnNumber: 20
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(AllChats, "SujOEMYIzB+iyvTfHJCctflS/VY=");
+_s(AllChats, "87yoWstOOD14cYYejmrJehIeciI=");
 _c = AllChats;
 exports.default = AllChats;
 var _c;
@@ -40644,34 +44782,35 @@ var _userContext = require("../../utils/userContext");
 var _s = $RefreshSig$();
 const ChatUserCard = ({ groupChat, data, idx })=>{
     _s();
-    const { searchuserId, setsearchuserId, token, setAllchats, setactiveChat, activeChat, chatData, setchatData } = (0, _react.useContext)((0, _userContext.userContext));
+    const { searchuserId, setsearchuserId, token, setAllchats, setactiveChat, activeChat, chatData, setchatData, isVisible, setisVisible } = (0, _react.useContext)((0, _userContext.userContext));
     // console.log(data);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
         onClick: ()=>{
             setactiveChat(data._id);
             setchatData(data);
+            setisVisible(!isVisible);
         },
         className: `border-2 px-2 py-2 rounded-md w-full text-left transition-all duration-300 ${data._id == activeChat ? "bg-black text-white hover:bg-black hover:text-white" : " hover:bg-black hover:text-white"}`,
         children: groupChat == true ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _groupchatCardDefault.default), {
             data: data
         }, void 0, false, {
             fileName: "src/components/Chat/ChatUserCard.jsx",
-            lineNumber: 33,
-            columnNumber: 9
+            lineNumber: 30,
+            columnNumber: 28
         }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _onetooneCardDefault.default), {
             data: data
         }, void 0, false, {
             fileName: "src/components/Chat/ChatUserCard.jsx",
-            lineNumber: 35,
-            columnNumber: 9
+            lineNumber: 30,
+            columnNumber: 60
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Chat/ChatUserCard.jsx",
-        lineNumber: 20,
-        columnNumber: 5
+        lineNumber: 24,
+        columnNumber: 10
     }, undefined);
 };
-_s(ChatUserCard, "n6Q93OBhffcCygIAFEXH/zpqamU=");
+_s(ChatUserCard, "vceqeIKTyofKP4haddAAP2PvFqo=");
 _c = ChatUserCard;
 exports.default = ChatUserCard;
 var _c;
@@ -40706,37 +44845,42 @@ const GroupchatCard = ({ data })=>{
                 children: name
             }, void 0, false, {
                 fileName: "src/components/Chat/groupchatCard.jsx",
-                lineNumber: 9,
+                lineNumber: 13,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex text-[0.8em]",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: latestMessage?.sender?.name
-                    }, void 0, false, {
+                        children: [
+                            latestMessage?.sender?.name,
+                            latestMessage?.sender?.name && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                                children: "\xa0:\xa0"
+                            }, void 0, false)
+                        ]
+                    }, void 0, true, {
                         fileName: "src/components/Chat/groupchatCard.jsx",
-                        lineNumber: 11,
+                        lineNumber: 15,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         children: latestMessage?.content
                     }, void 0, false, {
                         fileName: "src/components/Chat/groupchatCard.jsx",
-                        lineNumber: 12,
+                        lineNumber: 19,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Chat/groupchatCard.jsx",
-                lineNumber: 10,
+                lineNumber: 14,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Chat/groupchatCard.jsx",
-        lineNumber: 8,
-        columnNumber: 5
+        lineNumber: 12,
+        columnNumber: 10
     }, undefined);
 };
 _c = GroupchatCard;
@@ -40768,44 +44912,49 @@ const OnetooneCard = ({ data })=>{
     if (users) {
         const name = users[1].name;
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "flex flex-col",
+            className: "flex flex-col gap-y-1",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                     className: "text-[1em]",
                     children: name
                 }, void 0, false, {
                     fileName: "src/components/Chat/onetooneCard.jsx",
-                    lineNumber: 12,
+                    lineNumber: 16,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "flex text-[0.8em]",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                            children: latestMessage?.sender?.name
-                        }, void 0, false, {
+                            children: [
+                                latestMessage?.sender?.name,
+                                latestMessage?.sender?.name && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                                    children: "\xa0:\xa0"
+                                }, void 0, false)
+                            ]
+                        }, void 0, true, {
                             fileName: "src/components/Chat/onetooneCard.jsx",
-                            lineNumber: 14,
+                            lineNumber: 18,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                             children: latestMessage?.content
                         }, void 0, false, {
                             fileName: "src/components/Chat/onetooneCard.jsx",
-                            lineNumber: 15,
+                            lineNumber: 22,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Chat/onetooneCard.jsx",
-                    lineNumber: 13,
+                    lineNumber: 17,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/Chat/onetooneCard.jsx",
-            lineNumber: 11,
-            columnNumber: 7
+            lineNumber: 15,
+            columnNumber: 12
         }, undefined);
     }
 };
@@ -40852,20 +45001,21 @@ const CreateGc = ({ setcreatgc })=>{
             }
         }).then((response)=>{
             setSearchUsers(response.data);
-        }).catch((err)=>{
-            console.log(err.message);
-        });
+        }).catch((err)=>{});
     }, [
         gcUserSearch
     ]);
     const clickHandler = async ()=>{
         const users = gcUsers.map((element)=>element._id);
+        if (users.length < 2) {
+            alert("Minimum of 3 users must be maintained");
+            return; // Return the previous state
+        }
         const formdata = {
             name: gcName,
             users: users
         };
         const finaldata = JSON.stringify(formdata);
-        console.log(finaldata);
         try {
             const response = await (0, _axiosDefault.default).post("http://localhost:5000/api/chat/group", finaldata, {
                 headers: {
@@ -40873,21 +45023,14 @@ const CreateGc = ({ setcreatgc })=>{
                     Authorization: `Bearer ${token}`
                 }
             });
-            console.log(response.data);
             setAllchats([
                 response.data.fullChat,
                 ...allChats
             ]);
             setactiveChat(response.data.fullChat._id);
             setchatData(response.data.fullChat);
-            console.log(allChats);
             setcreatgc(false);
-        } catch (error) {
-            console.log(error.message);
-            res.status(404).json({
-                msg: "Chat cannot be created"
-            });
-        }
+        } catch (error) {}
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -40901,7 +45044,7 @@ const CreateGc = ({ setcreatgc })=>{
                             children: "Create Group Chat"
                         }, void 0, false, {
                             fileName: "src/components/Chat/CreateGc.jsx",
-                            lineNumber: 67,
+                            lineNumber: 57,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -40912,7 +45055,7 @@ const CreateGc = ({ setcreatgc })=>{
                             onChange: (e)=>setGcName(e.target.value)
                         }, void 0, false, {
                             fileName: "src/components/Chat/CreateGc.jsx",
-                            lineNumber: 68,
+                            lineNumber: 58,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -40926,11 +45069,11 @@ const CreateGc = ({ setcreatgc })=>{
                             }
                         }, void 0, false, {
                             fileName: "src/components/Chat/CreateGc.jsx",
-                            lineNumber: 75,
+                            lineNumber: 59,
                             columnNumber: 11
                         }, undefined),
                         toggle && searchUsers.length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "w-[98%] md:w-[70%] max-h-60 overflow-y-auto hide-scrollbar border-2 border-black rounded-md mt-2",
+                            className: "w-[95%]  max-h-60 overflow-y-auto hide-scrollbar border-2 border-black rounded-md mt-2",
                             children: searchUsers.map((val, idx)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                     className: "w-full border-b border-black bg-slate-50 py-2 text-left hover:bg-green-400 transition-all duration-200 hover:border-white",
                                     onClick: ()=>{
@@ -40949,53 +45092,62 @@ const CreateGc = ({ setcreatgc })=>{
                                         setGcUserSearch("");
                                     },
                                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "flex gap-x-3 items-center px-2",
+                                        className: "flex md:gap-x-2 items-center px-2",
                                         children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _avatarDefault.default), {
-                                                name: val.name
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "flex-shrink-0",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _avatarDefault.default), {
+                                                    name: val.name
+                                                }, void 0, false, {
+                                                    fileName: "src/components/Chat/CreateGc.jsx",
+                                                    lineNumber: 75,
+                                                    columnNumber: 23
+                                                }, undefined)
                                             }, void 0, false, {
                                                 fileName: "src/components/Chat/CreateGc.jsx",
-                                                lineNumber: 107,
+                                                lineNumber: 74,
                                                 columnNumber: 21
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "flex-col gap-y-2",
+                                                className: "flex flex-col",
                                                 children: [
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                                        className: "break-words",
                                                         children: val.name
                                                     }, void 0, false, {
                                                         fileName: "src/components/Chat/CreateGc.jsx",
-                                                        lineNumber: 109,
+                                                        lineNumber: 79,
                                                         columnNumber: 23
                                                     }, undefined),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                                        className: "max-w-[99%] break-words",
                                                         children: val.email
                                                     }, void 0, false, {
                                                         fileName: "src/components/Chat/CreateGc.jsx",
-                                                        lineNumber: 110,
+                                                        lineNumber: 80,
                                                         columnNumber: 23
                                                     }, undefined)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/components/Chat/CreateGc.jsx",
-                                                lineNumber: 108,
+                                                lineNumber: 78,
                                                 columnNumber: 21
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/Chat/CreateGc.jsx",
-                                        lineNumber: 106,
+                                        lineNumber: 73,
                                         columnNumber: 19
                                     }, undefined)
                                 }, idx, false, {
                                     fileName: "src/components/Chat/CreateGc.jsx",
-                                    lineNumber: 89,
-                                    columnNumber: 17
+                                    lineNumber: 65,
+                                    columnNumber: 46
                                 }, undefined))
                         }, void 0, false, {
                             fileName: "src/components/Chat/CreateGc.jsx",
-                            lineNumber: 87,
-                            columnNumber: 13
+                            lineNumber: 64,
+                            columnNumber: 48
                         }, undefined),
                         gcUsers.length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "flex flex-wrap items-center w-[70%] gap-x-1 gap-y-2",
@@ -41008,7 +45160,7 @@ const CreateGc = ({ setcreatgc })=>{
                                             children: val.name
                                         }, void 0, false, {
                                             fileName: "src/components/Chat/CreateGc.jsx",
-                                            lineNumber: 123,
+                                            lineNumber: 89,
                                             columnNumber: 21
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -41018,20 +45170,20 @@ const CreateGc = ({ setcreatgc })=>{
                                             children: "\u2716"
                                         }, void 0, false, {
                                             fileName: "src/components/Chat/CreateGc.jsx",
-                                            lineNumber: 124,
+                                            lineNumber: 90,
                                             columnNumber: 21
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/Chat/CreateGc.jsx",
-                                    lineNumber: 122,
-                                    columnNumber: 19
+                                    lineNumber: 88,
+                                    columnNumber: 20
                                 }, undefined);
                             })
                         }, void 0, false, {
                             fileName: "src/components/Chat/CreateGc.jsx",
-                            lineNumber: 119,
-                            columnNumber: 13
+                            lineNumber: 86,
+                            columnNumber: 34
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                             className: " text-white bg-black rounded-md px-3 py-2 text-sm transform-cpu duration-300 active:scale-75",
@@ -41039,13 +45191,13 @@ const CreateGc = ({ setcreatgc })=>{
                             children: "Create Chat"
                         }, void 0, false, {
                             fileName: "src/components/Chat/CreateGc.jsx",
-                            lineNumber: 139,
+                            lineNumber: 99,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Chat/CreateGc.jsx",
-                    lineNumber: 66,
+                    lineNumber: 56,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -41057,18 +45209,18 @@ const CreateGc = ({ setcreatgc })=>{
                     children: "\u2716"
                 }, void 0, false, {
                     fileName: "src/components/Chat/CreateGc.jsx",
-                    lineNumber: 146,
+                    lineNumber: 103,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/Chat/CreateGc.jsx",
-            lineNumber: 65,
+            lineNumber: 55,
             columnNumber: 7
         }, undefined)
     }, void 0, false);
 };
-_s(CreateGc, "KRQa8bjgsukZrXnu/7wZaKsiXXk=");
+_s(CreateGc, "unus+hRY7rKxFB06otOX1DSYdmE=");
 _c = CreateGc;
 exports.default = CreateGc;
 var _c;
@@ -41123,7 +45275,7 @@ const SendMessage = ({ chatName, groupAdmin, users, _id })=>{
                                     children: "\uD83D\uDD0D"
                                 }, void 0, false, {
                                     fileName: "src/components/Chat/SendMessage.jsx",
-                                    lineNumber: 22,
+                                    lineNumber: 30,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -41131,7 +45283,7 @@ const SendMessage = ({ chatName, groupAdmin, users, _id })=>{
                                     children: groupChat ? chatData.chatName : (0, _getSenderJsDefault.default)(chatData.users)
                                 }, void 0, false, {
                                     fileName: "src/components/Chat/SendMessage.jsx",
-                                    lineNumber: 28,
+                                    lineNumber: 33,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -41140,13 +45292,13 @@ const SendMessage = ({ chatName, groupAdmin, users, _id })=>{
                                     children: "\uD83D\uDC41\uFE0F\u200D\uD83D\uDDE8\uFE0F"
                                 }, void 0, false, {
                                     fileName: "src/components/Chat/SendMessage.jsx",
-                                    lineNumber: 32,
+                                    lineNumber: 37,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Chat/SendMessage.jsx",
-                            lineNumber: 21,
+                            lineNumber: 29,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41164,7 +45316,7 @@ const SendMessage = ({ chatName, groupAdmin, users, _id })=>{
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Chat/SendMessage.jsx",
-                    lineNumber: 20,
+                    lineNumber: 28,
                     columnNumber: 9
                 }, undefined),
                 tgProfile && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
@@ -41175,15 +45327,16 @@ const SendMessage = ({ chatName, groupAdmin, users, _id })=>{
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     className: "relative",
                                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileModalJsxDefault.default), {
-                                        ...chatData.users[idx]
+                                        ...chatData.users[idx],
+                                        data: chatData
                                     }, void 0, false, {
                                         fileName: "src/components/Chat/SendMessage.jsx",
-                                        lineNumber: 54,
+                                        lineNumber: 49,
                                         columnNumber: 17
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/Chat/SendMessage.jsx",
-                                    lineNumber: 53,
+                                    lineNumber: 48,
                                     columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41193,25 +45346,25 @@ const SendMessage = ({ chatName, groupAdmin, users, _id })=>{
                                         children: "\u274C"
                                     }, void 0, false, {
                                         fileName: "src/components/Chat/SendMessage.jsx",
-                                        lineNumber: 58,
+                                        lineNumber: 53,
                                         columnNumber: 17
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/Chat/SendMessage.jsx",
-                                    lineNumber: 57,
+                                    lineNumber: 52,
                                     columnNumber: 15
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Chat/SendMessage.jsx",
-                            lineNumber: 48,
+                            lineNumber: 47,
                             columnNumber: 13
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "fixed inset-0 bg-black opacity-80 z-40 "
                         }, void 0, false, {
                             fileName: "src/components/Chat/SendMessage.jsx",
-                            lineNumber: 62,
+                            lineNumber: 57,
                             columnNumber: 13
                         }, undefined)
                     ]
@@ -41225,19 +45378,19 @@ const SendMessage = ({ chatName, groupAdmin, users, _id })=>{
                                 setgcProfile: setgcProfile
                             }, void 0, false, {
                                 fileName: "src/components/Chat/SendMessage.jsx",
-                                lineNumber: 73,
+                                lineNumber: 62,
                                 columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Chat/SendMessage.jsx",
-                            lineNumber: 68,
+                            lineNumber: 61,
                             columnNumber: 13
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "fixed inset-0 bg-black opacity-80 z-40 "
                         }, void 0, false, {
                             fileName: "src/components/Chat/SendMessage.jsx",
-                            lineNumber: 76,
+                            lineNumber: 65,
                             columnNumber: 13
                         }, undefined)
                     ]
@@ -41250,16 +45403,16 @@ const SendMessage = ({ chatName, groupAdmin, users, _id })=>{
             children: "Select a chat or Create a chat"
         }, void 0, false, {
             fileName: "src/components/Chat/SendMessage.jsx",
-            lineNumber: 84,
+            lineNumber: 70,
             columnNumber: 9
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Chat/SendMessage.jsx",
-        lineNumber: 83,
-        columnNumber: 7
+        lineNumber: 69,
+        columnNumber: 12
     }, undefined);
 };
-_s(SendMessage, "aCksq7OCSpWCpR+oBMAj/hOHg4E=");
+_s(SendMessage, "tPFIfspJQ4LILHbQrMrlbYYT+TI=");
 _c = SendMessage;
 exports.default = SendMessage;
 var _c;
@@ -41303,7 +45456,7 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile })=>{
     _s();
     const [gcUsers, setGcUsers] = (0, _react.useState)(users);
     const [gcUserSearch, setGcUserSearch] = (0, _react.useState)(null);
-    const { token, allChats, setAllchats, chatData, setchatData } = (0, _react.useContext)((0, _userContext.userContext));
+    const { token, allChats, setAllchats, chatData, setchatData, activeChat, setactiveChat } = (0, _react.useContext)((0, _userContext.userContext));
     const [searchUsers, setSearchUsers] = (0, _react.useState)([]);
     const [toggle, settoggle] = (0, _react.useState)(false);
     const [name, setName] = (0, _react.useState)(null);
@@ -41313,11 +45466,8 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile })=>{
                 Authorization: `Bearer ${token}`
             }
         }).then((response)=>{
-            console.log(response.data);
             setSearchUsers(response.data);
-        }).catch((err)=>{
-            console.log(err.message);
-        });
+        }).catch((err)=>{});
     }, [
         gcUserSearch
     ]);
@@ -41327,7 +45477,6 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile })=>{
             updatedName: name
         };
         const formdata = JSON.stringify(data);
-        console.log(formdata);
         const response = await (0, _axiosDefault.default).put("http://localhost:5000/api/chat/rename", formdata, {
             headers: {
                 "Content-Type": "application/json",
@@ -41344,7 +45493,6 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile })=>{
             ...chatData,
             chatName: response.data.chatName
         });
-        console.log(chatData);
     };
     const removeUsers = async (userid, updatedusers, grpAdmin)=>{
         const data = {
@@ -41358,14 +45506,11 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile })=>{
                 Authorization: `Bearer ${token}`
             }
         });
-        console.log(grpAdmin);
         if (grpAdmin) setAllchats((chat)=>{
             return chat.filter((chat)=>chat._id !== _id);
         });
     };
-    (0, _react.useEffect)(()=>{
-        console.log(allChats);
-    }, [
+    (0, _react.useEffect)(()=>{}, [
         allChats
     ]);
     const addUser = async (id)=>{
@@ -41374,47 +45519,51 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile })=>{
             chatId: _id
         };
         const formdata = JSON.stringify(data);
-        console.log(formdata);
         const response = await (0, _axiosDefault.default).put("http://localhost:5000/api/chat/groupadd", formdata, {
             headers: {
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${token}`
             }
         });
-        console.log(response);
     };
     const leaveGrp = async ()=>{
         const user = JSON.parse(localStorage.getItem("userInfo"));
         const grpAdmin = true;
         removeUsers(user._id, null, grpAdmin);
-        setchatData(null);
+        if (activeChat === allChats[0]._id) {
+            setchatData(allChats[1]);
+            setactiveChat(allChats[1]._id);
+        } else {
+            setchatData(allChats[0]);
+            setactiveChat(allChats[0]._id);
+        }
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "w-[40vw] bg-slate-200 rounded-lg text-center relative",
+                className: "w-[80vw] md:w-[40vw] bg-slate-200 rounded-lg text-center relative",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "flex flex-col justify-center items-center gap-y-6 px-3 py-4 w-[90%] mx-auto text-center",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                            className: "text-3xl",
+                            className: "text-xl md:text-3xl",
                             children: chatName
                         }, void 0, false, {
                             fileName: "src/components/Chat/GcModal.jsx",
-                            lineNumber: 124,
+                            lineNumber: 106,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "flex flex-wrap items-center gap-3 ",
                             children: gcUsers.map((user)=>{
                                 return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: " flex  px-2 gap-x-3 py-[2px]  text-sm  rounded-md bg-black text-white text-[0.9em]",
+                                    className: " flex  px-2 gap-x-3 py-[2px] rounded-md bg-black text-white text-[0.7em] md:text-[0.9em]",
                                     children: [
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                                             children: user.name
                                         }, void 0, false, {
                                             fileName: "src/components/Chat/GcModal.jsx",
-                                            lineNumber: 129,
+                                            lineNumber: 110,
                                             columnNumber: 19
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -41433,23 +45582,23 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile })=>{
                                             children: "\u2716"
                                         }, void 0, false, {
                                             fileName: "src/components/Chat/GcModal.jsx",
-                                            lineNumber: 130,
+                                            lineNumber: 111,
                                             columnNumber: 19
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/Chat/GcModal.jsx",
-                                    lineNumber: 128,
-                                    columnNumber: 17
+                                    lineNumber: 109,
+                                    columnNumber: 20
                                 }, undefined);
                             })
                         }, void 0, false, {
                             fileName: "src/components/Chat/GcModal.jsx",
-                            lineNumber: 125,
+                            lineNumber: 107,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "flex gap-x-4 text-[0.9em] w-full items-center justify-center text-center ",
+                            className: "flex gap-x-4 text-[0.7em] md:text-[0.9em] w-full items-center justify-center text-center ",
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                                     type: "text",
@@ -41459,7 +45608,7 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile })=>{
                                     onChange: (e)=>setName(e.target.value)
                                 }, void 0, false, {
                                     fileName: "src/components/Chat/GcModal.jsx",
-                                    lineNumber: 155,
+                                    lineNumber: 130,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -41468,13 +45617,13 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile })=>{
                                     children: "Update"
                                 }, void 0, false, {
                                     fileName: "src/components/Chat/GcModal.jsx",
-                                    lineNumber: 162,
+                                    lineNumber: 131,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Chat/GcModal.jsx",
-                            lineNumber: 154,
+                            lineNumber: 129,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -41488,7 +45637,7 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile })=>{
                             }
                         }, void 0, false, {
                             fileName: "src/components/Chat/GcModal.jsx",
-                            lineNumber: 169,
+                            lineNumber: 135,
                             columnNumber: 11
                         }, undefined),
                         toggle && searchUsers.length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41518,7 +45667,7 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile })=>{
                                                 name: val.name
                                             }, void 0, false, {
                                                 fileName: "src/components/Chat/GcModal.jsx",
-                                                lineNumber: 202,
+                                                lineNumber: 151,
                                                 columnNumber: 21
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41528,59 +45677,59 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile })=>{
                                                         children: val.name
                                                     }, void 0, false, {
                                                         fileName: "src/components/Chat/GcModal.jsx",
-                                                        lineNumber: 204,
+                                                        lineNumber: 153,
                                                         columnNumber: 23
                                                     }, undefined),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                                                         children: val.email
                                                     }, void 0, false, {
                                                         fileName: "src/components/Chat/GcModal.jsx",
-                                                        lineNumber: 205,
+                                                        lineNumber: 154,
                                                         columnNumber: 23
                                                     }, undefined)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/components/Chat/GcModal.jsx",
-                                                lineNumber: 203,
+                                                lineNumber: 152,
                                                 columnNumber: 21
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/Chat/GcModal.jsx",
-                                        lineNumber: 201,
+                                        lineNumber: 150,
                                         columnNumber: 19
                                     }, undefined)
                                 }, idx, false, {
                                     fileName: "src/components/Chat/GcModal.jsx",
-                                    lineNumber: 183,
-                                    columnNumber: 17
+                                    lineNumber: 141,
+                                    columnNumber: 46
                                 }, undefined))
                         }, void 0, false, {
                             fileName: "src/components/Chat/GcModal.jsx",
-                            lineNumber: 181,
-                            columnNumber: 13
+                            lineNumber: 140,
+                            columnNumber: 48
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                             onClick: ()=>{
                                 leaveGrp();
                                 setgcProfile(false);
                             },
-                            className: "bg-black text-white px-2 py-1 rounded-md transform-cpu duration-300 active:scale-75",
+                            className: "bg-black text-white px-2 py-1 rounded-md transform-cpu duration-300 active:scale-75 text-[0.7em] md:text-[0.9em]",
                             children: "Leave Group"
                         }, void 0, false, {
                             fileName: "src/components/Chat/GcModal.jsx",
-                            lineNumber: 213,
+                            lineNumber: 160,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Chat/GcModal.jsx",
-                    lineNumber: 123,
+                    lineNumber: 105,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Chat/GcModal.jsx",
-                lineNumber: 122,
+                lineNumber: 104,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41591,18 +45740,18 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile })=>{
                     children: "\u2716"
                 }, void 0, false, {
                     fileName: "src/components/Chat/GcModal.jsx",
-                    lineNumber: 225,
+                    lineNumber: 169,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Chat/GcModal.jsx",
-                lineNumber: 224,
+                lineNumber: 168,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(GcModal, "uBsS9tP7rPS6fstmQgEcjZNOy8s=");
+_s(GcModal, "QXZkSzr15xaFEajd0ZGkKvo13s8=");
 _c = GcModal;
 exports.default = GcModal;
 var _c;
@@ -41642,7 +45791,7 @@ let socket;
 let selectedChatCompare;
 const MessageBox = ()=>{
     _s();
-    const { token, activeChat } = (0, _react.useContext)((0, _userContext.userContext));
+    const { token, activeChat, chatData, notifications, setNotifications } = (0, _react.useContext)((0, _userContext.userContext));
     const user = JSON.parse(localStorage.getItem("userInfo"));
     const loggedinUser = user._id;
     const [allMsg, setallMsgs] = (0, _react.useState)([]);
@@ -41650,6 +45799,25 @@ const MessageBox = ()=>{
     const [typing, setTyping] = (0, _react.useState)(false);
     const [istyping, setIsTyping] = (0, _react.useState)(false);
     const [socketconnected, setsocketconnected] = (0, _react.useState)(false);
+    const notificationHandler = async (newMessageRecieved)=>{
+        try {
+            const { data } = await (0, _axiosDefault.default).get(`http://localhost:5000/api/chat/${newMessageRecieved.chat._id}`, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            });
+            const { _id, latestMessage } = data;
+            const newNotification = {
+                activechatId: _id,
+                chatdata: data,
+                name: latestMessage.sender.name
+            };
+            setNotifications((prevNotifications)=>[
+                    newNotification,
+                    ...prevNotifications
+                ]);
+        } catch  {}
+    };
     (0, _react.useEffect)(()=>{
         socket = (0, _socketIoClientDefault.default)(ENDPOINT);
         socket.emit("setup", user);
@@ -41657,12 +45825,10 @@ const MessageBox = ()=>{
         socket.on("typing", ()=>setIsTyping(true));
         socket.on("stop typing", ()=>{
             setIsTyping(false);
-            console.log(istyping);
         });
         socket.on("message recieved", (newMessageRecieved)=>{
-            if (!selectedChatCompare || selectedChatCompare !== newMessageRecieved.chat._id) ;
+            if (!selectedChatCompare || selectedChatCompare !== newMessageRecieved.chat._id) notificationHandler(newMessageRecieved);
             else {
-                console.log("msg received");
                 setallMsgs((prevMsgs)=>[
                         ...prevMsgs,
                         newMessageRecieved
@@ -41687,7 +45853,7 @@ const MessageBox = ()=>{
             setallMsgs(response.data);
             selectedChatCompare = activeChat;
             socket.emit("joinChat", activeChat);
-        }).catch((error)=>console.log(error.message));
+        }).catch((error)=>void 0);
     }, [
         activeChat
     ]);
@@ -41710,7 +45876,7 @@ const MessageBox = ()=>{
                         ...prevMsgs,
                         response.data
                     ]);
-            }).catch((error)=>console.log(error.message));
+            }).catch((error)=>void 0);
         }
     };
     const handleKeyDown = (event)=>{
@@ -41722,7 +45888,7 @@ const MessageBox = ()=>{
     let typingTimeout; // Declare this outside the component
     const typingHandler = ()=>{
         if (!socketconnected) return;
-        if (!typing) {
+        if (!typing && selectedChatCompare === activeChat) {
             setTyping(true);
             socket.emit("typing", activeChat);
         }
@@ -41761,8 +45927,8 @@ const MessageBox = ()=>{
                             minutes: minutes
                         }, void 0, false, {
                             fileName: "src/components/Chat/MessageBox.jsx",
-                            lineNumber: 152,
-                            columnNumber: 19
+                            lineNumber: 149,
+                            columnNumber: 48
                         }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recieverCardJsxDefault.default), {
                             content: content,
                             ...sender,
@@ -41770,13 +45936,13 @@ const MessageBox = ()=>{
                             minutes: minutes
                         }, void 0, false, {
                             fileName: "src/components/Chat/MessageBox.jsx",
-                            lineNumber: 158,
-                            columnNumber: 19
+                            lineNumber: 149,
+                            columnNumber: 115
                         }, undefined)
                     }, idx, false, {
                         fileName: "src/components/Chat/MessageBox.jsx",
-                        lineNumber: 140,
-                        columnNumber: 15
+                        lineNumber: 142,
+                        columnNumber: 16
                     }, undefined);
                 })
             }, void 0, false, {
@@ -41796,8 +45962,8 @@ const MessageBox = ()=>{
                                 className: "w-12 h-9 absolute bottom-12 py-1"
                             }, void 0, false, {
                                 fileName: "src/components/Chat/MessageBox.jsx",
-                                lineNumber: 172,
-                                columnNumber: 13
+                                lineNumber: 155,
+                                columnNumber: 24
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                                 type: "text",
@@ -41807,7 +45973,6 @@ const MessageBox = ()=>{
                                 value: msg,
                                 onChange: (e)=>{
                                     setMsg(e.target.value);
-                                    console.log(e.target.value);
                                     typingHandler();
                                 },
                                 onKeyDown: (e)=>{
@@ -41815,13 +45980,13 @@ const MessageBox = ()=>{
                                 }
                             }, void 0, false, {
                                 fileName: "src/components/Chat/MessageBox.jsx",
-                                lineNumber: 178,
+                                lineNumber: 156,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Chat/MessageBox.jsx",
-                        lineNumber: 170,
+                        lineNumber: 154,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -41830,23 +45995,23 @@ const MessageBox = ()=>{
                         children: "\u27A4"
                     }, void 0, false, {
                         fileName: "src/components/Chat/MessageBox.jsx",
-                        lineNumber: 195,
+                        lineNumber: 164,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Chat/MessageBox.jsx",
-                lineNumber: 169,
+                lineNumber: 153,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Chat/MessageBox.jsx",
-        lineNumber: 128,
-        columnNumber: 5
+        lineNumber: 131,
+        columnNumber: 10
     }, undefined);
 };
-_s(MessageBox, "o9sNMb928Wm0lz6WiX2kpQVKELI=");
+_s(MessageBox, "LKe+ygMzdDTQ+6GP9sSmLBnNPMM=");
 _c = MessageBox;
 exports.default = MessageBox;
 var _c;
@@ -41883,7 +46048,7 @@ const SenderCard = ({ content, hours, minutes })=>{
                     children: content
                 }, void 0, false, {
                     fileName: "src/components/Chat/SenderCard.jsx",
-                    lineNumber: 7,
+                    lineNumber: 9,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -41895,19 +46060,19 @@ const SenderCard = ({ content, hours, minutes })=>{
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Chat/SenderCard.jsx",
-                    lineNumber: 13,
+                    lineNumber: 14,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/Chat/SenderCard.jsx",
-            lineNumber: 6,
+            lineNumber: 8,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Chat/SenderCard.jsx",
-        lineNumber: 5,
-        columnNumber: 5
+        lineNumber: 7,
+        columnNumber: 10
     }, undefined);
 };
 _c = SenderCard;
@@ -41945,7 +46110,7 @@ const RecieverCard = ({ content, profilePic, name, hours, minutes })=>{
                         className: "w-6 h-6"
                     }, void 0, false, {
                         fileName: "src/components/Chat/RecieverCard.jsx",
-                        lineNumber: 7,
+                        lineNumber: 11,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -41953,13 +46118,13 @@ const RecieverCard = ({ content, profilePic, name, hours, minutes })=>{
                         children: name
                     }, void 0, false, {
                         fileName: "src/components/Chat/RecieverCard.jsx",
-                        lineNumber: 8,
+                        lineNumber: 12,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Chat/RecieverCard.jsx",
-                lineNumber: 6,
+                lineNumber: 10,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41973,7 +46138,7 @@ const RecieverCard = ({ content, profilePic, name, hours, minutes })=>{
                         children: content
                     }, void 0, false, {
                         fileName: "src/components/Chat/RecieverCard.jsx",
-                        lineNumber: 11,
+                        lineNumber: 15,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -41985,20 +46150,20 @@ const RecieverCard = ({ content, profilePic, name, hours, minutes })=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Chat/RecieverCard.jsx",
-                        lineNumber: 17,
+                        lineNumber: 20,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Chat/RecieverCard.jsx",
-                lineNumber: 10,
+                lineNumber: 14,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Chat/RecieverCard.jsx",
-        lineNumber: 5,
-        columnNumber: 5
+        lineNumber: 9,
+        columnNumber: 10
     }, undefined);
 };
 _c = RecieverCard;
@@ -45475,6 +49640,43 @@ function Backoff(opts) {
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jSo45":[function(require,module,exports) {
 module.exports = require("eff16e07b0aafb76").getBundleURL("aXMci") + "typinganimation.9a05d9b6.gif" + "?" + Date.now();
 
-},{"eff16e07b0aafb76":"lgJ39"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequire10c2")
+},{"eff16e07b0aafb76":"lgJ39"}],"b6oIK":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$a480 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$a480.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const Error = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+            children: "Something Went Wrong Please Try Again"
+        }, void 0, false, {
+            fileName: "src/components/Chat/Error.jsx",
+            lineNumber: 4,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/Chat/Error.jsx",
+        lineNumber: 3,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Error;
+exports.default = Error;
+var _c;
+$RefreshReg$(_c, "Error");
+
+  $parcel$ReactRefreshHelpers$a480.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequire10c2")
 
 //# sourceMappingURL=index.7271efb6.js.map

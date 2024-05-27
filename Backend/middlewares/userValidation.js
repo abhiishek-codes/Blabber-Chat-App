@@ -1,15 +1,18 @@
 const { z } = require("zod");
+require("../config/config");
 
 const signupSchema = z.object({
   name: z
     .string()
-    .min(1, { message: "Name must be at least 1 characters long" })
+    .min(1, { message: "Name must be at least 1 character long" })
     .max(30, { message: "Name cannot exceed 30 characters" }),
   uname: z.string().email({ message: "Invalid email address" }),
   pass: z
     .string()
-    .min(6, { message: "Password must be at least 6 characters long" }),
-
+    .min(6, { message: "Password must be at least 6 characters long" })
+    .regex(/^[a-zA-Z0-9!@#$%^&*()_+\[\]{}|;:',.<>/?-]+$/, {
+      message: "Password must be alphanumeric and can include valid Symbol",
+    }),
   profilePic: z
     .string()
     .optional()
@@ -39,6 +42,7 @@ const signupIpValidation = (req, res, next) => {
     const data = signupSchema.parse(req.body);
     next();
   } catch (error) {
+    console.log(error instanceof z.ZodError);
     throw error;
   }
 };
