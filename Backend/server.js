@@ -13,8 +13,11 @@ connectDB();
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: "https://blabber-chat-app.vercel.app/" }));
-
+app.use(
+  cors({
+    origin: "https://blabber-pwhtqbeth-abhisheks-projects-e2710dbc.vercel.app",
+  })
+);
 app.get("/", (req, res) => {
   res.send("API is running successfully");
 });
