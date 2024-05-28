@@ -13,27 +13,7 @@ connectDB();
 
 const app = express();
 app.use(express.json());
-var allowedOrigins = [
-  "http://localhost:1234",
-  "https://blabber-chat-app.onrender.com",
-  "https://blabber-chat-app.vercel.app",
-];
-
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      // allow requests with no origin (like mobile apps or curl requests)
-      if (!origin) return callback(null, true);
-      if (allowedOrigins.indexOf(origin) === -1) {
-        var msg =
-          "The CORS policy for this site does not allow access from the specified Origin.";
-        return callback(new Error(msg), false);
-      }
-      return callback(null, true);
-    },
-  })
-);
-
+app.use(cors());
 app.get("/", (req, res) => {
   res.send("API is running successfully");
 });
@@ -59,16 +39,7 @@ const server = app.listen(process.env.PORT || 5000, () => {
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: function (origin, callback) {
-      // allow requests with no origin (like mobile apps or curl requests)
-      if (!origin) return callback(null, true);
-      if (allowedOrigins.indexOf(origin) === -1) {
-        var msg =
-          "The CORS policy for this site does not allow access from the specified Origin.";
-        return callback(new Error(msg), false);
-      }
-      return callback(null, true);
-    },
+    origin: "*",
   },
 });
 
