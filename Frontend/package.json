@@ -5,11 +5,12 @@
   "main": "./src/App.js",
   "scripts": {
     "start": "parcel ./src/index.html",
-    "build": "parcel ./src/index.html",
+    "build": "parcel ./src/index.html --public-url ./",
     "vercel-build": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
+  "homepage": "https://abhiishek-codes.github.io/Blabber-Chat-App",
   "author": "",
   "license": "ISC",
   "devDependencies": {
