@@ -1,6 +1,6 @@
 import React from "react";
 import GroupchatCard from "./GroupchatCard";
-import OnetooneCard from "./onetooneCard";
+import OnetooneCard from "./OnetooneCard";
 import { userContext } from "../../utils/userContext";
 import { useContext } from "react";
 
