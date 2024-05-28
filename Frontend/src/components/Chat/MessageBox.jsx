@@ -56,18 +56,22 @@ const MessageBox = () => {
     socket.on("typing", () => setIsTyping(true));
     socket.on("stop typing", () => {
       setIsTyping(false);
-      console.log(istyping);
     });
 
     socket.on("message recieved", (newMessageRecieved) => {
+      console.log("msg recieved");
       if (
         !selectedChatCompare ||
         selectedChatCompare !== newMessageRecieved.chat._id
       ) {
+        console.log("Inside if block of message received");
         notificationHandler(newMessageRecieved);
       } else {
-        console.log("msg received");
         setallMsgs((prevMsgs) => [...prevMsgs, newMessageRecieved]);
+        console.log(
+          "Message got and updated the allmsg state",
+          newMessageRecieved
+        );
         const messageContainer = document.getElementById("messageContainer");
         messageContainer.scrollTo({
           top: messageContainer.scrollHeight,
@@ -120,7 +124,6 @@ const MessageBox = () => {
         })
         .then((response) => {
           socket.emit("new message", response.data);
-          console.log("messageRecived", response.data);
           setallMsgs((prevMsgs) => [...prevMsgs, response.data]);
         })
         .catch((error) => console.log(error.message));

@@ -24,7 +24,7 @@ const Header = () => {
   const [filterusers, setfilterusers] = useState(users);
   const [tgProfile, settgProfile] = useState(false);
   const userinfo = JSON.parse(localStorage.getItem("userInfo"));
-  console.log(userinfo);
+
   const [profileCard, setprofileCard] = useState(false);
   const navigate = useNavigate();
   const [notitrigger, setnotitrigger] = useState(false);

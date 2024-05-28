@@ -43,7 +43,6 @@ const sendMessage = asyncHandler(async (req, res) => {
       latestMessage: fullMessage,
     });
 
-    console.log(fullMessage);
     res.json(fullMessage);
   } catch (error) {
     res.send(error.message);
