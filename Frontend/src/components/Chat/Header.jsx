@@ -33,7 +33,7 @@ const Header = () => {
     const token = userinfo.token;
 
     axios
-      .get(`https://blabber-chat-app.vercel.app/api/users/?search=${suser}`, {
+      .get(`https://blabber-chat-app.onrender.com/api/users/?search=${suser}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

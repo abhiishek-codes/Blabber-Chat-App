@@ -21,7 +21,7 @@ const UsersCard = ({ name, email, _id, setsbar, idx, data }) => {
     console.log(formdata);
     console.log(token);
     axios
-      .post("https://blabber-chat-app.vercel.app/api/chat/", formdata, {
+      .post("https://blabber-chat-app.onrender.com/api/chat/", formdata, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

@@ -16,7 +16,7 @@ const CreateGc = ({ setcreatgc }) => {
   useEffect(() => {
     axios
       .get(
-        `https://blabber-chat-app.vercel.app/api/users/?search=${gcUserSearch}`,
+        `https://blabber-chat-app.onrender.com/api/users/?search=${gcUserSearch}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -48,7 +48,7 @@ const CreateGc = ({ setcreatgc }) => {
 
     try {
       const response = await axios.post(
-        "https://blabber-chat-app.vercel.app/api/chat/group",
+        "https://blabber-chat-app.onrender.com/api/chat/group",
         finaldata,
         {
           headers: {

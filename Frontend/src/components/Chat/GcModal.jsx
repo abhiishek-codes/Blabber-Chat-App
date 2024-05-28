@@ -23,7 +23,7 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile }) => {
   useEffect(() => {
     axios
       .get(
-        `https://blabber-chat-app.vercel.app/api/users/?search=${gcUserSearch}`,
+        `https://blabber-chat-app.onrender.com/api/users/?search=${gcUserSearch}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -47,7 +47,7 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile }) => {
     const formdata = JSON.stringify(data);
     console.log(formdata);
     const response = await axios.put(
-      "https://blabber-chat-app.vercel.app/api/chat/rename",
+      "https://blabber-chat-app.onrender.com/api/chat/rename",
       formdata,
 
       {
@@ -78,7 +78,7 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile }) => {
     };
     const formdata = JSON.stringify(data);
     const response = await axios.put(
-      "https://blabber-chat-app.vercel.app/api/chat/groupremove",
+      "https://blabber-chat-app.onrender.com/api/chat/groupremove",
       formdata,
       {
         headers: {
@@ -106,7 +106,7 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile }) => {
     const formdata = JSON.stringify(data);
     console.log(formdata);
     const response = await axios.put(
-      "https://blabber-chat-app.vercel.app/api/chat/groupadd",
+      "https://blabber-chat-app.onrender.com/api/chat/groupadd",
       formdata,
       {
         headers: {

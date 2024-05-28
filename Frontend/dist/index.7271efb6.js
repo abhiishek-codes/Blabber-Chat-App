@@ -34734,7 +34734,7 @@ const Login = ({ Setloginstate })=>{
     };
     const handleLogin = async ()=>{
         try {
-            const response = await (0, _axiosDefault.default).post("https://blabber-chat-app.vercel.app/api/users/login", formData);
+            const response = await (0, _axiosDefault.default).post("https://blabber-chat-app.onrender.com/api/users/login", formData);
             localStorage.setItem("userInfo", JSON.stringify(await response.data));
             navigate("/chats"); // Assuming successful login
         } catch (error) {
@@ -39442,7 +39442,7 @@ const Signup = ({ Setloginstate })=>{
         };
         if (profilePicUrl) dataToSend.pic = profilePicUrl;
         try {
-            const response = await (0, _axiosDefault.default).post("https://blabber-chat-app.vercel.app/api/users/signup", dataToSend);
+            const response = await (0, _axiosDefault.default).post("https://blabber-chat-app.onrender.com/api/users/signup", dataToSend);
             localStorage.setItem("userInfo", JSON.stringify(response.data));
             navigate("/chats");
         } catch (error) {
@@ -39886,7 +39886,7 @@ const Header = ()=>{
     const [notitrigger, setnotitrigger] = (0, _react.useState)(false);
     const clickHandler = ()=>{
         const token = userinfo.token;
-        (0, _axiosDefault.default).get(`https://blabber-chat-app.vercel.app/api/users/?search=${suser}`, {
+        (0, _axiosDefault.default).get(`https://blabber-chat-app.onrender.com/api/users/?search=${suser}`, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -40296,7 +40296,7 @@ const UsersCard = ({ name, email, _id, setsbar, idx, data })=>{
         const formdata = {
             userid: data._id
         };
-        (0, _axiosDefault.default).post("https://blabber-chat-app.vercel.app/api/chat/", formdata, {
+        (0, _axiosDefault.default).post("https://blabber-chat-app.onrender.com/api/chat/", formdata, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -40513,7 +40513,7 @@ const AllChats = ()=>{
     const userinfo = JSON.parse(localStorage.getItem("userInfo"));
     const token = userinfo?.token;
     (0, _react.useEffect)(()=>{
-        const url = "https://blabber-chat-app.vercel.app/api/chat/";
+        const url = "https://blabber-chat-app.onrender.com/api/chat/";
         (0, _axiosDefault.default).get(url, {
             headers: {
                 Authorization: `Bearer ${token}`
@@ -40877,7 +40877,7 @@ const CreateGc = ({ setcreatgc })=>{
     const { token, setAllchats, allChats, setactiveChat, setchatData } = (0, _react.useContext)((0, _userContext.userContext));
     const [toggle, settoggle] = (0, _react.useState)(false);
     (0, _react.useEffect)(()=>{
-        (0, _axiosDefault.default).get(`https://blabber-chat-app.vercel.app/api/users/?search=${gcUserSearch}`, {
+        (0, _axiosDefault.default).get(`https://blabber-chat-app.onrender.com/api/users/?search=${gcUserSearch}`, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -40899,7 +40899,7 @@ const CreateGc = ({ setcreatgc })=>{
         };
         const finaldata = JSON.stringify(formdata);
         try {
-            const response = await (0, _axiosDefault.default).post("https://blabber-chat-app.vercel.app/api/chat/group", finaldata, {
+            const response = await (0, _axiosDefault.default).post("https://blabber-chat-app.onrender.com/api/chat/group", finaldata, {
                 headers: {
                     "Content-Type": "application/json",
                     Authorization: `Bearer ${token}`
@@ -41343,7 +41343,7 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile })=>{
     const [toggle, settoggle] = (0, _react.useState)(false);
     const [name, setName] = (0, _react.useState)(null);
     (0, _react.useEffect)(()=>{
-        (0, _axiosDefault.default).get(`https://blabber-chat-app.vercel.app/api/users/?search=${gcUserSearch}`, {
+        (0, _axiosDefault.default).get(`https://blabber-chat-app.onrender.com/api/users/?search=${gcUserSearch}`, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -41359,7 +41359,7 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile })=>{
             updatedName: name
         };
         const formdata = JSON.stringify(data);
-        const response = await (0, _axiosDefault.default).put("https://blabber-chat-app.vercel.app/api/chat/rename", formdata, {
+        const response = await (0, _axiosDefault.default).put("https://blabber-chat-app.onrender.com/api/chat/rename", formdata, {
             headers: {
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${token}`
@@ -41382,7 +41382,7 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile })=>{
             chatId: _id
         };
         const formdata = JSON.stringify(data);
-        const response = await (0, _axiosDefault.default).put("https://blabber-chat-app.vercel.app/api/chat/groupremove", formdata, {
+        const response = await (0, _axiosDefault.default).put("https://blabber-chat-app.onrender.com/api/chat/groupremove", formdata, {
             headers: {
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${token}`
@@ -41401,7 +41401,7 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile })=>{
             chatId: _id
         };
         const formdata = JSON.stringify(data);
-        const response = await (0, _axiosDefault.default).put("https://blabber-chat-app.vercel.app/api/chat/groupadd", formdata, {
+        const response = await (0, _axiosDefault.default).put("https://blabber-chat-app.onrender.com/api/chat/groupadd", formdata, {
             headers: {
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${token}`
@@ -41668,7 +41668,7 @@ var _socketIoClientDefault = parcelHelpers.interopDefault(_socketIoClient);
 var _typinganimationGif = require("../../assets/typinganimation.gif");
 var _typinganimationGifDefault = parcelHelpers.interopDefault(_typinganimationGif);
 var _s = $RefreshSig$();
-const ENDPOINT = "https://blabber-chat-app.vercel.app";
+const ENDPOINT = "https://blabber-chat-app.onrender.com";
 let socket;
 let selectedChatCompare;
 const MessageBox = ()=>{
@@ -41683,7 +41683,7 @@ const MessageBox = ()=>{
     const [socketconnected, setsocketconnected] = (0, _react.useState)(false);
     const notificationHandler = async (newMessageRecieved)=>{
         try {
-            const { data } = await (0, _axiosDefault.default).get(`https://blabber-chat-app.vercel.app/api/chat/${newMessageRecieved.chat._id}`, {
+            const { data } = await (0, _axiosDefault.default).get(`https://blabber-chat-app.onrender.com/api/chat/${newMessageRecieved.chat._id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -41727,7 +41727,7 @@ const MessageBox = ()=>{
         };
     }, []);
     (0, _react.useEffect)(()=>{
-        if (activeChat) (0, _axiosDefault.default).get(`https://blabber-chat-app.vercel.app/api/messages/${activeChat}`, {
+        if (activeChat) (0, _axiosDefault.default).get(`https://blabber-chat-app.onrender.com/api/messages/${activeChat}`, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -41747,7 +41747,7 @@ const MessageBox = ()=>{
             };
             const formdata = JSON.stringify(Data);
             setMsg("");
-            (0, _axiosDefault.default).post("https://blabber-chat-app.vercel.app/api/messages", formdata, {
+            (0, _axiosDefault.default).post("https://blabber-chat-app.onrender.com/api/messages", formdata, {
                 headers: {
                     "Content-Type": "application/json",
                     Authorization: `Bearer ${token}`

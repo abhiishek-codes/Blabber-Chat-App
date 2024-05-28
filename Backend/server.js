@@ -13,7 +13,10 @@ connectDB();
 
 const app = express();
 app.use(express.json());
-var allowedOrigins = ["http://localhost:1234"];
+var allowedOrigins = [
+  "http://localhost:1234",
+  "https://blabber-chat-app.onrender.com",
+];
 
 app.use(
   cors({
