@@ -61,7 +61,7 @@ const Signup = ({ Setloginstate }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/users/signup",
+        "https://blabber-chat-app.vercel.app/api/users/signup",
         dataToSend
       );
       localStorage.setItem("userInfo", JSON.stringify(response.data));

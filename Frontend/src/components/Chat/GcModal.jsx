@@ -22,11 +22,14 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile }) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/users/?search=${gcUserSearch}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
+      .get(
+        `https://blabber-chat-app.vercel.app/api/users/?search=${gcUserSearch}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      )
       .then((response) => {
         console.log(response.data);
         setSearchUsers(response.data);
@@ -44,7 +47,7 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile }) => {
     const formdata = JSON.stringify(data);
     console.log(formdata);
     const response = await axios.put(
-      "http://localhost:5000/api/chat/rename",
+      "https://blabber-chat-app.vercel.app/api/chat/rename",
       formdata,
 
       {
@@ -75,7 +78,7 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile }) => {
     };
     const formdata = JSON.stringify(data);
     const response = await axios.put(
-      "http://localhost:5000/api/chat/groupremove",
+      "https://blabber-chat-app.vercel.app/api/chat/groupremove",
       formdata,
       {
         headers: {
@@ -103,7 +106,7 @@ const GcModal = ({ chatName, users, groupAdmin, _id, setgcProfile }) => {
     const formdata = JSON.stringify(data);
     console.log(formdata);
     const response = await axios.put(
-      "http://localhost:5000/api/chat/groupadd",
+      "https://blabber-chat-app.vercel.app/api/chat/groupadd",
       formdata,
       {
         headers: {

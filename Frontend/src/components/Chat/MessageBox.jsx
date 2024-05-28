@@ -7,7 +7,7 @@ import RecieverCard from "./RecieverCard.jsx";
 import io from "socket.io-client";
 import typinganimation from "../../assets/typinganimation.gif";
 
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://blabber-chat-app.vercel.app";
 let socket;
 let selectedChatCompare;
 
@@ -25,7 +25,7 @@ const MessageBox = () => {
   const notificationHandler = async (newMessageRecieved) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:5000/api/chat/${newMessageRecieved.chat._id}`,
+        `https://blabber-chat-app.vercel.app/api/chat/${newMessageRecieved.chat._id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -83,7 +83,7 @@ const MessageBox = () => {
   useEffect(() => {
     if (activeChat) {
       axios
-        .get(`http://localhost:5000/api/messages/${activeChat}`, {
+        .get(`https://blabber-chat-app.vercel.app/api/messages/${activeChat}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -107,7 +107,7 @@ const MessageBox = () => {
       const formdata = JSON.stringify(Data);
       setMsg("");
       axios
-        .post("http://localhost:5000/api/messages", formdata, {
+        .post("https://blabber-chat-app.vercel.app/api/messages", formdata, {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,

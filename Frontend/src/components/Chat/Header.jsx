@@ -6,7 +6,6 @@ import UsersCard from "./UsersCard";
 import { useNavigate } from "react-router-dom";
 import ProfileModal from "./ProfileModal";
 import notification from "../../assets/notification.gif";
-import { set } from "zod";
 
 const Header = () => {
   const { user, setUser } = useContext(userContext);
@@ -34,7 +33,7 @@ const Header = () => {
     const token = userinfo.token;
 
     axios
-      .get(`http://localhost:5000/api/users/?search=${suser}`, {
+      .get(`https://blabber-chat-app.vercel.app/api/users/?search=${suser}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
