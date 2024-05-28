@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://blabber-pwhtqbeth-abhisheks-projects-e2710dbc.vercel.app",
+    origin: "https://blabber-phi.vercel.app",
   })
 );
 app.get("/", (req, res) => {
