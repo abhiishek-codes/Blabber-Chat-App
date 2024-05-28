@@ -40656,7 +40656,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _groupchatCard = require("./groupchatCard");
+var _groupchatCard = require("./GroupchatCard");
 var _groupchatCardDefault = parcelHelpers.interopDefault(_groupchatCard);
 var _onetooneCard = require("./onetooneCard");
 var _onetooneCardDefault = parcelHelpers.interopDefault(_onetooneCard);
@@ -40703,79 +40703,7 @@ $RefreshReg$(_c, "ChatUserCard");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./groupchatCard":"eKMbX","./onetooneCard":"883j5","../../utils/userContext":"eBA1b","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"eKMbX":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$99ea = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$99ea.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-const GroupchatCard = ({ data })=>{
-    const { users } = data;
-    const { latestMessage } = data;
-    const name = data.chatName;
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex flex-col",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "text-[1em]",
-                children: name
-            }, void 0, false, {
-                fileName: "src/components/Chat/groupchatCard.jsx",
-                lineNumber: 13,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex text-[0.8em]",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: [
-                            latestMessage?.sender?.name,
-                            latestMessage?.sender?.name && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-                                children: "\xa0:\xa0"
-                            }, void 0, false)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/Chat/groupchatCard.jsx",
-                        lineNumber: 15,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: latestMessage?.content
-                    }, void 0, false, {
-                        fileName: "src/components/Chat/groupchatCard.jsx",
-                        lineNumber: 19,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Chat/groupchatCard.jsx",
-                lineNumber: 14,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Chat/groupchatCard.jsx",
-        lineNumber: 12,
-        columnNumber: 10
-    }, undefined);
-};
-_c = GroupchatCard;
-exports.default = GroupchatCard;
-var _c;
-$RefreshReg$(_c, "GroupchatCard");
-
-  $parcel$ReactRefreshHelpers$99ea.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"883j5":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./onetooneCard":"883j5","../../utils/userContext":"eBA1b","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./GroupchatCard":"gtab7"}],"883j5":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0a01 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -40850,7 +40778,79 @@ $RefreshReg$(_c, "OnetooneCard");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../utils/userContext":"eBA1b","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lADQG":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../utils/userContext":"eBA1b","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gtab7":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8bf5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8bf5.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const GroupchatCard = ({ data })=>{
+    const { users } = data;
+    const { latestMessage } = data;
+    const name = data.chatName;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "flex flex-col",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                className: "text-[1em]",
+                children: name
+            }, void 0, false, {
+                fileName: "src/components/Chat/GroupchatCard.jsx",
+                lineNumber: 13,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex text-[0.8em]",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: [
+                            latestMessage?.sender?.name,
+                            latestMessage?.sender?.name && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                                children: "\xa0:\xa0"
+                            }, void 0, false)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Chat/GroupchatCard.jsx",
+                        lineNumber: 15,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: latestMessage?.content
+                    }, void 0, false, {
+                        fileName: "src/components/Chat/GroupchatCard.jsx",
+                        lineNumber: 19,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Chat/GroupchatCard.jsx",
+                lineNumber: 14,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Chat/GroupchatCard.jsx",
+        lineNumber: 12,
+        columnNumber: 10
+    }, undefined);
+};
+_c = GroupchatCard;
+exports.default = GroupchatCard;
+var _c;
+$RefreshReg$(_c, "GroupchatCard");
+
+  $parcel$ReactRefreshHelpers$8bf5.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lADQG":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$9715 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
