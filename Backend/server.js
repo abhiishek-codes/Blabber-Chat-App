@@ -61,7 +61,7 @@ const server = app.listen(process.env.PORT || 5000, () => {
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    function(origin, callback) {
+    origin: function (origin, callback) {
       // allow requests with no origin (like mobile apps or curl requests)
       if (!origin) return callback(null, true);
       if (allowedOrigins.indexOf(origin) === -1) {
