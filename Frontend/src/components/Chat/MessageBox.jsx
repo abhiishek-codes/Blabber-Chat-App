@@ -52,6 +52,7 @@ const MessageBox = () => {
     socket = io(ENDPOINT);
     socket.emit("setup", user);
     socket.on("connected", () => setsocketconnected(true));
+    console.log("socketCOnnected");
     socket.on("typing", () => setIsTyping(true));
     socket.on("stop typing", () => {
       setIsTyping(false);
@@ -108,6 +109,7 @@ const MessageBox = () => {
         content: msg,
       };
       const formdata = JSON.stringify(Data);
+
       setMsg("");
       axios
         .post("https://blabber-chat-app.onrender.com/api/messages", formdata, {
@@ -118,6 +120,7 @@ const MessageBox = () => {
         })
         .then((response) => {
           socket.emit("new message", response.data);
+          console.log("messageRecived", response.data);
           setallMsgs((prevMsgs) => [...prevMsgs, response.data]);
         })
         .catch((error) => console.log(error.message));

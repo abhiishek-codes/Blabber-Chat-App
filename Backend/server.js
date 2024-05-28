@@ -23,10 +23,10 @@ app.use("/api/users", userRoute);
 app.use("/api/chat", chatRoute);
 app.use("/api/messages", messageRoute);
 
-if (process.env.NODE_ENV === "Production") {
-  console.log = function () {};
-  console.error = function () {};
-}
+// if (process.env.NODE_ENV === "Production") {
+//   console.log = function () {};
+//   console.error = function () {};
+// }
 
 app.use(errorHandler);
 app.use(invalidUrl);
@@ -47,6 +47,7 @@ const io = require("socket.io")(server, {
 io.on("connection", (socket) => {
   socket.on("setup", (userData) => {
     socket.join(userData._id);
+    console.log("Socket Connected");
     socket.emit("connected");
   });
 
