@@ -13,7 +13,7 @@ connectDB();
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:1234" }));
+app.use(cors({ origin: "https://blabber-chat-app.vercel.app/" }));
 
 app.get("/", (req, res) => {
   res.send("API is running successfully");

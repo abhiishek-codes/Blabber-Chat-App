@@ -1,4 +1,4 @@
-{ 
+{
   "homepage": "https://abhiishek-codes.github.io/Blabber-Chat-App.git",
   "name": "frontend",
   "version": "1.0.0",
@@ -7,8 +7,8 @@
   "scripts": {
     "start": "parcel ./src/index.html",
     "build": "parcel ./src/index.html",
-    "predeploy":"npm run build",
-    "deploy" : "gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "vercel-build": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
