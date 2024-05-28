@@ -13,13 +13,7 @@ connectDB();
 
 const app = express();
 app.use(express.json());
-var allowedOrigins = [
-  "http://localhost:1234",
-  "https://blabber-chat-app.vercel.app",
-  "https://blabber-pwhtqbeth-abhisheks-projects-e2710dbc.vercel.app",
-  "https://blabber-the-chat-app.vercel.app",
-  "https://blabber-the-chat-kl3d3hj0x-abhisheks-projects-e2710dbc.vercel.app",
-];
+var allowedOrigins = ["http://localhost:1234"];
 
 app.use(
   cors({
