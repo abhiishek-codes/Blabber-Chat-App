@@ -15,7 +15,7 @@ const Home = () => {
         className=" bg-bgcolor my-auto pt-2 md:pt-0"
         style={{ height: `${remainingHeight}px` }}
       >
-        <div className="pt-2 mx-auto flex flex-col items-center justify-center gap-y-4 md:gap-y-8 text-white max-w-7xl">
+        <div className="pt-2 mx-auto flex flex-col items-center justify-center gap-y-4 md:gap-y-3 text-white max-w-7xl">
           <h1 className="text-3xl  md:text-5xl font-bold tracking-wide">
             Blabber The Chat App
           </h1>

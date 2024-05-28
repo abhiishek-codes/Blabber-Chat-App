@@ -34417,7 +34417,7 @@ const Home = ()=>{
                 height: `${remainingHeight}px`
             },
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "pt-2 mx-auto flex flex-col items-center justify-center gap-y-4 md:gap-y-8 text-white max-w-7xl",
+                className: "pt-2 mx-auto flex flex-col items-center justify-center gap-y-4 md:gap-y-3 text-white max-w-7xl",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                         className: "text-3xl  md:text-5xl font-bold tracking-wide",

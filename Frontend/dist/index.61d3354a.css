@@ -1349,8 +1349,8 @@ img, video {
     column-gap: .5rem;
   }
 
-  .md\:gap-y-8 {
-    row-gap: 2rem;
+  .md\:gap-y-3 {
+    row-gap: .75rem;
   }
 
   .md\:p-0 {
