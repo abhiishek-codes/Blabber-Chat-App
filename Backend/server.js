@@ -16,6 +16,7 @@ app.use(express.json());
 var allowedOrigins = [
   "http://localhost:1234",
   "https://blabber-chat-app.onrender.com",
+  "https://blabber-chat-app.vercel.app",
 ];
 
 app.use(
